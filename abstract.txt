@@ -1,0 +1,29 @@
+ About one third of X-ray-luminous clusters show smooth, unpolarized
+  radio emission on ~Mpc scales, known as giant radio halos. One
+  promising model for radio halos is Fermi II acceleration of seed
+  relativistic electrons by turbulence in the intracluster medium
+  (ICM); Coulomb losses prohibit acceleration from the thermal
+  pool. However, the origin of seed electrons has never been fully
+  explored. Here, we integrate the Fokker-Planck equation of the
+  cosmic ray (CR) electron and proton distributions in cosmological
+  simulations of cluster formation. For standard assumptions,
+  structure formation shocks lead to a seed electron population which
+  produces too centrally concentrated radio emission. Instead, we
+  present three plausible scenarios for the seed CRs that each
+  can reproduce the spatially flat radio emission observed in the Coma
+  cluster. (1) The CR proton to electron acceleration efficiency
+  K_ep ~ 0.1 is assumed to be larger than in our Galaxy
+  (K_ep ~ 0.01), due to the magnetic geometry at the
+  shock. The resulting primary electrons dominate the radio emission,
+  which is more extended in comparison to radio emission from
+  secondary electrons that result from hadronic CR interactions in the
+  ICM. (2) CR protons may stream at the Alfvén speed to the
+  cluster outskirts when the ICM is relatively quiescent. A spatially
+  flat CR proton distribution develops and produces the required
+  population of secondary seed electrons. (3) The ratio of injected
+  turbulent energy density to thermal energy density increase
+  significantly with radius, as seen in cosmological simulations. This
+  generates a flat radio profile when CRs are reaccelerated even
+  if the seed population of CRs is steep with radius. These competing
+  non-trivial solutions provide incisive probes of non thermal
+  processes in the high-beta ICM.
