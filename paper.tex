@@ -1,4 +1,4 @@
- 
+
 \documentclass[useAMS,usenatbib]{mn2e}
 \usepackage{epsfig,psfrag,txfonts,xspace}
 \usepackage[normalem]{ulem}
@@ -32,9 +32,18 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\Vph}{V_\mathrm{ph}}
 \newcommand{\mug}{\mu G}
+\newcommand{\RH}{R_\rmn{RH}}
 
 %\voffset.6in 
 
+\definecolor{mygreen}{rgb}{0.,0.5,0.}
+\def\del#1{{}}
+%\def\del#1{{\bf (DELETED TEXT)}}
+\def\C#1{{\bf #1}}
+\def\AP#1{{\bf  AP: #1}}
+\def\APP#1{{\bf {\color{red} AP2: #1}}}
+\def\SPO#1{{\bf {\color{blue} SPO: #1}}}
+\def\CP#1{{\bf {\color{mygreen} CP: #1}}}
 
 \title[Origin of Seed Electrons]{Turbulence and Particle Acceleration in Giant Radio Halos: the Origin of Seed Electrons}  
 
@@ -129,15 +138,15 @@ fast switch on/off mechanism of the RH emission) and the very extended
 RH emission at low frequencies in Coma (352~MHz) represent a major
 challenge to this model class \citep{brunetti12,2014MNRAS.438..124Z}.
 
-The alternative model for RHs is re-energization of seed
-suprathermal electrons by Fermi II acceleration when ICM turbulence
-becomes transonic during mergers
+The alternative model for RHs is re-energization of seed suprathermal
+electrons by Fermi II acceleration when ICM turbulence becomes
+transonic during mergers
 \citep{1987A&A...182...21S,1993ApJ...406..399G,2001MNRAS.320..365B,
-  2004MNRAS.350.1174B,brunetti07,brunetti11}. Due to the short
-radiative cooling time of high-energy relativistic electrons, the
-cluster synchrotron emission quickly fades away after a merger, which
-naturally explains the observed bimodality of RHs \cite[see
-  e.g.][]{2013MNRAS.429.3564D,2014MNRAS.443.3564D}.
+  2004MNRAS.350.1174B,brunetti07,brunetti11,2015ApJ...800...60M}. Due
+to the short radiative cooling time of high-energy relativistic
+electrons, the cluster synchrotron emission quickly fades away after a
+merger, which naturally explains the observed bimodality of RHs
+\cite[see e.g.][]{2013MNRAS.429.3564D,2014MNRAS.443.3564D}.
 
 However, there is a salient piece missing in the turbulent
 reacceleration model. It relies heavily on the assumption of an
@@ -159,12 +168,12 @@ population, the CRp population required in the best-studied case of
 the Coma cluster must have a very broad and flat (or even slightly
 inverted) spatial profile \citep{brunetti12}, in contrast with the
 thermal plasma whose energy density declines steeply with radius. In
-Fig.~\ref{fig:Edens} we show that such a distribution is not predicted by
-cosmological simulations \cite[see
+\AP{the left panel of} Fig.~\ref{fig:Edens} we show that such a
+distribution is not predicted by cosmological simulations \cite[see
   also][]{pinzke10,2014MNRAS.439.2662V}.
 \begin{figure*}
-  \includegraphics[width=1.0\columnwidth]{figures/fCR.radius.coma.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI066.DII.140.v5.halo.test5.eps}
-  \includegraphics[width=1.0\columnwidth]{figures/turb_profile_ratio.eps}
+  \includegraphics[width=1.0\columnwidth]{figures/fCR.radius.coma.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI067.DII.140.v6.eps}
+  \includegraphics[width=1.0\columnwidth]{figures/turb_profile_ratio_tot.eps}
   \caption{Left: spatial distribution of CRp energy density in the
     Coma cluster. The red dash-dotted line shows the required
     distribution of seed CRps that generate secondary electrons via
@@ -172,26 +181,35 @@ cosmological simulations \cite[see
     observations after Fermi-II reacceleration \citep{brunetti12}. The
     blue solid line shows the distribution of fossil CRps found in
     cosmological simulations, which disagrees with the required
-    profile. We normalize the required distribution of CRps by fixing
-    the total CRp energy $E_\rmn{p}$ to 0.3 percent of the total
-    thermal energy, consistent with observations
-    \citep{2014ApJ...787...18A,2012ApJ...757..123A}. Right: the ratio
-    of turbulent-to-thermal energy densities in our three models which
-    is parametrised as $\epsilon_\rmn{turb} \propto
-    \epsilon_\rmn{th}^{\alpha_{\rmn{tu}}}$. They are normalized such
-      that the total turbulent energy for each scenario makes up 20\%
-      of the total thermal energy inside the radio halo. Solid lines
-      show the median ratio, while the dotted lines show the 68
-      percentiles.}
-    \label{fig:Edens}
+    profile. \AP{To better compare the two models in this figure, we
+      normalize the required distribution of CRps by fixing the total
+      CRp energy $E_\rmn{CR}$ to 0.3 percent of the total thermal
+      energy, consistent with observations
+      \citep{2014ApJ...787...18A,2012ApJ...757..123A}. Right: the
+      ratio of turbulent-to-thermal energy densities (solid lines) and
+      cumulative energies (dotted lines) in our three models. The
+      energy densities are parametrized as $\epsilon_\rmn{turb}
+      \propto \epsilon_\rmn{th}^{(\alpha_{\rmn{tu}}+1)/2}/T^{1/4}$ and
+      normalized such that the total turbulent energy in compressible
+      modes $E_\rmn{turb}$ for each scenario makes up about 6\% of the
+      total thermal energy $E_\rmn{th}$ inside the radio halo
+      ($R_\rmn{RH}\approx0.6R_{200}$). The turbulent profiles explore
+      the uncertainty in the cluster turbulence and are motivated by
+      the cosmological simulation in
+      \citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V}.}}
+  \label{fig:Edens}
 \end{figure*}
 
-Indeed, arriving at a seed population with the required
-characteristics is highly constraining, and has the potential to teach
-us much about the origin of CRps/CRes in clusters. In this paper we
-consider three new scenarios that individually or combined can
-reproduce the observed radio profiles and spectrum in the Coma cluster
-without violating gamma-ray constraints:
+\CP{Could you add a comparison to Miniati's work here and discuss the
+  right panel of figure 1 and table 1? Do we want to move the figure
+  to a later section?}  Indeed, arriving at a seed population with the
+required characteristics is highly constraining, and has the potential
+to teach us much about the origin of CRps/CRes in clusters. \AP{For
+  both the turbulence and magnetic fields we adopt stationary models,
+  parameterized in terms of thermal quantities derived from our
+  simulations.} In this paper we consider three new scenarios that
+individually or combined can reproduce the observed radio profiles and
+spectrum in the Coma cluster without violating gamma-ray constraints:
 \begin{enumerate}
 \item {\bf Model {\em M-primaries}.} If the acceleration efficiency of CRps is below
   about $0.1$~{\%} in weak (perpendicular) shocks and the ratio of injected
@@ -213,16 +231,18 @@ simulations of CRs in clusters. In tandem with new insights from our
 recent work on DSA generated fossil electrons \citep{pinzke13}, we
 generate the first quantitative calculation of primary and secondary
 seed electrons and compare to observations in the Coma cluster. For
-the most part, we adopt parameters that are used in previous work: for
-turbulence, see \citet[][ including turbulent spectrum, injection
-  scale, energy density of turbulence]{brunetti07,brunetti11},
-for CR acceleration in shocks, see \citet[][ in particular
-  $K_{\rmn{ep}}$, acceleration efficiency]{pinzke13}, and for
-cosmological simulations, see \citet[][ i.e., shock history,
-  temperature profile, density profile, magnetic field
-  profile]{pinzke10}. All these parameters are uncertain, and could
-potentially change our predictions. We leave exploration of parameter
-space and the interaction between free parameters to future work.
+the most part, we adopt parameters that are used in previous work:
+\AP{for details, see \citep[][ turbulent
+    spectrum]{brunetti07,brunetti11}, \citep[][ injection scale of
+    turbulens]{2015ApJ...800...60M}, \citep[][ energy density of
+    turbulence]{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V},
+  for CR acceleration in shocks, \citep[][ in particular
+    $K_{\rmn{ep}}$, acceleration efficiency]{pinzke13}, and for
+  cosmological simulations, \citep[][ i.e., shock history, temperature
+    profile, density profile, magnetic field profile]{pinzke10}.} All
+these parameters are uncertain, and could potentially change our
+predictions. We leave exploration of parameter space and the
+interaction between free parameters to future work.
 
 
 % --- section: Method --- %
@@ -247,7 +267,7 @@ calculations to radio and gamma-ray observations of Coma.
 
 In our Galaxy, the CRe-to-CRp ratio at a few GeV is $K_{\rmn{ep}} \sim
 10^{-2}$. Hence, we adopt this as a fiducial value for the CRe-to-CRp
-acceleration efficiency (see \citet{pinzke13} for more
+acceleration efficiency (see \cite{pinzke13} for more
 discussion). However, as recent PIC simulations have shown, this is
 likely very different at weak shocks, with electrons efficiently
 accelerated at perpendicular shocks
@@ -277,8 +297,8 @@ accelerated to relativistic energies, injected electrons and protons
 are indistinguishable. We therefore assume that CRp and CRe have the
 same distribution function $f_\rmn{CRe}(p) = K_\rmn{ep}
 f_\rmn{CRp}(p)$, with a different normalization (due to differing
-acceleration efficiencies) $K_\rmn{ep}=0.1$ (viable for primarily
-perpendicular shocks; \citet{2014ApJ...794..153G}). While this
+acceleration efficiencies) $K_\rmn{ep}=0.1$ \citep[viable for primarily
+perpendicular shocks]{2014ApJ...794..153G}. While this
 appears to contradict the radial bias of magnetic fields in the bulk
 of the ICM as suggested by observations \citep{2010NatPh...6..520P}
 and cluster simulations \citep{2011ApJ...740...81R}, it does not
@@ -310,10 +330,10 @@ even Alfv{\'e}nic streaming timescales are relatively short
 \cite[$\sim 0.1-0.5$ Gyr;][]{wiener13} compared to the timescale on
 which the CRp population is built up. Based on these findings, we
 adopt a toy model for our \Mstream scenario in which CR streaming
-quickly produces flat CRp profiles. We assume that CRs cannot stream
-significantly past perpendicular $B$-fields at the accretion shock, so
-that the total number of CRs is conserved within the galaxy cluster
-during the streaming process.
+instantaniously produces flat CRp profiles. \sout{We assume that CRs cannot
+stream significantly past perpendicular $B$-fields at the accretion
+shock, so that the total number of CRs is conserved within the galaxy
+cluster during the streaming process.}
 
 Given a seed population of CRs, we adopt essentially the same set of
 plasma physics assumptions as the reacceleration model for RHs
@@ -327,11 +347,12 @@ time evolution of the CRe distribution in the Lagrangian frame
 \left\{
 f_{\rmn{e}}(p,t)\left[
 \left|{{dp}\over{dt}}\right|_{\rm C} 
-+ \frac{p}{3}\left(\vec{\nabla}\cdot \vec{\upsilon}\right)\right.\right.
++ \frac{p}{3}\left(\vec{\nabla}\cdot \vec{\upsilon}\right)
++ \left|{{dp}\over{dt}}\right|_{\rm r}\right.\right.
 \nonumber\\
-&+& \left.\left. \left|{{dp}\over{dt}}\right|_{\rm r}
-- {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
+&-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
 \right]\right\} - \left(\vec{\nabla}\cdot \vec{\upsilon}\right) f_{\rmn{e}}(p,t)
+- \vec{\nabla}\cdot \vec{F}_\rmn{stream}
 \nonumber\\
 &+& {{\partial^2 }\over{\partial p^2}}
 \left[
@@ -347,22 +368,41 @@ $\vec{\upsilon}$ is the gas velocity, $|dp/dt|$ represents radiative
 (r) and Coulomb (C) losses, $D_{pp}$ is the momentum space diffusion
 coefficient, and $Q_{\rmn{e}}$ denotes the injection rate of primary
 and secondary electrons in the ICM. The $\vec{\nabla}\cdot
-\vec{\upsilon}$ terms represent adiabatic gains and losses. During
-post-processing of our Coma-like cluster simulation, we solve the
-Fokker-Planck equation over a redshift interval from $z=5$ to 0. The
-simulated cluster undergoes a major merger over the last 1-2~Gyrs that
-injects large turbulent eddies. After about 1~Gyr those have decayed
-down to the scale needed to reaccelerate particles and the radio halo
-turns on shortly after. This delay naturally explains why giant radio
-halos are only seen in a fraction of all merging clusters. In all our
+\vec{\upsilon}$ terms represent adiabatic gains and losses \AP{and the
+  $\vec{\nabla}\cdot \vec{F}_\rmn{stream}$ terms represent
+  super-Alfv{\'e}nic CR streaming. For details about $F_\rmn{stream}$
+  please see \citet{wiener13}.} During post-processing of our
+Coma-like cluster simulation, we solve the Fokker-Planck equation over
+a redshift interval from $z=5$ to 0. The simulated cluster undergoes a
+major merger over the last 1-2~Gyrs that \AP{is thought to inject
+  large turbulent eddies. Following \citet{brunetti07,brunetti11}
+  \citep[see also][]{2004ApJ...614..757Y,2015ApJ...800...60M} we
+  assume that about one Gyr after core passage the fields have decayed
+  down to the smallest scales where reacceleration is most efficient
+  ($D_{pp}\sim k_\rmn{cut}$) and the radio halo turns on shortly
+  after. Note that the exact decay time of the turbulens is of minor
+  importance, since the thermal and CR quantities are very similar a
+  few 100 Myrs before and after $z=0$ where we have chosen to evaluate
+  the simulations.}  \sout{injects large turbulent eddies. After about
+  1~Gyr those have decayed down to the scale needed to reaccelerate
+  particles.} This delay naturally explains why giant radio halos are
+only seen in a fraction of all merging clusters. In all our
 calculations we assume that turbulent reacceleration efficiently
-accelerates particles for 650 Myrs (which is roughly the cascade time
-on which turbulence is damped) and that during this turbulent phase CR
-streaming and spatial diffusion can be neglected. In our \Mstream
-model, CR streaming and diffusion are incorporated separately during
-kinematically quiescent times that precede the merger. As a result,
-flat CRp profiles are produced on relatively short timescales ($\sim
-0.1-0.5$ Gyr).
+accelerates particles for $\tau_D\sim650$~Myrs (which is roughly the
+cascade time on which turbulence is damped) and that during this
+turbulent phase CR streaming and spatial diffusion can be
+neglected. In our \Mstream model, CR streaming and diffusion are
+incorporated separately during kinematically quiescent times that
+precede the merger. As a result, flat CRp profiles are produced on
+relatively short timescales ($\sim 0.1-0.5$ Gyr). \AP{This allows us
+  to implicitly solve for CR streaming in our calculations, where we
+  adopt a toy model that enforce a flat CRp profile at all quiescent
+  times \citep{wiener13}. We assume that CRs cannot stream
+  significantly past perpendicular $B$-fields at the accretion shock,
+  so that the total number of CRs is conserved within the virial
+  radius during the streaming process. Finally, since streaming is
+  much more efficient for the CRps, we can ignore this effect for the
+  CRes.}
 
 The time evolution of the spectral energy distribution of CRps,
 $f_{\rmn{p}}$, is similarly given by:
@@ -375,6 +415,7 @@ f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm C}
 \nonumber\\
 &-&\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right)
 \right]\right\} - \left(\vec{\nabla}\cdot \vec{\upsilon}\right) f_{\rmn{p}}(p,t)
+- \vec{\nabla}\cdot \vec{F}_\rmn{stream}
 \nonumber\\
 &+& {{\partial^2 }\over{\partial p^2}}
 \left[ D_{pp} f_{\rmn{p}}(p,t) \right] - {{f_{\rmn{p}}(p,t)}\over{\tau_{\rm had}(p)}}
@@ -386,6 +427,7 @@ accelerated CRps as a function of momentum $p$ and time $t$, and
 $\tau_{\rm had}$ is the timescale of hadronic losses that produce
 pions via CRp collisions with thermal protons of the ICM
 \cite[e.g.][]{brunetti11}.  
+
 
 \subsection{Turbulent reacceleration}
 
@@ -412,8 +454,7 @@ isotropizes the CR distribution function at the gyroscale and on the
 reacceleration time scale, which ensures sustained efficient
 reacceleration with time. The particle pitch-angle averaged
 momentum-diffusion coefficient of isotropic particles that couple to
-fast magnetosonic modes via TTD resonance is \cite{brunetti07}
-(Eqn. 47):
+fast magnetosonic modes via TTD resonance is \citep[][ Eqn. 47]{brunetti07}:
 \begin{eqnarray}
   D_{pp}(p,t) = \frac{\pi}{16} \frac{p^2}{c\,\rho}
   \left\langle\frac{\beta |B_k|^2}{16 \pi \,W}\right\rangle
@@ -435,37 +476,92 @@ magnetic field orientation is given by $\theta$, and
     |\cos \theta | }}
 \left[1+\left(\frac{\Vph}{c\,\cos{\theta}}\right)^2\right]^2.
 \end{equation}
-Here $V_\rmn{ph}$ is the phase velocity of the fast magnetosonic waves given
-approximately by the sound speed, $\Vph \sim c_\rmn{s}$. For a sound speed
-typical for the ICM of 1000~km/s, $I_\theta\approx5$. As in \cite{brunetti07},
-we initially assume that the velocity of turbulent eddies is $V_0\approx 0.47
-c_\rmn{s}$ throughout the cluster. This gives a turbulent acceleration time
-scale, $\tau_{pp} = p^2/4D_{pp}$, that is typically few 100 Myrs in the ICM.
+Here $V_\rmn{ph}$ is the phase velocity of the fast magnetosonic waves
+given approximately by the sound speed, $\Vph \sim c_\rmn{s}$. For a
+sound speed typical for the ICM of 1000~km/s, $I_\theta\approx5$. As
+in \cite{brunetti07}, we initially assume that the velocity of
+turbulent eddies is $V_0\approx 0.47 c_\rmn{s}$ throughout the
+cluster. This gives a turbulent acceleration time scale, $\tau_{D} =
+p^2/4D_{pp}$, that is typically few 100 Myrs in the ICM (see
+Tab.~\ref{tab:timescales} for more details).
 
-We adopt a simplified isotropic MHD turbulent spectrum for the fast
-modes per elemental range $dk$ of the form
+
+\AP{We focus on a scenario where the turbulence is injected at the
+  largest scale that is driven by the merging cluster and accreting
+  matter. The diffusion equation for isotropic MHD turbulence in
+  $k$--space is given by}
+\begin{eqnarray}
+&{{\partial {\mathcal W}(k,t) }\over{\partial t}}
+=
+{{\partial}\over{\partial k}}
+\left[
+k^2 D_{kk}
+{{\partial}\over{\partial k}}
+\left( {{ {\mathcal W}(k,t) }\over{k^2}} \right)
+\right]
+- \sum_i \Gamma_i (k,t) {\mathcal W}(k,t)
++ I(k,t)\nonumber\\
+&
+\label{modes_kinetic}
+\end{eqnarray}
+\AP{where we assume that the volumetric injection rate of turbulence
+  $I(k,t)$ is constant over time with a fixed rate $I_0$ so that
+  $I(k,t) \equiv I(k) = I_0\,\delta (k - k_o)$. The different damping
+  terms are given by $\Gamma_i(k,t)$ and $D_{kk}$ is the wave--wave diffusion
+  coefficient of magnetosonic waves in the $k$--space represented by
+  \begin{equation}
+    \label{eq:Dkk}
+    D_{kk} \approx \Vph k^4
+    \left(\frac{\mathcal{W}(k)}{\rho\,\Vph^2}\right)\,.
+  \end{equation}
+}
+
+We adopt a simplified isotropic MHD turbulent spectrum \AP{based on
+Kraichnan's picture} for the fast modes per elemental range $dk$ of
+  the form
 \begin{equation}
   \label{eq:Wk}
   \mathcal{W}(k) =
 \sqrt{2/7\,I_0\,\rho\,\langle \Vph \rangle}\,k^{-3/2},
 \end{equation}
-for $k_0<k<k_\rmn{cut}$, where we assume an injection scale for the
-turbulence, $k_0= 2\pi/(100~\mbox{kpc})$. The volumetric injection
-rate of turbulent energy, $I_0$, is fixed by requiring that the total
-turbulent energy on the largest scales $E_\rmn{turb}=\int \int
-\mathcal{W}(k) \rmn{d}k \rmn{d}V \approx 0.2 E_\rmn{th}$, where
-$E_\rmn{th}$ is the total thermal energy \citep{brunetti07,brunetti11}
-within the radio halo. In this work we investigate different spatial
-models for injected turbulence. We assume that turbulent energy
-density $\epsilon_\rmn{turb} \propto
-\epsilon_\rmn{th}^{\alpha_\rmn{tu}}$, where $\alpha_\rmn{tu}= 0.66$
-for \Mflatturb, $\alpha_\rmn{tu}= 0.81$ for \Mstream, and
-$\alpha_\rmn{tu}= 0.88$ for \Mprimary (note that in previous work on
-the Coma cluster, $\alpha_\rmn{tu}= 1$ was adopted \citep{brunetti12},
-which together with the different distributions for seed CRes
-constitute the main differences compared to our work). Our flatter
-turbulent profiles are motivated by fits to cosmological simulations
-\citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2012ApJ...758...74B}
+for $k_0<k<k_\rmn{cut}$. \AP{Here we adopt an injection scale of the
+  turbulens, $k_0= 2\pi/(1~\mbox{Mpc})$, motivated by recent
+  state-of-art simulations
+  \citep{2009A&A...504...33V,2011A&A...529A..17V,2015ApJ...800...60M}. \sout{At
+    the same time we note that there is a large uncertainty in $k_0$,
+    that is degenerate with the level of turbulence in compressible
+    modes ($X_\rmn{tu}$) which is also highly uncertain. Increasing
+    one of the parameters, allow us to decrease the other in order to
+    keep $D_{pp}$ at the value needed to explain
+    observations.}}\sout{, where we assume an injection scale for the
+  turbulence, $k_0= 2\pi/(100~\mbox{kpc})$.} \AP{The profile of
+  injected turbulence is also highly uncertain, however we assume it
+  correlates to the thermal energy density to some power of the
+  merging clusters. Hence we assume volumetric injection rate of
+  turbulent energy, $I_0\propto \epsilon_\rmn{th}^{\alpha_\rmn{tu}}$,
+  and determine the normalization by requiring that the turbulent
+  energy in compressible modes $E_\rmn{turb}=\int \int \mathcal{W}(k)
+  \rmn{d}k \rmn{d}V = X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is
+  the total thermal energy. We adopt a turbulent energy
+  ratio\footnote{Simulations show that the compressible modes
+    contribute a factor $0.2-0.4$ to the total turbulent energy
+    \citep{2013ApJ...771..131B,2015ApJ...800...60M}. Furthermore, the
+    total turbulent energy is typically $10-30$\% of the thermal
+    energy in a cluster which is in agreement with our adopted value
+    of $X_\rmn{tu}$.}  $X_\rmn{tu}=0.06$ within the radio halo.} In
+this work we investigate different spatial models for injected
+turbulence. With the above choice of normalization, the turbulent
+energy density becomes $\epsilon_\rmn{turb} \propto
+\epsilon_\rmn{th}^{\alpha_\rmn{tu}}/T^{1/4}$, where $T$ is the
+temperature of the gas, $\alpha_\rmn{tu}= 0.67$ for \Mflatturb,
+$\alpha_\rmn{tu}= 0.82$ for \Mstream, and $\alpha_\rmn{tu}= 0.88$ for
+\Mprimary. Note that in previous work on the Coma cluster,
+$\epsilon_\rmn{turb} \propto \epsilon_\rmn{th}$ was adopted which
+roughly corresponds to $\alpha_\rmn{tu}= 1$ \citep{brunetti12} and
+together with the different distributions for seed CRes constitute the
+main differences compared to our work. Our flatter turbulent profiles
+are motivated by fits to cosmological simulations
+\citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V,2012ApJ...758...74B}
 and the range indicates uncertainties of the turbulent profile in
 Coma. Future observations (by Astro-H) and simulations will help to
 clarify this issue. Provided dissipation of turbulence in the ICM is
@@ -473,14 +569,7 @@ collisionless, turbulent cascades of compressible modes become
 suppressed when thermal and relativistic particles resonantly interact
 with magnetosonic waves via TTD on a timescale $\Gamma^{-1}$ that
 approaches the cascading timescale given by $\tau_{kk} \approx
-k^2/D_{kk}$. Here the wave-wave diffusion coefficient of magnetosonic
-modes is given by
-\begin{equation}
-\label{eq:Dkk}
-D_{kk} \approx \Vph k^4
-\left(\frac{\mathcal{W}(k)}{\rho\,\Vph^2}\right).
-\end{equation}
-Thus, the cascade is suppressed for wave numbers above
+k^2/D_{kk}$. Thus, the cascade is suppressed for wave numbers above
 \begin{equation}
 \label{eq:kc}
   k_\rmn{cut} \approx \frac{81}{14} \frac{I_0}{\rho \langle \Vph \rangle}
@@ -509,31 +598,108 @@ magnetic field strengths derived from Faraday rotation observations of
 Coma \citep{bonafede10} in combination with the density profile
 derived from X-ray measurements \citep{1992A&A...259L..31B}.
 
+\AP{For reference we show in \ref{tab:timescales} both the thermal
+  quantities and the timescales for CR cooling and (re)acceleration
+  for three different spatial regions of the RH. Interestingly the
+  reacceleration timescale $\tau_D$ is very similar between our three
+  models, where the difference comes from turbulent profile
+  parameterized with $\alpha_\rmn{tu}$. This implies that even small
+  differences in the turbulent profile could impact the seed CRs
+  significantly.}
+
+\begin{table}
+  \caption{Thermal quantities and timescales for different spatial
+    regions in a Coma like cluster.}
+\begin{tabular}{l c  c c}
+\hline
+\hline
+& & spatial regions & \\
+ & $0.1\,\RH^{(2)}$ &  $0.3\,\RH^{(2)}$  &  $\RH^{(2)}$   \\
+\hline
+THERMAL QUANTITIES$^{(1)}$ & & & \\
+$\rho$ [$10^{-27}$ g cm$^{-3}$] & 3.0 & 1.6 & 0.15 \\
+$T$ [$10^{8}$ K] & 1.4 & 1.0 & 0.58 \\
+\hline
+TIMESCALES$^{(1)}$ & & & \\
+$\tau_\rmn{D}$(\Mprimary)$^{(3)}$ [Gyr] & 0.29 & 0.36 & 0.52 \\
+$\tau_\rmn{D}$(\Mstream)$^{(3)}$  [Gyr] & 0.29 & 0.36 & 0.51 \\
+$\tau_\rmn{D}$(\Mflatturb)$^{(3)}$  [Gyr] & 0.29 & 0.37 & 0.49 \\
+$\tau_\rmn{IC/sync}(P=10^4\,m_ec)^{(4)}$ [Gyr] & 0.11 & 0.10 & 0.09 \\
+$\tau_\rmn{pp}(P=100\,m_pc)^{(5)}$ [Gyr] & 2.4 & 4.5 & 44 \\
+$\tau_\rmn{coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.16 \\
+\hline
+\end{tabular}
+\begin{quote}
+ Notes: \\ 
+ (1) Median quantities from our simulated post-merging cluster g72a.\\
+ (2) Radius of the giant radio halo in Coma where $\RH\approx0.6\,R_{200}$.\\
+ (3) Fermi-II reacceleration for both electrons and protons at all energies.\\
+ (4) Inverse Compton and Synchrotron cooling for electrons.\\
+ (5) Catastrophic losses for protons.\\
+ (6) Coulomb cooling for electrons (protons factor $m_e/m_p$ smaller).\\
+
+ \label{tab:timescales}
+  \end{quote}
+\end{table} 
+
+
 % --- section: Results and discussion --- %
 
 \section{Results and Discussion} 
 \label{sec:results}
+\AP{In this section we show that our three models individually
+  reproduce the observed Coma radio halo without violating gamma-ray
+  bounds. The level of emission is mainly driven by how efficient the
+  CRs are reaccelerated and for how long. The diffusion constant,
+  $D_\rmn{pp}\propto I_0/\rho c_s \propto
+  X_\rmn{tu}^2k_0\epsilon_\rmn{tu}^{\alpha_\rmn{tu}-1}\sqrt{T}$, where
+  we adopt the same level of compressible turbulence,
+  $X_\rmn{tu}=0.06$, for all models. The reaccelerated CRs are
+  super-exponentially dependent on this parameter as long as $\tau_D >
+  \tau_\rmn{cl}$, where $\tau_\rmn{cl}$ represent the duration of
+  reacceleration of the merger which we assume to be 650~Myrs
+  long. Note that a fixed $D_\rmn{pp}$ allow us to relate
+  $\tau_\rmn{cl} \propto X_\rmn{tu}^2 \propto k_0$ that ultimately set
+  the normalization for $D_\rmn{pp}$. We also exploit the large
+  uncertainty in the turbulent profile and adjust $\alpha_\rmn{tu}$
+  for each model so that the CRs have the correct spatial profile to
+  match the radio emission. The shape of the spectrum for each of
+  model is more complicated and is determined both from reacceleration
+  and as well as the gains and losses during the formation of the
+  cluster. It depends only weakly on the specifics of the CR injection
+  at the shocks (where the Mach number distribution of the shocks is
+  the most important quantity). The normalization of the spectrum is
+  mainly determined from the maximum acceleration efficiency (together
+  with the uncertain parameters $X_\rmn{tu}$, $\tau_\rmn{cl}$, and
+  $k_0$). Given the freedom in the turbulens, it might not be
+  surprising that we match the radio profile in Coma. Although,
+  matching the spectrum without violating gamma-ray bounds for each of
+  our three models is more surprising and is not a consequence of
+  parameter fitting. We believe that it is ultimately a consequence of
+  the adopted physics and hint that reacceleration is a viable
+  explanation for giant radio halos. Below we discuss in more detail
+  the different emission components of Coma.}
 
+\subsection{Gamma-rays}
 After turbulent reacceleration, the volume-weighted, relative CRp
-energy density and CRp number density inside the RH for \Mflatturb
-(\Mstream), are found to be 3 (2) \% and $3.0\times10^{-8}$
-($4.5\times10^{-8}$), respectively. As we will see later, these
+energy density and relative CRp number density inside the RH for
+\Mflatturb (\Mstream), are found to be 2 (3) \% and $2\times10^{-8}$
+($5\times10^{-8}$), respectively. As we will see later, these
 densities are just of the right order of magnitude to reproduce radio
 observations in the Coma cluster. The gamma-ray emission from CRps
 that produce decaying neutral pions could be substantial if the CRps
 are reaccelerated efficiently enough, hence it is interesting to
 estimate this emission for our models and compare to upper limits. We
 predict the gamma-ray emission from \Mflatturb (\Mstream) with
-$F_\gamma(>500\,\rmn{MeV})=4.8\times10^{-10} (2.3\times10^{-10})
-\mathrm{ \,ph\, s}^{-1}\mathrm{cm}^{-2}$. The fluxes from these
-models are slightly larger than in \cite{brunetti12}, where the
-differences comes from our steeper CRp profiles in addition to
-simulation based formalism we rely on that accounts for both Coulomb
-and hadronic losses during the build up of the CR distribution in
-contrast to the scaling relations adopted in their
-paper. Interestingly the gamma-ray flux from both our scenarios are
-just below recent Fermi-LAT limits derived from a gamma-ray profile
-similar to \Mflatturb where
+$F_\gamma(>500\,\rmn{MeV})=4\times10^{-10} (5\times10^{-10}) \mathrm{
+  \,ph\, s}^{-1}\mathrm{cm}^{-2}$. The fluxes from these models are
+slightly larger than in \cite{brunetti12}, where the differences comes
+from our steeper CRp profiles in addition to simulation based
+formalism we rely on that accounts for both Coulomb and hadronic
+losses during the build up of the CR distribution in contrast to the
+scaling relations adopted in their paper. Interestingly the gamma-ray
+flux from both our scenarios are just below recent Fermi-LAT limits
+derived from a gamma-ray profile similar to \Mflatturb where
 $F_\gamma(>500\,\rmn{MeV})<5.3\times10^{-10} \mathrm{ \,ph\,
   s}^{-1}\mathrm{cm}^{-2}$ \footnote{Fabio Zandanel, private
   communication. See also
@@ -542,10 +708,12 @@ $F_\gamma(>500\,\rmn{MeV})<5.3\times10^{-10} \mathrm{ \,ph\,
 distribution is relatively steep ($\alpha_{\rmn{p}}\sim2.6$) for the
 CRp energies $E \gtrsim 10$~GeV that are relevant for the injection of
 radio-emitting secondary CRes. The steep spectrum is ultimately a
-consequence of our test particle model for Fermi-I acceleration
+consequence \AP{of the shock history of the simulated cluster, with a
+  weak dependence on} our test particle model for Fermi-I acceleration
 \citep{pinzke13}, where we steepen the spectral index to avoid
 acceleration efficiencies above $\zeta_{\rmn{p}} \sim 10\%$.
 
+\subsection{Radio profile}
 In Fig.~\ref{fig:sync_profile}, we find that all three scenarios in
 which the seeds undergo Fermi-II reacceleration can reproduce the Coma
 RH profile at 352~MHz. In the panel {\it Brunetti et al. (2012)} we
@@ -557,7 +725,7 @@ possible to reproduce observations in both frequencies in any
 model. Note that decreasing acceleration efficiency with radius does
 not change this conclusion much because of the weak radial dependence
 of $D_\rmn{pp}(R)\propto
-\epsilon_\rmn{th}(R)^{(\alpha_\rmn{tu}+1)/2}/\sqrt{T(R)}$. This
+\epsilon_\rmn{th}(R)^{\alpha_\rmn{tu}-1}\sqrt{T(R)}$. This
 signals that the problem is generic and requires either additional
 modifications to the plasma physics of acceleration or a better
 understanding of potential observational systematics. In addition
@@ -595,41 +763,42 @@ stronger cutoff in the particle energy spectrum.
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
    \begin{center}\Large{\Mprimary:}\\
-     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.Pri.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI088.140.v5.halo.test5.eps}
+     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.Pri.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI088.140.v6.eps}
    \end{center}
 \end{minipage}
 \begin{minipage}{1\columnwidth}
    \begin{center}\Large{\Mstream:}\\
-     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.flatCR.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI081.flatCR.140.v5.halo.test5.eps}
+     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.flatCR.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI082.flatCR.140.v6.eps}
    \end{center}
 \end{minipage}
 \\
 \begin{minipage}{1\columnwidth}
   \begin{center}\Large{\Mflatturb:}\\ 
-    \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.I0.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI066.140.v5.halo.test5.eps}
+    \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.I0.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI067.140.v6.eps}
   \end{center}
 \end{minipage}
 \begin{minipage}{1\columnwidth}
    \begin{center}\Large{\it Brunetti et al. (2012)}:\\
-     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.Brunetti.g72a.Rad14.2400p.z0.NL.xKR.eb23.140.v5.halo.test5.eps}
+     \includegraphics[width=\columnwidth]{figures/sbright.nu.DIIcomp.Brunetti.g72a.Rad14.2400p.z0.NL.xKR.eb23.140.v6.eps}
    \end{center}
 \end{minipage}
 \caption{Radio surface brightness profiles of Fermi-II reaccelerated
   CR electrons of a simulated post-merging cluster similar to Coma. We
-  compare profiles at 352~MHz (blue lines and crosses \citet{brown11})
-  to those at 1.4~GHz (green lines and crosses \citet{deiss97}). The
-  red crosses show the reprocessed 1.4~GHz data, where a zero level of
-  about 10~\% of the central value is adopted. The solid lines show
-  predicted emission from a reaccelerated fossil population, while
-  dotted lines show emission from a fossil population without
-  reacceleration. The panels show the emission of our models \Mprimary
-  (upper left panel), \Mstream (upper right panel), \Mflatturb (lower
-  left panel), and simulated secondary electrons together with
-  previous estimates \citet{brunetti12} for the Coma cluster (lower
-  right panel).}
+  compare profiles at 352~MHz \citep[blue lines and
+    crosses,][]{brown11} to those at 1.4~GHz \citep[green lines and
+    crosses,][]{deiss97}. The red crosses show the reprocessed 1.4~GHz
+  data, where a zero level of about 10~\% of the central value is
+  adopted. The solid lines show predicted emission from a
+  reaccelerated fossil population, while dotted lines show emission
+  from a fossil population without reacceleration. The panels show the
+  emission of our models \Mprimary (upper left panel), \Mstream (upper
+  right panel), \Mflatturb (lower left panel), and simulated secondary
+  electrons together with previous estimates \citep{brunetti12} for
+  the Coma cluster (lower right panel).}
   \label{fig:sync_profile}
 \end{figure*}
 
+\subsection{Radio spectrum}
 In Fig.~\ref{fig:sync_spectrum} we show that our three models that
 include Fermi-II reacceleration can individually reproduce the
 convexly curved total radio spectrum found in the Coma cluster. Seed
@@ -638,8 +807,8 @@ reacceleration have a power-law spectrum in disagreement with
 observations. In order to match both the spatial and spectral profiles
 in Coma, we adopt an acceleration efficiency for the strongest shocks
 in our three models \Mprimary, \Mstream, and \Mflatturb to
-$\zeta_{\rmn{e}} <0.002$, $\zeta_{\rmn{p}} < 0.1$, and
-$\zeta_{\rmn{p}}<0.025$, respectively. Following the Mach number
+$\zeta_{\rmn{e}} <0.003$, $\zeta_{\rmn{p}} < 0.1$, and
+$\zeta_{\rmn{p}}<0.03$, respectively. Following the Mach number
 ($\mathcal{M}$)-dependence of the acceleration efficiency suggested in
 \cite{pinzke13}, the efficiency in weak shocks ($\mathcal{M}\sim
 2.5-3.5$) that dominates the CR distribution function, has an
@@ -656,28 +825,33 @@ different simulated clusters.
 
 While the radio surface brightness has an approximate linear
 dependence on the acceleration efficiency, it has a strong non-linear
-dependence on the level of turbulence. Below a critical level ($X =
-E_\rmn{turb}/E_\rmn{th} \sim 0.15$ in our fiducial model), turbulent
-reacceleration is negligible, while it rises sharply above this
-threshold. For instance, for $X>0.15$, a factor 2 change in $X$
-changes the radio surface brightness by $\sim 10-100$. In principle
-this threshold behavior allows us to provide a strict lower bound on
-turbulence in radio halos. An even more stringent bound on $X$ can be
-inferred from combining radio observations with the gamma-ray
-observations where the predicted fluxes from both \Mstream and
-\Mflatturb are close to the upper limits set by Fermi-LAT. If $X$ is
-smaller than in our adopted models (where we assume $X=0.2$), then the
-efficiency of DSA has to be larger than $\zeta_\rmn{p}\sim 0.1$ for
-the secondary CRes to reproduce the radio observations. However, since
-the turbulent reacceleration acts on both the secondary CRes and the
-CRps, while $\zeta_\rmn{p}$ only affects the CRps, these models would
-produce too much gamma-rays. Hence we conclude that $X\gtrsim0.2$ if
-all other parameters are kept fixed. We will explore this parameter
-space further in future work.
+dependence on the level of compressible turbulence. Below a critical
+level ($X_\rmn{thres,tu} = 
+\frac{400\,\rmn{Myrs}}{\tau_\rmn{cl}} X_\rmn{tu}\approx 0.04$ in our fiducial model),
+turbulent reacceleration is negligible, while it rises sharply above
+this threshold. For instance, for $X_\rmn{tu}\gtrsim0.04$, a factor 2 change
+in $X_\rmn{tu}$ changes the radio surface brightness by $\sim
+10-100$. In principle this threshold behavior allows us to provide a
+strict lower bound on turbulence in radio halos. An even more
+stringent bound on $X_\rmn{tu}$ can be inferred from combining radio
+observations with the gamma-ray observations where the predicted
+fluxes from both \Mstream and \Mflatturb are close to the upper limits
+set by Fermi-LAT. If $X_\rmn{tu}$ is smaller than in our adopted
+models (where we assume $X_\rmn{tu}=0.06$), then the efficiency of DSA
+has to be larger than $\zeta_\rmn{p}\sim 0.1$ for the secondary CRes
+to reproduce the radio observations. However, since the turbulent
+reacceleration acts on both the secondary CRes and the CRps, while
+$\zeta_\rmn{p}$ only affects the CRps, these models would produce too
+much gamma-rays. Hence we conclude that $X_\rmn{tu}\gtrsim0.06$ if all
+other parameters are kept fixed. \AP{Although, we caution the reader
+  to take this limit too stringent since there are degeneracies between
+  the uncertain parameters
+  $X_\rmn{tu}\propto\sqrt{\tau_\rmn{D}}\propto \sqrt{k_0}$.} We will
+explore this parameter space further in future work.
 
 \begin{figure*}
-  \includegraphics[width=1.0\columnwidth]{figures/sync.spec.pri.g72a.140.v5.halo.test5.eps}
-  \includegraphics[width=1.0\columnwidth]{figures/sync.spec.sec.g72a.140.v5.halo.test5.eps}
+  \includegraphics[width=1.0\columnwidth]{figures/sync.spec.pri.g72a.140.v6.eps}
+  \includegraphics[width=1.0\columnwidth]{figures/sync.spec.sec.g72a.140.v6.eps}
   \caption{Radio synchrotron spectra. Lines are derived from
     simulations, while the black crosses are compiled from
     observations \citet{2010PhDT.......259P}. The solid lines show the
@@ -696,17 +870,17 @@ space further in future work.
 \section{Conclusions}
 \label{sec:conclusions}
 
-The standard reacceleration model for radio halos (RHs) requires
-a population of seed electrons to undergo turbulent
+The standard reacceleration model for radio halos (RHs) requires a
+population of seed electrons to undergo turbulent
 reacceleration. These seeds are generally thought to be secondary
-electrons from hadronic cosmic ray proton (CRp) interactions. In
-this work we use cosmological simulations to derive a population of
-seed CR protons originating from structure formation shocks and merger
-shocks during the cluster build up. The resulting secondary population
-is inconsistent with RH observations. We propose three possible
-solutions that all produce gamma-ray emission below current upper
-limits and that reproduce both, the spectrum and the surface
-brightness profiles of the Coma radio halo: 
+electrons from hadronic cosmic ray proton (CRp) interactions. In this
+work we use cosmological simulations to derive a population of seed CR
+protons originating from structure formation shocks and merger shocks
+during the cluster build up. The resulting secondary population is
+inconsistent with RH observations. We propose three possible solutions
+where all reaccelerated CRs produce gamma-ray emission below current
+upper limits. Additionally, they reproduce both the spectrum and the
+surface brightness profiles of the Coma radio halo:
 
 \begin{enumerate}
 \item {\bf Model {\em M-primaries}.} If indeed the acceleration
@@ -732,13 +906,14 @@ produce the observed radio emission. In addition proton-proton
 collisions produce neutral pions that decay into gamma rays. Since
 turbulent reacceleration acts on both CRes and CRps, while the DSA
 acceleration efficiency ($\zeta_p$) only acts on the CRps, radio
-observations fix the relation between $X$ (the ratio of the total
-turbulent energy to the thermal energy) and the acceleration
-efficiency. With the addition of gamma-ray constraints from Fermi-LAT,
-we can derive a lower limit to $X\gtrsim0.2$ and a upper limit to the
-acceleration efficiencies of $\zeta_p\lesssim 10\%$ ($\zeta_p\lesssim
-2.5\%$) for the two models, respectively, for our current choices of
-other parameters.
+observations fix the relation between $X_\rmn{tu}$ (the ratio of the
+total turbulent energy in compressional modes to the total thermal
+energy) and the acceleration efficiency. With the addition of
+gamma-ray constraints from Fermi-LAT, we can derive a lower limit to
+$X_\rmn{tu}\gtrsim0.06$ and a upper limit to the acceleration
+efficiencies of $\zeta_p\lesssim 10\%$ ($\zeta_p\lesssim 3\%$) for
+the two models, respectively, for our current choices of other
+parameters.
 
 How could we distinguish the different possibilities of a dominating
 primary or secondary seed population of electrons observationally?
