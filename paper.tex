@@ -123,7 +123,8 @@ non-thermal processes in the ICM.
 There have been two competing models proposed to explain RHs.  The
 radio emitting electrons in the ``hadronic model'' are produced in
 inelastic (hadronic) CR proton interactions with protons of the
-ambient thermal ICM
+ambient thermal ICM, which generates pions that eventually decay into
+electrons and positrons, depending of the charge of the initial pion
 (\citealp{1980ApJ...239L..93D,1999APh....12..169B,2001ApJ...562..233M,
   2004A&A...413...17P,2008MNRAS.385.1211P,ensslin11}). CR protons and
 heavier nuclei may have been accelerated and injected into the ICM by
@@ -166,8 +167,15 @@ inverted) spatial profile \citep{brunetti12}, in contrast with the
 thermal plasma whose energy density declines steeply with radius. In
 \AP{the left panel of} Fig.~\ref{fig:Edens} we show that such a
 distribution is not predicted by cosmological simulations \cite[see
-  also][]{pinzke10,2014MNRAS.439.2662V}. \CP{Explain Fig 1: why is
-  simulated profile steep? transport, secondaries, \ldots}
+  also][]{pinzke10,2014MNRAS.439.2662V}. \CP{If CRps are predominantly
+  advected with the cluster plasma, their distribution will be peaked
+  towards the cluster center and shows a similar characteristics as
+  the thermal plasma. As a consequence, the distribution of secondary
+  electrons and the resulting radio synchrotron emission is also
+  peaked since the hadronic reaction is a two-body scattering process
+  (see Fig.~Fig.~\ref{fig:Edens}). Hence, the simulated emission falls
+  short of the observed extended and flat radio profile of the Coma
+  cluster.}
 
 \begin{figure*}
   \includegraphics[width=1.0\columnwidth]{fCR.radius.coma.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI067.DII.140.v6.eps}
@@ -200,15 +208,24 @@ distribution is not predicted by cosmological simulations \cite[see
 
 Indeed, arriving at a seed population with the required
 characteristics is highly constraining, and has the potential to teach
-us much about the origin of CRps/CRes in clusters.  \CP{We use our
-  simuations to generate distribution function of seed population,
-  resolve injection and loss processes for CRs and integrate the
-  Fokker-Planck equation along Lagrangian particle trajectories to
-  obtain a momentum spectrum of CRs. However, we assume a simplified
-  turbulent model. So our approach is orthogonal (and complementary)
-  to e.g. Miniati 2015.}  \AP{For both the turbulence and magnetic
-  fields we adopt stationary models, parameterized in terms of thermal
-  quantities derived from our simulations.}
+us much about the origin of CRps/CRes in clusters.  \CP{In this work,
+  we use our hydrodynamical zoom simulations of galaxy clusters in a
+  cosmological setting to follow the distribution functions of seed
+  CRp and CRe population and integrate the Fokker-Planck equation of
+  CR transport along Lagrangian particle trajectories. We resolve
+  injection at structure formation shocks, account for various loss
+  processes of CRs, and -- most importantly -- model second-order
+  Fermi acceleration by CR interactions with magnetised
+  turbulence. However, we assume a simplified and stationary model for
+  magnetic fields and turbulence. We do not account for the
+  time-varying energy density in compressible waves, which are thought
+  to be necessary for the acceleration process
+  \citep{brunetti07,brunetti11}, as the cluster merger proceeds.  So
+  our approach is orthogonal (and complementary) to e.g.,
+  \citealp{2015ApJ...800...60M}. This enables us to vary parameters
+  associated with the unknown continuation of magneto-hydrodynamical
+  turbulence below the MHD scale and the overall amplitude of
+  compressible waves.}
 
 In this paper we consider three new scenarios that
 individually or combined can reproduce the observed radio profiles and
@@ -434,18 +451,17 @@ pions via CRp collisions with thermal protons of the ICM
 \subsection{Turbulent reacceleration}
 
 We incorporate momentum diffusion for electrons and protons from
-transit-time-damping (TTD) resonance with compressible
-magneto-hydrodynamic (MHD) turbulence, to model Fermi-II
-reacceleration \citep{brunetti07,brunetti11}. The TTD resonance
-requires the wave frequency $\omega=k_\parallel\upsilon_\parallel$,
-where $k_\parallel$ and $\upsilon_\parallel$ are the parallel
-(projected along the magnetic field) wavenumber and particle velocity,
-respectively. This implies that the particle transit time across the
-confining wave region matches the wave period,
-$\lambda_{\parallel}/v_{\parallel}=T$. Note, the CRs' gyroradius does
-not enter the resonance condition. Hence the CRs that are in resonance
-with compressible waves experience Fermi-II acceleration
-irrespectively of the length scale of the perturbation.
+transit-time-damping (TTD) resonance with compressible MHD turbulence,
+to model Fermi-II reacceleration \citep{brunetti07,brunetti11}. The
+TTD resonance requires the wave frequency
+$\omega=k_\parallel\upsilon_\parallel$, where $k_\parallel$ and
+$\upsilon_\parallel$ are the parallel (projected along the magnetic
+field) wavenumber and particle velocity, respectively. This implies
+that the particle transit time across the confining wave region
+matches the wave period, $\lambda_{\parallel}/v_{\parallel}=T$. Note,
+the CRs' gyroradius does not enter the resonance condition. Hence the
+CRs that are in resonance with compressible waves experience Fermi-II
+acceleration irrespectively of the length scale of the perturbation.
 
 However, the resonance changes the component of particle momentum
 parallel to seed magnetic fields, which over time leads to increasing
