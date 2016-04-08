@@ -28,6 +28,7 @@
 \newcommand{\RH}{R_\rmn{RH}}
 \newcommand{\bvel}{\ensuremath{\boldsymbol{\varv}}}
 \newcommand{\bnabla}{\ensuremath{\boldsymbol{\nabla}}}
+\newcommand\eb{\epsilon_\rmn{B}}
 
 %\voffset.6in 
 
@@ -285,6 +286,97 @@ calculations to radio and gamma-ray observations of Coma.
 
 \subsection{Acceleration}
 
+\AP{We use a simple test-particle model for the CR acceleration and
+  injection, where each shock inject CRs that trace a power-law in
+  momentum,
+  \begin{equation}
+    f(p,t) = C(t)\,p^{\alpha_\rmn{inj}}\,,
+  \end{equation}
+  determined by the normalization $C(t)$ and the spectral index
+  $\alpha_\rmn{inj}=\frac{(\gamma_\rmn{ad}+1)\mathcal{M}^2}{(\gamma_\rmn{ad}-1)\mathcal{M}^2+2}$
+  that depends on the adiabatic index $\gamma_\rmn{ad} = 5/3$ and the
+  Mach number of the shock $\mathcal{M}$. It is given by the ratio of
+  the upstream velocity ($u_2$) and the sound speed ($c_s$). The CR
+  number density and CR energy density are derived from $n_\rmn{CR} =
+  \int_{p_\rmn{inj}}^\infty \dd p\, f(p)$ and $\epsilon_\rmn{CR} =
+  \int_{p_\rmn{inj}}^\infty \dd p\, f(p) \,T(p)$, respectively, where
+  $T(p) = (\sqrt{1+p^2} -1)\, m\,c^2$ is the kinetic energy of a
+  particle with momentum $p$. We adopt a fit to Monte Carlo
+  simulations of the thermal leakage process that relates the momentum
+  of injected protons ($p_\rmn{inj}$) to the thermal energy
+  ($p_\rmn{th}$) of the shocked plasma \citep{kang11}:
+  \begin{eqnarray}
+  \label{eq:qinj}
+  p_\rmn{inj} &=& x_\rmn{inj} p_\rmn{th} = x_\rmn{inj} \sqrt{\frac{2 \,k T_2}{m c^2}}\,, \nonumber \\
+  \rmn{where}\quad x_\rmn{inj} &\approx& 1.17 \frac{u_2}{p_{\rmn th}\,c} \left(1+
+  \frac{1.07}{\epsilon_B}\right) \left(\frac{\mathcal{M}}{3}\right)^{0.1}\,.
+  \end{eqnarray}
+Here $\eb = B_0/B_{\perp}$, $B_0$ is the amplitude of the downstream
+MHD wave turbulence, and $B_{\perp}$ is the magnetic field along the
+shock normal. The physical range of $\eb$ is quite uncertain due to
+complex plasma interactions. In this paper, we adopt $\eb = 0.23$,
+which we will later see corresponds to a conservative maximum energy
+acceleration efficiency for protons of $10\%$. To derive the
+acceleration efficiency, $\zeta_{\rmn inj}$, we first have to infer the
+particle injection efficiency, which is the fraction of downstream
+thermal gas particles which experience diffusive shock acceleration
+\citep[for details see ][]{pinzke13},
+\begin{equation}
+  \label{eq:eta}
+  \eta_\rmn{CR,lin} =
+  \frac{4}{\sqrt{\upi}}\,\frac{x_\rmn{inj}^3}{\alpha_\rmn{inj}-1}\,
+  \rmn{e}^{-x_\rmn{inj}^2}.
+\end{equation}
+The particle injection efficiency is a strong function of
+$x_\rmn{inj}$ that depends on both $\mathcal{M}$ and $\eb$. The
+energy density of CRs that are injected and accelerated at the shock
+(neglecting the CR back reaction on the shock) is given by
+\begin{equation}
+\label{eq:CR_energy} 
+  \Delta\epsilon_\rmn{CR,lin} =
+  \eta_\rmn{CR,lin}(\mathcal{M})\,T_\rmn{CR}(\mathcal{M},p_\rmn{inj})\,n_\rmn{th}(T_2),
+\end{equation}
+and the CR energy injection and acceleration efficiency is:
+\begin{equation}
+  \zeta_\rmn{lin} =
+  \frac{\Delta\epsilon_\rmn{CR,lin}}{\Delta\epsilon_\rmn{diss}},
+   \quad\mbox{where}\quad
+  \Delta\epsilon_\rmn{diss} = \epsilon_\rmn{th2} - \epsilon_\rmn{th0}\,\left(\frac{\rho_2}{\rho_0}\right)^{\gamma_\rmn{ad}}\,.
+\label{eqn:energy_frac}  
+\end{equation}
+The dissipated energy density in the downstream regime,
+$\Delta\epsilon_\rmn{diss}$, is given by the difference of the thermal
+energy densities in the pre- and post-shock regimes, corrected for the
+adiabatic energy increase due to gas compression.}
+
+\AP{We limit the acceleration efficiency to $\zeta_{\rmn max}$ by
+  steepening the spectral index of the injected population
+  $\alpha_\rmn{inj}$ to $\alpha_\rmn{sub}$ so that $\zeta_{\rmn lin}
+  \leq \zeta_{\rmn max}$ is always fulfilled. The slope
+  $\alpha_\rmn{inj}$ impact $\zeta_{\rmn inj}$ via the mean energy per
+  particle given by $T_\rmn{CR} = \epsilon_\rmn{CR}/n_\rmn{CR}$. This
+  procedure conserves energy and is motivated by models of non-linear
+  shock acceleration where a sub-shock with a lower compression ratio
+  (and hence steeper spectral index) forms
+  \citep[e.g.,][]{2000ApJ...540..292E}. Given our assumed $\eb=0.23$,
+  we find that for strong shocks where $\alpha \lesssim 2.3$ the
+  spectral slope is steepened by a maximum of $\sim 10$ per cent in
+  low temperature regimes ($kT\sim 0.1$~keV), while the steepening is
+  much smaller for high temperature regimes ($kT\sim 10$~keV) that are
+  more relevant for clusters. Since $p_{\rm inj}$ remains fixed, so
+  does the CR number density $n_\rmn{CR}$. Hence we can solve for the
+  renormalized normalization constant $C_\rmn{sub}$ using $n_\rmn{CR}$
+  and Eqn.~\ref{eq:eta}:
+\begin{equation}
+  \label{eq:Cp_sub}
+  C_\rmn{sub}=\eta_\rmn{CR,lin}\,(\alpha_\rmn{sub}-1)\,p_\rmn{inj}^{\alpha_\rmn{sub}-1}\,,
+\end{equation}
+where the new distribution function is given by $f(p,t)= C_\rmn{sub}
+p^{-\alpha_\rmn{sub}}$.} We set an upper limit on the ratio of
+accelerated proton-to-dissipated energy in the downstream of strong
+shocks that varies from $\zeta_{\rmn max} \sim 1-10\%$, depending on
+the adopted model (for more details, see Section \ref{sec:results}).
+
 In our Galaxy, the CRe-to-CRp ratio at a few GeV is $K_{\rmn{ep}} \sim
 10^{-2}$. Hence, we adopt this as a fiducial value for the CRe-to-CRp
 acceleration efficiency (see \cite{pinzke13} for more
@@ -294,19 +386,13 @@ accelerated at perpendicular shocks
 \citep{2014ApJ...794..153G,2014ApJ...797...47G}, and ions efficiently
 accelerated at parallel shocks \citep{2014ApJ...783...91C}. Thus,
 depending on magnetic geometry, $K_{\rmn{ep}}$ could be either larger
-or smaller. In this work we use a simple test-particle model for the
-CRp acceleration, where we adopt a fit to Monte Carlo simulations of
-the thermal leakage process that relates the momentum of injected
-protons to the thermal energy of the shocked plasma \citep{kang11}. We
-set an upper limit on the ratio of accelerated proton-to-dissipated
-energy in the downstream of strong shocks that varies from 1-10\%,
-depending on the adopted model (for more details, see Section
-\ref{sec:results}). In order not to violate energy conservation with a
-fixed limit for the acceleration efficiency, we steepen the spectral
-index of the accelerated CRps at the limit \citep{pinzke13}, which
-mimics the non-linear CR modification of the shock
-\citep{ellison00}. For weak shocks the efficiency is a factor 10-100
-lower and well below the limit. Some observations of radio relics
+or smaller. \sout{In order not to violate energy conservation with a
+  fixed limit for the acceleration efficiency, we steepen the spectral
+  index of the accelerated CRps at the limit %\citep{pinzke13}
+, which  mimics the non-linear CR modification of the shock
+  %\citep{ellison00}
+  . For weak shocks the efficiency is a factor 10-100
+  lower and well below the limit.} Some observations of radio relics
 suggest high values of $K_{\rmn{ep}}$, due to the absence of gamma-ray
 emission, which probes the CRp population
 \citep{2014MNRAS.437.2291V}. This suggests primary CRes as a viable
