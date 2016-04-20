@@ -45,8 +45,7 @@
 
 \author[A. Pinzke, S. Peng Oh and C. Pfrommer] 
 {Anders Pinzke$^{1,2}$\thanks{apinzke@fysik.su.se (AP); peng@physics.ucsb.edu (SPO); christoph.pfrommer@h-its.org (CP)}, S. Peng Oh$^{3}$ and Christoph Pfrommer$^{4}$\footnotemark[1]\\
-$^{1}$The Oskar Klein Centre for Cosmoparticle Physics, Department
-  of Physics, Stockholm University, AlbaNova University Center, SE - 106 91
+$^{1}$The Oskar Klein Centre for Cosmoparticle Physics, Stockholm University, AlbaNova University Center, SE - 106 91
   Stockholm, Sweden\\
 $^{2}$Dark Cosmology Center, University of Copenhagen,
   Juliane Maries Vej 30, DK-2100 Copenhagen, Denmark\\
@@ -177,7 +176,7 @@ since the hadronic reaction is a two-body scattering process (see
 Fig.~Fig.~\ref{fig:Edens}). Hence, the simulated emission falls short
 of the observed extended and flat radio profile of the Coma cluster.
 
-\begin{figure*}
+\begin{figure}
   \includegraphics[width=1.0\columnwidth]{fCR.radius.coma.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI067.DII.140.v6.eps}
   \caption{Spatial distribution of CRp energy density in the Coma
     cluster. The red dash-dotted line shows the required distribution
@@ -191,7 +190,7 @@ of the observed extended and flat radio profile of the Coma cluster.
     to 0.3 percent of the total thermal energy, consistent with
     observations \citep{2014ApJ...787...18A,2012ApJ...757..123A}.}
   \label{fig:Edens}
-\end{figure*}
+\end{figure}
 
 Indeed, arriving at a seed population with the required
 characteristics is highly constraining, and has the potential to teach
@@ -547,7 +546,7 @@ magnetic field strengths derived from Faraday rotation observations of
 Coma \citep{bonafede10} in combination with the density profile
 derived from X-ray measurements \citep{1992A&A...259L..31B}.
 
-\begin{figure*}
+\begin{figure}
   \includegraphics[width=1.0\columnwidth]{turb_profile_ratio_tot.eps}
   \caption{The ratio of turbulent-to-thermal energy densities (solid
     lines) and cumulative energies (dotted lines) in our three
@@ -562,7 +561,7 @@ derived from X-ray measurements \citep{1992A&A...259L..31B}.
     cosmological simulation in
     \citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V}.}
   \label{fig:Edens}
-\end{figure*}
+\end{figure}
 
 For reference we show in Table~\ref{tab:timescales} both the thermal
 quantities and the timescales for CR cooling and (re)acceleration for
@@ -600,7 +599,7 @@ $\tau_\rmn{coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
  (1) Median quantities from our simulated post-merging cluster g72a.\\
  (2) Radius of the giant radio halo in Coma where $\RH\approx0.6\,R_{200}$.\\
  (3) Fermi-II reacceleration for both electrons and protons at all energies.\\
- (4) Inverse Compton and Synchrotron cooling for electrons.\\
+ (4) Inverse Compton and synchrotron cooling for electrons.\\
  (5) Catastrophic losses for protons.\\
  (6) Coulomb cooling for electrons (protons factor $m_e/m_p$ smaller).\\
 
@@ -748,7 +747,79 @@ giant radio relics \citep{2010Sci...330..347V}.
 % --- section: Analytical Results and discussion --- %
 
 \section{Parameter space exploration with spherical models}
-...
+In this section we explore the robustness of our models to crucial
+parameters. We do not trace single Lagrangian particles in the
+cluster, instead we use a more simple approach where we solve the
+Fokker-Plack equation in static spherical shells for injection,
+reacceleration, and losses of the CRs. Once the CRs have been
+reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$, we calculate the
+radio emission and compare the profile and spectra for different
+parametrizations.
+
+We adopt both the density \cite{1992A&A...259L..31B} and temperature
+\cite{2009ApJ...696.1886B,2001A&A...365L..67A} profiles derived from
+X-ray observations of the Coma cluster. They are given by:
+\begin{eqnarray}
+n_e = \frac{3.4\times10^{-3}}{\left[1+\left(R/294\,\rmn{kpc}\right)^2\right]^{1.125}}\nonumber\\
+T k_B = 8.25\,\rmn{keV} \left[1+\left(R/0.5R_{200}\right)^2\right]^{-0.32}\,.
+\end{eqnarray}
+The virial radius of Coma is given by $R_{200} = 2300\,\rmn{kpc}$.  The
+bulk of the CRps are injected by relatively low Mach number shocks and
+parametrized by $f_\rmn{CRp,inj}(p) = C_\rmn{CRp,inj}\,p^(-2.5)$. The
+CRps trace the thermal gas with $C_\rmn{CRp,inj} \propto
+\epsilon_\rmn{th}^{\alpha_\rmn{CR,spat}}$ where the normalization is fixed
+by assuming that the injected CR energy in the last 650~Myrs make up
+0.03\% of the thermal energy inside the virial radius, i.e.
+$\int\epsilon_\rmn{CRp,inj} d\rmn{V}/\int\epsilon_\rmn{th} d\rmn{V} =
+0.0003$. The spectrum of the initial CRp distibtion is determined by
+is given by the steady state between injection and cooling,
+\begin{equation}
+ f_{CRp,0} \approx \frac{\int_p^\infty f_\rmn{CRp,inj}(p') 
+\rmn{d}p'}{\left|{{dp}\over{dt}}\right|_{\rm C}+\frac{p}{\tau_{\rm had}}}\,,
+\end{equation}
+where the normalization is determined from $\int\epsilon_\rmn{CRp,inj}
+d\rmn{V}/\int\epsilon_\rmn{th} d\rmn{V} = 0.003$. Similarly, the
+initial CRe distribution is given by the steady state between cooling
+(Coulomb, invers Compton, and synchroton) and injection from
+$f_{CRp,0}$. We also include the contineous injection of secondary
+CRes during $\tau_\rmn{cl}$. 
+
+The compressible turbulence responsible for reacceleating both the CRps and
+CRes is parametrized by $I_0 \propto X_\rmn{tu} (n_e
+T)^\alpha_\rmn{tu}$. The diffusion constant $D_\rmn{pp}$ is 
+calculated for each radial bin using
+Eqns.~\ref{eq:Gamma_e}-\ref{eq:dpp}.
+
+In Fig.~\ref{fig:param_comp} we show how assumptions about turbulence
+and CRs impact the radio emission. We find that the level of
+turbulence has a large impact on both radio spectra and profile, while
+the parameter $\alpha_\rmn{tu}$ that determines the spatial profile of
+turbulence mainly influence the radio profiles. Interestingly,
+assumptions about CRs have less impact on radio emission. This can be
+understood by again looking at the scaling of parameters to the
+reacceleration timescale, where $\tau_\rmn{D} \propto
+X_\rmn{tu}^2$. The CRps approximately gain a factor $\Delta
+C_\rmn{reacc.} \sim
+\exp{\frac{(2+\alpha)(1-\alpha)}{4}\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}}$
+during reacceleration if injection and cooling are neglected. The CRes
+gain a similar factor from reacceleration, however in the region
+around $0.1\,R_{200}$ the Coulomb cooling timescale
+$\tau_\rmn{coul}\approx0.01\,\rmn{Myr}$ is much shorter than
+$\tau_\rmn{D}\approx0.5\,\rmn{Myr}$, hence $\Delta C_\rmn{reacc.}$
+will be greatly reduced for the electrons. The spatial region is
+important when we derive the radio spectrum, since in order to compare
+to observations we integrate the CR profile out to $\sim
+0.2\,R_{200}$. For a CRp spectral index $\alpha_\rmn{CR}\sim 2.5$,
+$\Delta C_\rmn{reacc.} \sim
+\exp{1.7\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}} \sim 10$ for
+$X_\rmn{tu}=0.2$ and $\alpha_\rmn{tu}=0.8$. This is confirmed by the
+top panels in Fig.~\ref{fig:param_comp}. Increasing from
+$X_\rmn{tu}=0.2$ to $X_\rmn{tu}=0.3$, gives us a $\Delta
+C_\rmn{reacc.}  \sim 100$, which is roughly confirmed by same
+figures. The difference is due to the shorter reacceleration timescale
+that increase the contribution from reaccelerated CRes with a factor
+few. \AP{Too complicated, perhaps cut or simplify?}
+
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
    \begin{center}\Large{Radio profiles}\\
@@ -763,17 +834,6 @@ giant radio relics \citep{2010Sci...330..347V}.
 \\
 \begin{minipage}{1\columnwidth}
   \begin{center}%\Large{\Mflatturb:}\\ 
-    \includegraphics[width=\columnwidth]{prof.comp.KrTTDth.aCR.eps}
-  \end{center}
-\end{minipage}
-\begin{minipage}{1\columnwidth}
-   \begin{center}%\Large{\it Brunetti et al. (2012)}:\\
-     \includegraphics[width=\columnwidth]{spec.comp.KrTTDth.aCR.eps}
-   \end{center}
-\end{minipage}
-\\
-\begin{minipage}{1\columnwidth}
-  \begin{center}%\Large{\Mflatturb:}\\ 
     \includegraphics[width=\columnwidth]{prof.comp.KrTTDth.aI0.eps}
   \end{center}
 \end{minipage}
@@ -782,7 +842,34 @@ giant radio relics \citep{2010Sci...330..347V}.
      \includegraphics[width=\columnwidth]{spec.comp.KrTTDth.aI0.eps}
    \end{center}
 \end{minipage}
-\caption{...}
+\\
+\begin{minipage}{1\columnwidth}
+  \begin{center}%\Large{\Mflatturb:}\\ 
+    \includegraphics[width=\columnwidth]{prof.comp.KrTTDth.aCR.eps}
+  \end{center}
+\end{minipage}
+\begin{minipage}{1\columnwidth}
+   \begin{center}%\Large{\it Brunetti et al. (2012)}:\\
+     \includegraphics[width=\columnwidth]{spec.comp.KrTTDth.aCR.eps}
+   \end{center}
+\end{minipage}
+\caption{Sensitivity of radio emission in Coma cluster to critical
+  parameters. {\it Left panels} show the radio surface brightness
+  profiles. We compare profiles at 352~MHz \citep[blue lines and
+    crosses,][]{brown11} to predicted emission from Fermi-II
+  reaccelerated CR electrons populations (black lines). {\it Right
+    panels} show radio synchrotron spectra. The green crosses are
+  compiled from observations \citet{2010PhDT.......259P}, while the
+  black lines show predicted emission from reaccelerated CR
+  electrons. The upper panels show the sensitivity to the level of
+  turbulence ($X_\rmn{tu}$), middle panels show the impact of
+  different turbulent profiles ($\alpha_\rmn{tu}$), and lower panels
+  show the dependence on spatial distributions of initial and injected
+  CRs ($\alpha_\rmn{CR,spat}$). We adopt the following fiducial values
+  for parameters that are not varied in each panel: $X_\rmn{tu}=0.2$,
+  $\alpha_\rmn{tu}=0.8$, and $\alpha_\rmn{CR,spat}$. Note that the
+  radio emission is much more sensitive to assumptions about turbulent
+  parameters than CRs.}
   \label{fig:param_comp}
 \end{figure*}
 
@@ -798,8 +885,8 @@ reaccelerated and for how long. The diffusion constant,
 $D_\rmn{pp}\propto I_0/\rho c_s \propto
 X_\rmn{tu}^2k_0\epsilon_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}$, where
 we adopt the same level of compressible turbulence, $X_\rmn{tu}=0.06$,
-for all models. The reaccelerated CRs are super-exponentially
-dependent on this parameter as long as $\tau_D > \tau_\rmn{cl}$, where
+for all models. The reaccelerated CRs are exponentially dependent on
+this parameter as long as $\tau_D > \tau_\rmn{cl}$, where
 $\tau_\rmn{cl}$ represent the duration of reacceleration of the merger
 which we assume to be 650~Myrs long. Note that fixing $D_\rmn{pp}$
 allows us to relate $\tau_\rmn{cl} \propto X_\rmn{tu}^2 \propto k_0$
