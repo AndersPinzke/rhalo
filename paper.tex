@@ -609,6 +609,23 @@ $\tau_\rmn{coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
 \end{table} 
 
 
+\subsection{Scaling relations for turbulent reacceleratio}
+The diffusion constant, $D_\rmn{pp}\propto I_0/\rho c_s \propto
+X_\rmn{tu}^2k_0\epsilon_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}$, where
+we adopt the same level of compressible turbulence, $X_\rmn{tu}=0.2$,
+for all models. The reaccelerated CRs are exponentially dependent on
+this parameter as long as $\tau_D > \tau_\rmn{cl}$, where
+$\tau_\rmn{cl}$ represent the duration of reacceleration of the merger
+which we assume to be 650~Myrs long. Note that a fixed reacceleration
+timescale $\tau_D\sim 1/D_\rmn{pp}\sim 0.2-0.7\,\rmn{Gyr}$ is required
+to explain the observations for each model and radial bin (see
+Table~\ref{tab:timescales}). This allows us to interchange
+$\tau_\rmn{cl} \propto X_\rmn{tu}^2 \propto k_0$, i.e. a longer
+reacceleration duration have to be compensated by lowering the level
+of turbulence or increasing the physical injection scale of turbulence
+to keep $\tau_D$ constant.
+
+
 \subsection{Spherically symmetric models}
 In this section we develope a simple framework that will be used to
 test the robustness of our models to the critical parameters for CRs
@@ -787,20 +804,25 @@ giant radio relics \citep{2010Sci...330..347V}.
 
 
 % --- section: Analytical Results and discussion --- %
-
 \section{Parameter space exploration with spherical models}
 \label{sect:param_comp}
-In this section we explore the robustness of our models to crucial
-parameters. Figure~\ref{fig:param_comp} shows how assumptions about
-turbulence and CRs impact the radio emission. We find that the level
-of turbulence has a large impact on both radio spectra and profile,
+in this paper we rely on several critical parameters decribing
+relatively unknown non-thermal physics in the ICM. Here we try to
+explore the robustness of our models to the most critical parameters
+related to turbulence and CRs. Figure~\ref{fig:param_comp} shows their
+impact on radio emission. We find that the level of turbulence
+($X_\rmn{tu}$) has a large impact on both radio spectra and profile,
 while the parameter $\alpha_\rmn{tu}$ that determines the spatial
-profile of turbulence mainly influence the radio
-profiles. Interestingly, assumptions about CRs have less impact on
-radio emission. This can be understood by looking at the scaling of
-parameters to the reacceleration timescale, where $\tau_\rmn{D}
-\propto X_\rmn{tu}^2$. The CRps approximately gain a factor $\Delta
-C_\rmn{reacc.} \sim
+profile of turbulence mainly influence the radio profiles. As
+expected, the radio profiles flatten significantely with a flatter
+turbulent profile. A higher amount of energy also flatten the radio
+profile, where the reason beeing that the steep profiles of injected
+CRs have less impact on the radio emission for an increasing
+reacceleration efficiency. Interestingly, assumptions about CRs have
+less impact on radio emission. This can be understood by looking at
+the scaling of parameters to the reacceleration timescale, where
+$\tau_\rmn{D} \propto X_\rmn{tu}^2$. The CRps approximately gain a
+factor $\Delta C_\rmn{reacc.} \sim
 \exp{\left[\frac{(2+\alpha)(1-\alpha)}{4}\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]}$
 during reacceleration if injection and cooling are neglected. The CRes
 gain a similar factor from reacceleration, however in the region
@@ -814,15 +836,30 @@ to observations we integrate the CR profile out to $\sim
 $\Delta C_\rmn{reacc.} \sim
 \exp{\left[1.7\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]} \sim 10$ for
 $X_\rmn{tu}=0.2$ and $\alpha_\rmn{tu}=0.8$. This is confirmed by the
-top panels in Fig.~\ref{fig:param_comp}. Increasing from
-$X_\rmn{tu}=0.2$ to $X_\rmn{tu}=0.3$, gives us a $\Delta
-C_\rmn{reacc.}  \sim 100$, which is roughly confirmed by same
-figures. The factor 2-3 difference in the figure is due to the shorter
-reacceleration timescale that increase the contribution from
-reaccelerated CRes. Hence we conclude that the radio emission is much
-more sensitive to the exponential dependence on turbulence than the
-linjear dependence on injected CRs. \AP{Too complicated, perhaps cut
-  or simplify?}
+top panels in Fig.~\ref{fig:param_comp}. Increasing the level of
+turbulence to $X_\rmn{tu}=0.3$, gives us a $\Delta C_\rmn{reacc.}
+\sim 100$, which is roughly confirmed by same figures. The factor 2-3
+difference in the figure is due to the shorter reacceleration
+timescale that increase the contribution from reaccelerated CRes that
+would othervise cool away on a much shorter timescale. Hence we
+conclude that the radio emission is much more sensitive to the
+exponential dependence on compressible turbulence than the linjear
+dependence on injected CRs. \AP{Too complicated? Perhaps cut or
+  simplify?} 
+
+We can also find a lower critical level of turbulence where
+reacceleration is negliable, while it rises sharply above this
+threshold. We define the threshold by $\Delta C_\rmn{reacc.}  \lesssim
+2$, which gives us an $X_\rmn{thres,tu} = \left(\frac{\log(2)
+  0.04}{1.7}\frac{\tau_\rmn{D}}{\tau_\rmn{cl}}\right)^{0.5} \approx 0.08$ for
+$\tau_\rmn{D} = 0.5\,\rmn{Myr}$. This threshold is also seen in the
+top panels of figure~\ref{fig:param_comp}. For instance, for
+$X_\rmn{tu}\gtrsim0.08$, a factor two change in $X_\rmn{tu}$ changes
+the radio surface brightness by a factor $\sim 10-100$. In principle
+this threshold behavior allows us to provide a strict lower bound on
+turbulence in radio halos. An even more stringent bound on
+$X_\rmn{tu}$ can be inferred from combining radio observations with
+the gamma-ray observations (see section~\ref{sect:radio_spec}).
 
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
@@ -879,7 +916,6 @@ linjear dependence on injected CRs. \AP{Too complicated, perhaps cut
 
 
 % --- section: Simulation Results and discussion --- %
-
 \section{Results of cosmological simulations}
 \label{sec:results}
 
@@ -891,22 +927,7 @@ volume-weighted, relative CRp energy density and relative CRp number
 density inside the RH for \Mflatturb (\Mstream), are found to be 2 (3)
 \% and $2\times10^{-8}$ ($5\times10^{-8}$), respectively. As we will
 see later, these densities are just of the right order of magnitude to
-reproduce radio observations in the Coma cluster.
-
-\AP{move to a scaling subsection?} The diffusion constant,
-$D_\rmn{pp}\propto I_0/\rho c_s \propto
-X_\rmn{tu}^2k_0\epsilon_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}$, where
-we adopt the same level of compressible turbulence, $X_\rmn{tu}=0.2$,
-for all models. The reaccelerated CRs are exponentially dependent on
-this parameter as long as $\tau_D > \tau_\rmn{cl}$, where
-$\tau_\rmn{cl}$ represent the duration of reacceleration of the merger
-which we assume to be 650~Myrs long. Note that a fixed reacceleration
-timescale $\tau_D\sim 1/D_\rmn{pp}\sim 0.2-0.7\,\rmn{Gyr}$ is required
-to explain the observations for each model and radial bin. This allows
-us to interchange $\tau_\rmn{cl} \propto X_\rmn{tu}^2 \propto k_0$,
-i.e. a longer reacceleration duration have to be compensated by
-lowering the level of turbulence or increasing the injection scale of
-turbulence to keep $\tau_D$ constant. We also exploit the large
+reproduce radio observations in the Coma cluster. We exploit the large
 uncertainty in the turbulent profile and adjust $\alpha_\rmn{tu}$ for
 each model so that the CRs have the correct spatial profile to match
 the radio emission. The shape of the spectrum for each of model is
@@ -1012,6 +1033,7 @@ stronger cutoff in the particle energy spectrum.
 \end{figure*}
 
 \subsection{Radio spectrum}
+\label{sect:radio_spec}
 In Fig.~\ref{fig:sync_spectrum} we show that our three models that
 include Fermi-II reacceleration can individually reproduce the
 convexly curved total radio spectrum found in the Coma cluster. Seed
@@ -1034,34 +1056,23 @@ CRes that generate most of the radio emission from the cluster in the
 OFF-state are dominated by only a small fraction of the CRes. These
 electrons are injected very recently and have not had time to cool
 yet. Hence we expect there to be a large variance in the OFF-state of
-different simulated clusters.
-
-While the radio surface brightness has an approximate linear
-dependence on the acceleration efficiency, it has a strong non-linear
-dependence on the level of compressible turbulence. Below a critical
-level ($X_\rmn{thres,tu} = \frac{400\,\rmn{Myrs}}{\tau_\rmn{cl}}
-X_\rmn{tu}\approx 0.12$ in our fiducial model), turbulent
-reacceleration is negligible, while it rises sharply above this
-threshold. For instance, for $X_\rmn{tu}\gtrsim0.12$, a factor two
-change in $X_\rmn{tu}$ changes the radio surface brightness by $\sim
-10-100$ (see also section~\ref{sect:param_comp}). In principle this
-threshold behavior allows us to provide a strict lower bound on
-turbulence in radio halos. An even more stringent bound on
-$X_\rmn{tu}$ can be inferred from combining radio observations with
-the gamma-ray observations where the predicted fluxes from both
-\Mstream and \Mflatturb are close to the upper limits set by
-Fermi-LAT. If $X_\rmn{tu}$ is smaller than in our adopted models
-(where we assume $X_\rmn{tu}=0.2$), then the efficiency of DSA has to
-be larger than $\zeta_\rmn{p}\sim 0.1$ for the secondary CRes to
-reproduce the radio observations. However, since the turbulent
-reacceleration acts on both the secondary CRes and the CRps, while
-$\zeta_\rmn{p}$ only affects the CRps, these models would produce too
-much gamma-rays. Hence we conclude that $X_\rmn{tu}\gtrsim0.2$ if all
-other parameters are kept fixed. Although, we caution the reader to
-take this limit too stringent since there are degeneracies between the
-uncertain parameters $X_\rmn{tu}\propto\sqrt{\tau_\rmn{D}}\propto
-\sqrt{k_0}$. We will explore this parameter space further in future
-work.
+different simulated clusters. As mentioned in
+section~\ref{sect:param_comp}, combining radio observations with
+gamma-ray limits allows us to put a lower limit to $X_\rmn{tu}$.  If
+$X_\rmn{tu}$ is smaller than in our adopted models (where we assume
+$X_\rmn{tu}=0.2$), then the efficiency of DSA has to be larger than
+$\zeta_\rmn{p}\sim 0.1$ for the secondary CRes to reproduce the radio
+observations. However, since the turbulent reacceleration acts on both
+the secondary CRes and the CRps, while $\zeta_\rmn{p}$ only affects
+the CRps, \Mstream and \Mflatturb would produce too much
+gamma-rays. Hence we conclude that $X_\rmn{tu}\gtrsim0.2$ if all other
+parameters are kept fixed. Although, we caution the reader to take
+this limit too stringent because of the uncertainty in $k_0$ and
+$\tau_\rmn{cl}$ that impact $X_\rmn{tu}$ for a fixed
+$\tau_\rmn{D}$. This parameter space needs to be explored further in
+future work in order to put more stringent limits on the level of
+turbulence in clusters using radio and gamma-ray observations in
+combination with turbulent reaccelerated CRs.
 
 \begin{figure*}
   \includegraphics[width=1.0\columnwidth]{sync.spec.pri.g72a.140.v6.eps}
@@ -1102,8 +1113,8 @@ $F_\gamma(>500\,\rmn{MeV})<5.3\times10^{-10} \mathrm{ \,ph\,
 distribution is relatively steep ($\alpha_{\rmn{p}}\sim2.6$) for the
 CRp energies $E \gtrsim 10$~GeV that are relevant for the injection of
 radio-emitting secondary CRes. The steep spectrum is ultimately a
-consequence \AP{of the shock history of the simulated cluster, with a
-  weak dependence on} our test particle model for Fermi-I acceleration
+consequence of the shock history of the simulated cluster, with a weak
+dependence on our test particle model for Fermi-I acceleration
 \citep{pinzke13}, where we steepen the spectral index to avoid
 acceleration efficiencies above $\zeta_{\rmn{p}} \sim 10\%$.
 
