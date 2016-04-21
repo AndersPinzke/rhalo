@@ -103,6 +103,7 @@ $^{4}$Heidelberg Institute for Theoretical Studies
 %\end{keywords}
 %%\maketitle
 
+
 % --- section: Introduction --- %
 \section{Introduction}
 About one third of X-ray-luminous clusters show smooth, unpolarized
@@ -130,7 +131,7 @@ electrons and positrons, depending of the charge of the initial pion
 heavier nuclei may have been accelerated and injected into the ICM by
 structure formation shocks, active galactic nuclei and galactic
 winds. However, the strong bimodality that separates X-ray luminous
-clusters into radio-active and radio-quite clusters (and requires a
+clusters into radio-active and radio-quite clusters (requiring a
 fast switch on/off mechanism of the RH emission) and the very extended
 RH emission at low frequencies in Coma (352~MHz) represent a major
 challenge to this model class \citep{brunetti12,2014MNRAS.438..124Z}.
@@ -155,12 +156,14 @@ presumed to be either fossil CR electrons (CRes) accelerated by
 diffusive shock acceleration (DSA) during structure formation
 \citep{1999ApJ...520..529S}, or secondaries injected by hadronic
 interaction of CR protons (CRps) with thermal protons
-\citep{brunetti11}. While analytic estimates have been made, there has
-been no ab initio demonstration that structure formation can lead to
-the required abundance of seed electrons with the correct spatial and
-spectral characteristics. This is a non-trivial requirement: Coulomb
-cooling in dense cluster cores is severe, and DSA fossil electrons may
-not survive. On the other hand, for secondaries to constitute the seed
+\citep{brunetti11}.
+
+While analytic estimates have been made, there has been no ab initio
+demonstration that structure formation can lead to the required
+abundance of seed electrons with the correct spatial and spectral
+characteristics. This is a non-trivial requirement: Coulomb cooling in
+dense cluster cores is severe, and DSA fossil electrons may not
+survive. On the other hand, for secondaries to constitute the seed
 population, the CRp population required in the best-studied case of
 the Coma cluster must have a very broad and flat (or even slightly
 inverted) spatial profile \citep{brunetti12}, in contrast with the
@@ -172,9 +175,9 @@ advected with the cluster plasma, their distribution will be peaked
 towards the cluster center and shows a similar characteristics as the
 thermal plasma. As a consequence, the distribution of secondary
 electrons and the resulting radio synchrotron emission is also peaked
-since the hadronic reaction is a two-body scattering process (see
-Fig.~\ref{fig:Edens}). Hence, the simulated emission falls short
-of the observed extended and flat radio profile of the Coma cluster.
+since the hadronic reaction is a two-body scattering process. Hence,
+the simulated emission falls short of the observed extended and flat
+radio profile of the Coma cluster.
 
 \begin{figure}
   \includegraphics[width=1.0\columnwidth]{fCR.radius.coma.g72a.Rad14.2400p.z0.NL.xKR.eb23.eI067.DII.140.v6.eps}
@@ -196,21 +199,27 @@ Indeed, arriving at a seed population with the required
 characteristics is highly constraining, and has the potential to teach
 us much about the origin of CRps/CRes in clusters.  In this work, we
 use our hydrodynamical zoom simulations of galaxy clusters in a
-cosmological setting to follow the distribution functions of seed CRp
-and CRe population and integrate the Fokker-Planck equation of CR
-transport along Lagrangian particle trajectories. We resolve injection
-at structure formation shocks, account for various loss processes of
-CRs, and -- most importantly -- model second-order Fermi acceleration
-by CR interactions with magnetised turbulence. However, we assume a
-simplified and stationary model for magnetic fields and turbulence. We
-do not account for the time-varying energy density in compressible
-waves, which are thought to be necessary for the acceleration process
-\citep{brunetti07,brunetti11}, as the cluster merger proceeds.  So our
-approach is orthogonal (and complementary) to e.g.,
-\citealp{2015ApJ...800...60M}. This enables us to vary parameters
-associated with the unknown continuation of magneto-hydrodynamical
-turbulence below the MHD scale and the overall amplitude of
-compressible waves.
+cosmological setting to follow the distribution functions of seed
+populations for CRps and CRes, and integrate the Fokker-Planck
+equation of CR transport along Lagrangian particle trajectories. We
+model diffusive shock acceleration at structure formation shocks,
+account for various loss processes of CRs, and -- most importantly --
+model second-order Fermi acceleration by CR interactions with
+magnetised turbulence.
+
+However, we assume a simplified and stationary model for magnetic
+fields and turbulence. We do not account for the time-varying energy
+density in compressible waves, which are thought to be necessary for
+the acceleration process \citep{brunetti07,brunetti11}, as the cluster
+merger proceeds.  So our approach is orthogonal (and complementary) to
+e.g., simulations of \citealp{2015ApJ...800...60M} that focus on the
+time-dependent compressible turbulence while adopting a simplified
+treatment of CR that does not follow the transport of the CR
+distribution function. Our approach of parametrizing turbulence
+enables us to vary parameters associated with the unknown continuation
+of magneto-hydrodynamical turbulence below the MHD scale and the
+overall amplitude of compressible waves (that can in principle vary
+depending on the details of a particular cluster merger).
 
 In this paper we consider three new scenarios that
 individually or combined can reproduce the observed radio profiles and
@@ -236,33 +245,35 @@ simulations of CRs in clusters. In tandem with new insights from our
 recent work on DSA generated fossil electrons \citep{pinzke13}, we
 generate the first quantitative calculation of primary and secondary
 seed electrons and compare to observations in the Coma cluster. For
-the most part, we adopt parameters that are used in previous work: for
-details, see \citep[][ turbulent spectrum]{brunetti07,brunetti11},
-\citep[][ injection scale of turbulens]{2015ApJ...800...60M},
-\citep[][ energy density of
-  turbulence]{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V},
-for CR acceleration in shocks, \citep[][ in particular $K_{\rmn{ep}}$,
-  acceleration efficiency]{pinzke13}, and for cosmological
-simulations, \citep[][ i.e., shock history, temperature profile,
-  density profile, magnetic field profile]{pinzke10}. All these
-parameters are uncertain, and could potentially change our
-predictions. We refer the reader to section~\ref{sect:param_comp} for
-a minor exploration of parameter space, and leave the full exploration
-of parameter space and the interaction between free parameters to
-future work.
+the most part, we adopt parameters that are used in previous work,
+including Fermi-II acceleration with models of turbulent spectra
+\citep{brunetti07,brunetti11}, injection scale of turbulence
+\citep{2015ApJ...800...60M}, the energy density of turbulence
+\citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V},
+for CR acceleration in shocks \citep[][in particular $K_{\rmn{ep}}$
+  and the acceleration efficiency]{pinzke13}, and for cosmological
+simulations with CR physics \citep[][i.e., shock history,
+  temperature profile, density profile, magnetic field
+  profile]{pinzke10}. All these parameters are uncertain, and could
+potentially change our predictions. We refer the reader to
+section~\ref{sect:param_comp} for a first exploration of parameter
+space, however we leave the detailed exploration of parameter space and
+the interaction between free parameters to future work.
 
 
 % --- section: Method --- %
 \section{Method} 
 
-The transport of relativistic electrons and protons in the ICM is a
-complex process that depends both on the details of the thermal
-component (gas density, temperature, and pressure) as well as
-non-thermal component (turbulence, magnetic fields, fossil CRs). We
-use high resolution galaxy cluster simulations to derive the thermal
-and fossil CR properties (shock accelerated primary CRes and CRps, as
-well as secondary CRes produced in p-p collisions)
+The transport of relativistic electrons and protons across cosmic time
+into galaxy clusters is a complex problem that depends on the velocity
+field of the gas (and its thermodynamic properties such as density,
+temperature, and pressure) as well as non-thermal processes
+(turbulence, magnetic fields, fossil CRs). We use high resolution
+galaxy cluster simulations to derive the thermal and fossil CR
+properties (shock accelerated primary CRes and CRps, as well as
+secondary CRes produced in p-p collisions)
 \citep{2007MNRAS.378..385P,pfrommer08,pinzke10,pinzke13}.
+
 
 [explain overall picture, $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$]
 
