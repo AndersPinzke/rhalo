@@ -607,7 +607,8 @@ $\tau_\rmn{coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
 \end{tabular}
 \begin{quote}
  Notes: \\ 
- (1) Median quantities from our simulated post-merging cluster g72a.\\
+ (1) Median quantities from our simulated post-merging cluster g72a derived 
+ during last 300~Myrs in time. \\
  (2) Radius of the giant radio halo in Coma where $\RH\approx0.6\,R_{200}$.\\
  (3) Fermi-II reacceleration for both electrons and protons at all energies.\\
  (4) Inverse Compton and synchrotron cooling for electrons.\\
@@ -623,13 +624,16 @@ To understand the radial dependence of the diffusion constant we
 investigate how $D_\rmn{pp}$ scales with different parameters. This is
 crucial in order to identify important parameters, and understand the
 profile of reaccelerated CRs and radio emission. Combining
-Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e} we find that $D_\rmn{pp}\propto
-I_0/\rho c_s \propto
-X_\rmn{tu}^2k_0\epsilon_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}$. Here we
-immediately see that if the turbulent profile trace the thermal energy
-(i.e. $\alpha_\rmn{tu}=1$), the square root of temperature alone
-determines the diffusion constant. We also see that $D_\rmn{pp}$ is
-much more sensitive to $X_\rmn{tu}$ than $k_0$. 
+Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e} we find that 
+\begin{equation}
+  \label{eq:Dpp_scaling}
+  D_\rmn{pp}\propto I_0/\rho c_s \propto 
+X_\rmn{tu}^2k_0\epsilon_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}\,.
+\end{equation}
+Here we immediately see that if the turbulent profile trace the
+thermal energy (i.e. $\alpha_\rmn{tu}=1$), the square root of
+temperature alone determines the diffusion constant. We also see that
+$D_\rmn{pp}$ is much more sensitive to $X_\rmn{tu}$ than $k_0$.
 
 During reacceleration the CRps approximately gain a factor 
 \begin{equation}
@@ -638,17 +642,36 @@ During reacceleration the CRps approximately gain a factor
   \exp{\left[\frac{(2+\alpha)(\alpha+1)}{4}\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]}\,,
 \end{equation}
 if injection and cooling are neglected. The reaccelerated CRs are then
-exponentially dependent on $D_\rmn{pp}$ as long as $\tau_D \lesssim
-\tau_\rmn{cl}$, where $\tau_\rmn{cl}$ represent the duration of
-reacceleration of the merger which we assume to be 650~Myrs long.
-Note that a fixed reacceleration timescale $\tau_D\sim
-1/D_\rmn{pp}\sim 0.2-0.7\,\rmn{Gyr}$ is required to explain the
-observations at each radius and for each model (see
-Table~\ref{tab:timescales}). This allows us to interchange
-$\tau_\rmn{cl} \sim X_\rmn{tu}^2 \sim k_0$, i.e. a longer
-reacceleration duration have to be compensated by lowering the level
-of turbulence or increasing the physical injection scale of turbulence
-to keep $\tau_D$ constant.
+exponentially dependent on $tau_D\sim 1/D_\rmn{pp}$ as long as $\tau_D
+\lesssim \tau_\rmn{cl}$, where $\tau_\rmn{cl}$ represent the duration
+of reacceleration of the merger which we assume to be 650~Myrs long.
+
+In Figure~\ref{fig:tauD} we show how the turbulent reacceleration
+timescales in our three models scale with radius. As expected, the
+\Mprimary model with $\alpha_\rmn{tu}=0.88$ has the flattest profile
+with $\tau_D\approx0.4\,\rmn{Gyr}$, where the small dip at large
+radius driven by the decrease in thermal energy density. The
+\Mflatturb model has the the flattest turbulent profile parameterized
+by the smaller $\alpha_\rmn{tu}$ which explains the steepest $\tau_D$
+profile. Note that a fixed reacceleration timescale is required to
+explain the observations at each radius and for each model (see also
+Table~\ref{tab:timescales}). This allows us to interchange the value
+of uncertain parameters $\tau_\rmn{cl} \sim X_\rmn{tu}^2 \sim k_0$,
+i.e. a longer reacceleration duration have to be compensated by
+lowering the level of turbulence or increasing the physical injection
+scale of turbulence to keep $\tau_D$ constant.
+
+\begin{figure}
+  \includegraphics[width=1.0\columnwidth]{tau_reacc.eps}
+  \caption{Turbulent reacceleration timescales for our simulated
+    cluster g72a. We show in linear-log the reacceleration timescale
+    ($\tau_D$) as a function of radius $R$ for our three models:
+    \Mprimary (green dotted line), \Mstream (blue dashed line), and
+    \Mflatturb (red solid line). Note that the timescales are derived
+    during the last 100~Myrs in time in our simulations.}
+  \label{fig:tauD}
+\end{figure}
+
 
 
 \subsection{Spherically symmetric models}
@@ -855,7 +878,7 @@ reacceleration if injection and cooling are neglected. The CRes gain a
 similar factor from reacceleration, however in the region around
 $0.1\,R_{200}$ the Coulomb cooling timescale
 ($\tau_\rmn{coul}\approx0.01\,\rmn{Gyr}$) is much shorter than
-$\tau_\rmn{D}\approx0.5\,\rmn{Gyr}$, hence $\Delta C_\rmn{reacc.}$
+$\tau_\rmn{D}\approx0.6\,\rmn{Gyr}$, hence $\Delta C_\rmn{reacc.}$
 will be greatly reduced for the electrons. The spatial region is
 important when we derive the radio spectrum, since in order to compare
 to observations we integrate the CR profile out to $\sim
@@ -876,7 +899,7 @@ reacceleration is negligible, while it rises sharply above this
 threshold. We define the threshold by $\Delta C_\rmn{reacc.}  \lesssim
 2$, which gives us an $X_\rmn{thres,tu} = \left(\frac{0.04\,\log(2)
 }{1.7}\frac{\tau_\rmn{D}}{\tau_\rmn{cl}}\right)^{0.5} \approx 0.08$
-for $\tau_\rmn{D} = 0.5\,\rmn{Myr}$. This threshold is also seen in
+for $\tau_\rmn{D} = 0.6\,\rmn{Gyr}$. This threshold is also seen in
 the top panels of figure~\ref{fig:param_comp}. For instance, for
 $X_\rmn{tu}\gtrsim0.08$, a factor two change in $X_\rmn{tu}$ changes
 the radio surface brightness by a factor $\sim 10-100$. In principle
