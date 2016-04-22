@@ -270,17 +270,16 @@ field of the gas (and its thermodynamic properties such as density,
 temperature, and pressure) as well as non-thermal processes
 (turbulence, magnetic fields, fossil CRs). We use high resolution
 galaxy cluster simulations to derive the thermal and fossil CR
-properties (shock accelerated primary CRes and CRps, as well as
-secondary CRes produced in p-p collisions)
-\citep{2007MNRAS.378..385P,pfrommer08,pinzke10,pinzke13}.
-
+properties \citep[shock accelerated primary CRes and CRps, as well as
+  secondary CRes produced in p-p collisions,
+  see][]{2007MNRAS.378..385P,pfrommer08,pinzke10,pinzke13}.
 
 [explain overall picture, $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$]
 
 
 \subsection{Cosmic ray transport}
 As previously noted, secondaries produced by shock accelerated CRp
-have the wrong spatial profile to explain RH observations; because
+have the wrong spatial profile to explain RH observations. Because
 they arise from a two body process, they are too centrally
 concentrated. They also produce $\gamma$-ray emission in excess of
 Fermi-LAT upper limits
@@ -324,7 +323,6 @@ f_{\rmn{e}}(p,t)\left[
 \nonumber\\
 &-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
 \right]\right\} - \left(\bnabla\bcdot \bvel\right) f_{\rmn{e}}(p,t)
-- \bnabla\bcdot \vec{F}_\rmn{stream}
 \nonumber\\
 &+& {{\partial^2 }\over{\partial p^2}}
 \left[
@@ -340,62 +338,64 @@ velocity, $|dp/dt|$ represents radiative (r) and Coulomb (coul) losses,
 $D_{pp}$ is the momentum space diffusion coefficient, and
 $Q_{\rmn{e}}$ denotes the injection rate of primary and secondary
 electrons in the ICM. The $\bnabla\bcdot \bvel$ terms represent
-adiabatic gains and losses and the $\bnabla\bcdot
-\vec{F}_\rmn{stream}$ terms represent super-Alfv{\'e}nic CR
-streaming. For details about $F_\rmn{stream}$ please see
-\citet{wiener13}. During post-processing of our Coma-like cluster
-simulation, we solve the Fokker-Planck equation over a redshift
-interval from $z=5$ to 0. The simulated cluster undergoes a major
-merger over the last 1-2~Gyrs that is thought to inject large
-turbulent eddies. Following \citet{brunetti07,brunetti11} \citep[see
-  also][]{2004ApJ...614..757Y,2015ApJ...800...60M} we assume that
-about one Gyr after core passage the fields have decayed down to the
-smallest scales where reacceleration is most efficient ($D_{pp}\sim
-k_\rmn{cut}$) and the radio halo turns on shortly after. Note that the
-exact decay time of the turbulens is of minor importance, since the
-thermal and CR quantities are very similar a few 100 Myrs before and
-after $z=0$ where we have chosen to evaluate the simulations. This
-delay naturally explains why giant radio halos are only seen in a
-fraction of all merging clusters. In all our calculations we assume
-that turbulent reacceleration efficiently accelerates particles for
-$\tau_\rmn{cl}\sim650$~Myrs (which is roughly the cascade time on which
-turbulence is damped) and that during this turbulent phase CR
-streaming and spatial diffusion can be neglected. In our \Mstream
-model, CR streaming and diffusion are incorporated separately during
-kinematically quiescent times that precede the merger. As a result,
-flat CRp profiles are produced on relatively short timescales ($\sim
-0.1-0.5$ Gyr). This allows us to implicitly solve for CR streaming in
-our calculations, where we adopt a toy model that enforce a flat CRp
-profile at all quiescent times \citep{wiener13}. We assume that CRs
-cannot stream significantly past perpendicular $B$-fields at the
-accretion shock, so that the total number of CRs is conserved within
-the virial radius during the streaming process. Finally, since
-streaming is much more efficient for the CRps, we can ignore this
-effect for the CRes.
+adiabatic gains and losses.
+
+During post-processing of our Coma-like cluster simulation, we solve
+the Fokker-Planck equation over a redshift interval from $z=5$ to
+0. The simulated cluster undergoes a major merger over the last
+1-2~Gyrs that is thought to inject large turbulent eddies. Following
+standard approaches
+\citep{brunetti07,brunetti11,2004ApJ...614..757Y,2015ApJ...800...60M}
+we assume that about one Gyr after core passage the fields have
+decayed down to the smallest scales where reacceleration is most
+efficient ($D_{pp}\sim k_\rmn{cut}$) and the radio halo turns on
+shortly after. Note that the exact decay time of the turbulens is of
+minor importance, since the thermal and CR quantities are very similar
+a few 100 Myrs before and after $z=0$ where we have chosen to evaluate
+the simulations. This delay naturally explains why giant radio halos
+are only seen in a fraction of all merging clusters. In all our
+calculations we assume that turbulent reacceleration efficiently
+accelerates particles for $\tau_\rmn{cl}\sim650$~Myrs (which is
+roughly the cascade time on which turbulence is damped) and that
+during this turbulent phase CR streaming and spatial diffusion can be
+neglected. In our \Mstream model, CR streaming and diffusion are
+incorporated separately during kinematically quiescent times that
+precede the merger. As a result, flat CRp profiles are produced on
+relatively short timescales ($\sim 0.1-0.5$ Gyr). This allows us to
+implicitly solve for CR streaming in our calculations, where we adopt
+a toy model that enforce a flat CRp profile at all quiescent times
+\citep{wiener13}. We assume that CRs cannot stream significantly past
+perpendicular $B$-fields at the accretion shock, so that the total
+number of CRs is conserved within the virial radius during the
+streaming process. Finally, since streaming is much more efficient for
+the CRps, we can ignore this effect for the CRes.
 
 The time evolution of the spectral energy distribution of CRps,
 $f_{\rmn{p}}$, is similarly given by:
 \begin{eqnarray}
-{{d f_{\rmn{p}}(p,t)}\over{d t}} &=&
-{{\partial }\over{\partial p}}
-\left\{
-f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm C}
-+ \frac{p}{3}\left(\bnabla\bcdot \bvel\right)\right.\right.
+\lefteqn{
+  {{d f_{\rmn{p}}(p,t)}\over{d t}} =
+  {{\partial }\over{\partial p}}
+  \left\{
+  f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm C}
+    + \frac{p}{3}\bnabla\bcdot \left(\bvel+\bvel_{\rmn{st}}\right)\right.\right.}
 \nonumber\\
-&-&\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right)
-\right]\right\} - \left(\bnabla\bcdot \bvel\right) f_{\rmn{p}}(p,t)
-- \bnabla\bcdot \vec{F}_\rmn{stream}
+&&-\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right)
+\right]\right\} - f_{\rmn{p}}(p,t) \bnabla\bcdot \left(\bvel+\bvel_{\rmn{st}}\right) 
+- \bvel_{\rmn{st}}\bcdot\bnabla f_{\rmn{p}}(p,t)
 \nonumber\\
-&+& {{\partial^2 }\over{\partial p^2}}
+&&+\,\,\, {{\partial^2 }\over{\partial p^2}}
 \left[ D_{pp} f_{\rmn{p}}(p,t) \right] - {{f_{\rmn{p}}(p,t)}\over{\tau_{\rm had}(p)}}
 + Q_{\rmn{p}}(p,t)\, ,
 \label{eq:FP_p}
 \end{eqnarray}
-where $Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock
-accelerated CRps as a function of momentum $p$ and time $t$, and
-$\tau_{\rm had}$ is the timescale of hadronic losses that produce
-pions via CRp collisions with thermal protons of the ICM
-\cite[e.g.][]{brunetti11}.  
+where $\bvel_{\rmn{st}}=-\varv_{\rmn{A}}\bnabla f_{\rmn{p}}/|\bnabla
+f_{\rmn{p}}|$ is the streaming velocity in the isotropic transport
+approximation, $\varv_{\rmn{A}}$ is the Alfv\'en speed,
+$Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock accelerated
+CRps as a function of momentum $p$ and time $t$, and $\tau_{\rm had}$
+is the timescale of hadronic losses that produce pions via CRp
+collisions with thermal protons of the ICM \cite[e.g.][]{brunetti11}.
 
 
 \subsection{Turbulent reacceleration}
@@ -642,7 +642,7 @@ During reacceleration the CRps approximately gain a factor
   \exp{\left[\frac{(2+\alpha)(\alpha+1)}{4}\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]}\,,
 \end{equation}
 if injection and cooling are neglected. The reaccelerated CRs are then
-exponentially dependent on $tau_D\sim 1/D_\rmn{pp}$ as long as $\tau_D
+exponentially dependent on $\tau_D\sim 1/D_\rmn{pp}$ as long as $\tau_D
 \lesssim \tau_\rmn{cl}$, where $\tau_\rmn{cl}$ represent the duration
 of reacceleration of the merger which we assume to be 650~Myrs long.
 
@@ -685,14 +685,15 @@ CRs. Once the CRs have been reaccelerated for $\tau_\rmn{cl} =
 650\,\rmn{Myr}$, we calculate the radio emission and compare the
 profile and spectra for different parameterizations.
 
-We adopt both the density \cite{1992A&A...259L..31B} and temperature
-\cite{2009ApJ...696.1886B,2001A&A...365L..67A} profiles derived from
+We adopt both the density \citep{1992A&A...259L..31B} and temperature
+profiles \citep{2009ApJ...696.1886B,2001A&A...365L..67A} derived from
 X-ray observations of the Coma cluster. They are given by:
 \begin{eqnarray}
-n_e &=& \frac{3.4\times10^{-3}}{\left[1+\left(R/294\,\rmn{kpc}\right)^2\right]^{1.125}}\nonumber\\
-T k_B &=& 8.25\,\rmn{keV} \left[1+\left(R/0.5R_{200}\right)^2\right]^{-0.32}\,.
+n_e &=& \frac{3.4\times10^{-3}}{\left[1+\left(R/R_{\rmn{c}}\right)^2\right]^{1.125}}\nonumber\\
+k_{\rmn{B}} T &=& 8.25\,\rmn{keV} \left[1+\left(2R/R_{200}\right)^2\right]^{-0.32}\,.
 \end{eqnarray}
-The virial radius of Coma is given by $R_{200} = 2300\,\rmn{kpc}$.
+The virial and core radii of Coma are given by $R_{200} =
+2300\,\rmn{kpc}$ and $R_{\rmn{c}} = 294\,\rmn{kpc}$, respectively.
 The bulk of the CRps are injected by relatively low Mach number shocks
 and parameterized by $f_\rmn{CRp,inj}(p) =
 C_\rmn{CRp,inj}\,p^{-2.5}$. The CRps trace the thermal gas with
@@ -701,16 +702,16 @@ where the normalization is fixed by assuming that the injected CR
 energy in the last 650~Myrs make up 0.03\% of the thermal energy
 inside the virial radius, i.e.
 $\int_0^{R_{200}}\epsilon_\rmn{CRp,inj} \rmn{d}
-V/\int_0^{R_{200}}\epsilon_\rmn{th} \rmn{d}V = 0.0003$. The spectrum of
-  the initial CRp distribution is determined by the steady state between
-  injection and cooling,
+V\left(\int_0^{R_{200}}\epsilon_\rmn{th} \rmn{d}V\right)^{-1} =
+0.0003$. The spectrum of the initial CRp distribution is determined by
+the steady state between injection and cooling,
 \begin{equation}
  f_\rmn{CRp,0} \propto \frac{\int_p^\infty f_\rmn{CRp,inj}(p') 
-\rmn{d}p'}{\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm coul}+\frac{p}{\tau_{\rm had}}}\,,
+\rmn{d}p'}{\displaystyle\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm coul}+\frac{p}{\tau_{\rm had}}}\,,
 \end{equation}
-where the normalization is fixed by
+where we fix the normalization by requiring
 $\int_0^{R_{200}}\epsilon_\rmn{CRp,0}
-\rmn{d}V/\int_0^{R_{200}}\epsilon_\rmn{th} \rmn{d}V =
+\rmn{d}V\left(\int_0^{R_{200}}\epsilon_\rmn{th} \rmn{d}V\right)^{-1} =
 0.003$. Similarly, the initial CRe distribution is given by the steady
 state between cooling (Coulomb, inverse Compton, and synchrotron) and
 injection of secondary CRes from $f_{CRp,0}$. We also include the
@@ -734,21 +735,23 @@ We use a simple test-particle model for the CR acceleration and
 injection, where each shock inject CRs that trace a power-law in
 momentum,
 \begin{equation}
-  f(p,t) = C(t)\,p^{\alpha_\rmn{inj}}\,,
+  f(p,t) = C(t)\,p^{\alpha_\rmn{inj}}\,,\quad
+  \alpha_\rmn{inj}=\frac{(\gamma_\rmn{ad}+1)\mathcal{M}^2}
+        {(\gamma_\rmn{ad}-1)\mathcal{M}^2+2}
 \end{equation}
 determined by the normalization $C(t)$ and the spectral index
-$\alpha_\rmn{inj}=\frac{(\gamma_\rmn{ad}+1)\mathcal{M}^2}{(\gamma_\rmn{ad}-1)\mathcal{M}^2+2}$
-that depends on the adiabatic index $\gamma_\rmn{ad} = 5/3$ and the
-Mach number of the shock $\mathcal{M}$. It is given by the ratio of
-the upstream velocity ($u_2$) and the sound speed ($c_s$). The CR
-number density and CR energy density are derived from $n_\rmn{CR} =
+$\alpha_{\rmn{inj}}$ that depends on the adiabatic index
+$\gamma_\rmn{ad} = 5/3$ and the Mach number of the shock
+$\mathcal{M}$. It is given by the ratio of the upstream velocity
+($u_2$) and the sound speed ($c_s$). The CR number density and CR
+energy density are derived from $n_\rmn{CR} =
 \int_{p_\rmn{inj}}^\infty \dd p\, f(p)$ and $\epsilon_\rmn{CR} =
 \int_{p_\rmn{inj}}^\infty \dd p\, f(p) \,T(p)$, respectively, where
 $T(p) = (\sqrt{1+p^2} -1)\, m\,c^2$ is the kinetic energy of a
-particle with momentum $p$. We adopt a fit to Monte Carlo
-simulations of the thermal leakage process that relates the momentum
-of injected protons ($p_\rmn{inj}$) to the thermal energy
-($p_\rmn{th}$) of the shocked plasma \citep{kang11}:
+particle with momentum $p$. We adopt a fit to Monte Carlo simulations
+of the thermal leakage process that relates the momentum of injected
+protons ($p_\rmn{inj}$) to the thermal energy ($p_\rmn{th}$) of the
+shocked plasma \citep{kang11}:
 \begin{eqnarray}
   \label{eq:qinj}
   p_\rmn{inj} &=& x_\rmn{inj} p_\rmn{th} = x_\rmn{inj} \sqrt{\frac{2 \,k T_2}{m c^2}}\,, \nonumber \\
@@ -823,10 +826,10 @@ the adopted model (for more details, see Section \ref{sec:results}).
 
 In our Galaxy, the CRe-to-CRp ratio at a few GeV is $K_{\rmn{ep}} \sim
 10^{-2}$. Hence, we adopt this as a fiducial value for the CRe-to-CRp
-acceleration efficiency (see \cite{pinzke13} for more
-discussion). However, as recent PIC simulations have shown, this is
-likely very different at weak shocks, with electrons efficiently
-accelerated at perpendicular shocks
+acceleration efficiency \citep[see][for more
+  discussion]{pinzke13}. However, as recent PIC simulations have
+shown, this is likely very different at weak shocks, with electrons
+efficiently accelerated at perpendicular shocks
 \citep{2014ApJ...794..153G,2014ApJ...797...47G}, and ions efficiently
 accelerated at parallel shocks \citep{2014ApJ...783...91C}. Thus,
 depending on magnetic geometry, $K_{\rmn{ep}}$ could be either larger
@@ -910,12 +913,12 @@ the gamma-ray observations (see section~\ref{sect:radio_spec}).
 
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
-   \begin{center}\Large{Radio profiles}\\
+   \begin{center}\Large{radio profiles}\\
      \includegraphics[width=\columnwidth]{prof.comp.KrTTDth.Xtu.eps}
    \end{center}
 \end{minipage}
 \begin{minipage}{1\columnwidth}
-   \begin{center}\Large{Radio spectra}\\
+   \begin{center}\Large{radio spectra}\\
      \includegraphics[width=\columnwidth]{spec.comp.KrTTDth.Xtu.eps}
    \end{center}
 \end{minipage}
