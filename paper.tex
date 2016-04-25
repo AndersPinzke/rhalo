@@ -316,9 +316,9 @@ time evolution of the CRe distribution in the Lagrangian frame
 \frac{\partial}{\partial p}
 \left\{
 f_{\rmn{e}}(p,t)\left[
-\left|{{dp}\over{dt}}\right|_{\rm C} 
+\left|{{dp}\over{dt}}\right|_{\rm Coul} 
 + \frac{p}{3}\left(\bnabla\bcdot \bvel\right)
-+ \left|{{dp}\over{dt}}\right|_{\rm r}\right.\right.
++ \left|{{dp}\over{dt}}\right|_{\rm rad}\right.\right.
 \nonumber\\
 &-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
 \right]\right\} - \left(\bnabla\bcdot \bvel\right) f_{\rmn{e}}(p,t)
@@ -333,7 +333,7 @@ Here $f_{\rmn{e}}$ is the one-dimensional distribution in position $x$
 normalized such that the number density is given by
 $n_{\rmn{e}}(t)=\int d p f_{\rmn{e}}(p,t)$), $d/dt=\partial/\partial
 t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas
-velocity, $|dp/dt|$ represents radiative (r) and Coulomb (C)
+velocity, $|dp/dt|$ represents radiative (rad) and Coulomb (Coul)
 losses, $D_{pp}$ is the momentum space diffusion coefficient, and
 $Q_{\rmn{e}}$ denotes the injection rate of primary and secondary
 electrons in the ICM. The first term containing the expression
@@ -377,7 +377,7 @@ $f_{\rmn{p}}$, is similarly given by:
   {{d f_{\rmn{p}}(p,t)}\over{d t}} =
   {{\partial }\over{\partial p}}
   \left\{
-  f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm C}
+  f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm Coul}
     + \frac{p}{3}\bnabla\bcdot \left(\bvel+\bvel_{\rmn{st}}\right)\right.\right.}
 \nonumber\\
 &&-\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right)
@@ -615,7 +615,7 @@ $\tau_\rmn{D}$(\Mstream)$^{(3)}$  [Gyr] & 0.50 & 0.47 & 0.34 \\
 $\tau_\rmn{D}$(\Mflatturb)$^{(3)}$  [Gyr] & 0.69 & 0.56 & 0.27 \\
 $\tau_\rmn{IC/sync}(P=10^4\,m_ec)^{(4)}$ [Gyr] & 0.11 & 0.15 & 0.22 \\
 $\tau_\rmn{had}(P=100\,m_pc)^{(5)}$ [Gyr] & 2.4 & 4.5 & 47 \\
-$\tau_\rmn{coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
+$\tau_\rmn{Coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
 \hline
 \end{tabular}
 \begin{quote}
@@ -720,7 +720,7 @@ V\left(\int_0^{R_{200}}\epsilon_\rmn{th} \rmn{d}V\right)^{-1} =
 the steady state between injection and cooling,
 \begin{equation}
  f_\rmn{CRp,0} \propto \frac{\int_p^\infty f_\rmn{CRp,inj}(p') 
-\rmn{d}p'}{\displaystyle\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm coul}+\frac{p}{\tau_{\rm had}}}\,,
+\rmn{d}p'}{\displaystyle\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm Coul}+\frac{p}{\tau_{\rm had}}}\,,
 \end{equation}
 where we fix the normalization by requiring
 $\int_0^{R_{200}}\epsilon_\rmn{CRp,0}
@@ -768,7 +768,7 @@ shocked plasma \citep{kang11}:
 \begin{eqnarray}
   \label{eq:qinj}
   p_\rmn{inj} &=& x_\rmn{inj} p_\rmn{th} = x_\rmn{inj} \sqrt{\frac{2 \,k T_2}{m c^2}}\,, \nonumber \\
-  \rmn{where}\quad x_\rmn{inj} &\approx& 1.17 \frac{u_2}{p_{\rmn th}\,c} \left(1+
+  \rmn{where}\quad x_\rmn{inj} &\approx& 1.17 \frac{u_2}{p_{\rmn{th}}\,c} \left(1+
   \frac{1.07}{\epsilon_B}\right) \left(\frac{\mathcal{M}}{3}\right)^{0.1}\,.
 \end{eqnarray}
 Here $\eb = B_0/B_{\perp}$, $B_0$ is the amplitude of the downstream
