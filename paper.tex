@@ -1,9 +1,9 @@
-\documentclass[a4paper,fleqn,usenatbib]{mnras}
+\documentclass[fleqn,usenatbib,useAMS]{mnras}
+\usepackage{amsmath}	% Advanced maths commands
 \usepackage{txfonts}
 \usepackage[T1]{fontenc}
 \usepackage{ae,aecompl}
 \usepackage{graphicx,color}	% Including figure files
-%\usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{amsbsy}
 \usepackage[normalem]{ulem}
@@ -24,11 +24,13 @@
 \renewcommand{\vec}{\ensuremath{\mathbfit}}
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\Vph}{V_\mathrm{ph}}
-\newcommand{\mug}{\mu G}
+\newcommand{\mug}{\umu G}
 \newcommand{\RH}{R_\rmn{RH}}
 \newcommand{\bvel}{\ensuremath{\boldsymbol{\varv}}}
 \newcommand{\bnabla}{\ensuremath{\boldsymbol{\nabla}}}
 \newcommand\eb{\epsilon_\rmn{B}}
+\newcommand{\dps}{\displaystyle}
+
 
 %\voffset.6in 
 
@@ -37,8 +39,8 @@
 %\def\del#1{{\bf (DELETED TEXT)}}
 \def\C#1{{\bf #1}}
 \def\AP#1{{\bf  AP: #1}}
-\def\APP#1{{\bf {\color{red} AP2: #1}}}
-\def\SPO#1{{\bf {\color{blue} SPO: #1}}}
+\def\APP#1{{\bf {\color{blue} AP2: #1}}}
+\def\SPO#1{{\bf {\color{red} SPO: #1}}}
 \def\CP#1{{\bf {\color{mygreen} CP: #1}}}
 
 \title[Origin of Seed Electrons]{Turbulence and Particle Acceleration in Giant Radio Halos: the Origin of Seed Electrons}  
@@ -274,7 +276,7 @@ properties \citep[shock accelerated primary CRes and CRps, as well as
   secondary CRes produced in p-p collisions,
   see][]{2007MNRAS.378..385P,pfrommer08,pinzke10,pinzke13}.
 
-[explain overall picture, $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$]
+\SPO{explain overall picture, $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$}
 
 
 \subsection{Cosmic ray transport}
@@ -301,10 +303,7 @@ even Alfv{\'e}nic streaming timescales are relatively short
 \cite[$\sim 0.1-0.5$ Gyr;][]{wiener13} compared to the timescale on
 which the CRp population is built up. Based on these findings, we
 adopt a toy model for our \Mstream scenario in which CR streaming
-instantaneously produces flat CRp profiles. \sout{We assume that CRs cannot
-stream significantly past perpendicular $B$-fields at the accretion
-shock, so that the total number of CRs is conserved within the galaxy
-cluster during the streaming process.}
+instantaneously produces flat CRp profiles. 
 
 Given a seed population of CRs, we adopt essentially the same set of
 plasma physics assumptions as the reacceleration model for RHs
@@ -317,7 +316,7 @@ time evolution of the CRe distribution in the Lagrangian frame
 \frac{\partial}{\partial p}
 \left\{
 f_{\rmn{e}}(p,t)\left[
-\left|{{dp}\over{dt}}\right|_{\rm coul} 
+\left|{{dp}\over{dt}}\right|_{\rm C} 
 + \frac{p}{3}\left(\bnabla\bcdot \bvel\right)
 + \left|{{dp}\over{dt}}\right|_{\rm r}\right.\right.
 \nonumber\\
@@ -334,11 +333,12 @@ Here $f_{\rmn{e}}$ is the one-dimensional distribution in position $x$
 normalized such that the number density is given by
 $n_{\rmn{e}}(t)=\int d p f_{\rmn{e}}(p,t)$), $d/dt=\partial/\partial
 t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas
-velocity, $|dp/dt|$ represents radiative (r) and Coulomb (coul) losses,
-$D_{pp}$ is the momentum space diffusion coefficient, and
+velocity, $|dp/dt|$ represents radiative (r) and Coulomb (C)
+losses, $D_{pp}$ is the momentum space diffusion coefficient, and
 $Q_{\rmn{e}}$ denotes the injection rate of primary and secondary
-electrons in the ICM. The $\bnabla\bcdot \bvel$ terms represent
-adiabatic gains and losses.
+electrons in the ICM. The first term containing the expression
+$\bnabla\bcdot \bvel$ represents Fermi-I acceleration and the second
+term of this form describes adiabatic gains and losses.
 
 During post-processing of our Coma-like cluster simulation, we solve
 the Fokker-Planck equation over a redshift interval from $z=5$ to
@@ -399,32 +399,36 @@ collisions with thermal protons of the ICM \cite[e.g.][]{brunetti11}.
 
 
 \subsection{Turbulent reacceleration}
-We incorporate momentum diffusion for electrons and protons from
+We incorporate momentum diffusion for electrons and protons via the
 transit-time-damping (TTD) resonance with compressible MHD turbulence,
 to model Fermi-II reacceleration \citep{brunetti07,brunetti11}. The
-TTD resonance requires the wave frequency
-$\omega=k_\parallel\upsilon_\parallel$, where $k_\parallel$ and
-$\upsilon_\parallel$ are the parallel (projected along the magnetic
+TTD resonance requires the wave frequency to obey the resonance
+condition, $\omega=k_\parallel\varv_\parallel$, where $k_\parallel$
+and $\varv_\parallel$ are the parallel (projected along the magnetic
 field) wavenumber and particle velocity, respectively. This implies
 that the particle transit time across the confining wave region
-matches the wave period, $\lambda_{\parallel}/v_{\parallel}=T$. Note,
-the CRs' gyroradius does not enter the resonance condition. Hence the
-CRs that are in resonance with compressible waves experience Fermi-II
+matches the wave period,
+$\lambda_{\parallel}/v_{\parallel}=\tau_{\rmn{wave}}$. Note, the CRs'
+gyroradius does not enter the resonance condition. Hence the CRs that
+are in resonance with compressible waves experience Fermi-II
 acceleration irrespectively of the length scale of the perturbation.
 
-However, the resonance changes the component of particle momentum
-parallel to seed magnetic fields, which over time leads to increasing
-anisotropy in the particle distribution that decreases the efficiency
-of reacceleration with time. As in \citet{brunetti11}, we assume that
-there exists a mechanism---such as the firehose instability---that
-isotropizes the CR distribution function at the gyroscale and on the
-reacceleration time scale, which ensures sustained efficient
-reacceleration with time. The particle pitch-angle averaged
-momentum-diffusion coefficient of isotropic particles that couple to
-fast magnetosonic modes via TTD resonance is \citep[][ Eqn. 47]{brunetti07}:
+However, the resonance changes the component of the particle momentum
+parallel to the mean magnetic field, which over time leads to
+increasing anisotropy in the particle distribution that decreases the
+efficiency of reacceleration with time. As in \citet{brunetti11}, we
+assume that there exists a mechanism---such as the firehose
+instability---that isotropizes the CR distribution function at the
+gyroscale and on the reacceleration time scale, which ensures
+sustained efficient reacceleration with time.
+\CP{add OoM}
+
+The particle pitch-angle averaged momentum-diffusion coefficient of
+isotropic particles that couple to fast magnetosonic modes via TTD
+resonance is \citep[][ Eqn. 47]{brunetti07}:
 \begin{eqnarray}
-  D_{pp}(p,t) = \frac{\pi}{16} \frac{p^2}{c\,\rho}
-  \left\langle\frac{\beta |B_k|^2}{16 \pi \,W}\right\rangle
+  D_{pp}(p,t) = \frac{\upi}{16} \frac{p^2}{\rho c}
+  \left\langle\frac{\beta |B_k|^2}{16 \upi \,W}\right\rangle
   I_\theta
   \int_{k_\rmn{cut}}\mathcal{W}(k)k\,d k\,,
 \label{eq:dpp}
@@ -456,20 +460,21 @@ We focus on a scenario where the turbulence is injected at the largest
 scale that is driven by the merging cluster and accreting matter. The
 diffusion equation for isotropic MHD turbulence in $k$--space is given
 by
-\begin{eqnarray}
-&{{\partial {\mathcal W}(k,t) }\over{\partial t}}
+\begin{equation}
+  \begin{aligned}
+\frac{\partial {\mathcal W}(k,t)}{\partial t}
 =
-{{\partial}\over{\partial k}}
+\frac{\partial}{\partial k}
 \left[
 k^2 D_{kk}
-{{\partial}\over{\partial k}}
-\left( {{ {\mathcal W}(k,t) }\over{k^2}} \right)
+\frac{\partial}{\partial k}
+\left( \frac{{\mathcal W}(k,t)}{k^2} \right)
 \right]
 - \sum_i \Gamma_i (k,t) {\mathcal W}(k,t)
-+ I(k,t)\nonumber\\
-&
++ I(k,t)
+\end{aligned}
 \label{modes_kinetic}
-\end{eqnarray}
+\end{equation}
 where we assume that the volumetric injection rate of turbulence
 $I(k,t)$ is constant over time with a fixed rate $I_0$ so that $I(k,t)
 \equiv I(k) = I_0\,\delta (k - k_o)$. The different damping terms are
@@ -489,34 +494,41 @@ form
   \mathcal{W}(k) =
 \sqrt{2/7\,I_0\,\rho\,\langle \Vph \rangle}\,k^{-3/2},
 \end{equation}
-for $k_0<k<k_\rmn{cut}$. Here we adopt a injection scale of the
-turbulence, $k_0= 2\pi/(100~\mbox{kpc})$, that is in line with
-previous work \citep{brunetti07,brunetti11} \AP{need to be motivated
-  better? why not 1 Mpc}
-%, motivated by recent state-of-art simulations \citep{2009A&A...504...33V,2011A&A...529A..17V,2015ApJ...800...60M}.
-The profile of injected turbulence is also highly uncertain, however
-we assume it correlates to the thermal energy density to some power of
-the merging clusters. Hence we assume volumetric injection rate of
-turbulent energy, $I_0\propto \epsilon_\rmn{th}^{\alpha_\rmn{tu}}$,
-and determine the normalization by requiring that the turbulent energy
-in compressible modes $E_\rmn{turb}=\int \int \mathcal{W}(k) \rmn{d}k
-\rmn{d}V = X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is the total
-thermal energy. We adopt a turbulent energy ratio\footnote{Simulations
-  show that the compressible modes contribute a factor $0.2-0.4$ to
-  the total turbulent energy
+for $k_0<k<k_\rmn{cut}$. Here we adopt an injection scale of the
+turbulence, $k_0= 2\upi/\lambda_0$ with $\lambda_0 =100~\mbox{kpc}$,
+that is in line with previous work \citep{brunetti07,brunetti11}. Note
+that this length scale defines an eddy turn-over time
+$\tau_{\rmn{eddy}}\sim2\upi\lambda_0/V_0\sim1.2$~Gyr with
+$V_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event. 
+
+The profile of injected turbulence depends on the details of the
+merger such as time during the merger, the impact parameter, the
+merger mass ratio, and the degree of cluster anisotropy
+\citep{2015ApJ...800...60M}. We parametrize these uncertainties and
+assume that it scales with the thermal energy density to some
+power. Hence we assume volumetric injection rate of turbulent energy,
+$I_0\propto \epsilon_\rmn{th}^{\alpha_\rmn{tu}}$, and determine the
+normalization by requiring that the turbulent energy in compressible
+modes $E_\rmn{turb}=\int \int \mathcal{W}(k) \rmn{d}k \rmn{d}V =
+X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is the total thermal
+energy. We adopt a turbulent energy ratio $X_\rmn{tu}=0.2$ within the
+radio halo.\footnote{Simulations show that the compressible modes
+  contribute a factor $0.2-0.4$ to the total turbulent energy
   \citep{2013ApJ...771..131B,2015ApJ...800...60M}. Furthermore, the
-  total turbulent energy is typically $\sim15-70$\% of the thermal
-  energy in a cluster \cite{2011A&A...529A..17V} which is in agreement
-  with our adopted value of $X_\rmn{tu}$.}  $X_\rmn{tu}=0.2$ within
-the radio halo. In this work we investigate different spatial models
-for injected turbulence. With the above choice of normalization, the
-turbulent energy density becomes $\epsilon_\rmn{turb} \propto
+  total turbulent energy, which can be decomposed into a slenoidal and
+  compressible component, is typically $\sim15-70$\% of the thermal
+  energy in a cluster \citep{2011A&A...529A..17V}; in agreement with
+  our adopted value of $X_\rmn{tu}$.} In this work we investigate
+different spatial models for injected turbulence. With the above
+choice of normalization, the turbulent energy density becomes
+$\epsilon_\rmn{turb} \propto
 \epsilon_\rmn{th}^{(\alpha_\rmn{tu}+1)/2}/T^{1/4}$, where $T$ is the
 temperature of the gas, $\alpha_\rmn{tu}= 0.67$ for \Mflatturb,
 $\alpha_\rmn{tu}= 0.82$ for \Mstream, and $\alpha_\rmn{tu}= 0.88$ for
-\Mprimary (see Figure~\ref{fig:turb} for visualization). Note that in
-previous work on the Coma cluster, $\epsilon_\rmn{turb} \propto
-\epsilon_\rmn{th}$ was adopted which roughly corresponds to
+\Mprimary (see Figure~\ref{fig:turb} for visualization).
+
+Note that in previous work on the Coma cluster, $\epsilon_\rmn{turb}
+\propto \epsilon_\rmn{th}$ was adopted which roughly corresponds to
 $\alpha_\rmn{tu}= 1$ \citep{brunetti12} and together with the
 different distributions for seed CRes constitute the main differences
 compared to our work. Our flatter turbulent profiles are motivated by
@@ -535,21 +547,22 @@ k^2/D_{kk}$. Thus, the cascade is suppressed for wave numbers above
   k_\rmn{cut} \approx \frac{81}{14} \frac{I_0}{\rho \langle \Vph \rangle}
   \left(\frac{\langle\sum_i \Gamma_i(k,\theta)\rangle}{k}\right)^{-2}\,,
 \end{equation}
-where $2\pi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
+where $2\upi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
 effective mean free path for CRs, unless plasma instabilities can
 mediate interactions between turbulence and particles on smaller
-scales \citep{brunetti11}. In this work we only consider damping of
-the turbulence via TTD due to thermal electrons, and neglect
-subdominant damping with thermal protons and relativistic particles
-(conversely, the turbulence has important effects on the
-reacceleration of CRs). The latter will be subdominant in the ICM for
-a CR-to-thermal energy density ratio $\lesssim 10 \%$
-\citep{brunetti07}, which is always satisfied in our models. The
-azimuthally averaged turbulent damping rate from thermal electrons
-\citep{brunetti07} in a high-$\beta$ plasma is
+scales \citep{brunetti11}.
+
+In this work we only consider damping of the turbulence via TTD due to
+thermal electrons, and neglect subdominant damping with thermal
+protons and relativistic particles (conversely, the turbulence has
+important effects on the reacceleration of CRs). The latter will be
+subdominant in the ICM for a CR-to-thermal energy density ratio
+$\lesssim 10 \%$ \citep{brunetti07}, which is always satisfied in our
+models. The azimuthally averaged turbulent damping rate from thermal
+electrons \citep{brunetti07} in a high-$\beta$ plasma is
 \begin{equation}
 \label{eq:Gamma_e}
-\langle\Gamma_{\rmn{e}}\rangle \approx \langle k\,\Vph\,\sqrt{3\pi
+\langle\Gamma_{\rmn{e}}\rangle \approx \langle k\,\Vph\,\sqrt{3\upi
   x/20}\exp(-5x/3)\sin^2{\theta}\rangle\approx 0.0435k\,\Vph, 
 \end{equation}
 where $x=(m_{\rmn{e}}/m_{\rmn{p}})/\cos^2{\theta}$. To compute the
@@ -1021,7 +1034,7 @@ In principle, reacceleration via TTD leads to spectral steepening with
 particle energy due to the inefficiency of the acceleration process to
 counter the stronger cooling losses with increasing energy. Since
 synchrotron emission peaks at frequency $\nu_\rmn{syn}\simeq 1\,
-B/\mu\rmn{G} (\gamma/10^4)^2\,\rmn{GHz}$, this translates into a
+B/\umu\rmn{G} (\gamma/10^4)^2\,\rmn{GHz}$, this translates into a
 spectral steepening of the radio spectrum (see
 Fig.~\ref{fig:sync_spectrum}). A given radio window samples higher
 energy electrons for a decreasing field strength in the cluster
