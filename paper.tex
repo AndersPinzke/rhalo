@@ -38,8 +38,8 @@
 \def\del#1{{}}
 %\def\del#1{{\bf (DELETED TEXT)}}
 \def\C#1{{\bf #1}}
-\def\AP#1{{\bf  AP: #1}}
-\def\APP#1{{\bf {\color{blue} AP2: #1}}}
+\def\AP2#1{{\bf  AP2: #1}}
+\def\AP#1{{\bf {\color{blue} AP: #1}}}
 \def\SPO#1{{\bf {\color{red} SPO: #1}}}
 \def\CP#1{{\bf {\color{mygreen} CP: #1}}}
 
@@ -316,9 +316,9 @@ time evolution of the CRe distribution in the Lagrangian frame
 \frac{\partial}{\partial p}
 \left\{
 f_{\rmn{e}}(p,t)\left[
-\left|{{dp}\over{dt}}\right|_{\rm Coul} 
+\left|\frac{dp}{dt}\right|_{\rm Coul} 
 + \frac{p}{3}\left(\bnabla\bcdot \bvel\right)
-+ \left|{{dp}\over{dt}}\right|_{\rm rad}\right.\right.
++ \left|\frac{dp}{dt}\right|_{\rm rad}\right.\right.
 \nonumber\\
 &-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
 \right]\right\} - \left(\bnabla\bcdot \bvel\right) f_{\rmn{e}}(p,t)
@@ -334,9 +334,17 @@ normalized such that the number density is given by
 $n_{\rmn{e}}(t)=\int d p f_{\rmn{e}}(p,t)$), $d/dt=\partial/\partial
 t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas
 velocity, $|dp/dt|$ represents radiative (rad) and Coulomb (Coul)
-losses, $D_{pp}$ is the momentum space diffusion coefficient, and
-$Q_{\rmn{e}}$ denotes the injection rate of primary and secondary
-electrons in the ICM. The first term containing the expression
+losses, \AP{please insert formulae:}
+\begin{eqnarray}
+  \left|\frac{dp}{dt}\right|_{\rm Coul}
+  &=& \\
+  \left|\frac{dp}{dt}\right|_{\rm rad~}
+  &=& 
+\end{eqnarray}
+$D_{pp}$ is the momentum space diffusion coefficient (see
+Sect.~\ref{sec:reacc}), and $Q_{\rmn{e}}$ denotes the injection rate
+of primary and secondary electrons in the ICM (see
+Sect.~\ref{sec:cosmo_sim}). The first term containing the expression
 $\bnabla\bcdot \bvel$ represents Fermi-I acceleration and the second
 term of this form describes adiabatic gains and losses.
 
@@ -393,12 +401,19 @@ where $\bvel_{\rmn{st}}=-\varv_{\rmn{A}}\bnabla f_{\rmn{p}}/|\bnabla
 f_{\rmn{p}}|$ is the streaming velocity in the isotropic transport
 approximation, $\varv_{\rmn{A}}$ is the Alfv\'en speed,
 $Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock accelerated
-CRps as a function of momentum $p$ and time $t$, and $\tau_{\rm had}$
-is the timescale of hadronic losses that produce pions via CRp
-collisions with thermal protons of the ICM \cite[e.g.][]{brunetti11}.
+CRps as a function of momentum $p$ and time $t$ (see
+Sect.~\ref{sec:cosmo_sim}), and $\tau_{\rm had}$ is the timescale of
+hadronic losses that produce pions via CRp collisions with thermal
+protons of the ICM \cite[e.g.][]{brunetti11}.
+\AP{please insert formulae:}
+\begin{eqnarray}
+  \tau_{\rm had} = 
+\end{eqnarray}
 
 
 \subsection{Turbulent reacceleration}
+\label{sec:reacc}
+
 We incorporate momentum diffusion for electrons and protons via the
 transit-time-damping (TTD) resonance with compressible MHD turbulence,
 to model Fermi-II reacceleration \citep{brunetti07,brunetti11}. The
@@ -421,9 +436,20 @@ assume that there exists a mechanism---such as the firehose
 instability---that isotropizes the CR distribution function at the
 gyroscale and on the reacceleration time scale, which ensures
 sustained efficient reacceleration with time.
-\CP{add OoM}
 
-The particle pitch-angle averaged momentum-diffusion coefficient of
+\SPO{please check the following:} To order of magnitude, the
+momentum-space diffusion coefficient due to second-order Fermi-II
+acceleration scales as
+\begin{eqnarray}
+  D_{pp} \propto p\dot{p}
+  \propto p^2\langle kc\rangle_{\mathcal{W}} \left(\frac{\Vph}{c}\right)^2,
+\label{eq:dpp_oom}
+\end{eqnarray}
+since the force on a particle due to Fermi-II acceleration scales as
+$\dot{p}\sim p/\tau\sim p \langle kc\rangle_{\mathcal{W}} (\Vph/c)^2$
+where $\langle kc\rangle_{\mathcal{W}} (\Vph/c)^2$ is the wave
+energy-averaged wave-particle interaction rate. It can be shown that
+the particle pitch-angle averaged momentum-diffusion coefficient of
 isotropic particles that couple to fast magnetosonic modes via TTD
 resonance is \citep[][ Eqn. 47]{brunetti07}:
 \begin{eqnarray}
@@ -525,7 +551,9 @@ $\epsilon_\rmn{turb} \propto
 \epsilon_\rmn{th}^{(\alpha_\rmn{tu}+1)/2}/T^{1/4}$, where $T$ is the
 temperature of the gas, $\alpha_\rmn{tu}= 0.67$ for \Mflatturb,
 $\alpha_\rmn{tu}= 0.82$ for \Mstream, and $\alpha_\rmn{tu}= 0.88$ for
-\Mprimary (see Figure~\ref{fig:turb} for visualization).
+\Mprimary (see Figure~\ref{fig:turb} for visualization). \CP{These
+  models and scaling indices are not well motivated here, they would
+  better fit into the results section.}
 
 Note that in previous work on the Coma cluster, $\epsilon_\rmn{turb}
 \propto \epsilon_\rmn{th}$ was adopted which roughly corresponds to
@@ -588,11 +616,13 @@ derived from X-ray measurements \citep{1992A&A...259L..31B}.
   \label{fig:turb}
 \end{figure}
 
-For reference we show in Table~\ref{tab:timescales} both the thermal
-quantities and the timescales for CR cooling and (re)acceleration for
-three different spatial regions of the RH. Interestingly the
-reacceleration timescale $\tau_D$ is similar between our three models,
-where the difference comes from turbulent profile parameterized with
+\SPO{this needs a rewrite in the light of an updated discussion of
+  $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$.}  For reference we show in
+Table~\ref{tab:timescales} both the thermal quantities and the
+timescales for CR cooling and (re)acceleration for three different
+spatial regions of the RH. Interestingly the reacceleration timescale
+$\tau_{\rm D}$ is similar between our three models, where the
+difference comes from turbulent profile parameterized with
 $\alpha_\rmn{tu}$. This implies that even small differences in the
 turbulent profile could impact the seed CRs significantly.
 
@@ -730,13 +760,14 @@ state between cooling (Coulomb, inverse Compton, and synchrotron) and
 injection of secondary CRes from $f_{CRp,0}$. We also include the
 continuous injection of secondary CRes during $\tau_\rmn{cl}$. The
 compressible turbulence responsible for reaccelerating both the CRps
-and CRes is parameterized by $I_0 \propto X_\rmn{tu} (n_e
+and CRes is parameterized by $I_0 \propto X_\rmn{tu} (n_{\rmn{e}}
 T)^{\alpha_\rmn{tu}}$. The diffusion constant $D_\rmn{pp}$ is
 calculated for each radial bin using
 Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e}. All parameters and assumptions
 are similar to what is used for our simulated cluster.
 
 \subsection{Cosmological simulation methodology}
+\label{sec:cosmo_sim}
 In this paper we focus on our simulated cluster, g72a, which is a
 massive $1.6\times10^{15}\,M_\odot$ cluster that experienced a merger
 about 1-2 Gyrs ago \citep{2009MNRAS.399..497D}. Since the cluster
