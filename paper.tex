@@ -335,17 +335,30 @@ Here $f_{\rmn{e}}$ is the one-dimensional distribution in position $x$
 normalized such that the number density is given by
 $n_{\rmn{e}}(t)=\int d p f_{\rmn{e}}(p,t)$), $d/dt=\partial/\partial
 t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas
-velocity, $|dp/dt|$ represents radiative (rad) and Coulomb (Coul)
-losses, \AP{please insert formulae:}
+velocity, $|dp/dt|$ represents radiative
+\citep[rad,][]{1979rpa..book.....R} and Coulomb
+\citep[Coul,][]{1972Phy....60..145G} losses, \AP{please insert
+  formulae: -- done}
 \begin{eqnarray}
-  \left|\frac{dp}{dt}\right|_{\rm Coul}
-  &=& \\
-  \left|\frac{dp}{dt}\right|_{\rm rad~}
-  &=& 
+   \left|\frac{dp}{dt}\right|_{\rm Coul} &=& \frac{3\,\sigma_\rmn{T}\,n_e\,c}{2\, \beta^2}
+  \left[\ln\left(\frac{m_e c^2 \beta \sqrt{\gamma-1}}{\hbar\,\omega_\rmn{plasma}}\right)\right.\nonumber \\
+    &-&\ln(2)\left(\frac{\beta^2}{2}+\frac{1}{\gamma}\right)+\frac{1}{2}+
+    \left.\left(\frac{\gamma-1}{4\gamma}\right)^2\right]\,, \\
+  \rmn{where} &\,& \beta = p/\sqrt{1+p^2}\,,\qquad \gamma=\sqrt{1+p^2}\,, \quad\rmn{and}\nonumber \\
+  \left|\frac{dp}{dt}\right|_{\rm rad~} &=& \frac{4}{3}\frac{\sigma_\rmn{T}}{m_ec}\,
+  \frac{p^2}{\beta}\,\left[1+\left(\frac{B}{B_\rmn{CMB}}\right)^2\right]\,.
 \end{eqnarray}
-$D_{pp}$ is the momentum space diffusion coefficient (see
-Sect.~\ref{sec:reacc}), and $Q_{\rmn{e}}$ denotes the injection rate
-of primary and secondary electrons in the ICM (see
+Here $\omega_\rmn{plasma} = \sqrt{4\pi e^2 n_e / m_e}$ is the plasma
+frequency, $n_e$ is the number density of free electrons, and
+$\sigma_\rmn{T}= 8\pi e^4/3(m_e c^2)^2$ is the Thomson cross
+section. The {\it rms} magnetic field strength is denoted by $B$ and
+the equivalent field strength of the cosmic-microwave background is
+given by $B_\rmn{CMB} = 3.24 (1 + z)^2\mu\rmn{G}$, where $z$ denotes
+the redshift. In the peripheral cluster regions, where $B <<
+B_\rmn{CMB}$, the CRes loose virtually all their energy by means of
+inverse Compton emission. $D_{pp}$ is the momentum space diffusion
+coefficient (see Sect.~\ref{sec:reacc}), and $Q_{\rmn{e}}$ denotes the
+injection rate of primary and secondary electrons in the ICM (see
 Sect.~\ref{sec:cosmo_sim}). The first term containing the expression
 $\bnabla\bcdot \bvel$ represents Fermi-I acceleration and the second
 term of this form describes adiabatic gains and losses.
@@ -403,15 +416,17 @@ $f_{\rmn{p}}$, is similarly given by:
 where $\bvel_{\rmn{st}}=-\varv_{\rmn{A}}\bnabla f_{\rmn{p}}/|\bnabla
 f_{\rmn{p}}|$ is the streaming velocity in the isotropic transport
 approximation, $\varv_{\rmn{A}}$ is the Alfv\'en speed,
-$Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock accelerated
+and $Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock accelerated
 CRps as a function of momentum $p$ and time $t$ (see
-Sect.~\ref{sec:cosmo_sim}), and $\tau_{\rm had}$ is the timescale of
+Sect.~\ref{sec:cosmo_sim}). The timescale of
 hadronic losses that produce pions via CRp collisions with thermal
-protons of the ICM \cite[e.g.][]{brunetti11}.
-\AP{please insert formulae:}
+protons of the ICM is given by 
+\AP{please insert formulae: -- done}
 \begin{eqnarray}
-  \tau_{\rm had} = 
+  \tau_{\rm had} = \frac{1}{c\,n_\rmn{th}\,\sigma^{+/-,0}(p)}\,
 \end{eqnarray}
+where we use the cross-section, $\sigma^{+/-,0}(p)$, given by the
+fitting formula in \citep{1986ApJ...307...47D}.
 
 
 \subsection{Turbulent reacceleration}
@@ -525,10 +540,11 @@ form
 \end{equation}
 for $k_0<k<k_\rmn{cut}$. Here we adopt an injection scale of the
 turbulence, $k_0= 2\upi/\lambda_0$ with $\lambda_0 =100~\mbox{kpc}$,
-that is in line with previous work \citep{brunetti07,brunetti11}. Note
-that this length scale defines an eddy turn-over time
+that is in line with previous work
+\citep{2006MNRAS.366.1437S,brunetti07,brunetti11}. Note that this
+length scale defines an eddy turn-over time
 $\tau_{\rmn{eddy}}\sim2\upi\lambda_0/V_0\sim1.2$~Gyr with
-$V_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event. 
+$V_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event.
 
 The profile of injected turbulence depends on the details of the
 merger such as time during the merger, the impact parameter, the
@@ -746,17 +762,22 @@ n_e &=& \frac{n_0}{\left[1+\left(R/R_{\rmn{c}}\right)^2\right]^{1.125}}\nonumber
 k_{\rmn{B}} T &=& 8.25\,\rmn{keV} \left[1+\left(2R/R_{200}\right)^2\right]^{-0.32}\,,
 \end{eqnarray}
 with $n_0=3.4\times10^{-3}\,\rmn{cm}^{-3}$.  The virial and core radii
-of Coma are given by $R_{200} = 2300\,\rmn{kpc}$ and $R_{\rmn{c}} =
-294\,\rmn{kpc}$, respectively.
+of Coma are given by $R_{200} = 2300\,\rmn{kpc}$
+\citep{2002ApJ...567..716R} and $R_{\rmn{c}} = 294\,\rmn{kpc}$,
+respectively.
 
-\AP{Can you please provide references for the following:} The bulk of the
-CRps are injected by relatively low Mach number shocks and
-parameterized by $f_\rmn{p,inj}(p) = C_\rmn{inj}\,p^{-2.5}$. The
-CRps trace the thermal gas with $C_\rmn{inj} \propto
-\eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$, where the normalization is
-fixed by assuming that the injected CR energy in the last 650~Myrs
-make up 0.03\% of the thermal energy inside the virial radius, i.e.
-$\int_0^{R_{200}}\eps_\rmn{p,inj} \rmn{d}
+\AP{Can you please provide references for the following: -- check if
+  ok, the numbers are taken from our simulated g72a cluster. It should
+  be more clear now...} The bulk of the CRps are injected by
+relatively low Mach number shocks and parameterized by
+$f_\rmn{p,inj}(p) = C_\rmn{inj}\,p^{-\alpha_\rmn{inj}}$, where
+$\alpha_\rmn{inj}\approx 2.5$ in our simulations. The CRps
+approximately trace the thermal gas with $C_\rmn{inj} \propto
+\eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
+\citep{pinzke10,2016MNRAS.459...70V}, where the normalization is fixed
+by the injected CR energy in the last 650~Myrs. Our simulations show
+that it roughly make up 0.03\% of the thermal energy inside the virial
+radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{p,inj} \rmn{d}
 V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
 0.0003$. The spectrum of the initial CRp distribution is determined by
 the steady state between injection and cooling,
@@ -767,9 +788,12 @@ the steady state between injection and cooling,
 where we fix the normalization by requiring
 $\int_0^{R_{200}}\eps_\rmn{p,0}
 \rmn{d}V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
-0.003$. \AP{not 0.0003?} Similarly, the initial CRe distribution is
-given by the steady state between cooling (Coulomb, inverse Compton,
-and synchrotron) and injection of secondary CRes from $f_\rmn{p,0}$. We
+0.003$. \AP{not 0.0003? -- No, the injected energy in the last 650 Mys
+  is smaller then the energy density of the CRs injected during the
+  formation of the cluster. I estimated the difference to be about a
+  factor 10.} Similarly, the initial CRe distribution is given by the
+steady state between cooling (Coulomb, inverse Compton, and
+synchrotron) and injection of secondary CRes from $f_\rmn{p,0}$. We
 also include the continuous injection of secondary CRes during
 $\tau_\rmn{cl}$. The compressible turbulence responsible for
 reaccelerating both the CRps and CRes is parameterized by $I_0 \propto
@@ -1061,31 +1085,33 @@ components of Coma.
 \subsection{Radio profile}
 In Fig.~\ref{fig:sync_profile}, we find that all three scenarios in
 which the seeds undergo Fermi-II reacceleration can reproduce the Coma
-RH profile at 352~MHz. In the panel {\it Brunetti et al. (2012)} we
-show that without CR streaming or a flat turbulent profile, our
-simulations of reaccelerated CRs produce radio profiles that are too
-steep. Indeed, even using the assumptions of previous work -- where
-complete freedom in the seed population was allowed -- it is not
-possible to reproduce observations in both frequencies in any
-model. Note that decreasing acceleration efficiency with radius does
-not change this conclusion much because of the weak radial dependence
-of $D_\rmn{pp}(R)\propto
-\eps_\rmn{th}(R)^{\alpha_\rmn{tu}-1}\sqrt{T(R)}$. This
-signals that the problem is generic and requires either additional
-modifications to the plasma physics of acceleration or a better
-understanding of potential observational systematics. In addition
-there are differences in the simulated density and temperature
-profiles in comparison to the observed profile in Coma that impact the
-CR abundance as well as cooling and reacceleration.
+RH profile at 352~MHz. \AP{It is also clear that without turbulent
+  reacceleration, the simulated radio profiles are too steep.} In the
+panel {\it Brunetti et al. (2012)} we show that without CR streaming
+or a flat turbulent profile, our simulations of reaccelerated CRs
+produce radio profiles that are too steep. Indeed, even using the
+assumptions of previous work -- where complete freedom in the seed
+population was allowed -- it is not possible to reproduce observations
+in both frequencies in any model. Note that decreasing acceleration
+efficiency with radius does not change this conclusion much because of
+the weak radial dependence of $D_\rmn{pp}(R)\propto
+\eps_\rmn{th}(R)^{\alpha_\rmn{tu}-1}\sqrt{T(R)}$. This signals that
+the problem is generic and requires either additional modifications to
+the plasma physics of acceleration or a better understanding of
+potential observational systematics. In addition there are differences
+in the simulated density and temperature profiles in comparison to the
+observed profile in Coma that impact the CR abundance as well as
+cooling and reacceleration.
 
 In principle, reacceleration via TTD leads to spectral steepening with
 particle energy due to the inefficiency of the acceleration process to
 counter the stronger cooling losses with increasing energy. Since
 synchrotron emission peaks at frequency $\nu_\rmn{syn}\simeq 1\,
 B/\umu\rmn{G} (\gamma/10^4)^2\,\rmn{GHz}$, this translates into a
-spectral steepening of the radio spectrum (see
-Fig.~\ref{fig:sync_spectrum}). A given radio window samples higher
-energy electrons for a decreasing field strength in the cluster
+spectral steepening of the radio spectrum (see \AP{the left panel of
+  Fig.~\ref{fig:sync_spectrum}} where the continuous injection of
+secondary CRes is absent). A given radio window samples higher energy
+electrons for a decreasing field strength in the cluster
 outskirts. Hence, the spectral steepening with energy should translate
 into a radial spectral steepening \citep{brunetti12}. However, because
 of the weak dependence of the electron Lorentz factor on emission
@@ -1161,9 +1187,18 @@ $\zeta_{\rmn{p}}<0.03$, respectively. Following the Mach number
 acceleration efficiency for protons $\zeta_{\rmn{p}}\sim0.0001-0.01$,
 and for electrons $\zeta_{\rmn{e}}\sim 0.001$. Interestingly, we find
 that the radio luminosity from clusters in the OFF-state (DSA only)
-and ON-state (DSA and reacceleration) differ by about a factor 10 in
-all our three models. However, note that for \Mprimary, the primary
-CRes that generate most of the radio emission from the cluster in the
+and ON-state (DSA and reacceleration) differ by about a factor 10-20
+in all our three models. \AP{This means that the secondary CRes are
+  dominated by the reaccelerated fossil CRes and not from the CRes
+  produced by reaccelerated CRps. However, for high frequencies
+  ($\nu_\rmn{syn}\gtrsim$ GHz) where synchrotron cooling is more
+  efficient than reacceleration, the emission is dominated by the CRes
+  produced in the continuous injection of electrons from reaccelerated
+  CRps. It is also worth mentioning that the radio emission from
+  secondary CRes are smoothly distributed around the cluster because
+  of the continuous injection, hence the it is not dominated by
+  outliers.} However, \sout{note that} for \Mprimary, the primary CRes
+that generate most of the radio emission from the cluster in the
 OFF-state are dominated by only a small fraction of the CRes. These
 electrons are injected very recently and have not had time to cool
 yet. Hence we expect there to be a large variance in the OFF-state of
@@ -1281,32 +1316,41 @@ parameters.
 
 How could we distinguish the different possibilities of a dominating
 primary or secondary seed population of electrons observationally?
-One possibility that is relative insensitive to adopted parameters in
-our models is to use high-frequency radio observations (with e.g., the
+\AP{I do not understand the next scentence, could you clarify?} One
+possibility that is relative insensitive to adopted parameters in our
+models is to use high-frequency radio observations (with e.g., the
 Jansky Very Large Array) where turbulent reacceleration (which has a
 high energy cutoff) is no longer efficient (see
 Fig.~\ref{fig:sync_spectrum}). The negative flux bowl of the
 Sunyaev-Zel'dovich effect introduces a cutoff of the RH spectrum at
 frequencies above $\gtrsim 10$~GHz \citep[][ depending on cluster mass
   and redshift]{2002A&A...396L..17E,Pfrommer:2003mk}. Hence the
-subdominant hadronic radio emission may only be detectable in steep
-spectrum radio sources \citep{2008Natur.455..944B}, which exhibit a
-cutoff at lower radio frequencies and are thought to represent dying
-RHs as a result of the decaying turbulence after a
-merger. Alternatively, one could attempt to reconstruct the intrinsic
-high-frequency RH spectrum by filling in the missing flux due to the
-Sunyaev-Zel'dovich effect by precise measurements of the Compton-$y$
-parameter at microwave frequencies. Another possibility would consist
-in stacking the radio data of radio-quiet clusters that due not
-exhibit RH emission \citep{2011ApJ...740L..28B}. This may reveal the
+subdominant \sout{hadronic} radio emission \AP{from freshly injected
+  secondary CRes} may only be detectable in steep spectrum radio
+sources \citep{2008Natur.455..944B}, which exhibit a cutoff at lower
+radio frequencies and are thought to represent dying RHs as a result
+of the decaying turbulence after a merger. Alternatively, one could
+attempt to reconstruct the intrinsic high-frequency RH spectrum by
+filling in the missing flux due to the Sunyaev-Zel'dovich effect by
+precise measurements of the Compton-$y$ parameter at microwave
+frequencies. Another possibility would consist in stacking the radio
+data of radio-quiet clusters that do not exhibit RH emission
+\AP{individually} \citep{2011ApJ...740L..28B}. This may reveal the
 glow of radio emission due to steady state secondary
 population. Emission from faint secondary electrons should still be
 visible, whereas due to the much more intermittent nature of DSA
 injection, primary CRe will instead show a sharp cutoff due to
 cooling, and will not be visible at high energies (see
-Fig.~\ref{fig:sync_spectrum}). We will pursue further implications and
-distinguishing characteristics of these competing models in future
-work.
+Fig.~\ref{fig:sync_spectrum}). \AP{Finally we want to mention that in
+  the near future we hope to gain valuable information about the
+  turbulent profile in galaxy clusters from the recently launched
+  X-ray satellite ASTRO-H. Alternatively, as magnetohydrodynamic
+  simulations improve, these can provide valuable insight about the
+  profile and the total energy of turbulence in clusters. This will
+  further help us to distinguish the three different models from each
+  other.} We will pursue further implications and distinguishing
+characteristics of these competing models in future work.
+
 
 {\bf Acknowledgments.} We thank Josh Wiener for discussions on CR
 streaming. We are also grateful to Lawrence Rudnick for discussion on
