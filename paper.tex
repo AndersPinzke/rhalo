@@ -452,7 +452,7 @@ D_{pp} \sim p \dot{p} \sim p^{2} \langle k c \rangle_{\mathcal{W}} \left( \frac{
 
 Equations \ref{eqn:diffusion} and \ref{eqn:Wk} make the important aspects of turbulence clear: the energy in compressive modes $\langle (\delta v_{\rm c})^{2} \rangle$, the inner and outer scale ($k_{\rm cut}$ and $k_{\rm L}$), and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
 
-{\bf Energy in compressive modes} The total turbulence energy is typically $\sim 15-70\%$ of the thermal energy in a cluster \citep{vazza11}; it rises rapidly during a merger. The compressible component is $\sim 20-40\%$ of the total turbulent energy, and shows more rapid temporal variations compared to the compressible component \citep{2013ApJ...771..131B,2015ApJ...800...60M}. It is worth noting that in the subsonic regime of the solar wind \citep{yao11,howes12}, as well as most idealized calculations of turbulent driving, there is relatively little energy in the fast mode. For instance, the fidiucial simulations of \citet{lynn14} with a sonic Mach number ${\mathcal M}_{\rm s} \sim 0.35$ and a plasma beta factor of $\beta \sim 1$ show that 50\%, 45\%, 5\% of the turbulent energy density is in the Alfv{\'e}n, slow, and fast modes, respectively. For higher $\beta \sim 3-10$, they find that the proportion of energy in fast modes drops to $< 1\%$, while the fraction of energy in the slow mode remains roughly the same. Similarly, \citet{kowal10} find that the fast mode is highly subdominant (see their Table 2); for the run most relevant to cluster conditions ${\mathcal M}_{\rm s} \sim 0.7, \beta \sim 10$, they find $\sim 42\%, 6\%$ of turbulent energy in slow and fast modes respectively. These simulations are roughly consistent with theoretical estimates of $U_{\rm fast}/U_{\rm slow} \sim {\mathcal M}_{\rm s}^{2}/{\mathcal M}_{\rm A}$ \citep{cho03}. By contrast, MHD simulations of galaxy clusters find a large fraction ($\sim 25$\%) of turbulent energy in fast modes \citep{2013ApJ...771..131B}. This is likely due to the compressive nature of turbulent driving (transonic infall and merger), whereas idealized simulations tend to use incompressible solenoidal driving and allow compressive fluctuations to develop on their own. 
+{\bf Energy in compressive modes} The total turbulence energy is typically $\sim 15-70\%$ of the thermal energy in a cluster \citep{vazza11}; it rises rapidly during a merger. The compressible component is $\sim 20-40\%$ of the total turbulent energy, and shows more rapid temporal variations compared to the compressible component \citep{2013ApJ...771..131B,2015ApJ...800...60M}. It is worth noting that in the subsonic regime of the solar wind \citep{yao11,howes12}, as well as most idealized calculations of turbulent driving, there is relatively little energy in the fast mode. For instance, the fiducial simulations of \citet{lynn14} with a sonic Mach number ${\mathcal M}_{\rm s} \sim 0.35$ and a plasma beta factor of $\beta \sim 1$ show that 50\%, 45\%, 5\% of the turbulent energy density is in the Alfv{\'e}n, slow, and fast modes, respectively. For higher $\beta \sim 3-10$, they find that the proportion of energy in fast modes drops to $< 1\%$, while the fraction of energy in the slow mode remains roughly the same. Similarly, \citet{kowal10} find that the fast mode is highly subdominant (see their Table 2); for the run most relevant to cluster conditions ${\mathcal M}_{\rm s} \sim 0.7, \beta \sim 10$, they find $\sim 42\%, 6\%$ of turbulent energy in slow and fast modes respectively. These simulations are roughly consistent with theoretical estimates of $U_{\rm fast}/U_{\rm slow} \sim {\mathcal M}_{\rm s}^{2}/{\mathcal M}_{\rm A}$ \citep{cho03}. By contrast, MHD simulations of galaxy clusters find a large fraction ($\sim 25$\%) of turbulent energy in fast modes \citep{2013ApJ...771..131B}. This is likely due to the compressive nature of turbulent driving (transonic infall and merger), whereas idealized simulations tend to use incompressible solenoidal driving and allow compressive fluctuations to develop on their own. 
 
 In the high-$\beta$, subsonic conditions of the ICM, the Alfv{\'e}n/slow modes are exactly/approximately incompressible, and so the approximate identification of compressive modes with fast modes is valid. We therefore take $\sim 25\%$ of the turbulent energy density in compressive fast modes as a reasonable baseline estimate \citep{2013ApJ...771..131B,2015ApJ...800...60M}. If a large fraction of energy is in slow modes, then resonant broadening of wave-particle interactions can render slow modes an efficient acceleration mechanism \citep{lynn14}, as we discuss briefly in \S\ref{?}.
 
@@ -549,7 +549,7 @@ Here $\Vph$ is the phase velocity of the fast magnetosonic waves
 given approximately by the sound speed, $\Vph \sim c_\rmn{s}$. For a
 sound speed typical for the ICM of 1000~km/s, $I_\theta\approx5$. As
 in \cite{brunetti07}, we initially assume that the velocity of
-turbulent eddies is $V_0\approx 0.47 c_\rmn{s}$ throughout the
+turbulent eddies is $\varv_0\approx 0.47 c_\rmn{s}$ throughout the
 cluster. This gives a turbulent acceleration time scale, $\tau_{D} =
 p^2/4D_{pp}$, that is typically few 100 Myrs in the ICM (see
 Tab.~\ref{tab:timescales} for more details).
@@ -597,8 +597,8 @@ turbulence, $k_0= 2\upi/\lambda_0$ with $\lambda_0 =100~\mbox{kpc}$,
 that is in line with previous work
 \citep{2006MNRAS.366.1437S,brunetti07,brunetti11}. Note that this
 length scale defines an eddy turn-over time
-$\tau_{\rmn{eddy}}\sim2\upi\lambda_0/V_0\sim1.2$~Gyr with
-$V_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event.
+$\tau_{\rmn{eddy}}\sim2\upi\lambda_0/\varv_0\sim1.2$~Gyr with
+$\varv_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event.
 
 Provided dissipation of turbulence in the ICM is collisionless,
 turbulent cascades of compressible modes become suppressed when
@@ -615,6 +615,25 @@ where $2\upi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
 effective mean free path for CRs, unless plasma instabilities can
 mediate interactions between turbulence and particles on smaller
 scales \citep{brunetti11}.
+
+The profile of injected turbulence depends on the details of the
+merger such as time during the merger, the impact parameter, the
+merger mass ratio, and the degree of cluster anisotropy
+\citep{2015ApJ...800...60M}. We parametrize these uncertainties and
+assume that it scales with the thermal energy density to some
+power. Hence we assume volumetric injection rate of turbulent energy,
+$I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, and determine the
+normalization by requiring that the turbulent energy in compressible
+modes $E_\rmn{turb}=\int \int \mathcal{W}(k) \rmn{d}k \rmn{d}V =
+X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is the total thermal
+energy. We adopt a turbulent energy ratio $X_\rmn{tu}=0.2$ within the
+radio halo.\footnote{Simulations show that the compressible modes
+  contribute a factor $0.2-0.4$ to the total turbulent energy
+  \citep{2013ApJ...771..131B,2015ApJ...800...60M}. Furthermore, the
+  total turbulent energy, which can be decomposed into a slenoidal and
+  compressible component, is typically $\sim15-70$\% of the thermal
+  energy in a cluster \citep{2011A&A...529A..17V}; in agreement with
+  our adopted value of $X_\rmn{tu}$.}
 
 In this work we only consider damping of the turbulence via TTD due to
 thermal electrons, and neglect subdominant damping with thermal
@@ -697,6 +716,7 @@ temperature determines the diffusion constant. We also see that
 $D_{pp}$ is much more sensitive to the turbulent energy content
 $X_\rmn{tu}$ in comparison to the injection scale $k_0$.
 
+\SPO{the derivation of the following is not transparent, could you expand?}
 During reacceleration, the CRps increase their normalization
 approximately by the factor
 \begin{equation}
@@ -710,33 +730,40 @@ exponentially on $\tau_D\sim 1/D_{pp}$ as long as $\tau_D \lesssim
 reacceleration of the merger which we assume to be 650~Myrs long.
 
 
-
 % --- section: Analytical Results and discussion --- %
 \section{Parameter space exploration with spherical models}
 \label{sect:param_comp}
 In this paper we rely on several critical parameters describing
-relatively unknown non-thermal physics in the ICM. Here we try to
-explore the robustness of our models to the most critical parameters
-related to turbulence and CRs.
+relatively unknown non-thermal physics in the ICM. Here we develop a
+simplified framework that will be used to explore the robustness of
+our models to the most critical parameters related to turbulence and
+CRs.
+
 
 \subsection{Methodology}
-In this section we develop a simplified framework that will be used to
-test the robustness of our models with respect to the critical
-parameters for CRs and turbulence in Section~\ref{sect:param_comp}. In
-order to quickly explore parameter space, we we solve the
-Fokker-Planck equation in static spherical shells for injection,
-reacceleration, and losses of the CRs, i.e., we neglect the Lagrangian
-trajectories during the re-acceleration time.  Once the CRs have been
-reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$, we calculate the
-radio emission and compare the profile and spectra for different
-parameterizations.
+
+As we have seen before, the resulting radio-emitting CRe distribution
+depends on compressible turbulence (which sets the level of
+reacceleration) and the distribution of pre-existing CRs. Hence we
+vary parameters describing the amount of energy contained in
+turbulence relative to the thermal energy, $X_{\rm tu}$, the spatial
+profile of turbulence as parametrized by $\alpha_{\rm tu}$, as well as
+the spatial CR profile that we will parametrize by $\alpha_{\rm CR,
+  spat}$ (see below).  In order to quickly explore this parameter
+space, we solve the Fokker-Planck equation in static spherical shells
+for injection, reacceleration, and losses of the CRs, i.e., we neglect
+the Lagrangian trajectories during the re-acceleration time.  Once the
+CRs have been reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$, we
+calculate the resulting radio emission and compare the emission
+profiles and spectra as we vary one parameter at the time relative to
+our fiducial model.
 
 We adopt both the density \citep{1992A&A...259L..31B} and temperature
 profiles \citep{2009ApJ...696.1886B,2001A&A...365L..67A} derived from
-X-ray observations of the Coma cluster. They are given by:
+X-ray observations of the Coma cluster,
 \begin{eqnarray}
-n_e &=& \frac{n_0}{\left[1+\left(R/R_{\rmn{c}}\right)^2\right]^{1.125}}\nonumber\\
-k_{\rmn{B}} T &=& 8.25\,\rmn{keV} \left[1+\left(2R/R_{200}\right)^2\right]^{-0.32}\,,
+n_e &=& n_0\,\left[1+\left(R/R_{\rmn{c}}\right)^2\right]^{-1.125},\nonumber\\
+k_{\rmn{B}} T &=& 8.25\,\rmn{keV} \left[1+\left(2R/R_{200}\right)^2\right]^{-0.32},
 \end{eqnarray}
 with $n_0=3.4\times10^{-3}\,\rmn{cm}^{-3}$.  The virial and core radii
 of Coma are given by $R_{200} = 2300\,\rmn{kpc}$
@@ -750,8 +777,8 @@ C_\rmn{inj}\,p^{-\alpha_\rmn{inj}}$, where $\alpha_\rmn{inj}\approx
 with $C_\rmn{inj} \propto \eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
 \citep{pinzke10,2016MNRAS.459...70V}, where the normalization is fixed
 by the injected CR energy in the last 650~Myrs. Our simulations show
-that it roughly make up 0.03\% of the thermal energy inside the virial
-radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{p,inj} \rmn{d}
+that it approximately amounts to 0.03\% of the thermal energy inside
+the virial radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{p,inj} \rmn{d}
 V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
 0.0003$. The spectrum of the initial CRp distribution is determined by
 the steady state between injection and cooling,
@@ -774,60 +801,64 @@ and CRes is parameterized by $I_0 \propto X_\rmn{tu} (n_{\rmn{e}}
 T)^{\alpha_\rmn{tu}}$. The diffusion constant $D_{pp}$ is calculated
 for each radial bin using Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e}. All
 parameters and assumptions are similar to what is used for our
-simulated cluster.
+simulated cluster (see Sect.~\ref{sec:results}).
+
 
 \subsection{Results}
 
-Figure~\ref{fig:param_comp} shows their
-impact on radio emission. We find that the level of turbulence
-($X_\rmn{tu}$) has a large impact on both radio spectra and profiles,
-while the parameter $\alpha_\rmn{tu}$ that determines the spatial
-profile of turbulence mainly influence the radio profiles. As
-expected, the radio profiles flatten significantly with a flatter
-turbulent profile. A higher amount of turbulent energy also flatten
-the radio profile, where the reason being that the steep profiles of
+Figure~\ref{fig:param_comp} shows the impact of turbulence and the
+spatial distribution of CRs on the radio emission.  We find that the
+level of turbulence ($X_\rmn{tu}$) has a large impact on both radio
+spectra and profiles, while the parameter $\alpha_\rmn{tu}$ that
+determines the spatial profile of turbulence mainly influences the
+radio profiles. As expected, the radio profiles flatten significantly
+with a flatter turbulent profile. A larger amount of turbulent energy
+also flattens the radio profile, because the steep profiles of
 injected CRs have less impact on the radio emission for an increasing
-reacceleration efficiency. Interestingly, assumptions about CRs have
-less impact on radio emission. This can be understood by looking at
-the scaling of parameters to the reacceleration timescale, where
-$\tau_\rmn{D} \propto 1/D_\rmn{pp} \propto 1/X_\rmn{tu}^2$. From
-Eqn.~\ref{eq:Creacc} we see that the CRps with a spectral index of
-$\alpha_\rmn{p}\approx2.5$ approximately gain a factor $\Delta
-C_\rmn{reacc.} \sim
-\exp{\left[1.7\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]}$ during
+reacceleration efficiency.
+
+Interestingly, the spatial profile of CRs has a smaller impact on the
+radio emission. This can be understood by looking at the scaling of
+parameters to the reacceleration timescale, where $\tau_\rmn{D}
+\propto 1/D_\rmn{pp} \propto 1/X_\rmn{tu}^2$. From
+Equation~\ref{eq:Creacc} we see that the CRps with a spectral index of
+$\alpha_\rmn{p}\approx2.5$ approximately gain a factor $\delta
+C_\rmn{reacc.} \sim \exp{(1.7\,\tau_\rmn{cl}/\tau_\rmn{D})}$ during
 reacceleration if injection and cooling are neglected. The CRes gain a
 similar factor from reacceleration, however in the region around
 $0.1\,R_{200}$ the Coulomb cooling timescale
-($\tau_\rmn{coul}\approx0.01\,\rmn{Gyr}$) is much shorter than
-$\tau_\rmn{D}\approx0.6\,\rmn{Gyr}$, hence $\Delta C_\rmn{reacc.}$
+($\tau_\rmn{Coul}\approx0.01\,\rmn{Gyr}$) is much shorter than
+$\tau_\rmn{D}\approx0.6\,\rmn{Gyr}$, hence $\delta C_\rmn{reacc.}$
 will be greatly reduced for the electrons. The spatial region is
 important when we derive the radio spectrum, since in order to compare
 to observations we integrate the CR profile out to $\sim
 0.2\,R_{200}$. For $X_\rmn{tu}=0.2$ and $\alpha_\rmn{tu}=0.8$ we find
-that $\Delta C_\rmn{reacc.} \sim 10$. This is confirmed by the top
+that $\delta C_\rmn{reacc.} \sim 10$. This is confirmed by the top
 panels in Fig.~\ref{fig:param_comp}. Increasing the level of
-turbulence to $X_\rmn{tu}=0.3$, gives us a $\Delta C_\rmn{reacc.}
+turbulence to $X_\rmn{tu}=0.3$, gives us a $\delta C_\rmn{reacc.}
 \sim 100$, which is roughly confirmed by same figures. The factor 2-3
 difference in the figure is due to the shorter reacceleration
 timescale that increase the contribution from reaccelerated CRes that
 would otherwise cool away on a much shorter timescale. Hence we
-conclude that the radio emission is much more sensitive to the
-exponential dependence on compressible turbulence than the linear
-dependence on injected CRs.
+conclude that the radio emission is much more sensitive to the level
+of compressible turbulence through an exponential dependence.  In
+contrast, the radio emission only depends linearly on the density of
+injected CRs.
 
-We can also derive a lower critical level of turbulence where
-reacceleration is negligible, while it rises sharply above this
-threshold. We define the threshold by $\Delta C_\rmn{reacc.}  \lesssim
-2$, which gives us an $X_\rmn{thres,tu} = \left(\frac{0.04\,\log(2)
-}{1.7}\frac{\tau_\rmn{D}}{\tau_\rmn{cl}}\right)^{0.5} \approx 0.08$
-for $\tau_\rmn{D} = 0.6\,\rmn{Gyr}$. This threshold is also seen in
-the top panels of figure~\ref{fig:param_comp}. For instance, for
-$X_\rmn{tu}\gtrsim0.08$, a factor two change in $X_\rmn{tu}$ changes
-the radio surface brightness by a factor $\sim 10-100$. In principle
-this threshold behavior allows us to provide a strict lower bound on
-turbulence in radio halos. An even more stringent bound on
-$X_\rmn{tu}$ can be inferred from combining radio observations with
-the gamma-ray observations (see section~\ref{sect:radio_spec}).
+We can also derive a critical level of turbulence below which
+reacceleration is negligible. Above this threshold, reacceleration
+becomes increasingly more efficient. We define the threshold by
+$\delta C_\rmn{reacc.}  \lesssim 2$, which gives us an
+$X_\rmn{thres,tu} = \sqrt{0.04\,\log(2)/1.7 \times
+  \tau_\rmn{D}/\tau_\rmn{cl}} \approx 0.08$ for $\tau_\rmn{D} =
+0.6\,\rmn{Gyr}$. The existence of such a threshold can also manifested
+in the top panels of Fig.~\ref{fig:param_comp}. For
+$X_\rmn{tu}\gtrsim0.08$, changing $X_\rmn{tu}$ by a factor of two
+changes the radio surface brightness by a factor of $\sim 10-100$. In
+principle this threshold behavior allows us to provide a strict lower
+bound on turbulence in radio halos. An even more stringent bound on
+$X_\rmn{tu}$ can be obtained by combining radio observations with
+the gamma-ray observations (see Section~\ref{sect:radio_spec}).
 
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
@@ -863,22 +894,23 @@ the gamma-ray observations (see section~\ref{sect:radio_spec}).
    \end{center}
 \end{minipage}
 \caption{Sensitivity of radio emission in Coma cluster to critical
-  parameters. {\it Left panels} show the radio surface brightness
-  profiles. We compare profiles at 352~MHz \citep[blue lines and
+  parameters. The left-hand panels show the radio surface brightness
+  profiles. We compare profiles at 352~MHz \citep[blue
     crosses,][]{brown11} to predicted emission from Fermi-II
-  reaccelerated CR electrons populations (black lines). {\it Right
-    panels} show radio synchrotron spectra. The green crosses are
-  compiled from observations \citet{2010PhDT.......259P}, while the
+  reaccelerated CR electrons populations (black lines). The right-hand
+  panels show radio synchrotron spectra. The green crosses are
+  compiled from observations \citep{2010PhDT.......259P}, while the
   black lines show predicted emission from reaccelerated CR
   electrons. The upper panels show the sensitivity to the level of
-  turbulence ($X_\rmn{tu}$), middle panels show the impact of
-  different turbulent profiles ($\alpha_\rmn{tu}$), and lower panels
-  show the dependence on spatial distributions of initial and injected
-  CRs ($\alpha_\rmn{CR,spat}$). We adopt the following fiducial values
-  for parameters that are not varied in each panel: $X_\rmn{tu}=0.2$,
-  $\alpha_\rmn{tu}=0.8$, and $\alpha_\rmn{CR,spat}=1.0$. Note that the
-  radio emission is much more sensitive to assumptions about turbulent
-  parameters than CRs.}
+  turbulence ($X_\rmn{tu}$), the middle panels show the impact of
+  different turbulent profiles ($\alpha_\rmn{tu}$), and the lower
+  panels show the dependence on spatial distributions of initial and
+  injected CRs ($\alpha_\rmn{CR,spat}$). We adopt the following
+  fiducial values for our model, $X_\rmn{tu}=0.2$,
+  $\alpha_\rmn{tu}=0.8$, and $\alpha_\rmn{CR,spat}=1.0$ and vary each
+  parameter separately in each row of panels. We find that the radio
+  emission is much more sensitive to the level of turbulence while it
+  depends less senstively to the spatial distribution of CRs.}
   \label{fig:param_comp}
 \end{figure*}
 
@@ -1074,24 +1106,7 @@ giant radio relics \citep{2010Sci...330..347V}.
   \label{fig:turb}
 \end{figure}
 
-The profile of injected turbulence depends on the details of the
-merger such as time during the merger, the impact parameter, the
-merger mass ratio, and the degree of cluster anisotropy
-\citep{2015ApJ...800...60M}. We parametrize these uncertainties and
-assume that it scales with the thermal energy density to some
-power. Hence we assume volumetric injection rate of turbulent energy,
-$I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, and determine the
-normalization by requiring that the turbulent energy in compressible
-modes $E_\rmn{turb}=\int \int \mathcal{W}(k) \rmn{d}k \rmn{d}V =
-X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is the total thermal
-energy. We adopt a turbulent energy ratio $X_\rmn{tu}=0.2$ within the
-radio halo.\footnote{Simulations show that the compressible modes
-  contribute a factor $0.2-0.4$ to the total turbulent energy
-  \citep{2013ApJ...771..131B,2015ApJ...800...60M}. Furthermore, the
-  total turbulent energy, which can be decomposed into a slenoidal and
-  compressible component, is typically $\sim15-70$\% of the thermal
-  energy in a cluster \citep{2011A&A...529A..17V}; in agreement with
-  our adopted value of $X_\rmn{tu}$.} In this work we investigate
+In this work we investigate
 different spatial models for injected turbulence. With the above
 choice of normalization, the turbulent energy density becomes
 $\eps_\rmn{turb} \propto
@@ -1415,8 +1430,11 @@ uncertainties in the 1.4 GHz radio data. Finally, we thank Fabio
 Zandanel for recalculating gamma-ray limits and Gianfranco Brunetti
 for useful discussions. A.P. is grateful to the Swedish research
 council for financial support. S.P.O. thanks NASA grant NNX12AG73G for
-support. C.P.~gratefully acknowledges financial support of the Klaus
-Tschira Foundation.
+support. C.P.~acknowledges support by the European Research Council
+under ERC-CoG grant CRAGSMAN-646955 and by the Klaus Tschira
+Foundation.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.7cm}
 
