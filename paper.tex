@@ -428,6 +428,72 @@ protons of the ICM is given by
 where we use the cross-section, $\sigma^{+/-,0}(p)$, given by the
 fitting formula in \citep{1986ApJ...307...47D}.
 
+\subsection{Dummy's guide} 
+\label{sec:dummy} 
+
+All of the physics of turbulent reacceleration is effectively encapsulated in the diffusion coefficient, which can be rewritten as \citep{2015ApJ...800...60M}:
+\begin{equation}
+D_{\rm pp}(p) = \frac{ p^{2} \pi I_{\theta}(c_{s}/c)}{8 c} \langle k \rangle_{\rm W} \langle (\delta v_{c})^{2} \rangle
+\label{eqn:diffusion}
+\end{equation}
+where
+\begin{equation}
+\langle k \rangle_{\rm W} = \frac{1}{\langle \delta v_{c})^{2} \rangle} \int_{k_{\rm L}}^{k_{\rm c}} dk \, k \, W(k) \approx \frac{s-1}{2-s} k_{\rm L} \left( \frac{k_{\rm c}}{k_{\rm L}} \right)^{2-s} 
+\end{equation}
+is an energy-averaged wavenumber, $k_{\rm L}, k_{\rm c}$ are the wavenumbers associated with the outer scale and the cutoff scale respectively, and we have assumed a total energy spectrum (both kinetic and potential energy, where the two are assumed to be in equipartition \citep{sarkar11}): 
+\begin{equation}
+W(k) = \frac{(s-1) \langle \delta v_{c})^{2} \rangle}{k_{\rm L}} \left( \frac{k}{k_{\rm L}} \right)^{-2} 
+\label{eqn:Wk}
+\end{equation}
+which defines the normalization $\langle \delta v_{c})^{2} \rangle$ (the subscript 'c' emphasizes that we specialize to compressive modes). Intuitively, we can understand the form of the the diffusion coefficient from the fact that for second-order Fermi acceleration, $\dot{p} \sim \Delta p/\tau \sim \langle k c \rangle_{\rm W} (v_{\rm c}/c)^{2}$, where $\tau^{-1} \sim \langle k c \rangle_{\rm W}$ is the energy averaged wave-particle interaction rate, and $\Delta p \sim p (V_{c}/c)^{2}$ is the typical momentum change during wave particle scattering. Thus: 
+\begin{equation}
+D_{\rm pp} \sim p \dot{p} \sim p^{2} \langle k c \rangle_{\rm W} \left( \frac{v_{c}}{c} \right)^{2}. 
+\end{equation}
+{\bf Christoph: note I agree with your expression except substituted $v_{c}$ for $V_{ph}$, since the diffusion rate must depend on the amplitude of the turbulence.} 
+
+Equations \ref{eqn:diffusion} and \ref{eqn:Wk} makes clear the important aspects of turbulence: the energy in compressive modes $\langle (\delta v_{c})^{2} \rangle$, the inner and outer scale $k_{\rm c}, k_{\rm L}$, and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
+
+{\bf Energy in compressive modes} The total turbulence energy is typically $\sim 15-70\%$ of the thermal energy in a cluster \citep{vazza11}; it rises rapidly during a merger. The compressible component is $\sim 20-40\%$ of the total turbulent energy, and shows more rapid temporal variations compared to the compressible component \citep{2013ApJ...771..131B,2015ApJ...800...60M}. It is worth noting that in the subsonic regime of the solar wind \citep{yao11,howes12}, as well as most idealized calculations of turbulent driving, there is relatively little energy in the fast mode. For instance, the fudicial simulations of \citep{lynn14} with ${\mathcal M}_{s} \sim 0.35, \beta \sim 1$ show 50\%, 45\%, 5\% of the turbulent energy density is in the Alfven, slow, and fast modes respectively. For higher $\beta \sim 3-10$, they find that the proportion of energy in fast modes drops to $< 1\%$, while the fraction of energy in the slow mode remains roughly the same. Similarly, \citep{kowal10} find that the fast mode is highly subdominant (see their Table 2); for the run most relevant to cluster conditions ${\mathcal M}_{\rm s} \sim 0.7, \beta \sim 10$, they find $\sim 42\%, 6\%$ of turbulent energy in slow and fast modes respectively. These simulations are roughly consistent with theoretical estimates of $U_{\rm fast}/U_{\rm slow} \sim {\mathcal M}_{s}^{2}/{\mathcal M}_{A}$ \citep{cho03}. By contrast, MHD simulations of galaxy clusters find a large fraction ($\sim 25$\%) of turbulent energy in fast modes \citep{2013ApJ...771..131B}. This is likely due to the compressive nature of turbulent driving (transonic infall and merger), whereas idealized simulations tend to use incompressible solenoidal driving and allowing compressive fluctuations to develop on their own. 
+
+In the high $\beta$, subsonic conditions of the ICM, the Alfven/slow modes are exactly/approximately incompressible, and so the approximate identification of compressive modes with fast modes is valid. We therefore take $\sim 25\%$ of the turbulent energy density in compressive fast modes as a reasonable baseline estimate \citep{2013ApJ...771..131B,2015ApJ...800...60M}. If a large fraction of energy is in slow modes, then resonant broadening of wave-particle interactions can render slow modes an efficient acceleration mechanism \citep{lynn14}, as we discuss briefly in \S\ref{?}.
+
+{\bf Slope of the energy spectrum $s$} At large scales, turbulent motions are subsonic (${\mathcal M}_{s} \sim 0.2-0.5$) but super-Alfvenic (${\mathcal M}_{s} \sim 5$). Thus, except in the case where motions are transonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $U_{\rm t} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_{o} {\mathcal M}_{\rm A}^{-3}$, where $U_{\rm turb} \sim U_{\rm B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. Theory \citep{goldreich95,chandran05} and simulations \citep{cho03} show that in the MHD regime, the Alfven and slow modes have a shallower Kraichnan spectrum ($s=3/2$), with relatively little coupling between the incompressible and compressible modes \citep{cho02,cho03} -- though if weak shocks are important, $s=2$ may be more appropriate (see discussion below). 
+
+Since the Kraichnan spectrum is critical in what follows, it is worthwhile taking a moment to recount the origin of the spectral slope $s$ and the cascade rate. In the magnetically dominated regime, two counterpropagating wave packets of scale $l$ interact on an Alfven time $\tau_{\rm A}=l/v_{\rm A}$, rather than the eddy turnover time $\tau_{\rm edd} = l/u_{\rm l}$. 
+Since $\tau_{\rm A} \ll \tau_{\rm edd}$, each interaction results in a small velocity change $\delta u_{\rm l} \sim u_{\rm l} (\tau_{\rm A}/\tau_{\rm edd})$. If these changes behave like a random walk, the cascade time $\tau_{\rm l}$ it takes for an eddy to become non-linear ($\Delta u \sim u_{\rm l})$ and cascade to smaller scales is $u_{\rm l} \sim \delta u_{\rm l} (\tau_{\rm l}/\tau_{\rm A})^{1/2} \sim u_{\rm l} \tau_{\rm A}/\tau_{\rm edd} (\tau_{\rm l}/\tau_{\rm A})^{1/2}$, which we can solve to obtain the cascade time: 
+\begin{equation}
+\tau_{\rm l} \sim \left(\frac{\tau_{\rm edd}}{\tau_{\rm A}}\right)^{2} \tau_{\rm A} \sim \frac{l v_{A}}{u_{\rm l}^{2}} 
+\end{equation}
+where we have implicitly assumed isotropy. This implies a dissipation rate $\epsilon \sim u_{l}^{2}/\tau_{l} \sim u_{l}^{4}/(l v_{\rm A})$, or $u_{\rm l} \sim (\epsilon l v_{A})^{1/4}$. Thus, since $k E(k)\sim u_{\rm l}^{2}$, this gives a kinetic energy spectrum: 
+\begin{equation}
+E(k) \sim (\epsilon v_{\rm A})^{1/2} k^{-3/2}.
+\end{equation}
+ 
+Finally, if turbulence is transonic ($M_{\rm s} \sim {\mathcal O}(1)$), then compressible modes can dissipate in weak shocks, as seen in decompositions of the velocity field into solenoidal/compressible components both in idealized simulations \citep{kowal10,porter15}, and cosmological hydrodynamic simulations \citep{2015ApJ...800...60M}. The compressible component has a steep Burgers ($s=2$) spectrum. Burgers turbulence is distinct from other forms of turbulence in that it violates locality in k-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$. If we contrast the different velocity scalings: $v \propto l^{1/4}$ (Kraichnan), $v \propto l^{1/3}$ (Kolmogorov), $v \propto l^{1/2}$ (Burgers), we see that because of its dissipative nature, Burgers turbulence is the least efficient at transferring energy towards the small scales needed (since the wave particle interaction rate scales as $k$) for efficient acceleration. If Burgers turbulence dominates, then particle acceleration rates are too slow in the face of cooling processes to explain radio halos \citep{2015ApJ...800...60M}.
+
+Given the lack of consensus on the fast mode spectrum, and the fact that turbulent reacceleration is not a viable explanation for radio halos if the spectrum is Burgers-like, we assume a Kraichnan spectrum. 
+
+{\bf Inner and outer scale}
+
+{\bf Timescales} 
+
+{\bf Scaling solutions} Since the diffusion time is independent of energy (the so-call 'hard sphere' approximation), analytic solutions are possible. The steady state solution is a power-law with a cutoff above a characteristic momentum $p_{\rm eq}$, defined by $t_{\rm acc} \equiv t_{\rm cool} (p_{\rm eq})$ \citep{stawarz08}: 
+\begin{equation}
+n(p) \propto \left \{
+\begin{array}{ll}
+p^{-\sigma} & \quad \text{for} \quad p \ll p_{\text{eq}} \, , \\
+p^2 {\rm e}^{-p/p_{\text{eq}}} & \quad \text{for} \quad p \sim p_{\text{eq}} \,.
+\end{array}
+\right.
+\end{equation}
+%
+where $-\sigma = 1/2 - \sqrt{9/4 +
+  t_\text{acc}/t_\text{esc}}$ asymptotically approaches $-1$
+as $t_\text{acc}/t_\text{esc} \rightarrow 0$.
+
+
+%%%Fast modes can become more important in highly supersonic turbulence, but this is not relevant to clusters. The magnetic energy density in fast modes scales as $\delta B^{2}_{\rm F} \sim \rho \delta v_{\rm F}^{2}/\beta$ (since magnetic restoring forces 
+
 
 \subsection{Turbulent reacceleration}
 \label{sec:reacc}
