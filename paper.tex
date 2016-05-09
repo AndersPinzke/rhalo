@@ -754,9 +754,10 @@ space, we solve the Fokker-Planck equation in static spherical shells
 for injection, reacceleration, and losses of the CRs, i.e., we neglect
 the Lagrangian trajectories during the re-acceleration time.  Once the
 CRs have been reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$, we
-calculate the resulting radio emission and compare the emission
-profiles and spectra as we vary one parameter at the time relative to
-our fiducial model.
+calculate the resulting radio emission \AP{numerically using the
+  formalism outlined in \cite{1979rpa..book.....R}} and compare the
+emission profiles and spectra as we vary one parameter at the time
+relative to our fiducial model.
 
 We adopt both the density \citep{1992A&A...259L..31B} and temperature
 profiles \citep{2009ApJ...696.1886B,2001A&A...365L..67A} derived from
@@ -1122,7 +1123,6 @@ giant radio relics \citep{2010Sci...330..347V}.
   \label{fig:sync_profile}
 \end{figure*}
 
-
 In Fig.~\ref{fig:sync_profile}, we show radial profiles for the radio
 emission in all three scenarios in which the seeds undergo Fermi-II
 reacceleration in turbulent fields that are shaped such as to
@@ -1158,7 +1158,6 @@ respectively.
     \citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V}.}
   \label{fig:turb}
 \end{figure}
-
 
 Figure~\ref{fig:sync_profile} demonstrates that the modeled radio
 profiles without turbulent reacceleration are too steep.  In the
@@ -1313,17 +1312,19 @@ CRs.
 The gamma-ray emission from CRps that produce decaying neutral pions
 could be substantial if the CRps are reaccelerated efficiently enough,
 hence it is interesting to estimate this emission for our models and
-compare to upper limits. We predict the gamma-ray emission from
-\Mflatturb (\Mstream) with $F_\gamma(>500\,\rmn{MeV})=4\times10^{-10}
-(5\times10^{-10}) \mathrm{ \,ph\, s}^{-1}\mathrm{cm}^{-2}$. The fluxes
-from these models are slightly larger than in \cite{brunetti12}, where
-the differences comes from our steeper CRp profiles in addition to
-simulation based formalism we rely on that accounts for both Coulomb
-and hadronic losses during the build up of the CR distribution in
-contrast to the scaling relations adopted in their
-paper. Interestingly the gamma-ray flux from both our scenarios are
-just below recent Fermi-LAT limits derived from a gamma-ray profile
-similar to \Mflatturb where
+compare to upper limits. \AP{We follow the formalism outlined in
+  \cite{1999APh....12..169B} (and references therein) and calculate
+  the gamma-ray emission numerically for our three models.} We predict
+the gamma-ray emission from \Mflatturb (\Mstream) with
+$F_\gamma(>500\,\rmn{MeV})=4\times10^{-10} (5\times10^{-10}) \mathrm{
+  \,ph\, s}^{-1}\mathrm{cm}^{-2}$. The fluxes from these models are
+slightly larger than in \cite{brunetti12}, where the differences comes
+from our steeper CRp profiles in addition to simulation based
+formalism we rely on that accounts for both Coulomb and hadronic
+losses during the build up of the CR distribution in contrast to the
+scaling relations adopted in their paper. Interestingly the gamma-ray
+flux from both our scenarios are just below recent Fermi-LAT limits
+derived from a gamma-ray profile similar to \Mflatturb where
 $F_\gamma(>500\,\rmn{MeV})<5.3\times10^{-10} \mathrm{ \,ph\,
   s}^{-1}\mathrm{cm}^{-2}$ \footnote{Fabio Zandanel, private
   communication. See also
