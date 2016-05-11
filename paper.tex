@@ -735,26 +735,41 @@ reacceleration of the merger which we assume to be 650~Myrs long.
 \label{sect:param_comp}
 In this paper we rely on several critical parameters describing
 relatively unknown non-thermal physics in the ICM. Here we develop a
-simplified framework that will be used to explore %%the robustness of
-%%our models to the most critical parameters related to turbulence and
-%%CRs.
-how radio emission depends on these parameters. Our fiducial model is meant to be compared against the Coma cluster. 
+simplified framework that will be used to explore how radio emission
+depends on these parameters. Our fiducial model is meant to be
+compared against the Coma cluster.
 
 
 \subsection{Methodology}
 
-As we have seen before, the most uncertain aspects of radio halo emission models are the profile of compressible turbulence (which determines the amount of Fermi II acceleration) and the distribution of pre-existing CRs. Hence we
-vary parameters describing the amount of energy contained in
-turbulence, $X_{\rm tu}$ (defined by $E_{\rm therm} = X_{\rm tu} E_{\rm therm}$), the spatial
-profile of turbulence as parametrized by $\alpha_{\rm tu}$ (defined by $I_{\rm o} \propto \epsilon_{\rm therm}^{\alpha_{\rm tu}}$, where $I_{\rm o} \propto v_{O}^{3} k_{0}$ is the injection rate of turbulence), as well as
+As we have seen before, the most uncertain aspects of radio halo
+emission models are the profile of compressible turbulence (which
+determines the amount of Fermi II acceleration) and the distribution
+of pre-existing CRs. Hence we vary parameters describing the amount of
+energy contained in turbulence, $X_{\rm tu}$ (defined by $E_{\rm
+  therm} = X_{\rm tu} E_{\rm therm}$), the spatial profile of
+turbulence as parametrized by $\alpha_{\rm tu}$ (defined by $I_0
+\propto \epsilon_{\rm therm}^{\alpha_{\rm tu}}$, where $I_0^{} \propto
+\varv_0^{3} k_0^{}$ is the injection rate of turbulence), as well as
 the spatial CR profile that we will parametrize by $\alpha_{\rm CR,
-  spat}$ (see below).  We hold fixed thermal plasma properties (temperature and density profiles), B-field profiles, total CR energy content, and the turbulent outer scale (corresponding to a wavenumber $k_{0}$). The CR energy content is suggested by our simulations (observations only give an upper bound; \citet{arlen12}). We focus on the uncertain CR distribution rather than the overall normalization, since the impact of the latter (an overall linear scaling) is clear. In order to quickly explore this parameter
-space, we solve the Fokker-Planck equation in static spherical shells
-for injection, reacceleration, and losses of the CRs, i.e., we neglect
-Lagrangian evolution during re-acceleration.  This ignores the effect of adiabatic compressive heating of the CRs, though this is generally subdominant (e.g., see Fig. 7 of \citet{miniati15}). Once the
-CRs have been reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$, we
-calculate the resulting radio emission \AP{numerically using the
-  formalism outlined in \cite{1979rpa..book.....R}} and compare the
+  spat}$ (see below).  We hold fixed thermal plasma properties
+(temperature and density profiles), $B$-field profiles, total CR energy
+content, and the turbulent outer scale (corresponding to a wavenumber
+$k_{0}$). The CR energy content is suggested by our simulations
+(observations only give an upper bound;
+\citealt{2012ApJ...757..123A}). We focus on the uncertain CR
+distribution rather than the overall normalization, since the impact
+of the latter (an overall linear scaling) is clear.
+
+In order to quickly explore this parameter space, we solve the
+Fokker-Planck equation in static spherical shells for injection,
+reacceleration, and losses of the CRs, i.e., we neglect Lagrangian
+evolution during re-acceleration.  This ignores the effect of
+adiabatic compressive heating of the CRs, though this is generally
+subdominant (e.g., see Fig. 7 of \citealt{2015ApJ...800...60M}). Once
+the CRs have been reaccelerated for $\tau_\rmn{cl} = 650\,\rmn{Myr}$,
+we calculate the resulting radio emission numerically using the
+formalism outlined in \cite{1979rpa..book.....R} and compare the
 emission profiles and spectra as we vary one parameter at a time
 relative to our fiducial model.
 
@@ -801,7 +816,7 @@ injection of secondary CRes from $f_\rmn{p,0}$. %We also include the
 %and CRes is parameterized by $I_0 \propto X_\rmn{tu} (n_{\rmn{e}}
 %T)^{\alpha_\rmn{tu}}$. 
 \AP{Do we include injection by primaries, is it negligible?} 
-The diffusion constant $D_{pp} \propto X_{\rm tu}^{2} \epsilon_{\rm th}^{\alpha-1} \sqrt{T} k_{\rm 0}$ is calculated
+The diffusion constant $D_{pp} \propto X_{\rm tu}^{2} \eps_{\rm th}^{\alpha-1} \sqrt{T} k_{\rm 0}$ is calculated
 for each radial bin using Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e}. All
 parameters and assumptions are similar to what is used for our
 simulated cluster (see Sect.~\ref{sec:results}). Our fiducial model assumes $X_{\rm tu} = 0.2$, $\alpha_{\rm tu} =0.8$, $\alpha_{\rm CR, spat}=1.0$, and $k_{\rm 0}=2 \pi/\lambda_{\rm 0}$ where $\lambda_{\rm 0}=100$ kpc. 
@@ -812,7 +827,7 @@ simulated cluster (see Sect.~\ref{sec:results}). Our fiducial model assumes $X_{
 Figure~\ref{fig:param_comp} shows the impact of turbulence and the
 spatial distribution of CRs on the radio emission. 
 
-{\bf $X_{\rm tu}$} Besides the overall increase in radio luminosity as $X_{\rm tu}$ increases, there are changes in spatial and spectral profiles. An increase in $X_{\rm tu}$ flattens the surface brightness profile, since high acceleration efficiency leads to larger amplification in the cluster outskirts (where cooling is less important) than the center. In particular, in the cluster outskirts, the reduced impact of Coulomb cooling implies that there is a larger pool of low-energy electrons available for reacceleration (see timescales in Table \ref{tab:timescales}). Larger levels of turbulence also {\it increase} spectral curvature, which might seem puzzling. It can be understood as follows. The pre-acceleration electron distribution function can be understood as a result of competition between injection $f \propto p^{-\alpha_{\rm inj}}$ and cooling. At low momenta, when the Coulomb cooling time is short, $f \propto p^{-\alpha_{\rm inj}+1}$, at high momenta, when inverse Compton/synchrotron cooling dominates, $f \propto p^{-\alpha_{\rm inj} -1}$. In between, there is a quasi-adiabatic regime where electrons accumulate (for more details, and an analytic self-similar solution, see \citet{sarazin99, pinzke13}). In the absence of cooling, momentum advection in the limit $D_{\rm pp} \propto p^{2}$ (so that $\tau =p^{2}/4 D_{\rm pp}$ is momentum independent) simply shifts the distribution $f(p) \rightarrow f(A p)$. 
+{\bf Impact of $X_{\rm tu}$.} Besides the overall increase in radio luminosity as $X_{\rm tu}$ increases, there are changes in spatial and spectral profiles. An increase in $X_{\rm tu}$ flattens the surface brightness profile, since high acceleration efficiency leads to larger amplification in the cluster outskirts (where cooling is less important) than the center. In particular, in the cluster outskirts, the reduced impact of Coulomb cooling implies that there is a larger pool of low-energy electrons available for reacceleration (see timescales in Table \ref{tab:timescales}). Larger levels of turbulence also {\it increase} spectral curvature, which might seem puzzling. It can be understood as follows. The pre-acceleration electron distribution function can be understood as a result of competition between injection $f \propto p^{-\alpha_{\rm inj}}$ and cooling. At low momenta, when the Coulomb cooling time is short, $f \propto p^{-\alpha_{\rm inj}+1}$, at high momenta, when inverse Compton/synchrotron cooling dominates, $f \propto p^{-\alpha_{\rm inj} -1}$. In between, there is a quasi-adiabatic regime where electrons accumulate (for more details, and an analytic self-similar solution, see \citealt{1999ApJ...520..529S, pinzke13}). In the absence of cooling, momentum advection in the limit $D_{pp} \propto p^{2}$ (so that $\tau =p^{2}/4 D_{pp}$ is momentum independent) simply shifts the distribution $f(p) \rightarrow f(A p)$. 
 When the acceleration efficiency is low, most observable emission corresponds to the power-law tail of the distribution function $f \propto p^{-\alpha_{\rm inj}-1}$ set by the balance between injection and synchrotron/IC cooling. However, as the acceleration efficiency $A$ increases, radio emission starts to probe the 'bump' around $p_{*}$ (given by $\tau_{\rm D} \sim \tau_{\rm cool}(p_{*})$) where electrons accumulate and the distribution function is curved. This results in a curved emission spectrum. The synchrotron spectrum steepens at the frequency \citep{brunetti01}: 
 \begin{equation}
 \nu_{\rm s} \propto \frac{B \tau_{\rm D}^{-2}}{(B^{2}+B^{2}_{\rm CMB})^{2}}
@@ -1327,9 +1342,9 @@ CRs.
 The gamma-ray emission from CRps that produce decaying neutral pions
 could be substantial if the CRps are reaccelerated efficiently enough,
 hence it is interesting to estimate this emission for our models and
-compare to upper limits. \AP{We follow the formalism outlined in
+compare to upper limits. We follow the formalism outlined in
   \cite{1999APh....12..169B} (and references therein) and calculate
-  the gamma-ray emission numerically for our three models.} We predict
+  the gamma-ray emission numerically for our three models. We predict
 the gamma-ray emission from \Mflatturb (\Mstream) with
 $F_\gamma(>500\,\rmn{MeV})=4\times10^{-10} (5\times10^{-10}) \mathrm{
   \,ph\, s}^{-1}\mathrm{cm}^{-2}$. The fluxes from these models are
