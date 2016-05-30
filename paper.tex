@@ -37,13 +37,6 @@
 %\voffset.6in 
 
 \definecolor{mygreen}{rgb}{0.,0.5,0.}
-\def\del#1{{}}
-%\def\del#1{{\bf (DELETED TEXT)}}
-\def\C#1{{\bf #1}}
-\def\AP2#1{{\bf  AP2: #1}}
-\def\AP#1{{\bf {\color{blue} AP: #1}}}
-\def\SPO#1{{\bf {\color{red} SPO: #1}}}
-\def\CP#1{{\bf {\color{mygreen} CP: #1}}}
 
 \title[Origin of Seed Electrons]{Turbulence and Particle Acceleration in Giant Radio Halos: the Origin of Seed Electrons}  
 
@@ -73,31 +66,13 @@ $^{4}$Heidelberg Institute for Theoretical Studies
   radio emission on $\sim$Mpc scales, known as giant radio halos. One
   promising model for radio halos is Fermi II acceleration of seed
   relativistic electrons by compressible turbulence in the
-  intracluster medium (ICM); Coulomb losses prohibit acceleration from
-  the thermal pool. However, the origin of seed electrons has never
+  intracluster medium (ICM). The origin of these seed electrons has never
   been fully explored. Here, we integrate the Fokker-Planck equation
   of the cosmic ray (CR) electron and proton distributions in
-  cosmological simulations of cluster formation. For standard
+  cosmological simulations of cluster formation, and confront them with radio surface brightness and spectral observations of Coma. For standard
   assumptions, structure formation shocks lead to a seed electron
   population which produces too centrally concentrated radio
-  emission. Instead, we present three plausible scenarios for the seed
-  CRs that each can reproduce the spatially flat radio emission
-  observed in the Coma cluster. (1) The CR proton-to-electron
-  acceleration efficiency $K_\rmn{ep} \sim 0.1$ is assumed to be
-  larger than in our Galaxy ($K_\rmn{ep} \sim 10^{-2}$), due to the
-  magnetic geometry at the shock. The resulting primary electrons
-  dominate the radio emission, which is more extended in comparison to
-  radio emission from secondary electrons that result from hadronic CR
-  interactions in the ICM. (2) CR protons may stream at the Alfv{\'e}n
-  speed to the cluster outskirts when the ICM is relatively
-  quiescent. A spatially flat CR proton distribution develops and
-  produces the required population of secondary seed electrons. (3)
-  The ratio of injected turbulent-to-thermal energy density increases
-  significantly with radius, as seen in cosmological simulations. This
-  generates a flat radio profile when CRs are reaccelerated even if
-  the seed population of CRs is steep with radius. These competing
-  non-trivial solutions provide incisive probes of non thermal
-  processes in the high-$\beta$ ICM.
+  emission. By modifying properties of the CR population (rapid streaming; enhanced CR electron acceleration at shocks) or turbulence (increasing $\eps_{\rm turb}/\eps_{\rm therm}$ with radius), we can match observations, but only at the expense of fine-tuning. We then perform a parameter study. Under naive assumptions, radio properties are exponentially sensitive to the amplitude of turbulence, which is inconsistent with small scatter in scaling relations. This sensitivity can be removed if we relate the acceleration time to the turbulent dissipation time. Their ratio depends only on plasma parameters. In this case, turbulence above a threshold value required to overcome cooling provides a fixed amount of amplification; observations could then potentially constrain the unknown CR seed population. Understanding the small scatter in radio halo scaling relations may prove a rich source of insight on plasma processes in the ICM.   
 \end{abstract} 
 
 %% --- keywords --- %
@@ -208,73 +183,30 @@ cosmological setting to follow the distribution functions of seed
 populations for CRps and CRes, and integrate the Fokker-Planck
 equation of CR transport along Lagrangian particle trajectories. We
 model diffusive shock acceleration at structure formation shocks,
-account for various loss processes of CRs, and -- most importantly --
-model second-order Fermi acceleration by CR interactions with
-magnetised turbulence.
+and account for various loss processes of CRs. Utilizing new insights from our recent work on DSA generated
+  fossil electrons \citep{pinzke13}, we generate the first
+  quantitative calculation of primary and secondary seed electrons
 
-However, we assume a simplified and stationary model for magnetic
+To compare this to observations, we model second-order Fermi acceleration by CR interactions with
+magnetised turbulence. However, we assume a simplified and stationary model for magnetic
 fields and turbulence. We do not account for the time-varying energy
 density in compressible waves, which are thought to be necessary for
 the acceleration process \citep{brunetti07,brunetti11}, as the cluster
 merger proceeds.  So our approach is orthogonal (and complementary) to
 e.g., simulations of \citealp{miniati15} that focus on the
 time-dependent compressible turbulence while adopting a simplified
-treatment of CR that does not follow the transport of the CR
-distribution function. Our approach of parametrizing turbulence
-enables us to vary parameters associated with the unknown continuation
-of magneto-hydrodynamical (MHD) turbulence below the MHD scale and the
+treatment of CR. Our approach of parametrizing turbulence
+enables us to vary parameters associated with the spatial profile and the
 overall amplitude of compressible waves (that can in principle vary
 depending on the details of a particular cluster merger).
 
-In this paper we consider three new scenarios that
-individually or combined can reproduce the observed radio profiles and
-spectrum in the Coma cluster without violating gamma-ray constraints:
-\begin{enumerate}
-\item {\bf Model {\em M-primaries}.} If the acceleration efficiency of CRps is below
-  about $0.1$~{\%} in weak (perpendicular) shocks and the ratio of injected
-  electrons-to-protons $K_{\rmn{ep}} \sim 0.1$, this yields a dominant primary
-  population with a flat spatial distribution, since primaries have a weaker
-  density dependence than secondaries.
-\item {\bf Model {\em M-streaming}.} Here, we account for streaming CRps that
-  produce flat distributions of CRps in the ICM
-  \citep{ensslin11,wiener13,2014MNRAS.438..124Z}, which also flattens the
-  secondary electron distribution.
-\item {\bf Model {\em M-turbulence}.} Here, we adopt a spatially
-  flatter turbulent profile than what was adopted in \citet{brunetti12},
-  but where seed CRps follow the steep profile that is suggested by
-  structure formation simulations.
-\end{enumerate}
-
-\AP{In section~\ref{sec:results} we pursue these three possibilities
-  further and employ cosmological simulations of CRs in clusters. In
-  tandem with new insights from our recent work on DSA generated
-  fossil electrons \citep{pinzke13}, we generate the first
-  quantitative calculation of primary and secondary seed electrons and
-  compare to observations in the Coma cluster. For the most part, we
-  adopt parameters that are used in previous work, including Fermi-II
-  acceleration with models of turbulent spectra
-  \citep{brunetti07,brunetti11}, injection scale of turbulence
-  \citep{miniati15}, the energy density of turbulence
-  \citep{2009ApJ...705.1129L,2010ApJ...725.1452S,2011A&A...529A..17V},
-  for CR acceleration in shocks \citep[][in particular $K_{\rmn{ep}}$
-    and the acceleration efficiency]{pinzke13}, and for cosmological
-  simulations with CR physics \citep[][i.e., shock history,
-    temperature profile, density profile, magnetic field
-    profile]{pinzke10}. All these parameters are uncertain, and could
-  potentially change our predictions. In section~\ref{sect:param_comp}
-  we adopt a simplified spherical framework for our reacceleration
-  model of secondary electrons. We perform a small parameter study and
-  explore how radio emission depends on the parameters describing the
-  spatial profile of CR protons and turbulence. In
-  section~\ref{sect:param_comp} we discuss our results and present our
-  conclusions.} \sout{We refer the reader to
-  section~\ref{sect:param_comp} for a first exploration of parameter
-  space, however} We leave the detailed exploration of parameter space
-and the interaction between free parameters to future work.
+In this paper, we explore how the radio surface brightness profile and spectrum of the best known radio halo, Coma, can be used to constrain the underlying properties of the seed cosmic rays and turbulence. We aim to constrain the normalization and spatial profile of these two input ingredients in turbulent reacceleration models. The outline of this paper is as follows. In \S\ref{sect:method}, we outline the basic physics of turbulence reacceleration of cosmic rays which we use. In \S\ref{sec:results}, we use cosmological simulations to generate a seed CR population, and combine it with our parameterized model of turbulence to produce radio surface brightness profiles and spectra of Coma. We find that it is possible to fit the observations using physically motivated modifications of the seed population    
+(rapid streaming; enhanced CR electron acceleration at shocks) or turbulence (increasing $\eps_{\rm turb}/\eps_{\rm therm}$ with radius), but only at the expense of fine tuning. In \S\ref{sect:param_comp}, we explore the reason for this fine-tuning, and seek ways to overcome it. We perform a parameter study on spherically symmetric, static models where we vary properties of the seed population and turbulence. We find exponential sensitivity to the amount of turbulent, which can be eliminated if the turbulent acceleration and dissipation time are linked. In this case, turbulence above a threshold value required to overcome cooling provides a fixed amount of amplification; observations could then potentially constrain the unknown CR seed population. We summarize and conclude in \S\ref{sec:conclusions}. 
 
 
 % --- section: Method --- %
 \section{Cosmic ray transport}
+\label{sect:method} 
 
 The transport of relativistic electrons and protons across cosmic time
 into galaxy clusters is a complex problem that depends on the velocity
@@ -293,25 +225,7 @@ have the wrong spatial profile to explain RH observations. Because
 they arise from a two body process, they are too centrally
 concentrated. They also produce gamma-ray emission in excess of
 Fermi-LAT upper limits
-\citep{2012ApJ...757..123A,brunetti12,2014ApJ...787...18A}. However,
-if CRps stream in the ICM, then their spatial profile could
-potentially flatten sufficiently \citep{ensslin11,wiener13}. This
-scenario is very attractive: it generates seed electrons with the
-right spatial footprint, and by removing CRps from the core, obeys
-gamma-ray constraints. Turbulence plays two opposing roles:
-Alfv{\'e}nic turbulence damps waves generated by the CR streaming
-instability \citep{yan02,farmer04}, thus reducing self-confinement;
-but compressible fast modes scatter CRs directly. Turbulent damping is
-still efficient for highly subsonic conditions \citep{wiener13}, while
-we assume compressible fast modes to only provide effective spatial
-confinement during the periods of transonic, highly super-Alfv{\'e}nic
-($M_{\rm A} \sim 5$) turbulence associated with mergers. Thus, CRs can
-stream out when the cluster is kinematically quiescent. Furthermore,
-even Alfv{\'e}nic streaming timescales are relatively short
-\cite[$\sim 0.1-0.5$ Gyr;][]{wiener13} compared to the timescale on
-which the CRp population is built up. Based on these findings, we
-adopt a toy model for our \Mstream scenario in which CR streaming
-instantaneously produces flat CRp profiles.
+\citep{2012ApJ...757..123A,brunetti12,2014ApJ...787...18A}. 
 
 Given a seed population of CRs, we adopt essentially the same set of
 plasma physics assumptions as the reacceleration model for RHs
@@ -328,12 +242,12 @@ f_{\rmn{e}}(p,t)\left[
 + \frac{p}{3}\left(\bnabla\bcdot \bvel\right)
 + \left|\frac{dp}{dt}\right|_{\rm rad}\right.\right.
 \nonumber\\
-&-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right) 
+&-& \left.\left.{1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{\rm pp}\right) 
 \right]\right\} - \left(\bnabla\bcdot \bvel\right) f_{\rmn{e}}(p,t)
 \nonumber\\
 &+& {{\partial^2 }\over{\partial p^2}}
 \left[
-D_{pp} f_{\rmn{e}}(p,t) \right]+ Q_{\rmn{e}}\left[p,t;f_{\rmn{p}}(p,t)\right]   \, .
+D_{\rm pp} f_{\rmn{e}}(p,t) \right]+ Q_{\rmn{e}}\left[p,t;f_{\rmn{p}}(p,t)\right]   \, .
 \label{elettroni}
 \end{eqnarray}
 Here $f_{\rmn{e}}$ is the one-dimensional distribution in position $x$
@@ -362,8 +276,8 @@ the equivalent field strength of the cosmic-microwave background is
 given by $B_\rmn{CMB} = 3.24 (1 + z)^2\mu\rmn{G}$, where $z$ denotes
 the redshift. In the peripheral cluster regions, where $B \ll
 B_\rmn{CMB}$, the CRes loose virtually all their energy by means of
-inverse Compton emission. $D_{pp}$ is the momentum space diffusion
-coefficient (see Sects.~\ref{sec:dummy} and \ref{sec:reacc}), and
+inverse Compton emission. $D_{\rm pp}$ is the momentum space diffusion
+coefficient (see \S\ref{sec:reacc}), and
 $Q_{\rmn{e}}$ denotes the injection rate of primary and secondary
 electrons in the ICM (see Sect.~\ref{sec:cosmo_sim}). The first term
 containing the expression $\bnabla\bcdot \bvel$ represents Fermi-I
@@ -373,33 +287,44 @@ gains and losses.
 During post-processing of our Coma-like cluster simulation, we solve
 the Fokker-Planck equation over a redshift interval from $z=5$ to
 0. The simulated cluster undergoes a major merger over the last
-1-2~Gyrs that is thought to inject large turbulent eddies. Following
-standard approaches
-\citep{brunetti07,brunetti11,2004ApJ...614..757Y,miniati15}
+1-2~Gyrs that is thought to inject large turbulent eddies. As is commonly assumed \citep{brunetti07,brunetti11,2004ApJ...614..757Y,2013ApJ...771..131B}
 we assume that about one Gyr after core passage the fields have
-decayed down to the smallest scales where reacceleration is most
-efficient ($D_{pp}\sim k_\rmn{cut}$) and the radio halo turns on
-shortly after. Note that the exact decay time of the turbulens is of
-minor importance, since the thermal and CR quantities are very similar
-a few 100 Myrs before and after $z=0$ where we have chosen to evaluate
-the simulations. This delay naturally explains why giant radio halos
-are only seen in a fraction of all merging clusters.
+decayed down to the smallest scales $k_{\rm cut}$, and the radio halo turns on
+shortly after. We choose this simulation snapshot to analyze. We are not very sensitive to this assumption, since the thermal and CR quantities are very similar a few
+100 Myrs before and after z = 0, where we have chosen to evaluate the
+simulations. In all our
+calculations we assume that turbulent reacceleration efficiently
+accelerates particles for $\tau{\rm cl} \sim 650$ Myrs (which is roughly the cascade
+time on which turbulence is damped) and that during this turbulent
+phase CR streaming and spatial diffusion can be neglected. In \S\ref{sect:self-limiting}, we explore sensitivity to the last assumption.
 
+
+Thus far, we have ignore CR transport. However, if CRps stream in the ICM, then their spatial profile could
+potentially flatten sufficiently \citep{ensslin11,wiener13}. This
+scenario is very attractive: it generates seed electrons with the
+right spatial footprint, and by removing CRps from the core, obeys
+gamma-ray constraints. Turbulence plays two opposing roles:
+Alfv{\'e}nic turbulence damps waves generated by the CR streaming
+instability \citep{yan02,farmer04}, thus reducing self-confinement;
+but compressible fast modes scatter CRs directly. Turbulent damping is
+still efficient for highly subsonic conditions \citep{wiener13}, while
+we assume compressible fast modes to only provide effective spatial
+confinement during the periods of transonic, highly super-Alfv{\'e}nic
+($M_{\rm A} \sim 5$) turbulence associated with mergers. Thus, CRs can
+stream out when the cluster is kinematically quiescent. Furthermore,
+even Alfv{\'e}nic streaming timescales are relatively short
+\cite[$\sim 0.1-0.5$ Gyr;][]{wiener13} compared to the timescale on
+which the CRp population is built up. Based on these findings, we
+adopt a toy model for our \Mstream scenario in which CR streaming
+instantaneously produces flat CRp profiles. We assume that CRs cannot stream significantly past
+perpendicular $B$-fields at the accretion shock, so that the total
+number of CRs is conserved within the virial radius during the
+streaming process.
 In all our calculations we assume that turbulent reacceleration
 efficiently accelerates particles for $\tau_\rmn{cl}\sim650$~Myrs
 (which is roughly the cascade time on which turbulence is damped) and
 that during this turbulent phase CR streaming and spatial diffusion
-can be neglected. In our \Mstream model, CR streaming and diffusion
-are incorporated separately during kinematically quiescent times that
-precede the merger. As a result, flat CRp profiles are produced on
-relatively short timescales ($\sim 0.1-0.5$ Gyr). This allows us to
-implicitly solve for CR streaming in our calculations, where we adopt
-a toy model that enforce a flat CRp profile at all quiescent times
-\citep{wiener13}. We assume that CRs cannot stream significantly past
-perpendicular $B$-fields at the accretion shock, so that the total
-number of CRs is conserved within the virial radius during the
-streaming process. Finally, since streaming is much more efficient for
-the CRps, we can ignore this effect for the CRes.
+can be neglected. 
 
 The time evolution of the spectral energy distribution of CRps,
 $f_{\rmn{p}}$, is similarly given by:
@@ -411,12 +336,12 @@ $f_{\rmn{p}}$, is similarly given by:
   f_{\rmn{p}}(p,t)\left[ \left|{{dp}\over{dt}}\right|_{\rm Coul}
     + \frac{p}{3}\bnabla\bcdot \left(\bvel+\bvel_{\rmn{st}}\right)\right.\right.}
 \nonumber\\
-&&-\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{pp}\right)
+&&-\left.\left. {1\over{p^2}}{{\partial }\over{\partial p}}\left(p^2 D_{\rm pp}\right)
 \right]\right\} - f_{\rmn{p}}(p,t) \bnabla\bcdot \left(\bvel+\bvel_{\rmn{st}}\right) 
 - \bvel_{\rmn{st}}\bcdot\bnabla f_{\rmn{p}}(p,t)
 \nonumber\\
 &&+\,\,\, {{\partial^2 }\over{\partial p^2}}
-\left[ D_{pp} f_{\rmn{p}}(p,t) \right] - {{f_{\rmn{p}}(p,t)}\over{\tau_{\rm had}(p)}}
+\left[ D_{\rm pp} f_{\rmn{p}}(p,t) \right] - {{f_{\rmn{p}}(p,t)}\over{\tau_{\rm had}(p)}}
 + Q_{\rmn{p}}(p,t)\, ,
 \label{eq:FP_p}
 \end{eqnarray}
@@ -434,93 +359,17 @@ protons of the ICM is given by
 where we use the cross-section, $\sigma^{+/-,0}(p)$, given by the
 fitting formula in \citep{1986ApJ...307...47D}.
 
-\subsection{Physical picture of reacceleration}
-\label{sec:dummy} 
-
-All of the physics of turbulent reacceleration is effectively encapsulated in the diffusion coefficient, which can be rewritten as \citep{miniati15}:
-\begin{equation}
-D_{pp}(p) = \frac{ p^{2} \pi I_{\theta}(c_{s}/c)}{8 c} \langle k \rangle_{\mathcal{W}} \langle (\delta v_{\rm c})^{2} \rangle
-\label{eqn:diffusion}
-\end{equation}
-\SPO{define $I_{\theta}(c_{s}/c)$ or explain its meaning in words and point to the definition provided in the next subsection.}
-where
-\begin{equation}
-\langle k \rangle_{\mathcal{W}} = \frac{1}{\langle (\delta \varv_{\rm c})^{2} \rangle} \int_{k_{\rm L}}^{k_{\rm cut}} dk \, k \, \mathcal{W}(k) \approx \frac{s-1}{2-s} k_{\rm L} \left( \frac{k_{\rm cut}}{k_{\rm L}} \right)^{2-s} 
-\label{eqn:k_W} 
-\end{equation}
-is an energy-averaged wavenumber, $k_{\rm L}, k_{\rm cut}$ are the wavenumbers associated with the outer scale and the cutoff scale respectively, and we have assumed a total energy spectrum (both kinetic and potential energy, where the two are assumed to be in equipartition \citep{sarkar11}): 
-\begin{equation}
-\mathcal{W}(k) = \frac{(s-1) \langle (\delta \varv_{\rm c})^{2} \rangle}{k_{\rm L}} \left( \frac{k}{k_{\rm L}} \right)^{-s} 
-\label{eqn:Wk}
-\end{equation}
-which defines the normalization $\langle (\delta \varv_{\rm c})^{2} \rangle$ (the subscript 'c' emphasizes that we specialize to compressive modes). Intuitively, we can understand the form of the the diffusion coefficient from the fact that for second-order Fermi acceleration, $\dot{p} \sim \Delta p/\tau \sim p\,\langle k c \rangle_{\mathcal{W}} (\delta \varv_{\rm c}/c)^{2}$, where $\tau^{-1} \sim \langle k c \rangle_{\mathcal{W}}$ is the energy averaged wave-particle interaction rate, and $\Delta p \sim p (\delta \varv_{\rm c}/c)^{2}$ is the typical momentum change during wave particle scattering. Thus: 
-\begin{equation}
-D_{pp} \sim p \dot{p} \sim p^{2} \langle k c \rangle_{\mathcal{W}} \left( \frac{\delta \varv_{\rm c}}{c} \right)^{2}. 
-\end{equation}
-
-Equations \ref{eqn:diffusion} and \ref{eqn:Wk} make the important aspects of turbulence clear: the energy in compressive modes $\langle (\delta v_{\rm c})^{2} \rangle$, the inner and outer scale ($k_{\rm cut}$ and $k_{\rm L}$), and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
-
-{\bf Energy in compressive modes} The total turbulence energy is typically $\sim 15-70\%$ of the thermal energy in a cluster \citep{vazza11}; it rises rapidly during a merger. The compressible component is $\sim 20-40\%$ of the total turbulent energy, and shows more rapid temporal variations compared to the compressible component \citep{2013ApJ...771..131B,miniati15}. It is worth noting that in the subsonic regime of the solar wind \citep{yao11,howes12}, as well as most idealized calculations of turbulent driving, there is relatively little energy in the fast mode. For instance, the fiducial simulations of \citet{lynn14} with a sonic Mach number ${\mathcal M}_{\rm s} \sim 0.35$ and a plasma beta factor of $\beta \sim 1$ show that 50\%, 45\%, 5\% of the turbulent energy density is in the Alfv{\'e}n, slow, and fast modes, respectively. For higher $\beta \sim 3-10$, they find that the proportion of energy in fast modes drops to $< 1\%$, while the fraction of energy in the slow mode remains roughly the same. Similarly, \citet{kowal10} find that the fast mode is highly subdominant (see their Table 2); for the run most relevant to cluster conditions ${\mathcal M}_{\rm s} \sim 0.7, \beta \sim 10$, they find $\sim 42\%, 6\%$ of turbulent energy in slow and fast modes respectively. These simulations are roughly consistent with theoretical estimates of $U_{\rm fast}/U_{\rm slow} \sim {\mathcal M}_{\rm s}^{2}/{\mathcal M}_{\rm A}$ \citep{cho03}. By contrast, MHD simulations of galaxy clusters find a large fraction ($\sim 25$\%) of turbulent energy in fast modes \citep{2013ApJ...771..131B}. This is likely due to the compressive nature of turbulent driving (transonic infall and merger), whereas idealized simulations tend to use incompressible solenoidal driving and allow compressive fluctuations to develop on their own. 
-
-In the high-$\beta$, subsonic conditions of the ICM, the Alfv{\'e}n/slow modes are exactly/approximately incompressible, and so the approximate identification of compressive modes with fast modes is valid. We therefore take $\sim 25\%$ of the turbulent energy density in compressive fast modes as a reasonable baseline estimate \citep{2013ApJ...771..131B,miniati15}. If a large fraction of energy is in slow modes, then resonant broadening of wave-particle interactions can render slow modes an efficient acceleration mechanism \citep{lynn14}, as we discuss briefly in \S\ref{?}.
-
-{\bf Slope of the energy spectrum $s$.} At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $U_{\rm t} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_{\rm o} {\mathcal M}_{\rm A}^{-3}$, where $U_{\rm turb} \sim U_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. Theory \citep{goldreich95,chandran05} and simulations \citep{cho03} show that in the MHD regime, the Alfv{\'e}n and slow modes have a shallower Kraichnan spectrum ($s=3/2$), with relatively little coupling between the incompressible and compressible modes \citep{cho02,cho03} -- though if weak shocks are important, $s=2$ may be more appropriate (see discussion below). 
-
-Since the Kraichnan spectrum is critical in what follows, it is worthwhile taking a moment to recount the origin of the spectral slope $s$ and the cascade rate. In the magnetically dominated regime, two counterpropagating wave packets of scale $l$ interact on an Alfv{\'e}n time $\tau_{\rm A}=l/\varv_{\rm A}$, rather than the eddy turnover time $\tau_{\rm edd} = l/\varv_{\rm l}$. 
-Since $\tau_{\rm A} \ll \tau_{\rm edd}$, each interaction results in a small velocity change $\delta \varv_{\rm l} \sim \varv_{\rm l} (\tau_{\rm A}/\tau_{\rm edd})$. If these changes behave like a random walk, the cascade time $\tau_{\rm l}$ it takes for an eddy to become non-linear ($\Delta \varv \sim \varv_{\rm l})$ and cascade to smaller scales is $\varv_{\rm l} \sim \delta \varv_{\rm l} (\tau_{\rm l}/\tau_{\rm A})^{1/2} \sim \varv_{\rm l} \tau_{\rm A}/\tau_{\rm edd} (\tau_{\rm l}/\tau_{\rm A})^{1/2}$, which we can solve to obtain the cascade time: 
-\begin{equation}
-\tau_{\rm l} \sim \left(\frac{\tau_{\rm edd}}{\tau_{\rm A}}\right)^{2} \tau_{\rm A} \sim \frac{l \varv_{\rm A}}{\varv_{\rm l}^{2}} 
-\label{eqn:cascade} 
-\end{equation}
-where we have implicitly assumed isotropy. This implies a dissipation rate $\epsilon \sim \varv_{\rm l}^{2}/\tau_{\rm l} \sim \varv_{\rm l}^{4}/(l \varv_{\rm A})$, or $\varv_{\rm l} \sim (\epsilon l \varv_{A})^{1/4}$. Thus, since $k E(k)\sim \varv_{\rm l}^{2}$, this gives a kinetic energy spectrum: 
-\begin{equation}
-E(k) \sim (\epsilon \varv_{\rm A})^{1/2} k^{-3/2}.
-\end{equation}
- 
-Finally, if turbulence is transonic ($M_{\rm s} \sim {\mathcal O}(1)$), then compressible modes can dissipate in weak shocks, as seen in decompositions of the velocity field into solenoidal/compressible components both in idealized simulations \citep{kowal10,porter15}, and cosmological hydrodynamic simulations \citep{miniati15}. The compressible component has a steep Burgers ($s=2$) spectrum. Burgers turbulence is distinct from other forms of turbulence in that it violates locality in k-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$. If we contrast the different velocity scalings: $\varv \propto l^{1/4}$ (Kraichnan), $\varv \propto l^{1/3}$ (Kolmogorov), $\varv \propto l^{1/2}$ (Burgers), we see that because of its dissipative nature, Burgers turbulence is the least efficient at transferring energy towards the small scales needed (since the wave particle interaction rate scales as $k$) for efficient acceleration. If Burgers turbulence dominates, then particle acceleration rates are too slow in the face of cooling processes to explain radio halos \citep{miniati15}.
-
-Given the lack of consensus on the fast mode spectrum, and the fact that turbulent reacceleration is not a viable explanation for radio halos if the spectrum is Burgers-like, we assume a Kraichnan spectrum. 
-
-{\bf Inner and outer scale}
-
-{\bf Timescales} 
-
-The characteristic synchrotron frequency is $\nu_{\rm s} \sim 3 \gamma^{2} \nu_{\rm c}^{2}$, where $\nu_{\rm c}$ is the non-relativistic cyclotron frequency. Thus, for a given observation frequency, the greatest contribution comes from electrons with: 
-\begin{equation}
-\nu_{\rm emit} \approx 6.6 \times 10^{3} \left( \frac{\nu_{\rm obs}}{350 \, {\rm MHz}} \right)^{1/2} \left(\frac{B}{1 \, \mu{\rm G}} \right)^{1/2} (1+z)^{1/2}.
-\end{equation}  
-
-{\bf Scaling solutions} Since the diffusion time is independent of energy (the so-call 'hard sphere' approximation), analytic solutions are possible. The steady state solution is a power-law with a cutoff above a characteristic momentum $p_{\rm eq}$, defined by $t_{\rm acc} \equiv t_{\rm cool} (p_{\rm eq})$ \citep{stawarz08}: 
-\begin{equation}
-n(p) \propto \left \{
-\begin{array}{ll}
-p^{-\sigma} & \quad \text{for} \quad p \ll p_{\text{eq}} \, , \\
-p^2 {\rm e}^{-p/p_{\text{eq}}} & \quad \text{for} \quad p \sim p_{\text{eq}} \,.
-\end{array}
-\right.
-\end{equation}
-%
-where $-\sigma = 1/2 - \sqrt{9/4 +
-  t_\text{acc}/t_\text{esc}}$ asymptotically approaches $-1$
-as $t_\text{acc}/t_\text{esc} \rightarrow 0$.
-
-
-%%%Fast modes can become more important in highly supersonic turbulence, but this is not relevant to clusters. The magnetic energy density in fast modes scales as $\delta B^{2}_{\rm F} \sim \rho \delta v_{\rm F}^{2}/\beta$ (since magnetic restoring forces 
-
-
-\subsection{Formalism for turbulent reacceleration}
+\subsection{Turbulent Reacceleration}
 \label{sec:reacc}
 
-We incorporate momentum diffusion for electrons and protons via the
-transit-time-damping (TTD) resonance with compressible MHD turbulence,
-to model Fermi-II reacceleration \citep{brunetti07,brunetti11}. The
+In turbulent reacceleration, particles gain energy via Fermi II acceleration. Wave-particle energy exchange takes place via transit time damping \citep{brunetti07,brunetti11}. The
 TTD resonance requires the wave frequency to obey the resonance
 condition, $\omega=k_\parallel\varv_\parallel$, where $k_\parallel$
 and $\varv_\parallel$ are the parallel (projected along the magnetic
-field) wavenumber and particle velocity, respectively. This implies
+field) wavenumber of the compressible mode and particle velocity, respectively. This implies
 that the particle transit time across the confining wave region
 matches the wave period,
-$\lambda_{\parallel}/\varv_{\parallel}=\tau_{\rmn{wave}}$. Note, the CRs'
+$\lambda_{\parallel}/\varv_{\parallel}=\tau_{\rmn{wave}}$ (hence the moniker, 'transit time damping'). Note that the CRs'
 gyroradius does not enter the resonance condition. Hence the CRs that
 are in resonance with compressible waves experience Fermi-II
 acceleration irrespectively of the length scale of the perturbation.
@@ -534,150 +383,73 @@ instability---that isotropizes the CR distribution function at the
 gyroscale and on the reacceleration time scale, which ensures
 sustained efficient reacceleration with time.
 
-It can be shown that the particle pitch-angle averaged
-momentum-diffusion coefficient of isotropic particles that couple to
-fast magnetosonic modes via TTD resonance is \citep[][
-  Eqn. 47]{brunetti07}:
-\begin{eqnarray}
-  D_{pp}(p,t) = \frac{\upi}{16} \frac{p^2}{\rho c}
-  \left\langle\frac{\beta |B_k|^2}{16 \upi \,W}\right\rangle
-  I_\theta
-  \int_{k_\rmn{cut}}\mathcal{W}(k)k\,d k\,,
-\label{eq:dpp}
-\end{eqnarray}
-where $\beta$ is the thermal-to-magnetic pressure ratio, and $c$
-is the speed of light. The energy density $W$ of a mode in a
-magnetized plasma stems from both electromagnetic fields and resonant
-particles. For a high-$\beta$ plasma, the pitch angle averaged ratio of
-beta-weighted magnetic-to-total energy density saturates to $\langle\beta
-|B_k|^2/2W\rangle\approx 10^{1.4}$ (see Figure 2 in
-\citealt{brunetti07}). The pitch angle of the CR momentum with the
-magnetic field orientation is given by $\theta$, and
+All of the physics of turbulent reacceleration is effectively encapsulated in the diffusion coefficient \citep{brunetti07}, which can be rewritten as \citep{miniati15}:
 \begin{equation}
-  \label{eq:I_theta}
-  I_\theta=\int_0^{\arccos(\Vph/c)} d\theta {\frac{ \sin^3 \theta }{
-    |\cos \theta | }}
-\left[1+\left(\frac{\Vph}{c\,\cos{\theta}}\right)^2\right]^2.
+D_{\rm pp}(p) = \frac{ p^{2} \pi I_{\theta}(c_{s}/c)}{8 c} \langle k \rangle_{\mathcal{W}} \langle (\delta v_{\rm c})^{2} \rangle
+\label{eqn:diffusion}
 \end{equation}
-Here $\Vph$ is the phase velocity of the fast magnetosonic waves
-given approximately by the sound speed, $\Vph \sim c_\rmn{s}$. For a
-sound speed typical for the ICM of 1000~km/s, $I_\theta\approx5$. As
-in \cite{brunetti07}, we initially assume that the velocity of
-turbulent eddies is $\varv_0\approx 0.47 c_\rmn{s}$ throughout the
-cluster. This gives a turbulent acceleration time scale, $\tau_{\rm D} =
-p^2/4D_{pp}$, that is typically few 100 Myrs in the ICM (see
-Tab.~\ref{tab:timescales} for more details).
-
-We focus on a scenario where the turbulence is injected at the largest
-scale that is driven by the merging cluster and accreting matter. The
-diffusion equation for isotropic MHD turbulence in $k$--space is given
-by
+where $I_{\theta}$ averages interaction rates over the CR pitch angle $\theta$; $I_{\theta} \approx 5$ for ICM conditions, and
 \begin{equation}
-  \begin{aligned}
-\frac{\partial {\mathcal W}(k,t)}{\partial t}
-=
-\frac{\partial}{\partial k}
-\left[
-k^2 D_{kk}
-\frac{\partial}{\partial k}
-\left( \frac{{\mathcal W}(k,t)}{k^2} \right)
-\right]
-- \sum_i \Gamma_i (k,t) {\mathcal W}(k,t)
-+ I(k,t)
-\end{aligned}
-\label{modes_kinetic}
+\langle k \rangle_{\mathcal{W}} = \frac{1}{\langle (\delta \varv_{\rm c})^{2} \rangle} \int_{k_{\rm L}}^{k_{\rm cut}} dk \, k \, \mathcal{W}(k) \approx \frac{s-1}{2-s} k_{\rm L} \left( \frac{k_{\rm cut}}{k_{\rm L}} \right)^{2-s} 
+\label{eqn:k_W} 
 \end{equation}
-where we assume that the volumetric injection rate of turbulence
-$I(k,t)$ is constant over time with a fixed rate $I_0$ so that $I(k,t)
-\equiv I(k) = I_0\,\delta (k - k_o)$. The different damping terms are
-given by $\Gamma_i(k,t)$ and $D_{kk}$ is the wave--wave diffusion
-coefficient of magnetosonic waves in the $k$--space represented by
+is an energy-averaged wavenumber, $k_{\rm L}, k_{\rm cut}$ are the wavenumbers associated with the outer scale and the cutoff scale respectively, and we have assumed a total energy spectrum (both kinetic and potential energy, where the two are assumed to be in equipartition \citep{sarkar11}): 
 \begin{equation}
-  \label{eq:Dkk}
-  D_{kk} \approx \Vph k^4
-  \left(\frac{\mathcal{W}(k)}{\rho\,\Vph^2}\right)\,.
+\mathcal{W}(k) = \frac{(s-1) \langle (\delta \varv_{\rm c})^{2} \rangle}{k_{\rm L}} \left( \frac{k}{k_{\rm L}} \right)^{-s} 
+\label{eqn:Wk}
+\end{equation}
+which defines the normalization $\langle (\delta \varv_{\rm c})^{2} \rangle$ (the subscript 'c' emphasizes that we specialize to compressive modes). Intuitively, we can understand the form of the the diffusion coefficient from the fact that for second-order Fermi acceleration, $\dot{p} \sim \Delta p/\tau \sim p\,\langle k c \rangle_{\mathcal{W}} (\delta \varv_{\rm c}/c)^{2}$, where $\tau^{-1} \sim \langle k c \rangle_{\mathcal{W}}$ is the energy averaged wave-particle interaction rate, and $\Delta p \sim p (\delta \varv_{\rm c}/c)^{2}$ is the typical momentum change during wave particle scattering. Thus: 
+\begin{equation}
+D_{\rm pp} \sim p \dot{p} \sim p^{2} \langle k c \rangle_{\mathcal{W}} \left( \frac{\delta \varv_{\rm c}}{c} \right)^{2}. 
 \end{equation}
 
-We adopt a simplified isotropic MHD turbulent spectrum based on
-Kraichnan's picture for the fast modes per elemental range $dk$ of the
-form
+Equations \ref{eqn:diffusion} and \ref{eqn:Wk} make the important aspects of turbulence clear: the energy in compressive modes $\langle (\delta v_{\rm c})^{2} \rangle$, the inner and outer scale ($k_{\rm cut}$ and $k_{\rm L}$), and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
+
+We adopt a Kraichnan spectrum ($s=3/2$) for the fast modes, as seen in simulations \citep{cho03}. This can also be written as: 
 \begin{equation}
   \label{eq:Wk}
   \mathcal{W}(k) =
 \sqrt{2/7\,I_0\,\rho\,\langle \Vph \rangle}\,k^{-3/2},
 \end{equation}
-for $k_0<k<k_\rmn{cut}$. Here we adopt an injection scale of the
-turbulence, $k_0= 2\upi/\lambda_0$ with $\lambda_0 =100~\mbox{kpc}$,
-that is in line with previous work
-\citep{2006MNRAS.366.1437S,brunetti07,brunetti11}. Note that this
-length scale defines an eddy turn-over time
-$\tau_{\rmn{eddy}}\sim2\upi\lambda_0/\varv_0\sim1.2$~Gyr with
-$\varv_0=500\,\rmn{km~s}^{-1}$, characteristic of a merger event.
-
-Provided dissipation of turbulence in the ICM is collisionless,
-turbulent cascades of compressible modes become suppressed when
-thermal and relativistic particles resonantly interact with
-magnetosonic waves via TTD on a timescale $\Gamma^{-1}$ that
-approaches the cascading timescale given by $\tau_{kk} \approx
-k^2/D_{kk}$. Thus, the cascade is suppressed for wave numbers above
+where $I{\rm 0}$ is the volumetric injection rate of turbulence (which is assumed to be constant), $v_{\rm ph}\approx c_{\rm s}$ is the phase speed of waves. It is important to realize that this only applies at small scales, which turbulence is MHD. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $U_{\rm t} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_{\rm o} {\mathcal M}_{\rm A}^{-3}$, where $U_{\rm turb} \sim U_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation \ref{eqn:Wk} can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
 \begin{equation}
-\label{eq:kc}
-  k_\rmn{cut} \approx \frac{81}{14} \frac{I_0}{\rho \langle \Vph \rangle}
-  \left(\frac{\langle\sum_i \Gamma_i(k,\theta)\rangle}{k}\right)^{-2}\,,
+k_{\rm c} \approx A k_{\rm outer} \frac{\langle v_{\rm outer}^{2}\rangle^{2}}{c_{\rm s}^{4}}
+\label{eqn:k_c} 
 \end{equation}
-where $2\upi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
+where $A \approx 11 000$. This gives $2\upi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
 effective mean free path for CRs, unless plasma instabilities can
 mediate interactions between turbulence and particles on smaller
-scales \citep{brunetti11}.
+scales \citep{brunetti11}, a possibility we discuss in \S\ref{sect:self-limiting}. Another possibility is that compressible modes dissipate in weak shocks, resulting in Burgers' turbulence $s=2$ \citep{kowal10,porter15,miniati15}. If Burgers turbulence dominates, then particle acceleration rates are too slow in the face of cooling processes to explain radio halos \citep{miniati15}, and an alternative model for radio halos is required. 
 
-The profile of injected turbulence depends on the details of the
+The spatial profile of injected turbulence depends on the details of the
 merger such as time during the merger, the impact parameter, the
 merger mass ratio, and the degree of cluster anisotropy
 \citep{miniati15}. We parametrize these uncertainties and
-assume that it scales with the thermal energy density to some
-power. Hence we assume volumetric injection rate of turbulent energy,
+assume that volumetric injection rate of turbulent energy,
 $I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, and determine the
 normalization by requiring that the turbulent energy in compressible
 modes $E_\rmn{turb}=\int \int \mathcal{W}(k) \rmn{d}k \rmn{d}V =
 X_\rmn{tu} E_\rmn{th}$, where $E_\rmn{th}$ is the total thermal
-energy. We adopt a turbulent energy ratio $X_\rmn{tu}=0.2$ within the
-radio halo.\footnote{Simulations show that the compressible modes
-  contribute a factor $0.2-0.4$ to the total turbulent energy
-  \citep{2013ApJ...771..131B,miniati15}. Furthermore, the
-  total turbulent energy, which can be decomposed into a slenoidal and
-  compressible component, is typically $\sim15-70$\% of the thermal
-  energy in a cluster \citep{2011A&A...529A..17V}; in agreement with
-  our adopted value of $X_\rmn{tu}$.}
-
-In this work we only consider damping of the turbulence via TTD due to
-thermal electrons, and neglect subdominant damping with thermal
-protons and relativistic particles (conversely, the turbulence has
-important effects on the reacceleration of CRs). The latter will be
-subdominant in the ICM for a CR-to-thermal energy density ratio
-$\lesssim 10 \%$ \citep{brunetti07}, which is always satisfied in our
-models. The azimuthally averaged turbulent damping rate from thermal
-electrons \citep{brunetti07} in a high-$\beta$ plasma is
+energy. Given these definitions, one can show that: 
 \begin{equation}
-\label{eq:Gamma_e}
-\langle\Gamma_{\rmn{e}}\rangle \approx \langle k\,\Vph\,\sqrt{3\upi
-  x/20}\exp(-5x/3)\sin^2{\theta}\rangle\approx 0.0435k\,\Vph, 
+  \label{eq:Dpp_scaling}
+  D_{\rm pp}\propto \frac{I_0}{\rho c_{\rmn{s}}} \propto 
+X_\rmn{tu}^2k_{\rm L} \eps_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}\,.
 \end{equation}
-where $x=(m_{\rmn{e}}/m_{\rmn{p}})/\cos^2{\theta}$. To compute the
-synchrotron surface brightness profiles, we use the profile of the
-magnetic field strengths derived from Faraday rotation observations of
-Coma \citep{bonafede10} in combination with the density profile
-derived from X-ray measurements \citep{1992A&A...259L..31B}.
 
-\SPO{the following needs a rewrite in the light of an updated discussion of
-  $\tau_\rmn{d}$ vs. $\tau_{\rmn{cl}}$ and the dummy's guide.}  For reference we show in
-Table~\ref{tab:timescales} both the thermal quantities and the
+What is a typical energy density in compressive fast modes? The total turbulent energy is typically $\sim 15-70\%$ of the thermal energy in a cluster \citep{vazza11}; it rises rapidly during a merger. The compressible component is $\sim 20-40\%$ of the total turbulent energy, and shows more rapid temporal variations compared to the compressible component \citep{2013ApJ...771..131B,miniati15}. Note the compressible component in cluster simulations is much larger than that seem in stirring box simulations with similar Mach numbers \citep{kowal10,lynn14}. This is likely due to the compressive nature of turbulent driving (transonic infall and merger), whereas idealized simulations tend to use incompressible solenoidal driving and allow compressive fluctuations to develop on their own. Overall, we adopt a compressive energy density which is $X_{\rm tu} \sim 0.2$ of the thermal energy as a baseline estimate. 
+
+The important effects are best summarized in terms of the acceleration time: 
+\begin{equation}
+\tau_{\rm D}= \frac{p^{2}}{4 D_{\rm pp}}
+\end{equation}
+which is momentum independent. This should be compared against the lifetime of turbulence, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}$. In Table~\ref{tab:timescales}, we show both the thermal quantities and the
 timescales for CR cooling and (re)acceleration for three different
-spatial regions of the RH. Interestingly the reacceleration timescale
+spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use B-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_{\rm L}=2\pi/\lambda_{\rm L}$, where $\lambda_{\rm L} = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This lengthscale corresponds to an eddy turnover time on the outer scale of $v_{L} k_{\rm L}^{-1} \sim 1.2$Gyr if $v_{\rm L} \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_{\rm L}$, in some cases comparable to the size of the cluster \citep{vazza11,miniati15}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_{\rm L}$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
 $\tau_{\rm D}$ is similar between our three models, where the
 difference comes from turbulent profile parameterized with
 $\alpha_\rmn{tu}$. This implies that even small differences in the
-turbulent profile could impact the seed CRs significantly.
-
+turbulent profile could impact the seed CRs significantly. Finally, we adopt an duration of acceleration $\tau_{\rm cl} = 650$ Myr, in line with previous assumptions \citep{brunetti07}, roughly corresponding to the turbulent decay time. 
 \begin{table}
   \caption{Thermal quantities and timescales for different spatial
     regions in a Coma like cluster.}
@@ -714,55 +486,14 @@ $\tau_\rmn{Coul}(P=\,m_ec)^{(6)}$  [Gyr] & 0.0092 & 0.017 & 0.17 \\
 \end{table} 
 
 
-To understand the radial dependence of the diffusion constant we
-investigate how $D_{pp}$ scales with different parameters. This is
-crucial in order to identify important parameters, and understand the
-profile of reaccelerated CRs and radio emission. Combining
-Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e} we find that 
-\begin{equation}
-  \label{eq:Dpp_scaling}
-  D_{pp}\propto \frac{I_0}{\rho c_{\rmn{s}}} \propto 
-X_\rmn{tu}^2k_0\eps_\rmn{th}^{\alpha_\rmn{tu}-1}\sqrt{T}\,.
-\end{equation}
-Here we immediately see that if the turbulent profile traces the
-thermal energy (i.e. $\alpha_\rmn{tu}=1$), the square root of
-temperature determines the diffusion constant. We also see that
-$D_{pp}$ is much more sensitive to the turbulent energy content
-$X_\rmn{tu}$ in comparison to the injection scale $k_0$.
-
-%\SPO{the derivation of the following is not transparent, could you
-%  expand?}  \sout{During reacceleration, the CRps increase their
-%  normalization approximately by the factor} \AP{In the region where
-%  reacceleration dominates over cooling and injection, the CRps
-%%  increase their normalization exponentially. This can easily be
- % understood by considering a simple toy model where a fossil CRp
-%  population described by $f=C p^{-\alpha}$ is reaccelerated such that
-%  $\tau_D < \tau_\rmn{cooling},\tau_\rmn{injection}$, i.e. injection
-%  and cooling can be neglected. The Fokker-Planck equation in
-%  Eqn.~\ref{eq:FP_p} then simplifies to}
-%\begin{equation}
-%  \dot{f} = {{\partial }\over{\partial p}}
-%  p^2 D_{pp} {{\partial }\over{\partial p}} \frac{f}{p^2}\,,
-%\end{equation}
-%with the analytic solution given by
-%\begin{equation}
-%  \label{eq:Creacc}
-%%  \delta C_\rmn{reacc.} \sim 
-%  \exp{\left[\frac{(2+\alpha)(\alpha-1)}{4}\frac{\tau_\rmn{cl}}{\tau_\rmn{D}}\right]}\,.
-%\end{equation}
-%The reaccelerated CRs depend exponentially on $\tau_D\sim 1/D_{pp}$ as
-%long as $\tau_D \lesssim \tau_\rmn{cl}$, where $\tau_\rmn{cl}$
-%represent the duration of reacceleration of the merger which we assume
-%to be 650~Myrs long.
-
-
 % --- section: Simulation Results and discussion --- %
 \section{Cosmological simulations}
 \label{sec:results}
 
 In this section, we solve the Fokker-Planck equation for CR transport
-on Lagrangian particle trajectories through cosmic history.  We
-concentrate on three scenarios. (i) In model {\em M-primaries}, we
+on Lagrangian particle trajectories through cosmic history. We then use our parameterized model of turbulence to apply turbulence re-acceleration, and compare radio halo profiles against observations of the Coma cluster. Our philosophy to is make assumptions roughly in line with previous successful models, which are now confronted with more accurate calculations of the seed CR population, and find the minimal modifications required to fit observations. We re-examine these choices in \S\ref{sect:param_comp}.  
+
+Since the standard vanilla model requires a CR seed population which is inconsistent with the simulations (Fig \ref{fig:Edens}), some modifications are necessary, either in the seed CR population or in the properties of turbulence. We focus on three scenarios. (i) In model {\em M-primaries}, we
 assume that CR electrons, which have been accelerated by cosmic
 formation shocks and successively cooled by inverse Compton and
 synchrotron losses, form a fossil seed population for
@@ -774,16 +505,6 @@ population of CRe for reacceleration. (iii) In model {\em
 what was adopted before but assume that seed CRps and secondary CRes
 follow the steep profile that is suggested by structure formation
 simulations.
-
-The level of emission is mainly driven by how efficient the CRs are
-reaccelerated and for how long. Hence, we exploit the exponential
-sensitivity of reacceleration on the level of turbulence and adopt
-different radial profiles of the turbulent energy density. We ask the
-question how differently the turbulent profiles need to be shaped in
-order to reproduce the observed radial profiles of the radio
-emission. For these models, we then compute radio spectra and
-gamma-ray luminosities and compare to observational data.
-
 
 \subsection{Modelling diffusive shock acceleration}
 \label{sec:cosmo_sim}
@@ -824,7 +545,7 @@ shocked plasma \citep{kang11}:
   \label{eq:qinj}
   p_\rmn{inj} &=& x_\rmn{inj} p_\rmn{th} = x_\rmn{inj} \sqrt{\frac{2 \,\kB T_2}{m c^2}}\,, \nonumber \\
   \rmn{where}\quad x_\rmn{inj} &\approx& 1.17 \frac{\varv_2}{p_{\rmn{th}}\,c} \left(1+
-  \frac{1.07}{\epsilon_B}\right) \left(\frac{\mathcal{M}}{3}\right)^{0.1}\,.
+  \frac{1.07}{\eb}\right) \left(\frac{\mathcal{M}}{3}\right)^{0.1}\,.
 \end{eqnarray}
 Here $\eb = B_0/B_{\perp}$, $B_0$ is the amplitude of the downstream
 MHD wave turbulence, and $B_{\perp}$ is the magnetic field along the
@@ -914,13 +635,7 @@ CRp and CRe have the same distribution function $f_\rmn{e}(p) =
 K_\rmn{ep} f_\rmn{p}(p)$, with a different normalization (due to
 differing acceleration efficiencies) $K_\rmn{ep}=0.1$ \citep[which is
   viable for primarily perpendicular
-  shocks,][]{2014ApJ...794..153G}. While this appears to contradict the
-radial bias of magnetic fields in the bulk of the ICM as suggested by
-observations \citep{2010NatPh...6..520P} and cluster simulations
-\citep{2011ApJ...740...81R}, it does not necessarily apply to the
-accretion shock regions, which show a field geometry with a net
-perpendicular bias with respect to the shock normal---at least for
-giant radio relics \citep{2010Sci...330..347V}.
+  shocks,][]{2014ApJ...794..153G}. Given the unknown magnetic geometry at cluster shocks, we investigate the consequences of this additional degree of freedom. 
 
 
 \subsection{Radio emission profile}
@@ -968,19 +683,16 @@ emission in all three scenarios in which the seeds undergo Fermi-II
 reacceleration in turbulent fields that are shaped such as to
 reproduce the Coma RH profile at 352~MHz.  Adopting our
 parametrisation for the volumetric injection rate of turbulent energy,
-$I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, we find
+$I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, we find that to fit the observations, we require
 $\alpha_\rmn{tu}= 0.67$ for \Mflatturb, $\alpha_\rmn{tu}= 0.82$ for
 \Mstream, and $\alpha_\rmn{tu}= 0.88$ for \Mprimary. As a result, the
 ratio of turbulent-to-thermal energy densities slightly increase with
-radius as shown in Fig.~\ref{fig:turb}.  After turbulent
+radius as shown in Fig.~\ref{fig:turb}.  The fine-tuning of these exponents is somewhat problematic, as we discuss in \S\ref{sect:param_comp}. After turbulent
 reacceleration, the volume-weighted, relative CRp energy density and
 relative CRp number density inside the RH for \Mflatturb (\Mstream),
 are found to be 2 (3) \% and $2\times10^{-8}$ ($5\times10^{-8}$),
 respectively.
 
-%the turbulent energy density becomes $\eps_\rmn{turb} \propto
-%\eps_\rmn{th}^{(\alpha_\rmn{tu}+1)/2}/T^{1/4}$, where $T$ is the
-%temperature of the gas,
 
 \begin{figure}
   \includegraphics[width=1.0\columnwidth]{turb_profile_ratio_tot.eps}
@@ -1015,7 +727,7 @@ in both frequencies in any model.\footnote{Note that in previous work
   seed CRes constitute the main differences compared to our work.}
 Decreasing the acceleration efficiency with radius does not change
 this conclusion much because of the weak radial dependence of
-$D_{pp}(R)\propto \eps_\rmn{th}(R)^{\alpha_\rmn{tu}-1}
+$D_{\rm pp}(R)\propto \eps_\rmn{th}(R)^{\alpha_\rmn{tu}-1}
 \sqrt{T(R)}$. This signals that the problem is generic and requires
 either additional modifications to the plasma physics of acceleration
 or a better understanding of potential observational systematics. In
@@ -1032,11 +744,8 @@ radius driven by the decrease in thermal energy density. The
 by the smaller $\alpha_\rmn{tu}$ which explains the steepest $\tau_{\rm D}$
 profile. Note that a fixed reacceleration timescale is required to
 explain the observations at each radius and for each model (see also
-Table~\ref{tab:timescales}). This allows us to interchange the value
-of uncertain parameters $\tau_\rmn{cl} \sim X_\rmn{tu}^2 \sim k_0$,
-i.e. a longer reacceleration duration have to be compensated by
-lowering the level of turbulence or increasing the physical injection
-scale of turbulence to keep $\tau_{\rm D}$ constant.
+Table~\ref{tab:timescales}). Since $\tau_\rmn{cl} \propto X_\rmn{tu}^2 k_0$,
+these two parameters are degenerate and can be traded off one another.
 
 \begin{figure}
   \includegraphics[width=1.0\columnwidth]{tau_reacc.eps}
@@ -1180,15 +889,14 @@ acceleration efficiencies above $\zeta_{\rmn{p}} \sim 10\%$.
 
 
 % --- section: Analytical Results and discussion --- %
-\section{Parameter space exploration with spherical models}
+\section{Parameter Space Exploration and Overcoming Fine Tuning}
 \label{sect:param_comp}
 In this paper we rely on several critical parameters describing
 relatively unknown non-thermal physics in the ICM. Here we develop a
 simplified framework for our reacceleration model of secondary
 electrons. We will explore how radio emission depends on the
 parameters describing the spatial profile of CR protons and
-turbulence, thereby semi-analytically probing variations about the
-models \Mflatturb and \Mstream. Our fiducial model is meant to be
+turbulence. Our fiducial model is meant to be
 compared against the Coma cluster.
 
 
@@ -1201,7 +909,7 @@ of pre-existing CRs. Hence we vary parameters describing the amount of
 energy contained in turbulence, $X_{\rm tu}$ (defined by $E_{\rm
   turb} = X_{\rm tu} E_{\rm th}$), the spatial profile of
 turbulence as parametrized by $\alpha_{\rm tu}$ (defined by $I_0
-\propto \epsilon_{\rm th}^{\alpha_{\rm tu}}$, where $I_0^{} \propto
+\propto \eps_{\rm th}^{\alpha_{\rm tu}}$, where $I_0^{} \propto
 \varv_0^{3} k_0^{}$ is the injection rate of turbulence), as well as
 the spatial CR profile that we will parametrize by $\alpha_{\rm CR,
   spat}$ (see below).  We hold fixed thermal plasma properties
@@ -1260,20 +968,13 @@ $\int_0^{R_{200}}\eps_\rmn{p,0}
 \rmn{d}V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
 0.003$. Note that the injected energy in the last 650 Myr is smaller
 by about a factor of 10 in comparison to the cumulative CR energy
-injected over the entire cosmological history of the cluster. \AP{So why can't we just neglect the population injected during the merger? -- Above ~ 1 GHz the radio emission is dominated by the CRes injected during the merger. The reason for this is that this population have not had time to cool significantly yet. Otherwise the radio spectrum would be more curved.}  
+injected over the entire cosmological history of the cluster, but this component is nonetheless important since above 1 GHz the radio emission is dominated by CRe's injected during the merger, which have not yet had time to cool. 
 Similarly, the initial CRe distribution is given by the steady state
 between cooling (Coulomb, inverse Compton, and synchrotron) and
-injection of secondary CRes from $f_\rmn{p,0}$. %We also include the
-%continuous injection of secondary CRes during $\tau_\rmn{cl}$. 
-%The
-%compressible turbulence responsible for reaccelerating both the CRps
-%and CRes is parameterized by $I_0 \propto X_\rmn{tu} (n_{\rmn{e}}
-%T)^{\alpha_\rmn{tu}}$. 
-\AP{Do we include injection by primaries, is it negligible? -- I did
-  not include it, because it is subdominant (at least for a
-  $K_{ep}=0.1$).}  The diffusion constant $D_{pp} \propto X_{\rm tu}^{2}
+injection of secondary CRes from $f_\rmn{p,0}$. 
+The diffusion constant $D_{\rm pp} \propto X_{\rm tu}^{2}
 \eps_{\rm th}^{\alpha-1} \sqrt{T} k_{\rm 0}$ is calculated for each
-radial bin using Eqns.~\ref{eq:dpp}-\ref{eq:Gamma_e}. All parameters
+radial bin. All parameters
 and assumptions are similar to what is used for our simulated cluster
 (see Sect.~\ref{sec:results}). Our fiducial model assumes $X_{\rm tu}
 = 0.2$, $\alpha_{\rm tu} =0.8$, $\alpha_{\rm CR, spat}=1.0$, and
@@ -1341,11 +1042,11 @@ spatial distribution of CRs on the radio emission.
 
 {\bf Impact of overall level of turbulence ($X_{\rm tu}$).} From the top panels of Fig.~\ref{fig:param_comp}, we see that as $X_{\rm tu}$ increases, there are 3 important changes: an exponential increase in radio luminosity, a flattening of the radio surface brightness profile, and an increase in spectral curvature. We discuss these in turn. 
 
-The exponential increase in radio surface brightness is easily understood from equation~\ref{eq:Creacc}, since for a power-law initial distribution function $f_{\rm i}(p) = C_{\rm 0} p^{-\alpha}$, then $C_{\rm reacc} \propto C_{\rm 0} {\rm exp}(A \tau_{\rm cl}/\tau_{\rm D}) \propto {\rm exp} (B(r) X_{\rm tu}^{2})$. This exponential sensitivity is somewhat modified by cooling (which results in a non power-law spectrum; also, the shorter the acceleration time, the larger the pool of seed electrons available which would otherwise cool away), but overall is a good approximation. %For fixed $\tau_{\rm cl}$, it also implies a critical level of turbulence, below which reacceleration becomes negligible. 
+As we show in \S\ref{sect:self-limiting}, the exponential increase in radio surface brightness is easily understood from equation~\ref{eq:Creacc}, since for a power-law initial distribution function $f_{\rm i}(p) = C_{\rm 0} p^{-\alpha}$, then $C_{\rm reacc} \propto C_{\rm 0} {\rm exp}(A \tau_{\rm cl}/\tau_{\rm D}) \propto {\rm exp} (B(r) X_{\rm tu}^{2})$. This exponential sensitivity is somewhat modified by cooling (which results in a non power-law spectrum; also, the shorter the acceleration time, the larger the pool of seed electrons available which would otherwise cool away), but overall is a good approximation.  
 
 An increase in $X_{\rm tu}$ flattens the surface brightness profile, since high acceleration efficiency leads to larger amplification in the cluster outskirts (where cooling is less important) than the center. In particular, in the cluster outskirts, the reduced impact of Coulomb cooling implies that there is a larger pool of low-energy electrons available for reacceleration (see timescales in Table \ref{tab:timescales}). 
 
-Larger levels of turbulence also {\it increase} spectral curvature, which might seem puzzling. It can be understood as follows. The pre-acceleration electron distribution function results from the competition between hadronic injection $f \propto p^{-\alpha_{\rm inj}}$ and cooling, which results in a quasi-steady state for the non-thermal (secondary) electrons. At low momenta, when the Coulomb cooling time is short, $f \propto p^{-\alpha_{\rm inj}+1}$, at high momenta, when inverse Compton/synchrotron cooling dominates, $f \propto p^{-\alpha_{\rm inj} -1}$. In between, there is a quasi-adiabatic regime where electrons accumulate (for more details, and an analytic self-similar solution, see \citealt{1999ApJ...520..529S, pinzke13}). In the absence of cooling, momentum advection in the limit $D_{pp} \propto p^{2}$ (so that $\tau_\rmn{D} =p^{2}/4 D_{pp}$ is momentum independent) simply shifts the distribution $f(p) \rightarrow f(A p)$. 
+Larger levels of turbulence also {\it increase} spectral curvature, which might seem puzzling. It can be understood as follows. The pre-acceleration electron distribution function results from the competition between hadronic injection $f \propto p^{-\alpha_{\rm inj}}$ and cooling, which results in a quasi-steady state for the non-thermal (secondary) electrons. At low momenta, when the Coulomb cooling time is short, $f \propto p^{-\alpha_{\rm inj}+1}$, at high momenta, when inverse Compton/synchrotron cooling dominates, $f \propto p^{-\alpha_{\rm inj} -1}$. In between, there is a quasi-adiabatic regime where electrons accumulate (for more details, and an analytic self-similar solution, see \citealt{1999ApJ...520..529S, pinzke13}). In the absence of cooling, momentum advection in the limit $D_{\rm pp} \propto p^{2}$ (so that $\tau_\rmn{D} =p^{2}/4 D_{\rm pp}$ is momentum independent) simply shifts the distribution $f(p) \rightarrow f(A p)$. 
 When the acceleration efficiency is low, most observable emission corresponds to the power-law tail of the distribution function $f \propto p^{-\alpha_{\rm inj}-1}$ set by the balance between injection and synchrotron/IC cooling. However, as the acceleration efficiency $A$ increases, radio emission starts to probe the 'bump' around $p_{*}$ (given by $\tau_{\rm D} \sim \tau_{\rm cool}(p_{*})$) where electrons accumulate and the distribution function is curved. This results in a curved emission spectrum. The synchrotron spectrum steepens at the frequency \citep{2001MNRAS.320..365B}: 
 \begin{equation}
 \nu_{\rm s} \propto \frac{B \tau_{\rm D}^{-2}}{(B^{2}+B^{2}_{\rm CMB})^{2}}
@@ -1358,16 +1059,17 @@ where $B_{\rm CMB} \equiv (8 \pi U_{\rm CMB})^{1/2}$, which increases for shorte
 
 Overall, our results suggest that radio halos are much more sensitive to the level of turbulence (exponential dependence) rather than CR abundance (linear dependence), and that the spatial distribution of turbulence and CRs, while important, are second-order effects. In our parametrization, the most important controlling variable is $X_{\rm tu}$. The overall level of turbulence has to be such that $\tau_{\rm D} \sim \tau_{\rm cl}$ (see Table \ref{tab:timescales}), otherwise, too little or too much amplification takes place. For instance, for $X_\rmn{tu}\gtrsim0.08$, changing $X_\rmn{tu}$ by a factor of two changes the radio surface brightness by a factor of $\sim 10-100$ (see top panels of Fig.~\ref{fig:param_comp}). The required $\tau_{\rm D}/\tau_{\rm cl}$ depends only logarithmically on the abundance of seed CRs.
 
-While the requirement of a threshold level of turbulence may explain why radio brightness is bimodal, it also raises a fine-tuning problem: why is the $L_{\rm radio}$ vs. $L_{\rm X}$ relation in active radio halos so tight? Depending on the details of infall or mergers, we would naturally expect fluctuations in $X_{\rm tu}$, which would translate into large scatter in the $L_{\rm radio}$--$L_{\rm X}$ relation. This can be only be understood if the timescale over which acceleration takes place $\tau_{\rm cl}$ also depends on the properties of turbulence, so that the the ratio $\tau_{\rm D}/\tau_{\rm cl}$ has relatively little scatter. We address this next. %We discuss one such scenario in \S\ref{sec:reacc}, but this point clearly deserves more work.  
+While the requirement of a threshold level of turbulence may explain why radio brightness is bimodal, it also raises a fine-tuning problem: why is the $L_{\rm radio}$ vs. $L_{\rm X}$ relation in active radio halos so tight? Depending on the details of infall or mergers, we would naturally expect fluctuations in $X_{\rm tu}$, which would translate into large scatter in the $L_{\rm radio}$--$L_{\rm X}$ relation. This can be only be understood if the timescale over which acceleration takes place $\tau_{\rm cl}$ also depends on the properties of turbulence, so that the the ratio $\tau_{\rm D}/\tau_{\rm cl}$ has relatively little scatter. We address this next. 
 
 \subsection{Self-Limiting Turbulent Reacceleration}
+\label{sect:self-limiting} 
 
 There are 3 important timescales in this problem: the acceleration time $\tau_{\rm D}$, the duration that turbulence is active and acceleration takes place, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}(p)$. Only $\tau_{\rm cool}(p)$ is momentum dependent (and is different for ions and electrons). Thus, the outcome of acceleration depends essentially on two dimensionless numbers, $\tau_{\rm cl}/\tau_{\rm D}$, and $\tau_{\rm cool}/\tau_{\rm D}$. 
 
 We have seen that the radio luminosity depends very sensitively on $\tau_{\rm cl}/\tau_{\rm D}$, through the very sensitive dependence on $X_{\rm tu}$ (Fig \ref{fig:param_comp}; note from equation \ref{eq:Dpp_scaling} that $\tau_{\rm D} \propto X_{\rm tu}^{-2}$). Since this raises questions of fine-tuning in $X_{\rm tu}$ to explain the observations, it is worth understanding in more detail. Let us ignore cooling. This is a good approximation for the CR protons, for instance, since hadronic cooling times are long\footnote{In principle, CRp can still lose energy via wave heating, at a rate $v_{\rm A} \cdot \nabla P_{c}$, but we assume CR streaming is suppressed during mergers, when they are spatially confined by scattering.} In this case, $\dot{p}= p/\tau_{\rm D}$, and after a time $\tau_{\rm cl}$, we have $p \rightarrow p \, {\rm exp}(\tau_{\rm cl}/\tau_{\rm D})$ (where we have used the fact that $\tau{\rm D}$ is momentum independent). For an initial power law distribution function $f(p) = C p^{-\alpha}$, this momentum increase can be rewritten as a change of normalization, $f(p) = \tilde{C} p^{-\alpha}$, where $\tilde{C} = {\rm exp}( \alpha \tau_{\rm cl}/\tau_{\rm D})$. A slightly more careful derivation by direct solution of the Fokker-Planck equation yields: 
 \begin{equation}
   \dot{f} = {{\partial }\over{\partial p}}
-  p^2 D_{pp} {{\partial }\over{\partial p}} \frac{f}{p^2}\,,
+  p^2 D_{\rm pp} {{\partial }\over{\partial p}} \frac{f}{p^2}\,,
 \end{equation}
 with the analytic solution given by
 \begin{equation}
@@ -1391,19 +1093,13 @@ From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogoro
 \begin{equation}
 \frac{D_{\rm pp}^{\rm HD}}{D_{\rm pp}^{\rm MHD}} = \frac{k_{\rm L}^{2/3}k_{\rm A}^{1/3} v_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm c}^{1/2} v_{\rm A}^{2}} = A^{-1/2} \beta = 0.5 \left( \frac{\beta}{50} \right) 
 \end{equation}
-where we have used $k_{\rm A} = k_{\rm L} M_{A}^{3}$ (from Kolmogorov scalings, and $M_{\rm A} = v_{\rm c}/v_{\rm A}$ is the Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm s}^{2}/v_{\rm A}^{2}$, and the cutoff scale \citep{brunetti07,miniati15}:
-\begin{equation}
-k_{\rm c} \approx A k_{\rm outer} \frac{\langle v_{\rm outer}^{2}\rangle^{2}}{c_{\rm s}^{4}}
-\label{eqn:k_c} 
-\end{equation}
-where $A \approx 11000$. Thus, the contribution of the two regimes are comparable (as we shall see later, this is not true if one incorrectly assumes Kraichnan scalings apply from the outer scale $L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a factor $M_{\rm A}^{1/2}$). 
-
+where we have used $k_{\rm A} = k_{\rm L} M_{A}^{3}$ (from Kolmogorov scalings, and $M_{\rm A} = v_{\rm c}/v_{\rm A}$ is the Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm s}^{2}/v_{\rm A}^{2}$, and the cutoff scale $k_{\rm c}$ (equation \ref{eqn:k_c}).  Thus, the contribution of the two regimes are comparable (as we shall see later, this is not true if one incorrectly assumes Kraichnan scalings apply from the outer scale $L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a factor $M_{\rm A}^{1/2}$). 
 Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$, with velocity $v_{\rm A}$. The turbulent reacceleration time is: 
 \begin{equation}
 \tau_{\rm D} = \frac{p^{2}}{4 D_{\rm pp}} = C_{\rm D} A^{1/2} c k_{\rm A} \frac{v_{A}^{2}}{c_{\rm S}^{2}}
 \label{eqn:tau_D} 
 \end{equation}
-where $C_{\rm D} = 2/(5 \pi)$, $A\approx 11000$, and we have used equation \ref{eqn:k_c}. The turbulence decay time is given by the cascade time of fast modes (\citet{yan04}; see equation \ref{eqn:cascade}): 
+where $C_{\rm D} = 2/(5 \pi)$, $A\approx 11000$, and we have used equation \ref{eqn:k_c}. The turbulence decay time is given by the cascade time of fast modes (\citet{2004ApJ...614..757Y}; see equation \ref{eqn:cascade}): 
 \begin{equation}
 \tau_{\rm decay} = \frac{c_{\rm s}}{v_{\rm A}^{2} k_{\rm A}}\,.
 \label{eqn:tau_decay} 
@@ -1431,19 +1127,30 @@ One alternative is that scattering in the high $\beta$ ICM is mediated by plasma
 \begin{equation}
 D_{\rm pp}^{\rm CR} = \frac{2 p^{2} \zeta}{x_{\rm CR}} k_{\rm L} \frac{\langle v_{\rm c}^{2} \rangle^{2}}{c_{\rm s}^{3}}
 \end{equation}
-where $\zeta$ is an efficiency factor for the the effectiveness of plasma instabilities (e.g., due to spatial or temporal intermittency), and $x_{\rm CR}=\epsilon_{\rm CR}/\epsilon_{\rm th}$ is the relative energy density of cosmic rays. If we set $k_{\rm L} \rightarrow k_{\rm A}$, $v_{c}^{2} \rightarrow v_{\rm A}^{2}$, as before, then: 
+where $\zeta$ is an efficiency factor for the the effectiveness of plasma instabilities (e.g., due to spatial or temporal intermittency), and $x_{\rm CR}=\eps_{\rm CR}/\eps_{\rm th}$ is the relative energy density of cosmic rays. If we set $k_{\rm L} \rightarrow k_{\rm A}$, $v_{c}^{2} \rightarrow v_{\rm A}^{2}$, as before, then: 
 \begin{equation}
 \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 8 \frac{\zeta}{\beta x_{\rm CR}}
 \end{equation}
-In principle, this implies exponential sensitivity to $x_{\rm CR}$, a similar situation as exponential sensitivity to $X_{\rm tu}$. However, there is a self-limiting asymptotic behaviour: as $x_{\rm CR}$ increases due to turbulent reacceleration, damping increases, which limits the further growth of the cosmic ray energy density \citep{brunetti11}. One natural assumption is to assume that $\epsilon_{\rm CR}$ saturates at a level $\epsilon_{\rm CR} \sim \epsilon_{\rm turb} (MHD) \sim \epsilon_{\rm B}$, in which case $x_{\rm CR} \sim \beta^{-1}$, so that: 
+In principle, this implies exponential sensitivity to $x_{\rm CR}$, a similar situation as exponential sensitivity to $X_{\rm tu}$. However, there is a self-limiting asymptotic behaviour: as $x_{\rm CR}$ increases due to turbulent reacceleration, damping increases, which limits the further growth of the cosmic ray energy density \citep{brunetti11}. One natural assumption is to assume that $\eps_{\rm CR}$ saturates at a level $\eps_{\rm CR} \sim \eps_{\rm turb} (MHD) \sim \eps_{\rm B}$, in which case $x_{\rm CR} \sim \beta^{-1}$, so that: 
 \begin{equation}
 \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 1.6 \left(\frac{\zeta}{0.2}\right)\,.
+\label{eqn:ratios_CR_damp} 
 \end{equation}
 Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potential consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
 
-STUFF ABOUT BURGERS TURBULENCE
+It is also worth exploring the effect of Burgers' turbulence (weak shocks). From equation \ref{eqn:diffusion} and \ref{eqn:k_W}, we find: 
+\begin{equation}
+\frac{D_{\rm pp}^{\rm Burgers}}{D_{\rm pp}^{\rm MHD}} = \left( \frac{\beta}{X_{\rm tu} A} \right)^{1/2} = 0.15 \left( \frac{\beta}{50} \right)^{1/2} \left( \frac{X_{\rm tu}}{0.2} \right)^{-1/2} 
+\end{equation}
+where we have set $\langle k \rangle_{\rm W} \approx k_{\rm L}$ for Burgers' turbulence, i.e. all power is at large scales. This weighting towards larger scales implies a much lower wave-particle interaction rate and thus a diffusion coefficient which is smaller than standard TTD on thermal particles by an order of magnitude. Since $\langle k \rangle_{\rm W} \approx k_{\rm L}$ is independent of the cutoff scale $k_{\rm c}$, this conclusion is unchanged if plasma instabilities regulate the thermal particle mean free path and TTD operates on relativistic particles instead. Since standard TTD on thermal particles was already potentially problematic (equation \ref{eqn:ratios_TTD}), we conclude, in agreement with other assessments \citep{miniati15,brunetti16_review}, that if Burgers turbulence dominates, then turbulent reacceleration will be ineffective\footnote{Note also that since there is no real cascade in Burgers' turbulence, but direct transfer of power from large to small scales, the dissipation time is potentially short. In this case, $\tau_{\rm cl} \sim \tau_{\rm drive}$, the driving time, rather than the turbulent dissipation time.}.
 
-STUFF ABOUT FIGURE--LESS SENSITIVE TO PROPERTIES OF TURBULENCE, MIGHT BE ABLE TO PROBE SEED POPULATION 
+It is interesting to reconsider surface brightness and spectral profiles if indeed $\tau_{\rm D} \sim \tau_{\rm cl}$, for the reasons mentioned above (e.g., equation \ref{eqn:ratios_CR_damp}). We show the results of adopting such an ansatz in Fig. \ref{fig:param_comp_tcl_tD}, where, similar to Fig. \ref{fig:param_comp}, we vary $X_{\rm tu}, \alpha_{\rm tu}, \alpha_{\rm CR, spat}$ about fuducial values, but this time we do not adopt a fixed $\tau_{\rm cl}$ but set $\tau_{\rm cl}=\tau_{\rm D}$.  They are remarkably revealing. In this case, one is much less sensitive to the properties of the turbulence, and more sensitive to the details of the CR seed population. This gives hope to the possibility that one could effectively marginalize over the very uncertain properties of turbulence (which are unlikely to be more precisely constrained observationally in the near future) to learn something about the underlying CR population. 
+
+For instance, in the top panels of Fig \ref{fig:param_comp_tcl_tD}, we see that once turbulence exceeds a threshold value $X_{\rm tu} \sim 0.1$, then its overall exact energy density does not matter-- profiles simply converge to an asymptotic form as $X_{\rm tu}$ is increased. This is in contrast to the exponential sensitivity, flattening in surface brightness, and increasing spectral curvature as $X_{\rm tu}$ is increased that we saw previously. A threshold value of $X_{\rm tu}$ is necessary for turbulent reacceleration to overcome cooling. Once that condition is satisfied, the condition $\tau_{\rm cl} \sim tau_{\rm D}$ implies a fixed amount of amplification: stronger turbulence implies faster acceleration, but also dissipates more quickly. This leads to the asymptotic behavior seen. From the middle panels, we see another striking result: in contrast to Fig. \ref{fig:param_comp}, results are also completely insensitive to the turbulent profile. Given the large uncertainties in the latter, this is welcome news. It arises because for our fuducial value ($X_{\rm tu} = 0.2$), variations in the turbulent profile still lead to local energy densities which are above the threshold value required to overcome cooling, and turbulent amplification approaches its asymptotic value. Finally, in the bottom panels, we see that we {\it are} sensitive to the spatial CRs; it affects both the surface brightness profile (a flatter CR distribution implies flatter surface brightness profiles) and luminosity (once again, luminosity is larger for more centrally concentrated CRs, since more secondaries are produced). This arises because once turbulent reacceleration overcomes cooling, the condition $\tau_{\rm cl} \sim \tau_{\rm D}$ provides for a fixed amount of amplification in each radial shell. The radio luminosity in each shell then depends linearly on initial conditions, i.e., the profile of CR seeds. Interestingly, the best-fitting profile for Coma comes from a flat CR distribution -- i.e., one that is the outcome of efficient CR streaming. Matching the overall amplitude simply involves a rescaling of $\tau_{\rm c}/\tau_{\rm D}$ (equation \ref{eqn:ratios_CR_damp}) or the CR content.  
+
+Obviously, the ideas in this section require further study. However, the notion that $\tau_{\rm cl}/\tau_{\rm D}$ could self-regulate around a fixed value is exciting, because it eliminates the main source of uncertainty-- the poorly unconstrained properties of turbulence, and implies that radio halos could potentially provide more robust constraints on the underlying CR population.  
+
+
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
    \begin{center}\Large{radio profiles}\\
@@ -1532,9 +1239,7 @@ spherically symmetric models consistent with Coma, where we repeat our
 Fokker-Planck calculations. We explore three main effects: the overall
 normalization of turbulence, and spatial distribution of turbulence and cosmic
 rays.
-%(note that while radio halos have a non-linear dependence on the overall
-%normalization of turbulence, the surface brightness scales linearly with the CR
-%abundance; thus, this degree of freedom is easily understood).
+
 We find that the most important variable is the overall normalization of
 turbulence: surface brightness scales exponentially with the amount of
 turbulence. The radio spectrum also becomes more curved with higher
@@ -1557,12 +1262,10 @@ luminosity between the radio bright and faint populations; \citet{brown11}),
 otherwise scatter in turbulence (which we might expect given the wide variety of
 merger and infall conditions) will be exponentially amplified in radio
 luminosity. The timescale of the merger has some natural scatter which is not
-obviously correlated with $\tau_{\rm D}$. More likely candidates for $\tau_{\rm
-  cl}$ are the timescale on which turbulence decays, or the escape (i.e. spatial
-diffusion) time from an accelerating regime. Across a wide variety of
-conditions, this must be correlated with $\tau_{\rm D}$ so as to keep the ratio
-$\tau_{\rm D}/\tau_{\rm cl}$ roughly constant. We believe this issue is worthy
-of further study.
+obviously correlated with $\tau_{\rm D}$. 
+
+If instead we adopt $\tau_{\rm
+  cl} \sim \tau_{\rm decay}$, i.e. the natural lifetime of turbulence is its decay lifetime, then we can show that the acceleration time and the lifetime of turbulence are linked, simply because the wave-particle interaction rate (which drives particle acceleration) and the wave-wave interaction rate (which drives dissipation) are linked. If we are mindful that Kraichnan turbulence is only applicable below the Alfven scale $l_{\rm A}$ (where turbulent velocities $v < v_{\rm A}$), then remarkably the ratio $\tau_{\rm cl}/\tau_{\rm D}$ is independent of properties of the turbulence (such as its amplitude and outer scale) and only depends on plasma parameters. Our results suggest that TTD on thermal particles may result in overly rapid damping of turbulence, and inefficient acceleration (equation \ref{eqn:ratios_TTD}), but if plasma instabilities scatter the thermal particles so that the fast modes damp via TTD on the cosmic rays, then the required acceleration can take place (equation \ref{eqn:ratios_CR_damp}). In agreement with other assessments, we find that if turbulence is Burgers rather than Kraichnan, then turbulent reacceleration is ineffective, and some other explanation for radio halos (e.g., magnetic reconnection, \cite{brunetti16}) is necessary. If we adopt the ansatz $\tau_{\rm cl} \sim \tau_{\rm D}$, then we find that above a threshold level of turbulence (necessary to overcome cooling), radio properties are insensitive to both the amplitude and spatial profile of turbulence, since only a fixed, asymptotic amount of amplification takes place. On the other hand, they {\it are} sensitive to the properties of the seed electron profile. This raises the exciting possibility that one could marginalize over the highly uncertain properties of cluster turbulence to learn about the underlying seed CR population. Our results suggest that studying not just mean trends, but the relatively small scatter in radio-halo scaling relations, may prove extremely fruitful in shedding light on ICM plasma processes. 
 
 
 {\bf Acknowledgments.} We thank Josh Wiener for discussions on CR streaming,

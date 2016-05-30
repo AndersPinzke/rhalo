@@ -1,17 +1,13 @@
-We would like to thank the referee for the detailed report that helped
-improve the content and readability of the paper. Enclosed in this
-response, we address each comment in detail in the order as they
-appeared in the referee report.
+We would like to thank the referee for a detailed and insightful report that helped to significantly improve this paper. Although our basic results have not changed, the report stimulated us to rethink their interpretation and draw somewhat different conclusions. The most major change is that we now regard our previous models as 'strawman models' which expose the fact that standard radio halo models are very sensitive to assumptions about turbulence. We now include a new section (section 4) exploring parameter sensitivity and suggesting ways forward. We believe the paper has been significantly improved, thanks to the referee's comments. Enclosed in this response, we address each comment in detail in the order they appeared in the referee report.
 
 In addition to the changes in response to the referee report we have
 have updated our code and improved numerics. This resulted in minor
-changes to all figures which we have updated. Note that our
-conclusions have *not* changed.
+changes to all figures which we have updated. 
 
-We have also restructured the paper, added two subsections where the
-sensitivity to parameters are discussed, corrected spelling mistakes,
+We have also restructured the paper, added a section where the
+sensitivity to parameters is discussed (section 4), corrected spelling mistakes,
 updated our reference list with recent published papers of arXiv
-version, as well as added a few new references.
+version, as well as a few new references. Much of the paper has also been revised and rewritten, particularly the conclusions. 
 
 > I have read the submitted manuscript titled “Turbulence and Particle
 > Acceleration in Giant Radio Halos: the Origin of Seed Electrons” by
@@ -43,23 +39,9 @@ version, as well as added a few new references.
 > Brunetti and Lazarian. So what do they use the simulation for ? This
 > should be made clear.  
 
-In this work we adopt the turbulent model from Brunetti and Lazarian
-2007. The diffusion constant (D_pp) in this model is used to calculate
-the reacceleration and depends both on thermal quantities (gas density
-and temperature) and on the compressible turbulence. We adopt a simple
-model to calculate the compressible turbulence that relates the
-turbulence to the thermal quantities of the cluster. We mainly use our
-simulated Coma like cluster to derive the thermal properties of each
-SPH particle, in addition to the CR distributions attached to each SPH
-particle.
+The referee is correct that we adopt assumptions very similar to Brunetti & Lazarian (2007). The main difference is that while they adopt a single, spatially uniform value for turbulent velocities, we use a simple parametrization which varies the overall amplitude and spatial profile of turbulence. This additional flexibility turns out to have important consequences. We do not use our SPH simulations to infer the properties of turbulence. Instead, they are used to produce a detailed physical model for seed CRp and CRe, which subsequently are reaccelerated by turbulence (given by our simplified parameteric model). Simulating the seed population has not previously been done in the literature. Our work is thus orthogonal and complementary to numerical grid simulations which resolve compressible turbulence, but adopt relatively simple ansatzen for the seed CR population. 
 
-We have added a clarifying sentence to the first paragraph of Section
-2.
-
-"For simplicity, we do not calculate the turbulent parameters
-explicitly. As discussed further in the following subsections, we
-instead adopt simple models that allow us to relate these parameters
-to the thermal quantities given by our simulated cluster."
+We have added statments clarifying rhe role of our simulations in the paper.
 
 > The spatial dependence is removed for clarity, but the spatial
 > distribution of the radio emission is one of the aims of the
@@ -72,14 +54,11 @@ to the thermal quantities given by our simulated cluster."
 
 We do not solve for CR streaming explicitly. Instead we rely on the
 findings from Wiener et al. 2013, where CR protons stream on relatively
-fast timescales which produce flat CR distributions almost
-instantly. Hence we think that writing out the spatial dependence
+fast timescales which quickly produce flat CR distributions. Hence we think that writing out the spatial dependence
 explicitly for each term will not add to the paper, but instead worsen
 the readability of equations considerably. However, we agree that the
 terms for spatial diffusion should be included. Hence we have added
-the necessary terms to the Fokker-Planck equation in Eqs. 1 and 2. In
-addition, we have included discussions about the spatial dependence of
-the diffusion constant D_pp into the first paragraph of Section 4.
+the necessary terms to the Fokker-Planck equation in Eqs. 1 and 2. In section 4, the effect of spatial variations in D_pp is now explicitly addressed. 
 
 > Section 2.2 states: “The simulated cluster undergoes a major merger
 > over the last 1-2 Gyr that injects large turbulent eddies. After about
@@ -92,39 +71,22 @@ the diffusion constant D_pp into the first paragraph of Section 4.
 > reaccelerate particles” ? And how does this information affect the
 > results anyway?  Without any evidence it all sounds very speculative.
 
-We adopt the simple model for the turbulent spectrum from Brunetti and
-Lazarian (2007). The spectrum is based on Kraichnan's picture and is
-stationary with time. We think that simulations of the turbulent
-spectrum in the ICM are still very uncertain and suffers from many
-uncertainties like ... Hence, adopting a stationary spectrum is a
-simplification, but not much worse than current
-simulations. ESPECIALLY CONSIDERING
-
-Given Kraichnan's picture for the turbulent spectrum, the diffusion
-constant is proportional to the square root of the smallest scales
-k_c, which is about 0.1-1 kpc in the ICM. Hence for this spectrum the
-smallest scales are most efficient in reaccelerating particles. For
-more details see the text below equation 8. Note that a flatter
-spectral index makes D_pp more dependent on the injection scale of
-turbulence than the cut_off scale, where the crossover takes place at
-a spectral index of -1.
+We adopted the simple model for the turbulent spectrum from Brunetti and
+Lazarian (2007); this timescale is essentially the decay time of the largest eddy. All it really sets is the snapshot at which we choose to evaluate our simulations. Since the thermal and CR properties turn out to be fairly stable over this period, we are not very sensitive to this assumption. 
 
 We have clarified the text in our revised paper. It now reads: "The
 simulated cluster undergoes a major merger over the last 1-2 Gyrs that
 is thought to inject large turbulent eddies. Following Brunetti &
 Lazarian (2007, 2011) (see also Yan & Lazarian 2004; Beresnyak et
-al. 2013) we assume that about one Gyr after core passage the fields
-have decayed down to the smallest scales where reacceleration is most
-efficient (Dpp ∼ k_cut) and the radio halo turns on shortly
-after. Note that the exact decay time of the turbulens is of minor
-importance, since the thermal and CR quantities are very similar a few
-100 Myrs before and after z = 0 where we have chosen to evaluate the
-simulations. This delay naturally explains why giant radio halos are
-only seen in a fraction of all merging clusters. In all our
+al. 2013) we assume that a Gyr after core passage the fields
+have decayed down to the smallest scales k_cut, and the radio halo turns on shortly
+after. We choose this simulation snapshot to analyze. We are not very sensitive to this assumption, since the thermal and CR quantities are very similar a few
+100 Myrs before and after z = 0, where we have chosen to evaluate the
+simulations. In all our
 calculations we assume that turbulent reacceleration efficiently
 accelerates particles for τ_cl ∼ 650 Myrs (which is roughly the cascade
 time on which turbulence is damped) and that during this turbulent
-phase CR streaming and spatial diffusion can be neglected."
+phase CR streaming and spatial diffusion can be neglected. In Section 4, we explore sensitivity to the last assumption."
 
 > In addition it apparently contradicts the results of numerical
 > simulations in Miniati (2015) showing that the compressional turbulent
@@ -134,10 +96,7 @@ phase CR streaming and spatial diffusion can be neglected."
 > results, the authors should provide supporting evidence for it, else
 > remove it.
 
-We believe that current simulations of turbulence are not conclusive
-regarding this point and follow the assumptions from Brunetti and
-Lazarian which are also supported the simulations of e.g. Beresnyak et
-al. 2013.
+As noted above, it's not very important for our model, so we choose not to pursue this in detail. 
  
 
 > 2) The specifics of the turbulent model are not very clear. First the
@@ -146,9 +105,9 @@ al. 2013.
 > 2011, Miniati 2014, 2015), indicating several times large injection
 > scales. 
 
-We use the same assumption for the injection scale of turbulence as in
+For our strawman models, we use the same assumption for the injection scale of turbulence as in
 Brunetti and Lazarian 2007, 2011. The injection scale that is derived
-from simulations is very uncertain due to ...
+from simulations is somewhat uncertain; it is difficult to quantify a simple turbulent scale from a spatially varying field (indeed, it is likely that the outer scale of turbulence varies with radius). The structure function methods used in simulations seem to uncover very large scales which are essentially the size of the cluster -- it is somewhat questionable whether subsonic turbulent eddies can plunge ~ Mpc scales in clusters which have a strong entropy gradient and are stably stratified. In the end, the exact value is not crucial: the main importance of the injection scale is setting the normalization for the diffusion coefficient (and is degenerate with the amplitude of turbulence). In section 4, we argue that the important scale is really the Alfven scale (which is < 100 kpc), not in the outer scale, and furthermore, if we consider the ratio of dissipation to acceleration times which is the important quantity, then the outer scale drops out. 
 
 > In addition it is not clear if the normalization with respect to the
 > thermal energy refers to the total turbulent energy or the
@@ -161,30 +120,13 @@ from simulations is very uncertain due to ...
 
 In the revised version of the paper the normalization is with respect
 to the turbulence in compressible modes. We have added clarifying
-statements to the text.
+statements to the text. We also include some discussion about the different amounts of compressible turbulence found in different studies. 
 
 > What is the motivation for the very carefully chosen values of
 > \alpha_tu indices, which furthermore take different values for each
 > different mode?  
 
-We assume that the turbulent profile of compressible modes is
-proportional to the thermal energy density to some power
-\alpha_tu. This produce turbulent profiles not too different from
-simulations (see e.g. Lau et al. 2009; Shaw et al. 2010; Vazza et
-al. 2011; Battaglia et al. 2012). Because of the large spread in
-turbulent profiles in addition to the unknown profile of the
-compressible modes in the literature, we exploit this large
-uncertainty and adjust alpha_tu for each model so that the CRs have
-the correct spatial profile to match the radio emission. Since the
-diffusion constant, $D_pp \propto eps_th^(\alpha_tu-1)$, small
-differences in $\alpha_tu$ will impact the final radio profile
-significantely, hence for consistency we write out two digits for this
-parameter. 
-
-We have also added a new subsection where we discuss the robustness of
-the results to both turbulent parameters as well as CR
-parameters. There we show that radio emission is much more sensitive
-to assumptions about turbulent parameters than CRs.
+Indeed, we agree with the referee that these models are fine-tuned. It turns out that radio halo profiles in standard models are extremely sensitive to the properties of turbulence. Since radio luminosity shows fairly tight correlations with other cluster properties (e.g. with X-ray luminosity), this cannot be the case. In section 4 we present possible ways out of this fine-tuning predicament. We thank the referee for nudging us in this direction. 
 
 > The role of TTD damping by relativistic particles depends on the mean
 > free path of the thermal particles. So it isn’t subdominant in
@@ -192,10 +134,7 @@ to assumptions about turbulent parameters than CRs.
 > free path of the thermal particles is determined by Coulomb
 > collisions, which is a strong assumption.
 
-We agree that this is a strong assumption, but again, we clearly state
-in our paper that we follow the same line of arguments for the TTD put
-forward by Brunetti and Lazarian 2007 (see Section 5.1 in their paper).
-
+In our vanilla models, we use TTD on thermal particles, which typically is the standard assumption. In section 4, we discuss TTD on relativistic particles, and indeed end up concluding that it is the most promising scenario, since TTD on thermal particles is potentially not efficient enough. 
 
 > 3) The discussion section should be better organised. First the
 > authors should discuss and explain how each different model is capable
@@ -209,12 +148,7 @@ forward by Brunetti and Lazarian 2007 (see Section 5.1 in their paper).
 > mentioned earlier, it could be the result of parameter fitting with
 > little physical relevance.
 
-We have added a paragraph to the beginning of section 4 where we
-discuss the uncertainty of the most important parameters and how they
-impact the result. In addition we have a brief disccussion about why
-each model can reproduce the radio data. We have also divided up
-section 4 into three subsection for better readability: radio profile,
-radio spectrum, and gamma-rays.
+We have reorganized sections 2 & 3 somewhat, and tried to make the discussion a little more intuitive, motivating certain scalings. More to the point, we added a new section 4, which argues that what really matters is two dimensionless numbers, (timescale ratios), and shows their sensitivity to various parameters. 
 
 > In addition, it would not be possible to use observations of radio
 > halos to infer the conditions in the ICM as suggested at the end of
@@ -231,11 +165,8 @@ radio spectrum, and gamma-rays.
 > emphasis on the physics required by the observations, then the
 > observational subtleties/potential pitfalls, and so on.  
 
-We have revised the text in the several parts of the paper so that it
-should be clear that the main goal of the paper is to find different
-scenarios for the CR physics and the turbulence that lead to a
-distribution of CRs that reproduce the observed Coma radio halo
-without violating gamma-ray bounds.
+Indeed, the main point of the paper is to try and reproduce spectral and spatial profiles of diffuse radio emission in Coma, by varying characteristics of both turbulence and the seed electron population. We have modified the abstract and introduction, and completely rewritten the conclusions to make this clear.
+
 
 > The acceleration rates by compressible turbulence depend dramatically
 > on subtle features, including the presence of microscopic
@@ -246,9 +177,7 @@ without violating gamma-ray bounds.
 > in the discussion section and also mentioned in the introduction to
 > provide a more complete picture about the state of the field.
 
-CHRISTOPH -- We have rewritten the introduction and added a longer
-discussion about the uncertainties of the compressible turbulence.
-
+The referee is certainly correct to bring these points up. We now discuss these modifications to standard assumptions in section 4. We have also included some discussion of the shape of the cascade in section 2. 
 
 > 4) The acceleration efficiency of electrons and protons at weak shocks
 > in the intracluster medium is highly uncertain and it is certainly
@@ -264,14 +193,14 @@ discussion about the uncertainties of the compressible turbulence.
 > again, assuming K_ep different/larger than 0.01 is nevertheless a
 > reasonable assumption.
 
-NOT CLEAR TO ME HOW WE WANT TO ANSWER THIS COMMENT
+Fair enough -- this is a can of worms, and rather than get into it, we now simply delete the offending comments about radio relics, and simply assume a larger K_ep due to the unknown magnetic geometry. 
 
 
 > 5) Line 16-17 of first paragraph at page 4 is not very clear. What is
 > the length scale of the perturbation? Is it the wavelength of the
 > compressible wave ?
 
-WHAT DID WE WANT TO WRITE HERE?
+Yes, it is the wavelength of the compressible wave. We now make this clear. 
 
 
 > 6) The abstract should be revised in view of the above comments
