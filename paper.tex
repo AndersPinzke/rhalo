@@ -28,11 +28,12 @@
 \newcommand{\RH}{R_\rmn{RH}}
 \newcommand{\bvel}{\ensuremath{\boldsymbol{\varv}}}
 \newcommand{\bnabla}{\ensuremath{\boldsymbol{\nabla}}}
-\newcommand\eb{\epsilon_\rmn{B}}
+\newcommand{\eb}{\epsilon_B}
 \newcommand{\dps}{\displaystyle}
 \newcommand{\p}{\rmn{p}}
 \newcommand{\kB}{k_{\rmn{B}}}
 \newcommand{\eps}{\varepsilon}
+\newcommand{\CR}{\rmn{CR}}
 
 %\voffset.6in 
 
@@ -579,9 +580,9 @@ $\mathcal{M}$. It is given by the ratio of the upstream velocity
 ($\varv_2$) and the sound speed ($c_{\rm s}$). The CR number density and CR
 energy density are derived from
 \begin{eqnarray}
-n_\rmn{p} &=&
+n_\CR &=&
 \int_{p_\rmn{inj}}^\infty \dd p\, f_\p(p)\\
-\eps_\rmn{p} &=&
+\eps_\CR &=&
 \int_{p_\rmn{inj}}^\infty \dd p\, f_\p(p) \,E(p),
 \end{eqnarray}
 where $E(p) = (\sqrt{1+p^2} -1)\, m_{\rmn{p}}\,c^2$ is the kinetic energy of a
@@ -618,9 +619,9 @@ energy density of CRs that are injected and accelerated at the shock
 (neglecting the CR back reaction on the shock) is given by
 \begin{equation}
 \label{eq:CR_energy} 
-  \Delta\eps_\rmn{p,lin} =
+  \Delta\eps_\rmn{CR,lin} =
   \eta_\rmn{p,lin}(\mathcal{M})\,n_\rmn{th}(T_2)
-  \,\frac{\eps_\p}{n_\p}
+  \,\frac{\eps_\CR}{n_\CR}
 \end{equation}
 and the CR energy injection and acceleration efficiency is:
 \begin{equation}
@@ -650,8 +651,8 @@ slope is steepened by a maximum of $\sim 10$ per cent in low
 temperature regimes ($\kB T\sim 0.1$~keV), while the steepening is much
 smaller for high temperature regimes ($\kB T\sim 10$~keV) that are more
 relevant for clusters. Since $p_\rmn{inj}$ remains fixed, so does the
-CR number density $n_\rmn{p}$. Hence we can solve for the
-renormalised normalisation constant $C_\rmn{sub}$ using $n_\rmn{p}$
+CR number density $n_\CR$. Hence we can solve for the
+renormalised normalisation constant $C_\rmn{sub}$ using $n_\CR$
 and Eqn.~\ref{eq:eta}:
 \begin{equation}
   \label{eq:Cp_sub}
@@ -999,7 +1000,7 @@ with $C_\rmn{inj} \propto \eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
 \citep{pinzke10,2016MNRAS.459...70V}, where the normalisation is fixed
 by the injected CR energy in the last 650~Myrs. Our simulations show
 that it approximately amounts to 0.03 per cent of the thermal energy inside
-the virial radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{p,inj} \rmn{d}
+the virial radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{CR,inj} \rmn{d}
 V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
 0.0003$. The spectrum of the initial CRp distribution is determined by
 the steady state between injection and cooling,
@@ -1007,7 +1008,7 @@ the steady state between injection and cooling,
  f_\rmn{p,0} \propto \frac{\int_p^\infty f_\rmn{p,inj}(p') 
 \rmn{d}p'}{\displaystyle\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm Coul}+\frac{p}{\tau_{\rm had}}}\,,
 \end{equation}
-where we fix the normalisation by requiring $\int_0^{R_{200}}\eps_\rmn{p,0}
+where we fix the normalisation by requiring $\int_0^{R_{200}}\eps_\rmn{CR,0}
 \rmn{d}V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} = 0.003$. Note
 that the injected energy in the last 650 Myr is smaller by about a factor of 10
 in comparison to the cumulative CR energy injected over the entire cosmological
@@ -1115,7 +1116,7 @@ We have seen that the radio luminosity depends very sensitively on $\tau_{\rm
 more detail. To this end, we ignore cooling which is a good approximation for
 the CR protons, because hadronic cooling times are long in comparison to the
 other relevant timescales of the problem.\footnote{In principle, CRp can still
-  lose energy via wave heating, at a rate $\bmath{\varv_{\rm A} \cdot \nabla} P_{c}$,
+  lose energy via wave heating, at a rate $\bmath{\varv_{\rm A} \cdot \nabla} P_\CR$,
   but we assume CR streaming is suppressed during mergers, when they are
   spatially confined by scattering.} In this case, $\dot{p}= p/\tau_{\rm D}$,
 and after a time $\tau_{\rm cl}$, we have $p \rightarrow p \, {\rm
@@ -1152,9 +1153,9 @@ etc., is only valid below these scales. For $l > l_{\rm A}$, turbulence is
 basically hydrodynamic and Kolmogorov in nature. The momentum diffusion
 coefficient can thus be split up into two components:
 \begin{equation}
-D_{pp} = D_{pp}^{\rm HD}[l_{\rm A} < l < L] + D_{pp}^{\rm MHD}[l_{\rm c} < l < l_{\rm A}]
+D_{pp} = D_{pp}^{\rm HD}[l_{\rm A} < l < L] + D_{pp}^{\rm MHD}[l_{\rm cut} < l < l_{\rm A}]
 \end{equation}
-From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogorov turbulence from $l_{\rm A} < l < L$ and Kraichnan turbulence from $l_{\rm c} < l < l_{\rm A}$, we get: 
+From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogorov turbulence from $l_{\rm A} < l < L$ and Kraichnan turbulence from $l_{\rm cut} < l < l_{\rm A}$, we get: 
 \begin{equation}
 \frac{D_{pp}^{\rm HD}}{D_{pp}^{\rm MHD}} = \frac{k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}} = A^{-1/2} \beta = 0.5 \left( \frac{\beta}{50} \right) 
 \end{equation}
