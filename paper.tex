@@ -1203,6 +1203,7 @@ From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogoro
   = \frac{\cp{2}k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}}
   = \cp{2 \left(A \mathcal{M}_\rmn{A}\right)^{-1/2}} \beta = 0.5 \left( \frac{\beta}{50} \right) 
 \end{equation}
+\cp{[This assumes the energy equipartition argument (by Sarkar) for $D_{pp}^\rmn{MHD}$ and for $D_{pp}^\rmn{HD}$; is this justified at the sme time? if so, why? and we should explain this in a footnote.]}
 where we have used $k_{\rm A} = k_L \mathcal{M}_{\rm A}^{3}$ (from Kolmogorov scalings), and $\mathcal{M}_{\rm A} = \varv_{\rm c}/\varv_{\rm A}$ is the Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm s}^{2}/\varv_{\rm A}^{2}$, and the cutoff scale $k_{\rm cut}$ (equation \ref{eqn:k_c}).  Thus, the contribution of the two regimes are comparable (as we shall see later, this is not true if one incorrectly assumes Kraichnan scalings apply from the outer scale $L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a factor $\mathcal{M}_{\rm A}^{1/2}$). 
 Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$, with velocity $\varv_{\rm A}$. The turbulent reacceleration time is: 
 \begin{equation}
@@ -1264,7 +1265,7 @@ In principle, this implies exponential sensitivity to $X_{\rm CR}$, a similar si
 \end{equation}
 Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potential consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
 
-It is also worth exploring the effect of Burgers' turbulence (weak shocks). From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
+It is also worth exploring the effect of Burgers' turbulence (weak shocks). \cp{Burgers' turbulence is distinct from other forms of turbulence in that it violates locality in $k$-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$.} From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
 \begin{equation}
 \frac{D_{pp}^{\rm Burgers}}{D_{pp}^{\rm MHD}} = \left( \frac{\beta}{X_{\rm tu} A} \right)^{1/2} = 0.15 \left( \frac{\beta}{50} \right)^{1/2} \left( \frac{X_{\rm tu}}{0.2} \right)^{-1/2} 
 \end{equation}
