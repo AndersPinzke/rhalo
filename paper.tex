@@ -16,6 +16,11 @@
    {\lower0.3ex\hbox{\scalebox{1.2}{$\cdot$}}}%
 }
 
+\usepackage[normalem]{ulem}
+\usepackage[usenames]{xcolor}
+\newcommand\cp[1]{{\color{red} #1}}
+\newcommand\po[1]{{\color{blue} #1}}
+
 % --- macros --- %
 \newcommand{\Mstream}{{\it M-streaming}\xspace}
 \newcommand{\Mflatturb}{{\it M-turbulence}\xspace}
@@ -282,20 +287,19 @@ D_{pp} f_{\rmn{e}}(p,t) \right]+ Q_{\rmn{e}}\left[p,t;f_{\rmn{p}}(p,t)\right]   
 \label{elettroni}
 \end{eqnarray}
 Here $f_{\rmn{e}}$ is the one-dimensional distribution in position $x$
-(suppressed for clarity), momentum $p=P/(m_{\rmn{e}} c)$ and time $t$ (which is
-normalised such that the number density is given by
+(suppressed for clarity), momentum \cp{$p=P/(m_{\rmn{e}} c)$} and time $t$
+(which is normalised such that the number density is given by
 $n_{\rmn{CRe}}(t)=\int d p f_{\rmn{e}}(p,t)$), $d/d t=\partial/\partial
-t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas
-velocity, $|d p/d t|$ represents Coulomb
-\citep[Coul,][]{1972Phy....60..145G} and radiative
-\citep[rad,][]{1979rpa..book.....R} losses, respectively,
+t+\bvel\bcdot\bnabla$ is the Lagrangian derivative, $\bvel$ is the gas velocity,
+$|d p/d t|$ represents Coulomb \citep[Coul,][]{1972Phy....60..145G} and
+radiative \citep[rad,][]{1979rpa..book.....R} losses, respectively,
 \begin{eqnarray}
    \left|\frac{d p}{d t}\right|_{\rm Coul} &=& \frac{3\,\sigma_\rmn{T}\,n_{\rmn{e}}\,c}{2\, \beta_{\rmn{e}}^2}
   \left[\ln\left(\frac{m_{\rmn{e}} c^2 \beta_{\rmn{e}} \sqrt{\gamma-1}}{\hbar\,\omega_\rmn{plasma}}\right)\right.\nonumber \\
     &-&\ln(2)\left(\frac{\beta_{\rmn{e}}^2}{2}+\frac{1}{\gamma}\right)+\frac{1}{2}+
     \left.\left(\frac{\gamma-1}{4\gamma}\right)^2\right]\,, \\
   \left|\frac{d p}{d t}\right|_{\rm rad~} &=& \frac{4}{3}\frac{\sigma_\rmn{T}}{m_{\rmn{e}}c}\,
-  \frac{p^2}{\beta_{\rmn{e}}}\,\left[1+\left(\frac{B}{B_\rmn{CMB}}\right)^2\right]\,\eps_{\rmn{CMB}}\,.
+  \frac{p^2}{\beta_{\rmn{e}}}\,\left[1+\left(\frac{B}{B_\rmn{CMB}}\right)^2\right]\,\cp{\eps_{\rmn{CMB}}}\,.
 \end{eqnarray}
 Here $\beta_{\rmn{e}} = p/\sqrt{1+p^2}$ is the dimensionless velocity of CRs,
 $\gamma=\sqrt{1+p^2}$ is the Lorentz factor of CRs,
@@ -379,7 +383,7 @@ where $\bvel_{\rmn{st}}=-\varv_{\rmn{A}}\bnabla f_{\rmn{p}}/|\bnabla
 f_{\rmn{p}}|$ is the streaming velocity in the isotropic transport
 approximation, $\varv_{\rmn{A}}$ is the Alfv\'en speed,
 and $Q_{\rmn{p}}(p,t)$ denotes the injection rate of shock accelerated
-CRps as a function of momentum $p=P/(m_{\rmn{p}} c)$ and time $t$ (see
+CRps as a function of momentum \cp{$p=P/(m_{\rmn{p}} c)$} and time $t$ (see
 section~\ref{sec:cosmo_sim}). The timescale of
 hadronic losses that produce pions via CRp collisions with thermal
 protons of the ICM is given by 
@@ -430,10 +434,11 @@ is an energy-averaged wavenumber, $k_L, k_{\rm cut}$ are the wavenumbers associa
 \end{equation}
 which defines the normalisation $\langle (\delta \varv_{\rm c})^{2} \rangle$ (the subscript 'c' emphasizes that we specialise to compressive modes). Intuitively, we can understand the form of the the diffusion coefficient from the fact that for second-order Fermi acceleration, $\dot{p} \sim \Delta p/\tau \sim p\,\langle k c \rangle_{\mathcal{W}} (\delta \varv_{\rm c}/c)^{2}$, where $\tau^{-1} \sim \langle k c \rangle_{\mathcal{W}}$ is the energy averaged wave-particle interaction rate, and $\Delta p \sim p (\delta \varv_{\rm c}/c)^{2}$ is the typical momentum change during wave-particle scattering. Thus: 
 \begin{equation}
+  \label{eqn:Dpp}
 D_{pp} \sim p \dot{p} \sim p^{2} \langle k c \rangle_{\mathcal{W}} \left( \frac{\delta \varv_{\rm c}}{c} \right)^{2}. 
 \end{equation}
 
-Equations \ref{eqn:diffusion} and \ref{eqn:Wk} make the important aspects of turbulence clear: the energy in compressive modes $\langle (\delta \varv_{\rm c})^{2} \rangle$, the inner and outer scale ($k_{\rm cut}$ and $k_L$), and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
+Equations (\ref{eqn:diffusion}) and (\ref{eqn:Wk}) make the important aspects of turbulence clear: the energy in compressive modes $\langle (\delta \varv_{\rm c})^{2} \rangle$, the inner and outer scale ($k_{\rm cut}$ and $k_L$), and the slope of the energy spectrum $s$. All of these can vary spatially and temporally. 
 
 We adopt a Kraichnan spectrum ($s=3/2$) for the fast modes, as seen in simulations \citep{cho03}. This can also be written as: 
 \begin{equation}
@@ -441,10 +446,20 @@ We adopt a Kraichnan spectrum ($s=3/2$) for the fast modes, as seen in simulatio
   \mathcal{W}(k) =
 \sqrt{2/7\,I_L\,\rho\,\langle \Vph \rangle}\,k^{-3/2},
 \end{equation}
-where $I_L$ is the volumetric injection rate of turbulence at scale $L$ (which is assumed to be constant), $\varv_{\rm ph}\approx c_{\rm s}$ is the phase speed of waves. It is important to realise that this only applies at small scales, where turbulence is magneto-hydrodynamical. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transsonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $\eps_{\rm turb} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_L {\mathcal M}_{\rm A}^{-3}$, where $\eps_{\rm turb} \sim \eps_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation \ref{eqn:Wk} can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
+where $I_L$ is the volumetric injection rate of turbulence at scale $L$ (which is assumed to be constant), $\varv_{\rm ph}\approx c_{\rm s}$ is the phase speed of waves. \cp{Since the Kraichnan spectrum is critical in what follows, it is worthwhile taking a moment to recount the origin of the spectral slope $s$ and the cascade rate. In the magnetically dominated regime, two counterpropagating wave packets of scale $l$ interact on an Alfv{\'e}n time $\tau_{\rm A}=l/\varv_{\rm A}$, rather than the eddy turnover time $\tau_{\rm edd} = l/\varv_{\rm l}$. 
+Since $\tau_{\rm A} \ll \tau_{\rm edd}$, each interaction results in a small velocity change $\delta \varv_{\rm l} \sim \varv_{\rm l} (\tau_{\rm A}/\tau_{\rm edd})$. If these changes behave like a random walk, the cascade time $\tau_{\rm l}$ it takes for an eddy to become non-linear ($\Delta \varv \sim \varv_{\rm l})$ and cascades to smaller scales occurs with a characteristic velocity $\varv_{\rm l} \sim \delta \varv_{\rm l} (\tau_{\rm l}/\tau_{\rm A})^{1/2} \sim \varv_{\rm l} \tau_{\rm A}/\tau_{\rm edd} (\tau_{\rm l}/\tau_{\rm A})^{1/2}$, which we can solve to obtain the cascade time: 
 \begin{equation}
-k_{\rm cut} \approx A k_L \frac{\langle \varv_L^{2}\rangle^{2}}{c_{\rm s}^{4}}
-%k_{\rm c} \approx A k_{\rm outer} \frac{\langle \varv_{\rm outer}^{2}\rangle^{2}}{c_{\rm s}^{4}}
+  \label{eqn:tau_l}
+\tau_{\rm l} \sim \left(\frac{\tau_{\rm edd}}{\tau_{\rm A}}\right)^{2} \tau_{\rm A} \sim \frac{l \varv_{\rm A}}{\varv_{\rm l}^{2}} 
+\end{equation}
+where we have implicitly assumed isotropy. This implies a dissipation rate $\epsilon \sim \varv_{\rm l}^{2}/\tau_{\rm l} \sim \varv_{\rm l}^{4}/(l \varv_{\rm A})$, or $\varv_{\rm l} \sim (\epsilon l \varv_{A})^{1/4}$. Thus, since $k E(k)\sim \varv_{\rm l}^{2}$, this gives a kinetic energy spectrum: 
+\begin{equation}
+E(k) \sim (\epsilon \varv_{\rm A})^{1/2} k^{-3/2}.
+\end{equation}}
+ 
+It is important to realise that this Kraichnan scaling only applies at small scales, where turbulence is magneto-hydrodynamical. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transsonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $\eps_{\rm turb} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_L {\mathcal M}_{\rm A}^{-3}$, where $\eps_{\rm turb} \sim \eps_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation (\ref{eqn:Wk}) can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
+\begin{equation}
+k_{\rm cut} \approx A k_L \frac{\langle (\delta \varv_{\rmn{c}})^{2}\rangle^{2}}{c_{\rm s}^{4}}
 \label{eqn:k_c} 
 \end{equation}
 where $A \approx 11 000$. This gives $2\upi/k_\rmn{cut}\sim 0.1-1$~kpc in the ICM. This constitutes an
@@ -482,11 +497,20 @@ compressive fluctuations to develop on their own. Overall, we adopt a
 compressive energy density which is $X_{\rm tu} \sim 0.2$ of the thermal energy
 as a baseline estimate.
 
-The important effects are best summarised in terms of the acceleration time: 
+The important effects are best summarised in terms of the acceleration \cp{rate
+  which is goverend by advection in momentum space:
 \begin{equation}
-\tau_{\rm D}= \frac{p^{2}}{4 D_{pp}}
+  \tau_{\rm D}^{-1}\equiv \Gamma_{\rm D}\equiv
+  \frac{\dot{p}}{p}=p^{-3}\frac{\partial}{\partial p}\left(p^2D_{pp}\right)
+  =\frac{4 D_{pp}}{p^{2}}.
 \end{equation}
-which is momentum independent. This should be compared against the lifetime of turbulence, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}$. In Table~\ref{tab:timescales}, we show both the thermal quantities and the
+In the last step we have used that $D_{pp}\propto p^2$ for the turbulent
+reacceleration (equation \ref{eqn:Dpp}). Hence the acceleration time is independent of momentum.}
+%\begin{equation}
+%\tau_{\rm D}= \frac{p^{2}}{4 D_{pp}}
+%\end{equation}
+%which is momentum independent.
+This should be compared against the lifetime of turbulence, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}$. In Table~\ref{tab:timescales}, we show both the thermal quantities and the
 timescales for CR cooling and (re)acceleration for three different
 spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use $B$-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_L=2\upi/\lambda_L$, where $\lambda_L = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This length scale corresponds to an eddy turnover time on the outer scale of $\varv_L k_L^{-1} \sim 1.2$~Gyr if $\varv_L \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_L$, in some cases comparable to the size of the cluster \citep{vazza11,miniati15}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_L$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
 $\tau_{\rm D}$ is similar between our three models, where the
@@ -1111,7 +1135,7 @@ There are 3 important timescales in this problem: the acceleration time $\tau_{\
 
 We have seen that the radio luminosity depends very sensitively on $\tau_{\rm
   cl}/\tau_{\rm D}$, through the very sensitive dependence on $X_{\rm tu}$ (Figure
-\ref{fig:param_comp}; note from equation \ref{eq:Dpp_scaling} that $\tau_{\rm D}
+\ref{fig:param_comp}; note from equation (\ref{eq:Dpp_scaling}) that $\tau_{\rm D}
 \propto X_{\rm tu}^{-2}$). Since this raises questions of fine-tuning in $X_{\rm
   tu}$ to explain the observations, it is worth understanding this property in
 more detail. To this end, we ignore cooling which is a good approximation for
@@ -1132,12 +1156,13 @@ careful derivation by direct solution of the Fokker-Planck equation yields:
   p^2 D_{pp} {{\partial }\over{\partial p}} \frac{f}{p^2}\,,
 \end{equation}
 with the analytic solution given by
+\cp{
 \begin{equation}
   \label{eq:Creacc}
   \tilde{C}= 
   C \exp{\left[\frac{(2+\alpha_{\rmn{inj}})(\alpha_{\rmn{inj}}-1)}{4}\frac{t}{\tau_\rmn{D}}\right]}\,.
 \end{equation}
-At $t=\tau_\rmn{cl}$ the CR distribution is exponentially sensitive to
+At $t=\tau_\rmn{cl}$} the CR distribution is exponentially sensitive to
 $\tau_{\rm cl}/\tau_{\rm D}$ which is the physical reason underlying
 the extreme sensitivity to $X_{\rm tu}$ in
 Figure~\ref{fig:param_comp}.
@@ -1174,33 +1199,51 @@ D_{pp} = D_{pp}^{\rm HD}[l_{\rm A} < l < L] + D_{pp}^{\rm MHD}[l_{\rm cut} < l <
 \end{equation}
 From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogorov turbulence from $l_{\rm A} < l < L$ and Kraichnan turbulence from $l_{\rm cut} < l < l_{\rm A}$, we get: 
 \begin{equation}
-\frac{D_{pp}^{\rm HD}}{D_{pp}^{\rm MHD}} = \frac{k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}} = A^{-1/2} \beta = 0.5 \left( \frac{\beta}{50} \right) 
+  \frac{D_{pp}^{\rm HD}}{D_{pp}^{\rm MHD}}
+  = \frac{\cp{2}k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}}
+  = \cp{2 \left(A \mathcal{M}_\rmn{A}\right)^{-1/2}} \beta = 0.5 \left( \frac{\beta}{50} \right) 
 \end{equation}
-where we have used $k_{\rm A} = k_L \mathcal{M}_{\rm A}^{3}$ (from Kolmogorov scalings, and $\mathcal{M}_{\rm A} = \varv_{\rm c}/\varv_{\rm A}$ is the Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm s}^{2}/\varv_{\rm A}^{2}$, and the cutoff scale $k_{\rm cut}$ (equation \ref{eqn:k_c}).  Thus, the contribution of the two regimes are comparable (as we shall see later, this is not true if one incorrectly assumes Kraichnan scalings apply from the outer scale $L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a factor $\mathcal{M}_{\rm A}^{1/2}$). 
+where we have used $k_{\rm A} = k_L \mathcal{M}_{\rm A}^{3}$ (from Kolmogorov scalings), and $\mathcal{M}_{\rm A} = \varv_{\rm c}/\varv_{\rm A}$ is the Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm s}^{2}/\varv_{\rm A}^{2}$, and the cutoff scale $k_{\rm cut}$ (equation \ref{eqn:k_c}).  Thus, the contribution of the two regimes are comparable (as we shall see later, this is not true if one incorrectly assumes Kraichnan scalings apply from the outer scale $L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a factor $\mathcal{M}_{\rm A}^{1/2}$). 
 Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$, with velocity $\varv_{\rm A}$. The turbulent reacceleration time is: 
 \begin{equation}
 \tau_{\rm D} = \frac{p^{2}}{4 D_{pp}} = C_{\rm D} A^{1/2} c k_{\rm A} \frac{\varv_{\rm A}^{2}}{c_{\rm S}^{2}}
 \label{eqn:tau_D} 
 \end{equation}
-where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equation \ref{eqn:k_c}. The turbulent decay time is given by the cascade time of fast modes (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:cascade}): 
+\cp{[The previous equation is wrong (you can see this by checking the units). Instead I get:]
+\begin{equation}
+\tau_{\rm D} = \frac{p^{2}}{4 D_{pp}} = C_{\rm D} \left(A\mathcal{M}_\rmn{A}\right)^{-1/2} \frac{c}{k_{\rm A}} \frac{c_{\rm s}^{2}}{\varv_{\rm A}^{4}}
+\label{eqn:tau_D} 
+\end{equation}
+}
+where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equation (\ref{eqn:k_c}). The turbulent decay time is given by the cascade time of fast modes (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:cascade}): 
 \begin{equation}
 \tau_{\rm decay} = \frac{c_{\rm s}}{\varv_{\rm A}^{2} k_{\rm A}^{}}\,.
 \label{eqn:tau_decay} 
-\end{equation} 
+\end{equation}
+\cp{[This agrees with Eqn. (3) of \citet{2004ApJ...614..757Y} but appears to disagree with our equation (\ref{eqn:tau_l}): Peng, do you understand this apparent contradiction? Can we motivate this important equation?]}
 This can be related to the eddy turnover time at the outer scale $\tau_{\rm edd}$ from $l_{\rm A} = L \mathcal{M}_{\rm A}^{-3}$ to: 
 \begin{equation}
 \tau_{\rm decay} =\frac{L}{\varv_{\rm c}} \left(\frac{c_{\rm s}}{\varv_{\rm c}} \right)^{2} \frac{\varv_{\rm A}}{c_{\rm s}} = 0.7 \, \tau_{\rm edd} \left(\frac{\tilde{X}_{\rm tu}}{0.2}\right)^{-1}  \left(\frac{\beta}{100} \right)^{-1/2}
 \end{equation}
+\cp{[I get 0.08 as prefactor mainly because of the $2\upi$ conversion from $k$ to $L$.]}
 where we have used $\tilde{X}_{\rm tu} \approx (\varv_{\rm c}/c_{\rm s})^{2}$ and $c_{\rm s}/\varv_{\rm A} = \beta^{1/2}$. Thus $\tau_{\rm decay} \sim \tau_{\rm edd}$, but we prefer to use the expression for $\tau_{\rm edd}$, since it is more physically correct and leads to more revealing scalings. 
 
-From equations \ref{eqn:tau_D} and \ref{eqn:tau_decay}, we obtain:
+From equations (\ref{eqn:tau_D}) and (\ref{eqn:tau_decay}), we obtain:
 \begin{equation}
 \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx \frac{\tau_{\rm decay}}{\tau_{\rm D}} = 0.1 \left( \frac{c_{\rm s}}{1500 \, {\rm km \, s^{-1}}} \right) \left( \frac{\beta}{50} \right)^{-1}\,. 
 \label{eqn:ratios_TTD} 
 \end{equation}
-Remarkably, this expression is independent of properties of the turbulence such as $\varv_{\rm c}$, $L$, or $l_{\rm A}$, and depends only on properties of the plasma ($c_{\rm s},\beta$). Ultimately, this arises because the timescale on which a fast mode wave transfers energy due to wave particle interactions in second order Fermi acceleration, $\tau_{\rm p} \sim [k_{\rm p} c (\varv_{\rm c}/c)^{2} ]^{-1}$, is closely related to the timescale on which it cascades due to wave-wave interactions, $\tau_{\rm w} \sim c_{\rm s}/(k_{\rm w} \varv_{\rm c}^{2})$. This implies $\tau_{\rm w}/\tau_{\rm p} \sim (c_{\rm s}/c)(l_{\rm w}/l_{\rm p})$, where $l_{\rm w} \sim l_{\rm A}$ is the outer scale on which the fast mode cascade begins, and $l_{\rm p} \sim (l_{\rm A} l_{\rm cut})^{1/2}$ is the characteristic wavelength for wave-particle interactions. For transit time damping and an outer scale of $l_{\rm A}$, we have $l_{\rm cut} \sim (m_{\rm e}/m_{\rm p}) l_{\rm A} (c_{\rm s}/\varv_{\rm A})^{4}$. We thus have $\tau_{\rm w}/\tau_{\rm p} \sim (c_{\rm s}/c)(l_{\rm A}/l_{\rm cut})^{1/2} \sim (c_{\rm s}/c) (m_{\rm p}/m_{\rm e})^{1/2} \beta^{-1}$. More careful consideration of dimensionless factors boosts this estimate by an order of magnitude to give equation \ref{eqn:ratios_TTD}. 
+\cp{[I get]
+  \begin{eqnarray}
+    \frac{\tau_{\rm cl}}{\tau_{\rm D}} &\approx& \frac{\tau_{\rm decay}}{\tau_{\rm D}}
+    \approx\frac{0.6\sqrt{A}\mathcal{M}_\rmn{A}^{7/2}}{C_\rmn{D}\beta}\,\frac{\varv_\rmn{A}^2}{\varv_\rmn{c} c}\nonumber\\
+    &\approx&0.1 \left( \frac{c_{\rm s}}{1000 \, {\rm km \, s^{-1}}} \right) \left( \frac{\beta}{100} \right)^{-1}\, 
+\label{eqn:ratios_TTD} 
+\end{eqnarray}
+[which is {\bf not} independent of the properties of turbulence!]}
+Remarkably, this expression is independent of properties of the turbulence such as $\varv_{\rm c}$, $L$, or $l_{\rm A}$, and depends only on properties of the plasma ($c_{\rm s},\beta$). Ultimately, this arises because the timescale on which a fast mode wave transfers energy due to wave particle interactions in second order Fermi acceleration, $\tau_{\rm p} \sim [\cp{4\,} k_{\rm p} c (\varv_{\rm c}/c)^{2} ]^{-1}$, is closely related to the timescale on which it cascades due to wave-wave interactions, $\tau_{\rm w} \sim c_{\rm s}/(k_{\rm w} \varv_{\rm c}^{2})$. This implies $\tau_{\rm w}/\tau_{\rm p} \sim \cp{4\,} (c_{\rm s}/c)(l_{\rm w}/l_{\rm p})$, where $l_{\rm w} \sim l_{\rm A}$ is the outer scale on which the fast mode cascade begins, and $l_{\rm p} \sim (l_{\rm A} l_{\rm cut})^{1/2}$ is the characteristic wavelength for wave-particle interactions. For transit time damping and an outer scale of $l_{\rm A}$, we have $l_{\rm cut} \sim (m_{\rm e}/m_{\rm p}) l_{\rm A} (c_{\rm s}/\varv_{\rm A})^{4}$. We thus have $\tau_{\rm w}/\tau_{\rm p} \sim \cp{4\,}(c_{\rm s}/c)(l_{\rm A}/l_{\rm cut})^{1/2} \sim \cp{4\,}(c_{\rm s}/c) (m_{\rm p}/m_{\rm e})^{1/2} \beta^{-1}$. More careful consideration of dimensionless factors boosts this estimate by an order of magnitude to give equation (\ref{eqn:ratios_TTD}). 
 
-On the other hand, equation \ref{eqn:ratios_TTD} points toward a pessimistic scenario where turbulent reacceleration with TTD on thermal particles is never effective. A key reason is that we assume Kraichnan turbulence only applies for $l< l_{\rm A}$. There is then insufficient separation of scales: the cutoff scale $l_{\rm cut} \sim 0.2 \beta_{\rm 50}^{2} l_{\rm A}$. Although there is a fair large separation of scales between the outer driving scale $L$ and $l_{\rm A} = L \mathcal{M}_{\rm A}^{-3}$ (a factor of $30-1000$ for $\mathcal{M}_{\rm A} \approx 3-10$; we have $\mathcal{M}_{\rm A} \sim (\tilde{X}_{\rm tu} \beta)^{1/2} \sim 3.2$ for our fiducial assumptions), Kolmogorov turbulence, with its steeper spectrum, has more energy at large scales ($k W(k) \propto k^{-2/3}, k^{-1/2}$ for Kolmogorov and Kraichnan turbulence, respectively). This implies that the energy-weighted scales at which wave-particle interaction take place are larger in Kolmogorov turbulence, and thus that the wave-particle interaction rate is lower. If (as is frequently seen) we instead assume that Kraichnan turbulence begins at the outer scale $L$, with characteristic decay time $L c_{\rm s}/\varv_{\rm c}^{2}$, then we obtain a more palatable result: 
+On the other hand, equation (\ref{eqn:ratios_TTD}) points toward a pessimistic scenario where turbulent reacceleration with TTD on thermal particles is never effective. A key reason is that we assume Kraichnan turbulence only applies for $l< l_{\rm A}$. There is then insufficient separation of scales: the cutoff scale $l_{\rm cut} \sim 0.2 \beta_{\rm 50}^{2} l_{\rm A}$. Although there is a fair large separation of scales between the outer driving scale $L$ and $l_{\rm A} = L \mathcal{M}_{\rm A}^{-3}$ (a factor of $30-1000$ for $\mathcal{M}_{\rm A} \approx 3-10$; we have $\mathcal{M}_{\rm A} \sim (\tilde{X}_{\rm tu} \beta)^{1/2} \sim 3.2$ for our fiducial assumptions), Kolmogorov turbulence, with its steeper spectrum, has more energy at large scales ($k W(k) \propto k^{-2/3}, k^{-1/2}$ for Kolmogorov and Kraichnan turbulence, respectively). This implies that the energy-weighted scales at which wave-particle interaction take place are larger in Kolmogorov turbulence, and thus that the wave-particle interaction rate is lower. If (as is frequently seen) we instead assume that Kraichnan turbulence begins at the outer scale $L$, with characteristic decay time $L c_{\rm s}/\varv_{\rm c}^{2}$, then we obtain a more palatable result: 
 \begin{equation}
 \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 0.8  \left( \frac{c_{\rm s}}{1500 \, {\rm km \, s^{-1}}} \right) \left( \frac{\tilde{X}_{\rm tu}}{0.2} \right). 
 \end{equation}
@@ -1221,7 +1264,7 @@ In principle, this implies exponential sensitivity to $X_{\rm CR}$, a similar si
 \end{equation}
 Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potential consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
 
-It is also worth exploring the effect of Burgers' turbulence (weak shocks). From equation \ref{eqn:diffusion} and \ref{eqn:k_W}, we find: 
+It is also worth exploring the effect of Burgers' turbulence (weak shocks). From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
 \begin{equation}
 \frac{D_{pp}^{\rm Burgers}}{D_{pp}^{\rm MHD}} = \left( \frac{\beta}{X_{\rm tu} A} \right)^{1/2} = 0.15 \left( \frac{\beta}{50} \right)^{1/2} \left( \frac{X_{\rm tu}}{0.2} \right)^{-1/2} 
 \end{equation}
