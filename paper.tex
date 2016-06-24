@@ -446,15 +446,29 @@ We adopt a Kraichnan spectrum ($s=3/2$) for the fast modes, as seen in simulatio
   \mathcal{W}(k) =
 \sqrt{2/7\,I_L\,\rho\,\langle \Vph \rangle}\,k^{-3/2},
 \end{equation}
-where $I_L$ is the volumetric injection rate of turbulence at scale $L$ (which is assumed to be constant), $\varv_{\rm ph}\approx c_{\rm s}$ is the phase speed of waves. \cp{Since the Kraichnan spectrum is critical in what follows, it is worthwhile taking a moment to recount the origin of the spectral slope $s$ and the cascade rate. In the magnetically dominated regime, two counterpropagating wave packets of scale $l$ interact on an Alfv{\'e}n time $\tau_{\rm A}=l/\varv_{\rm A}$, rather than the eddy turnover time $\tau_{\rm edd} = l/\varv_{\rm l}$. 
-Since $\tau_{\rm A} \ll \tau_{\rm edd}$, each interaction results in a small velocity change $\delta \varv_{\rm l} \sim \varv_{\rm l} (\tau_{\rm A}/\tau_{\rm edd})$. If these changes behave like a random walk, the cascade time $\tau_{\rm l}$ it takes for an eddy to become non-linear ($\Delta \varv \sim \varv_{\rm l})$ and cascades to smaller scales occurs with a characteristic velocity $\varv_{\rm l} \sim \delta \varv_{\rm l} (\tau_{\rm l}/\tau_{\rm A})^{1/2} \sim \varv_{\rm l} \tau_{\rm A}/\tau_{\rm edd} (\tau_{\rm l}/\tau_{\rm A})^{1/2}$, which we can solve to obtain the cascade time: 
+where $I_L$ is the volumetric injection rate of turbulence at scale $L$ (which
+is assumed to be constant), $\varv_{\rm ph}\approx c_{\rm s}$ is the phase speed
+of waves. \cp{Since the Kraichnan spectrum is critical in what follows, it is
+  worthwhile taking a moment to recount the origin of the spectral slope $s$ and
+  the cascade rate. In the magnetically dominated regime, two counterpropagating
+  wave packets of scale $l$ interact on a wave crossing time $\tau_{\rm
+    ph}=l/\varv_{\rm ph}$, rather than the eddy turnover time $\tau_{\rm edd} =
+  l/\varv_{\rm l}$.  Since $\tau_{\rm ph} \ll \tau_{\rm edd}$, each interaction
+  results in a small velocity change $\delta \varv_{\rm l} \sim \varv_{\rm l}
+  (\tau_{\rm ph}/\tau_{\rm edd})$. If these changes behave like a random walk,
+  the cascade time $\tau_{\rm l}$ it takes for an eddy to become non-linear
+  ($\Delta \varv \sim \varv_{\rm l})$ and cascades to smaller scales occurs with
+  a characteristic velocity $\varv_{\rm l} \sim \delta \varv_{\rm l} (\tau_{\rm
+    l}/\tau_{\rm ph})^{1/2} \sim \varv_{\rm l} (\tau_{\rm ph}/\tau_{\rm edd})\,
+  (\tau_{\rm l}/\tau_{\rm ph})^{1/2}$, which we can solve to obtain the cascade
+  time:
 \begin{equation}
   \label{eqn:tau_l}
-\tau_{\rm l} \sim \left(\frac{\tau_{\rm edd}}{\tau_{\rm A}}\right)^{2} \tau_{\rm A} \sim \frac{l \varv_{\rm A}}{\varv_{\rm l}^{2}} 
+\tau_{\rm l} \sim \left(\frac{\tau_{\rm edd}}{\tau_{\rm ph}}\right)^{2} \tau_{\rm ph} \sim \frac{l \varv_{\rm ph}}{\varv_{\rm l}^{2}} 
 \end{equation}
-where we have implicitly assumed isotropy. This implies a dissipation rate $\epsilon \sim \varv_{\rm l}^{2}/\tau_{\rm l} \sim \varv_{\rm l}^{4}/(l \varv_{\rm A})$, or $\varv_{\rm l} \sim (\epsilon l \varv_{A})^{1/4}$. Thus, since $k E(k)\sim \varv_{\rm l}^{2}$, this gives a kinetic energy spectrum: 
+where we have implicitly assumed isotropy. This implies a dissipation rate $\epsilon \sim \varv_{\rm l}^{2}/\tau_{\rm l} \sim \varv_{\rm l}^{4}/(l \varv_{\rm ph})$, or $\varv_{\rm l} \sim (\epsilon l \varv_{\rm ph})^{1/4}$. Thus, since $k E(k)\sim \varv_{\rm l}^{2}$, this gives a kinetic energy spectrum: 
 \begin{equation}
-E(k) \sim (\epsilon \varv_{\rm A})^{1/2} k^{-3/2}.
+E(k) \sim (\epsilon \varv_{\rm ph})^{1/2} k^{-3/2}.
 \end{equation}}
  
 It is important to realise that this Kraichnan scaling only applies at small scales, where turbulence is magneto-hydrodynamical. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transsonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $\eps_{\rm turb} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_L {\mathcal M}_{\rm A}^{-3}$, where $\eps_{\rm turb} \sim \eps_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation (\ref{eqn:Wk}) can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
@@ -462,7 +476,7 @@ It is important to realise that this Kraichnan scaling only applies at small sca
 k_{\rm cut} \approx A k_{\rmn{outer}} \frac{\langle (\delta \varv_{\rmn{outer}})^{2}\rangle^{2}}{c_{\rm s}^{4}}
 \label{eqn:k_c1} 
 \end{equation}
-where $A \approx 11 000$. \cp{If there is an unimpeded cascade from the injection to the cutoff scale, $k_{\rmn{outer}}=k_L$ and $\varv_{\rmn{outer}}=\varv_{\rmn{c}}$. However, in our case the hydrodynamic (Kolmogorov) cascade transitions to the MHD cascade at the Alfv{\'e}n scale so that $k_{\rmn{outer}}=k_{\rmn{A}}$ and $\varv_{\rmn{outer}}=\varv_{\rmn{A}}$ and hence, we get\footnote{\cp{Note that this differs from previous work which uses the wave number and compressible velocity at the outer scale $L$ for this estimate of $k_{\rm cut}$.}}
+where $A \approx 11 000$. \cp{If there is an unimpeded cascade from the injection to the cutoff scale, $k_{\rmn{outer}}=k_L$ and $\varv_{\rmn{outer}}=\varv_{\rmn{c}}$. However, in our case the hydrodynamic (Kolmogorov) cascade transitions to the MHD cascade at the Alfv{\'e}n scale so that $k_{\rmn{outer}}=k_{\rmn{A}}$ and $\varv_{\rmn{outer}}=\varv_{\rmn{A}}$ and hence, we get\footnote{\cp{Note that this differs from previous work, which assumes Kraichnan turbulence from the injection scale onward and effectively adopts wave number and compressible velocity at the outer scale $L$ for this estimate of $k_{\rm cut}$.}}
 \begin{equation}
 k_{\rm cut} \approx A k_{\rmn{A}} \beta^{-2}\,.
 \label{eqn:k_c} 
@@ -510,7 +524,7 @@ The important effects are best summarised in terms of the acceleration \cp{rate
   \frac{\dot{p}}{p}=p^{-3}\frac{\partial}{\partial p}\left(p^2D_{pp}\right)
   =\frac{4 D_{pp}}{p^{2}}.
 \end{equation}
-In the last step we have used that $D_{pp}\propto p^2$ for the turbulent
+In the last step we have used that $D_{pp}\propto p^2$ for turbulent
 reacceleration (equation \ref{eqn:Dpp}). Hence the acceleration time is independent of momentum.}
 %\begin{equation}
 %\tau_{\rm D}= \frac{p^{2}}{4 D_{pp}}
@@ -518,7 +532,7 @@ reacceleration (equation \ref{eqn:Dpp}). Hence the acceleration time is independ
 %which is momentum independent.
 This should be compared against the lifetime of turbulence, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}$. In Table~\ref{tab:timescales}, we show both the thermal quantities and the
 timescales for CR cooling and (re)acceleration for three different
-spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use $B$-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_L=2\upi/\lambda_L$, where $\lambda_L = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This length scale corresponds to an eddy turnover time on the outer scale of \cp{\sout{$\varv_L k_L^{-1} \sim 1.2$~Gyr} $2\upi\lambda_L\varv_L^{-1} \sim 1.2$~Gyr} if $\varv_L \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_L$, in some cases comparable to the size of the cluster \citep{vazza11,miniati15}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_L$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
+spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use $B$-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_L=2\upi/\lambda_L$, where $\lambda_L = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This length scale corresponds to an eddy turnover time on the outer scale of \cp{$2\upi\lambda_L\varv_L^{-1} \sim 1.2$~Gyr} if $\varv_L \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_L$, in some cases comparable to the size of the cluster \citep{vazza11,miniati15}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_L$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
 $\tau_{\rm D}$ is similar between our three models, where the
 difference comes from turbulent profile parametrized with
 $\alpha_\rmn{tu}$. This implies that even small differences in the
@@ -1235,7 +1249,7 @@ Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$,
 \label{eqn:tau_D} 
 \end{equation}
 }
-where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equation (\ref{eqn:k_c}). The turbulent decay time is given by the cascade time of fast modes \cp{at the Alfv\'en scale $k=k_{\rmn{A}}$} (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:cascade}): 
+where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equation (\ref{eqn:k_c}). The turbulent decay time is given by the cascade time of fast modes \cp{at the Alfv\'en scale $k=k_{\rmn{A}}$} (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:tau_l}): 
 \begin{equation}
   \tau_{\rm decay} = \cp{\frac{\varv_{\rm ph}}{\varv_k^{2} k} = }
   \frac{c_{\rm s}}{\varv_{\rm A}^{2} k_{\rm A}^{}}\,.
@@ -1246,9 +1260,7 @@ This can be related to the eddy turnover time at the outer scale $\tau_{\rm edd}
 \tau_{\rm decay} =\frac{L}{\varv_{\rm c}} \left(\frac{c_{\rm s}}{\varv_{\rm c}} \right)^{2} \frac{\varv_{\rm A}}{c_{\rm s}} = 0.7 \, \tau_{\rm edd} \left(\frac{\tilde{X}_{\rm tu}}{0.2}\right)^{-1}  \left(\frac{\beta}{100} \right)^{-1/2}
 \end{equation}
 \cp{[I get 0.08 as prefactor mainly because of the $2\upi$ conversion from $k$ to $L$.]}
-where we have used $\tilde{X}_{\rm tu} \approx (\varv_{\rm c}/c_{\rm s})^{2}$ and $c_{\rm s}/\varv_{\rm A} = \beta^{1/2}$. \cp{\sout{Thus $\tau_{\rm decay} \sim \tau_{\rm edd}$, but we prefer to use the expression for $\tau_{\rm edd}$, since it is more physically correct and leads to more revealing scalings. }}
-
-From equations (\ref{eqn:tau_D}) and (\ref{eqn:tau_decay}), we obtain:
+where we have used $\tilde{X}_{\rm tu} \approx (\varv_{\rm c}/c_{\rm s})^{2}$ and $c_{\rm s}/\varv_{\rm A} = \beta^{1/2}$. From equations (\ref{eqn:tau_D}) and (\ref{eqn:tau_decay}), we obtain:
 \begin{equation}
   \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx \frac{\tau_{\rm decay}}{\tau_{\rm D}}
   \cp{= \frac{A^{1/2}}{C_{\rmn{D}}}\,\frac{c_{\rm s}}{c}\,\beta^{-1}}
@@ -1278,11 +1290,11 @@ In principle, this implies exponential sensitivity to $X_{\rm CR}$, a similar si
 \end{equation}
 Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potential consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
 
-It is also worth exploring the effect of Burgers' turbulence (weak shocks). \cp{Burgers' turbulence is distinct from other forms of turbulence in that it violates locality in $k$-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$.} From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
+It is also worth exploring the effect of Burgers' turbulence (weak shocks). \cp{Burgers' turbulence is distinct from other forms of turbulence in that it violates locality in $k$-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. This implies a short dissipation time and we have in this case, $\tau_{\rm cl} \sim \tau_{\rm drive}$, the driving time, rather than the turbulent dissipation time. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$.} From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
 \begin{equation}
 \frac{D_{pp}^{\rm Burgers}}{D_{pp}^{\rm MHD}} = \left( \frac{\beta}{X_{\rm tu} A} \right)^{1/2} = 0.15 \left( \frac{\beta}{50} \right)^{1/2} \left( \frac{X_{\rm tu}}{0.2} \right)^{-1/2} 
 \end{equation}
-where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' turbulence, i.e. all power is at large scales. This weighting towards larger scales implies a much lower wave-particle interaction rate and thus a diffusion coefficient which is smaller than standard TTD on thermal particles by an order of magnitude. Since $\langle k \rangle_{\mathcal{W}} \approx k_L$ is independent of the cutoff scale $k_{\rm cut}$, this conclusion is unchanged if plasma instabilities regulate the thermal particle mean free path and TTD operates on relativistic particles instead. Since standard TTD on thermal particles was already potentially problematic (equation \ref{eqn:ratios_TTD}), we conclude, in agreement with other assessments \citep{miniati15,brunetti16_review}, that if Burgers turbulence dominates, then turbulent reacceleration will be ineffective\footnote{Note also that since there is no real cascade in Burgers' turbulence, but direct transfer of power from large to small scales, the dissipation time is potentially short. In this case, $\tau_{\rm cl} \sim \tau_{\rm drive}$, the driving time, rather than the turbulent dissipation time.}.
+where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' turbulence, i.e. all power is at large scales. This weighting towards larger scales implies a much lower wave-particle interaction rate and thus a diffusion coefficient which is smaller than standard TTD on thermal particles by an order of magnitude. Since $\langle k \rangle_{\mathcal{W}} \approx k_L$ is independent of the cutoff scale $k_{\rm cut}$, this conclusion is unchanged if plasma instabilities regulate the thermal particle mean free path and TTD operates on relativistic particles instead. Since standard TTD on thermal particles was already potentially problematic (equation \ref{eqn:ratios_TTD}), we conclude, in agreement with other assessments \citep{miniati15,brunetti16_review}, that if Burgers turbulence dominates, then turbulent reacceleration will be ineffective.
 
 It is interesting to reconsider surface brightness and spectral profiles if indeed $\tau_{\rm D} \sim \tau_{\rm cl}$, for the reasons mentioned above (e.g., equation \ref{eqn:ratios_CR_damp}). We show the results of adopting such an ansatz in Figure~\ref{fig:param_comp_tcl_tD}, where, similar to Figure~\ref{fig:param_comp}, we vary $X_{\rm tu}, \alpha_{\rm tu}, \alpha_{\rm CR, spat}$ about fiducial values, but this time we do not adopt a fixed $\tau_{\rm cl}$ but set $\tau_{\rm cl}=\tau_{\rm D}$.  They are remarkably revealing. In this case, one is much less sensitive to the properties of the turbulence, and more sensitive to the details of the CR seed population. This gives hope to the possibility that one could effectively marginalise over the very uncertain properties of turbulence at larger scales in merging clusters (which are unlikely to be more precisely constrained observationally in the near future) to learn something about the underlying CR population. 
 
