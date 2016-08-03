@@ -20,6 +20,7 @@
 \usepackage[usenames]{xcolor}
 \newcommand\cp[1]{{\color{red} #1}}
 \newcommand\po[1]{{\color{blue} #1}}
+\newcommand\AP[1]{{\color{green} #1}}
 
 % --- macros --- %
 \newcommand{\Mstream}{{\it M-streaming}\xspace}
@@ -75,7 +76,7 @@ $^{4}$Heidelberg Institute for Theoretical Studies
   compressible turbulence in the intracluster medium (ICM). The origin of these
   seed electrons has never been fully explored. Here, we integrate the
   Fokker-Planck equation of the cosmic ray (CR) electron and proton
-  distributions in cosmological simulations of cluster formation, and confront
+  distributions in \AP{the post-processing of} cosmological simulations of cluster formation, and confront
   them with radio surface brightness and spectral observations of Coma. For
   standard assumptions, structure formation shocks lead to a seed electron
   population which produces too centrally concentrated radio emission. By
@@ -169,7 +170,7 @@ Figure~\ref{fig:Edens} we show that such a distribution is not predicted
 by cosmological simulations \cite[see
   also][]{pinzke10,2014MNRAS.439.2662V}. If CRps are predominantly
 advected with the cluster plasma, their distribution will be peaked
-towards the cluster centre and shows a similar characteristics as the
+towards the cluster centre and show a similar characteristics as the
 thermal plasma. As a consequence, the distribution of secondary
 electrons and the resulting radio synchrotron emission is also peaked
 since the hadronic reaction is a two-body scattering process. Hence,
@@ -326,10 +327,8 @@ inject large turbulent eddies. As is commonly assumed
 \citep{brunetti07,brunetti11,2004ApJ...614..757Y,2013ApJ...771..131B} we assume
 that about one Gyr after core passage the fields have decayed down to the
 smallest scales $k_{\rm cut}$, and the radio halo turns on shortly after. We
-choose this simulation snapshot to analyse. We are not very sensitive to this
-assumption, since the thermal and CR quantities are very similar a few 100 Myrs
-before and after $z = 0$, where we have chosen to evaluate the simulations. In
-all our calculations we assume that turbulent reacceleration efficiently
+choose this simulation snapshot to analyse. \AP{Note that in recent simulations by \citet{miniati15}, the turbulent reacceleration is strongest around core passage. However, we are not very sensitive to the adopted decay time, since the thermal and CR quantities are very similar a few 100 Myrs before and after $z = 0$, where we have chosen to evaluate the simulations.}
+In all our calculations we assume that turbulent reacceleration efficiently
 accelerates particles for $\tau_{\rm cl} \sim 650$ Myrs (which is roughly the
 cascade time on which turbulence is damped) and that during this turbulent phase
 CR streaming and spatial diffusion can be neglected. In
@@ -354,11 +353,7 @@ the CRp population is built up. Based on these findings, we adopt a toy model
 for our \Mstream scenario in which CR streaming instantaneously produces flat
 CRp profiles. We assume that CRs cannot stream significantly past perpendicular
 $B$-fields at the accretion shock, so that the total number of CRs is conserved
-within the virial radius during the streaming process.  In all our calculations
-we assume that turbulent reacceleration efficiently accelerates particles for
-$\tau_\rmn{cl}\sim650$~Myrs (which is roughly the cascade time on which
-turbulence is damped) and that during this turbulent phase CR streaming and
-spatial diffusion can be neglected.
+within the virial radius during the streaming process. 
 
 The time evolution of the spectral energy distribution of CRps,
 $f_{\rmn{p}}$, is similarly given by:
@@ -532,7 +527,7 @@ reacceleration (equation \ref{eqn:Dpp}). Hence the acceleration time is independ
 %which is momentum independent.
 This should be compared against the lifetime of turbulence, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}$. In Table~\ref{tab:timescales}, we show both the thermal quantities and the
 timescales for CR cooling and (re)acceleration for three different
-spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use $B$-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_L=2\upi/\lambda_L$, where $\lambda_L = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This length scale corresponds to an eddy turnover time on the outer scale of \cp{$2\upi\lambda_L\varv_L^{-1} \sim 1.2$~Gyr} if $\varv_L \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_L$, in some cases comparable to the size of the cluster \citep{vazza11,miniati15}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_L$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
+spatial regions of the RH. The densities \citep{1992A&A...259L..31B} and temperatures \citep{2009ApJ...696.1886B,2001A&A...365L..67A} are derived from X-ray observations. To calculate synchrotron cooling times, we use $B$-fields derived from Faraday rotation measurements \citep{bonafede10}. To calculate the acceleration time, we need to assume an outer scale. We assume an injection scale $k_L=2\upi/\lambda_L$, where $\lambda_L = 100$ kpc, which were assumptions adopted in previous work \citep{2006MNRAS.366.1437S,brunetti07, brunetti11}. This length scale corresponds to an eddy turnover time on the outer scale of \cp{$2\upi\lambda_L\varv_L^{-1} \sim 1.2$~Gyr} if $\varv_L \sim 500 {\rm km \, s^{-1}}$, as is characteristic of a merger. Note that hydrodynamical simulations of clusters have sometimes found larger $\lambda_L$, in some cases comparable to the size of the cluster \AP{\citep[e.g. $\lambda_L \sim 1 {\rm Mpc}$ in ][]{vazza11,miniati15}}. This choice is degenerate with $X_{\rm tu}$; in \S\ref{sect:self-limiting} we argue that $k_{\rm A}$ is a more appropriate choice, but also find that when the decay time is appropriately scaled, we are relatively insensitive to the choice of $k_L$. We present $\tau_{\rm D}$ for 3 different models, which we discuss in the next section. The reacceleration timescale
 $\tau_{\rm D}$ is similar between our three models, where the
 difference comes from turbulent profile parametrized with
 $\alpha_\rmn{tu}$. This implies that even small differences in the
@@ -621,7 +616,7 @@ momentum,
 determined by the normalisation $C(t)$ and the spectral index
 $\alpha_{\rmn{inj}}$ that depends on the adiabatic index
 $\gamma_\rmn{ad} = 5/3$ and the Mach number of the shock
-$\mathcal{M}$. It is given by the ratio of the upstream velocity
+$\mathcal{M}$ \AP{\citep[see also ][]{1998ApJ...502..518Q,miniati01,pfrommer06}}. It is given by the ratio of the upstream velocity
 ($\varv_2$) and the sound speed ($c_{\rm s}$). The CR number density and CR
 energy density are derived from
 \begin{eqnarray}
@@ -776,7 +771,7 @@ emission in all three scenarios in which the seeds undergo Fermi-II
 reacceleration in turbulent fields that are shaped such as to
 reproduce the Coma RH profile at 352~MHz.  Adopting our
 parametrization for the volumetric injection rate of turbulent energy,
-$I_0\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, we find that to fit the observations, we require
+$I_L\propto \eps_\rmn{th}^{\alpha_\rmn{tu}}$, we find that to fit the observations, we require
 $\alpha_\rmn{tu}= 0.67$ for \Mflatturb, $\alpha_\rmn{tu}= 0.82$ for
 \Mstream, and $\alpha_\rmn{tu}= 0.88$ for \Mprimary. As a result, the
 ratio of turbulent-to-thermal energy densities slightly increase with
@@ -810,14 +805,14 @@ bottom right panel of Figure~\ref{fig:sync_profile} (labelled with
 Brunetti et al. 2012), we show that our simulated profiles of
 reaccelerated CRs, which only take advective CR transport into
 account, i.e. they neglect CR streaming or a flatter turbulent
-profile, produce radio profiles that are too steep. Indeed, even using
-the assumptions of previous work -- where complete freedom in the seed
-population was allowed -- it is not possible to reproduce observations
-in both frequencies in any model.\footnote{Note that in previous work
+profile, produce radio profiles that are too steep. \AP{Indeed, even using
+the assumptions of previous work, where complete freedom in the seed
+population was allowed, it is not possible to reproduce observations
+in both frequencies in any model\footnote{Note that in previous work
   on the Coma cluster, $\eps_\rmn{turb} \propto \eps_\rmn{th}$ was
   adopted which approximately corresponds to $\alpha_\rmn{tu}= 1$
   \citep{brunetti12} and together with the different distributions for
-  seed CRes constitute the main differences compared to our work.}
+  seed CRes constitute the main differences compared to our work.} -- with or without turbulent reacceleration.}
 Decreasing the acceleration efficiency with radius does not change
 this conclusion much because of the weak radial dependence of
 $D_{pp}(R)\propto \eps_\rmn{th}(R)^{\alpha_\rmn{tu}-1}
