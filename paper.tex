@@ -91,7 +91,7 @@ $^{4}$Heidelberg Institute for Theoretical Studies
   on plasma parameters. In this case, turbulence above a threshold value
   required to overcome cooling provides a fixed amount of amplification;
   observations could then potentially constrain the unknown CR seed
-  population. Understanding the small scatter in radio halo scaling relations
+  population. \po{Given that MHD turbulence only begins at the Alfven scale, in order to have sufficient acceleration, the turbulent cascade has to terminate by transit time damping on CRs, i.e., thermal particles must be scattered by plasma instabilities.} Understanding the small scatter in radio halo scaling relations
   may prove a rich source of insight on plasma processes in the ICM.
 \end{abstract} 
 
@@ -466,7 +466,7 @@ where we have implicitly assumed isotropy. This implies a dissipation rate $\eps
 E(k) \sim (\epsilon \varv_{\rm ph})^{1/2} k^{-3/2}.
 \end{equation}}
  
-It is important to realise that this Kraichnan scaling only applies at small scales, where turbulence is magneto-hydrodynamical. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transsonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $\eps_{\rm turb} \propto l^{2/3}$ decreases at small scales, the magnetic energy density is scale-independent. Thus, at some scale $l_{\rm A} \sim l_L {\mathcal M}_{\rm A}^{-3}$, where $\eps_{\rm turb} \sim \eps_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation (\ref{eqn:Wk}) can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
+It is important to realise that this Kraichnan scaling only applies at small scales, where turbulence is magneto-hydrodynamical. At large scales, turbulent motions are subsonic (${\mathcal M}_{\rm s} \sim 0.2-0.5$) but super-Alfv{\'e}nic (${\mathcal M}_{\rm A} \sim 5$). Thus, except in the case where motions are transsonic and weak shocks become important, motions are fundamentally hydrodynamic and turbulence follows a Kolmogorov ($s=5/3$) spectrum. However, while the turbulent energy density $\eps_{\rm turb} \propto l^{2/3}$ decreases at small scales, the magnetic energy density \po{(which is dominated by the large scale mean field} is scale-independent. Thus, at some scale $l_{\rm A} \sim l_L {\mathcal M}_{\rm A}^{-3}$, where $\eps_{\rm turb} \sim \eps_{B}$, the magnetic field becomes dynamically important, and turbulence transitions to the MHD regime. The cutoff scale in equation (\ref{eqn:Wk}) can be computed by setting the turbulent cascade rate for fast modes to the transit time damping rate on thermal electrons. This yields \citep{brunetti07,miniati15}:
 \begin{equation}
 k_{\rm cut} \approx A k_{\rmn{outer}} \frac{\langle (\delta \varv_{\rmn{outer}})^{2}\rangle^{2}}{c_{\rm s}^{4}}
 \label{eqn:k_c1} 
@@ -502,7 +502,7 @@ What is a typical energy density in compressive fast modes? The total turbulent
 energy is typically $\sim 15-70$ per cent of the thermal energy in a cluster
 \citep{vazza11}; it rises rapidly during a merger. The compressible component is
 $\sim 20-40$ per cent of the total turbulent energy, and shows more rapid temporal
-variations compared to the compressible component
+variations compared to the \po{incompressible} component
 \citep{2013ApJ...771..131B,miniati15}. Note the compressible component in
 cluster simulations is much larger than in stirring box simulations
 with similar Mach numbers \citep{kowal10,lynn14}. This is likely due to the
@@ -513,7 +513,7 @@ compressive energy density which is $X_{\rm tu} \sim 0.2$ of the thermal energy
 as a baseline estimate.
 
 The important effects are best summarised in terms of the acceleration \cp{rate
-  which is goverend by advection in momentum space:
+  which is governed by advection in momentum space:
 \begin{equation}
   \tau_{\rm D}^{-1}\equiv \Gamma_{\rm D}\equiv
   \frac{\dot{p}}{p}=p^{-3}\frac{\partial}{\partial p}\left(p^2D_{pp}\right)
@@ -1146,6 +1146,8 @@ While the requirement of a threshold level of turbulence may explain why radio b
 \subsection{Self-limiting turbulent reacceleration}
 \label{sect:self-limiting} 
 
+\po{In this section, we explore the physical origin of the high sensitivity of radio emission to turbulence levels (e.g., top right panel of Fig. \ref{fig:param_comp}), which thus requires strong fine-tuning to explain observed radio profiles. We will find that by relating the acceleration time to the turbulent decay time, this sensitivity can be eliminated.  We also challenge the common assumption of assuming a Kraichnan spectrum, beginning at the outer scale (see \S\ref{sec:reacc}). Since turbulence is essentially hydrodynamic at large scales, this is unjustified. Instead, we shall assume that the outer scale of the compressive fast modes is the Alfven scale.}
+
 There are 3 important timescales in this problem: the acceleration time $\tau_{\rm D}$, the duration over which turbulence is active and acceleration takes place, $\tau_{\rm cl}$, and the cooling time $\tau_{\rm cool}(p)$. Only $\tau_{\rm cool}(p)$ is momentum dependent (and is different for ions and electrons). Thus, the outcome of acceleration depends essentially on two dimensionless numbers, $\tau_{\rm cl}/\tau_{\rm D}$, and $\tau_{\rm cool}/\tau_{\rm D}$. 
 
 We have seen that the radio luminosity depends very sensitively on $\tau_{\rm
@@ -1153,7 +1155,7 @@ We have seen that the radio luminosity depends very sensitively on $\tau_{\rm
 \ref{fig:param_comp}; note from equation (\ref{eq:Dpp_scaling}) that $\tau_{\rm D}
 \propto X_{\rm tu}^{-2}$). Since this raises questions of fine-tuning in $X_{\rm
   tu}$ to explain the observations, it is worth understanding this property in
-more detail. To this end, we ignore cooling which is a good approximation for
+more detail. To this end, we ignore cooling, which is a good approximation for
 the CR protons, because hadronic cooling times are long in comparison to the
 other relevant timescales of the problem.\footnote{In principle, CRp can still
   lose energy via wave heating, at a rate $\left|\bmath{\varv_{\rm A} \cdot
@@ -1178,7 +1180,7 @@ with the analytic solution given by
   C \exp{\left[\frac{(2+\alpha_{\rmn{inj}})(\alpha_{\rmn{inj}}-1)}{4}\frac{t}{\tau_\rmn{D}}\right]}\,.
 \end{equation}
 At $t=\tau_\rmn{cl}$} the CR distribution is exponentially sensitive to
-$\tau_{\rm cl}/\tau_{\rm D}$ which is the physical reason underlying
+$\tau_{\rm cl}/\tau_{\rm D}$, which is the physical reason underlying
 the extreme sensitivity to $X_{\rm tu}$ in
 Figure~\ref{fig:param_comp}.
 
@@ -1198,64 +1200,69 @@ of the turbulence, it is conceivable that this would result in much
 less scatter in $\tau_{\rm cl}/\tau_{\rm D}$.
 
 An obvious candidate for $\tau_{\rm decay}$ is: 
-\begin{equation}
-\tau_{\rm edd} = \frac{L}{\varv_{\rm c}}
-\end{equation}
+\po{\begin{equation}
+\tau_{\rm edd} = \frac{L}{\varv_{\rm L}}
+\end{equation}}
 i.e., the eddy turnover time at the outer scale. This is subject to
 uncertainties about the location of the outer scale $L$; estimates in the
 literature range from $L \sim 0.1-1$ Mpc. It is also worth remembering that MHD
 turbulence only applies for $l < l_{\rm A}$, where $l_{\rm A}$ is the Alfv{\'e}n
 scale where $\varv \sim \varv_{\rm A}$. Invoking fast modes, Kraichnan scalings,
 etc., is only valid below these scales. For $l > l_{\rm A}$, turbulence is
-basically hydrodynamic and follows the universal Kolmogorov scaling. The
-momentum diffusion coefficient can thus be split up into two components:
-\begin{equation}
-D_{pp} = D_{pp}^{\rm HD}[l_{\rm A} < l < L] + D_{pp}^{\rm MHD}[l_{\rm cut} < l < l_{\rm A}]
-\end{equation}
-From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogorov turbulence from $l_{\rm A} < l < L$ and Kraichnan turbulence from $l_{\rm cut} < l < l_{\rm A}$, we get: 
-\begin{equation}
-  \label{eqn:Dratio}
-  \frac{D_{pp}^{\rm HD}}{D_{pp}^{\rm MHD}}
-  = \frac{\cp{2}k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}}
-  = \cp{2} A^{-1/2} \beta = \cp{1.0}\, \left( \frac{\beta}{50} \right) 
-\end{equation}
-where we have used $k_{\rm A} = k_L \mathcal{M}_{\rm A}^{3}$ (from Kolmogorov
-scalings), and $\mathcal{M}_{\rm A} = \varv_{\rm c}/\varv_{\rm A}$ is the
-Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm
-  s}^{2}/\varv_{\rm A}^{2}$, and the cutoff scale $k_{\rm cut}$ (equation
-\ref{eqn:k_c}).  Thus, the contribution of the two regimes are
-comparable\footnote{\cp{The estimate of equation~(\ref{eqn:Dratio}) assumes that
-    in both cascades, kinetic and potential energy are in equipartition which is
-    likely an overestimate for the hydrodynamical cascade and hence, the
-    hydrodynamic contribution to the momentum diffusion would be small in
-    comparison to the MHD contribution. }} (as we shall see later, this is not
-true if one incorrectly assumes Kraichnan scalings apply from the outer scale
-$L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a
-factor $\mathcal{M}_{\rm A}^{1/2}$).
+basically hydrodynamic.  
 
-Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$, with velocity $\varv_{\rm A}$. The turbulent reacceleration time is: 
+\po{In the hydrodynamic regime, a standard Hodge-Helmholtz decomposition usually shows that the compressive component of the velocity field is Burgers-like ($W(k) \propto k^{-2}$), while the solenoidal component is Kolomogorov-like ($W(k) \propto k^{-5/3}$), see e.g., \citet{federrath13}. The Burgers-like component does not reflect a genuine cascade, but rather the appearance of shocks which directly transfer power from large to small scales. At face value, we should use the Burgers spectrum for compressible modes. However, as already found by previous authors \citep{miniati15, brunetti16}, and as we shall discuss, this does not produce significant particle acceleration. If this is the correct spectrum, then the paradigm of turbulent particle acceleration is simply flawed, and some other mechanism is necessary to explain radio halos. Alternatively, it is well-known that due to mode-mode coupling,  solenoidal modes can give rise to compressive modes, and vice-versa \citep{kida90,cho03,kritsuk07}, even for subsonic turbulence, since pressure fluctuations of order $\sim \rho u^{2}$ arise. Indeed, note that many numerical studies (such as \citet{cho03,kritsuk07}) only have solenoidal driving on the outer scale, but then are also able to study the compressive modes that develop. In hydrodynamic turbulence, the energy in compressible modes which develop in this way scales as $\sim \mathcal{M}_{s}^2$, for $\mathcal{M}_{s} < 1$; this coupling is strongest at the Alfven scale \citep{cho03}. In MHD turbulence, mode-mode coupling is weak below the Alfven scale and the Alfven, fast and slow modes proceed as separate cascades.}
+
+\po{We thus assume that some fraction of the Kolmogorov-like hydrodynamic turbulence which cascades down to the Alfven scale ends up as compressive fast modes with a Kraichnan spectrum, as seen in simulations \citep{cho03}. Henceforth, we can consider the outer scale of the fast modes to be $l_{\rm A}$. If some fraction $f_{\rm c}$ of the turbulent energy density at this scale is in compressible modes, then the energy density at the outer scale is velocity $\sim f_{\rm c} \rho \varv_{\rm A}^{2}$.}
+%and follows the universal Kolmogorov scaling. The
+%momentum diffusion coefficient can thus be split up into two components:
+%\begin{equation}
+%D_{pp} = D_{pp}^{\rm HD}[l_{\rm A} < l < L] + D_{pp}^{\rm MHD}[l_{\rm cut} < l < l_{\rm A}]
+%\end{equation}
+%From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), and assuming Kolmogorov turbulence from $l_{\rm A} < l < L$ and Kraichnan turbulence from $l_{\rm cut} < l < l_{\rm A}$, we get: 
+%\begin{equation}
+%  \label{eqn:Dratio}
+%  \frac{D_{pp}^{\rm HD}}{D_{pp}^{\rm MHD}}
+%  = \frac{\cp{2}k_L^{2/3}k_{\rm A}^{1/3} \varv_{\rm c}^{2}}{k_{\rm A}^{1/2}k_{\rm cut}^{1/2} \varv_{\rm A}^{2}}
+%  = \cp{2} A^{-1/2} \beta = \cp{1.0}\, \left( \frac{\beta}{50} \right) 
+%\end{equation}
+%where we have used $k_{\rm A} = k_L \mathcal{M}_{\rm A}^{3}$ (from Kolmogorov
+%scalings), and $\mathcal{M}_{\rm A} = \varv_{\rm c}/\varv_{\rm A}$ is the
+%Alfv{\'e}n Mach number of the turbulence, $\beta \approx c_{\rm
+%  s}^{2}/\varv_{\rm A}^{2}$, and the cutoff scale $k_{\rm cut}$ (equation
+%\ref{eqn:k_c}).  Thus, the contribution of the two regimes are
+%comparable\footnote{\cp{The estimate of equation~(\ref{eqn:Dratio}) assumes that
+%%    in both cascades, kinetic and potential energy are in equipartition which is
+%    likely an overestimate for the hydrodynamical cascade and hence, the
+%   hydrodynamic contribution to the momentum diffusion would be small in
+%    comparison to the MHD contribution. }} (as we shall see later, this is not
+%true if one incorrectly assumes Kraichnan scalings apply from the outer scale
+%$L$; this boosts the contribution of the scales where $l_{\rm A} < l < L$ by a
+%factor $\mathcal{M}_{\rm A}^{1/2}$).
+The turbulent reacceleration time is: 
 %\begin{equation}
 %\tau_{\rm D} = \frac{p^{2}}{4 D_{pp}} = C_{\rm D} A^{1/2} c k_{\rm A} \frac{\varv_{\rm A}^{2}}{c_{\rm S}^{2}}
 %\label{eqn:tau_D} 
 %\end{equation}
-\cp{
+\po{
   \begin{equation}
-\tau_{\rm D} = \frac{p^{2}}{4 D_{pp}} = \frac{C_{\rm D}}{A^{1/2}}\, \frac{c}{k_{\rm A}}\, \frac{c_{\rm s}^{2}}{\varv_{\rm A}^{4}}
+\tau_{\rm D} = \frac{p^{2}}{4 D_{pp}} = \po{\frac{C_{\rm D}}{A^{1/2}}\, \frac{c}{k_{\rm A}}\, \frac{\beta}{f_{\rm c} \varv_{\rm A}^{2}}}
 \label{eqn:tau_D} 
 \end{equation}
 }
-where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equation (\ref{eqn:k_c}). The turbulent decay time is given by the cascade time of fast modes \cp{at the Alfv\'en scale $k=k_{\rmn{A}}$} (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:tau_l}): 
+where $C_{\rm D} = 2/(5 \upi)$, $A\approx 11000$, and we have used equations, \po{(\ref{eqn:diffusion}), (\ref{eqn:k_W}), (\ref{eqn:k_c}), assuming $s=3/2$}. The turbulent decay time is given by the cascade time of fast modes \cp{at the Alfv\'en scale $k=k_{\rmn{A}}$} (\citealt{2004ApJ...614..757Y}; see equation \ref{eqn:tau_l}): 
 \begin{equation}
   \tau_{\rm decay} = \cp{\frac{\varv_{\rm ph}}{\varv_k^{2} k} = }
-  \frac{c_{\rm s}}{\varv_{\rm A}^{2} k_{\rm A}^{}}\,.
+\po{\frac{c_{\rm s}}{f_{\rm c} \varv_{\rm A}^{2} k_{\rm A}^{}}\,.}
 \label{eqn:tau_decay} 
 \end{equation}
 This can be related to the eddy turnover time at the outer scale $\tau_{\rm edd}$ from $l_{\rm A} = L \mathcal{M}_{\rm A}^{-3}$ to: 
 \begin{equation}
-\tau_{\rm decay} =\frac{L}{\varv_{\rm c}} \left(\frac{c_{\rm s}}{\varv_{\rm c}} \right)^{2} \frac{\varv_{\rm A}}{c_{\rm s}} = 0.7 \, \tau_{\rm edd} \left(\frac{\tilde{X}_{\rm tu}}{0.2}\right)^{-1}  \left(\frac{\beta}{100} \right)^{-1/2}
+\po{\tau_{\rm decay} =\frac{L}{\varv_{\rm L}} \frac{c_{\rm s}^{2}}{f_{\rm c} \varv_{\rm L}^{2}}  \frac{\varv_{\rm A}}{c_{\rm s}} \approx  1.0 \, \tau_{\rm edd} \left(\frac{\tilde{X}_{\rm tu}}{0.2}\right)^{-1}  \left(\frac{\beta}{50} \right)^{-1/2}}
 \end{equation}
-\cp{[I get 0.08 as prefactor mainly because of the $2\upi$ conversion from $k$ to $L$.]}
-where we have used $\tilde{X}_{\rm tu} \approx (\varv_{\rm c}/c_{\rm s})^{2}$ and $c_{\rm s}/\varv_{\rm A} = \beta^{1/2}$. From equations (\ref{eqn:tau_D}) and (\ref{eqn:tau_decay}), we obtain:
+where we have used $\tilde{X}_{\rm tu} \approx f_{\rm c} (\varv_{\rm L}/c_{\rm s})^{2}$ and $c_{\rm s}/\varv_{\rm A} = \beta^{1/2}$. \po{The decay time at the Alfven scale is comparable (and could be larger, if $f_{\rm c}$ is smaller than we have assumed) to the eddy turnover time at the outer scale. Thus, it is appropriate to consider the latter as the decay time for the fast modes, rather than the cascade time at the driving scale. The reason for these comparable timescales despite the disparate lengthscales is that large scale hydrodynamic modes cascade on a single eddy turnover time, whereas small scale sub-Alfvenic MHD modes are in the weak turbulence limit, and require multiple wave-wave interactions for a mode to cascade.  }
+
+From equations (\ref{eqn:tau_D}) and (\ref{eqn:tau_decay}), we obtain:
 \begin{equation}
   \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx \frac{\tau_{\rm decay}}{\tau_{\rm D}}
   \cp{= \frac{A^{1/2}}{C_{\rmn{D}}}\,\frac{c_{\rm s}}{c}\,\beta^{-1}}
@@ -1283,7 +1290,7 @@ In principle, this implies exponential sensitivity to $X_{\rm CR}$, a similar si
 \frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 1.6 \left(\frac{\zeta}{0.2}\right)\,.
 \label{eqn:ratios_CR_damp} 
 \end{equation}
-Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potential consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
+Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potentially consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
 
 It is also worth exploring the effect of Burgers' turbulence (weak shocks). \cp{Burgers' turbulence is distinct from other forms of turbulence in that it violates locality in $k$-space--i.e., power does not gradually cascade, but instead can directly jump from large to small scales via a network of weak shocks. This implies a short dissipation time and we have in this case, $\tau_{\rm cl} \sim \tau_{\rm drive}$, the driving time, rather than the turbulent dissipation time. Since the Fourier transform of a step function goes as $k^{-1}$, Burgers turbulence has a power spectrum of $P(k) \propto k^{-2}$.} From equations (\ref{eqn:diffusion}) and (\ref{eqn:k_W}), we find: 
 \begin{equation}
