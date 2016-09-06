@@ -1269,7 +1269,7 @@ where $\zeta$ is an efficiency factor for the effectiveness of plasma instabilit
 \end{equation}
 In principle, this implies exponential sensitivity to $X_{\rm CR}$, a similar situation as exponential sensitivity to $X_{\rm tu}$. However, there is a self-limiting asymptotic behaviour: as $X_{\rm CR}$ increases due to turbulent reacceleration, damping increases, which limits the further growth of the CR energy density \citep{brunetti11}. One natural assumption is to assume that $\eps_{\rm CR}$ saturates at a level $\eps_{\rm CR} \sim \eps_{\rm turb} ({\rm MHD}) \sim \eps_{\rm B}$, in which case $X_{\rm CR} \sim \beta^{-1}$, so that: 
 \begin{equation}
-\frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 1.6 \left(\frac{\zeta}{0.2}\right)\,.
+\frac{\tau_{\rm cl}}{\tau_{\rm D}} \approx 2.5 \left(\frac{\zeta}{0.3}\right)\,.
 \label{eqn:ratios_CR_damp} 
 \end{equation}
 Given the host of uncertain factors which enter into $\zeta < 1$ (the intermittent nature of turbulence, small scale magnetic topology and the efficiency with which instabilities mediated by pressure anisotropies are triggered), this is potentially consistent with $\tau_{\rm cl} \sim \tau_{\rm D}$. This promising scenario should be investigated in more detail. 
@@ -1280,34 +1280,21 @@ It is also worth exploring the effect of Burgers' turbulence (weak shocks). \C{B
 \end{equation}
 where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' turbulence, i.e. all power is at large scales. This weighting towards larger scales implies a much lower wave-particle interaction rate and thus a diffusion coefficient which is smaller than standard TTD on thermal particles by an order of magnitude. Since $\langle k \rangle_{\mathcal{W}} \approx k_L$ is independent of the cutoff scale $k_{\rm cut}$, this conclusion is unchanged if plasma instabilities regulate the thermal particle mean free path and TTD operates on relativistic particles instead. Since standard TTD on thermal particles was already potentially problematic (equation \ref{eqn:ratios_TTD}), we conclude, in agreement with other assessments \citep{miniati15,brunetti16_review}, that if Burgers turbulence dominates, then turbulent reacceleration will be ineffective.
 
-\sout{It is interesting to reconsider surface brightness and spectral profiles
-  if indeed $\tau_{\rm D} \sim \tau_{\rm cl}$, for the reasons mentioned above
-  (e.g., equation \ref{eqn:ratios_CR_damp}). We show the results of adopting
-  such an ansatz in Figure~\ref{fig:param_comp_tcl_tD}, where, similar to
-  Figure~\ref{fig:param_comp}, we vary $X_{\rm tu}, \alpha_{\rm tu}, \alpha_{\rm
-    CR, spat}$ about fiducial values, but this time we do not adopt a fixed
-  $\tau_{\rm cl}$ but set $\tau_{\rm cl}=\tau_{\rm D}$.  They are remarkably
-  revealing. In this case, one is much less sensitive to the properties of the
-  turbulence, and more sensitive to the details of the CR seed population. This
-  gives hope to the possibility that one could effectively marginalise over the
-  very uncertain properties of turbulence at larger scales in merging clusters
-  (which are unlikely to be more precisely constrained observationally in the
-  near future) to learn something about the underlying CR population.}  \C{It is
+\C{It is
   interesting to reconsider surface brightness and spectral profiles if indeed
   $\tau_{\rm D} \sim \tau_{\rm cl}$ for the reasons mentioned above (e.g.,
   equation~\ref{eqn:ratios_CR_damp}). We show the results of adopting such an
   ansatz in Figure~\ref{fig:param_comp_tcl_tD}, where, similar to
   Figure~\ref{fig:param_comp}, we vary $X_{\rm tu}$, $\alpha_{\rm tu}$, and
-  $\alpha_{\rm CR, spat}$ about fiducial values.\footnote{\C{When $\tau_{\rm D}
-      \sim \tau_{\rm cl}$ is adopted, the radial behaviour of $\tau_{\rm cl}$ is
+  $\alpha_{\rm CR, spat}$ about fiducial values.\footnote{\C{When \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const} is adopted, the radial behaviour of $\tau_{\rm cl}$ is
       also modified. Because $\tau_{\rm D}$ decreases with radius (see
       e.g. Figure~\ref{fig:tauD}), $\tau_{\rm cl}$ has to decrease by the same
       amount, which results in a steeper radio profile. To compensate for this
       effect in Figure~\ref{fig:param_comp_tcl_tD}, we change $\alpha_{\rm CR,
         spat}=1.0\rightarrow0.5$ and decrease the relative CR-to-thermal energy
       within the virial radius by a factor five to $6\times10^{-4}$.}} Instead
-  of adopting a fixed $\tau_{\rm cl}$, we set $\tau_{\rm D} = 1/4 \,\tau_{\rm
-    cl}$. The results are remarkably revealing. In this case, we are indeed less
+  of adopting a fixed $\tau_{\rm cl}$, we set $\tau_{\rm
+    cl}/\tau_{\rm D} = 2.5 $. The results are remarkably revealing. In this case, we are indeed less
   sensitive to the properties of the turbulence, and more sensitive to the
   details of the CR seed population.  This gives hope to the possibility that
   one could effectively marginalise over the very uncertain properties of
@@ -1317,15 +1304,15 @@ where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' tur
 
 For instance, in the \C{third row of panels} of
 Figure~\ref{fig:param_comp_tcl_tD}, we see that once turbulence exceeds a
-threshold value $X_{\rm tu} \sim 0.1$, then its overall exact energy density
+threshold value $X_{\rm tu} \sim 0.2$, then its overall exact energy density
 does not matter -- profiles simply converge to an asymptotic form as $X_{\rm
   tu}$ is increased. This is in contrast to the exponential sensitivity,
 flattening in surface brightness, and increasing spectral curvature as $X_{\rm
   tu}$ is increased that we saw previously. A threshold value of $X_{\rm tu}$ is
 necessary for turbulent reacceleration to overcome cooling. Once that condition
-is satisfied, the condition $\tau_{\rm cl} \sim \tau_{\rm D}$ implies a fixed
+is satisfied, the condition $\tau_{\rm cl}/\tau_{\rm D} \sim$const implies a fixed
 amount of amplification: stronger turbulence implies faster acceleration, but
-also dissipates more quickly. This leads to the asymptotic behaviour seen.
+also dissipates more quickly. This leads to the asymptotic behaviour seen. \C{The value of this constant depends on plasma physics details, but we have shown that the value required to match observations is plausible.}  
 
 \C{The second row of panels of Figure~\ref{fig:param_comp_tcl_tD} reveal another
   striking result:} in contrast to Figure~\ref{fig:param_comp}, results are also
@@ -1341,15 +1328,14 @@ radio surface brightness profile (a flatter CR distribution implies flatter
 surface brightness profiles) and luminosity (once again, luminosity is larger
 for more centrally concentrated CRs, since more secondaries are produced). This
 arises because once turbulent reacceleration overcomes cooling, the condition
-$\tau_{\rm cl} \sim \tau_{\rm D}$ provides a fixed amount of amplification in
+$\tau_{\rm cl}/\tau_{\rm D} \sim$const provides a fixed amount of amplification in
 each radial shell. The radio luminosity in each shell then depends linearly on
 initial conditions, i.e., the profile of CR seeds. Interestingly, the
 best-fitting profile for Coma results from a flat CR distribution -- i.e., the
-outcome of efficient CR streaming. Matching the overall amplitude simply
-involves a rescaling of $\tau_{\rm cl}/\tau_{\rm D}$ (equation
-\ref{eqn:ratios_CR_damp}) or the CR content.
+outcome of efficient CR streaming. The overall amplitude is set by $\tau_{\rm cl}/\tau_{\rm D}$ (equation
+\ref{eqn:ratios_CR_damp}) and the CR content.
 
-Obviously, the ideas in this section require further study. However, the notion that $\tau_{\rm cl}/\tau_{\rm D}$ could self-regulate around a fixed value is exciting, because it eliminates the main source of uncertainty -- the poorly unconstrained properties of turbulence, and implies that radio haloes could potentially provide more robust constraints on the underlying CR population.  
+Obviously, the ideas in this section require further study. \C{For instance, the notion that fast modes appear abruptly at $l_{\rm A}$ and that they last for a time $\tau_{\rm cl}$ are clear approximations (the latter could be improved by solving the time dependent diffusion equation for the fast mode energy spectrum, see e.g. \citet{zhou90}).} However, the notion that $\tau_{\rm cl}/\tau_{\rm D}$ could self-regulate around a fixed value is exciting, because it eliminates the main source of uncertainty -- the poorly unconstrained properties of turbulence, and implies that radio haloes could potentially provide more robust constraints on the underlying CR population.  
 
 \begin{figure*}
 \begin{minipage}{1\columnwidth}
@@ -1466,7 +1452,7 @@ merger and infall conditions) will be exponentially amplified in radio
 luminosity. The timescale of the merger has some natural scatter which is not
 obviously correlated with $\tau_{\rm D}$. 
 
-If instead we adopt $\tau_{\rm cl} \sim \tau_{\rm decay}$, i.e. the natural
+If instead we adopt \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const}, i.e. the natural
 lifetime of turbulence is its decay lifetime, then we can show that the
 acceleration time and the lifetime of turbulence are coupled, simply because the
 wave-particle interaction rate (which drives particle acceleration) and the
@@ -1483,7 +1469,7 @@ acceleration can take place (equation \ref{eqn:ratios_CR_damp}). In agreement
 with other assessments, we find that if turbulence is Burgers rather than
 Kraichnan, then turbulent reacceleration is ineffective, and some other
 explanation for radio haloes (e.g., magnetic reconnection, \citealt{brunetti16}) is
-necessary. If we adopt the ansatz $\tau_{\rm cl} \sim \tau_{\rm D}$, then we
+necessary. If we adopt the ansatz \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const}, then we
 find that above a threshold level of turbulence (necessary to overcome cooling),
 radio properties are insensitive to both the amplitude and spatial profile of
 turbulence, since only a fixed, asymptotic amount of amplification takes
