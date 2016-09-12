@@ -1037,18 +1037,17 @@ respectively. In accordance with Faraday rotation measure
 measurements, we assume $B(r)=B_{0} (n/n_{0})^{\eta}$, where
 $B_{0}=4.8 \umu$G and $\eta=0.5$ \citep{bonafede10}.
 
-The bulk of the CRps are injected by relatively low Mach number shocks
-and parametrized by $f_\rmn{p,inj}(p) =
-C_\rmn{inj}\,p^{-\alpha_\rmn{inj}}$, where $\alpha_\rmn{inj}\approx
-2.5$ in our simulations. The CRps approximately trace the thermal gas
-with $C_\rmn{inj} \propto \eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
-\citep{pinzke10,2016MNRAS.459...70V}, where the normalisation is fixed
-by the \AP{injection rate of} CR energy in the last 650~Myrs. Our simulations show
-that \AP{the energy} approximately amounts to 0.03 per cent of the thermal energy inside
+The bulk of the CRps are injected by relatively low Mach number shocks and
+parametrized by $f_\rmn{p,inj}(p) = C_\rmn{inj}\,p^{-\alpha_\rmn{inj}}$, where
+$\alpha_\rmn{inj}\approx 2.5$ in our simulations. The CRps approximately trace
+the thermal gas with $C_\rmn{inj} \propto \eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
+\citep{pinzke10,2016MNRAS.459...70V}, where the normalisation is fixed by the
+injection rate of CR energy in the last 650~Myrs. Our simulations show that the
+CR energy approximately amounts to 0.03 per cent of the thermal energy inside
 the virial radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{CR,inj} \rmn{d}
-V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
-0.0003$. The spectrum of the initial CRp distribution is determined by
-the steady state between injection and cooling,
+V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} = 0.0003$. The
+spectrum of the initial CRp distribution is determined by the steady state
+between injection and cooling,
 \begin{equation}
  f_\rmn{p,0} \propto \frac{\int_p^\infty f_\rmn{p,inj}(p') 
 \rmn{d}p'}{\displaystyle\left|{{\rmn{d}p}\over{\rmn{d}t}}\right|_{\rm Coul}+\frac{p}{\tau_{\rm had}}}\,,
@@ -1057,17 +1056,18 @@ where we fix the normalisation by requiring $\int_0^{R_{200}}\eps_\rmn{CR,0}
 \rmn{d}V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} = 0.003$. Note
 that the injected energy in the last 650 Myr is smaller by about a factor of 10
 in comparison to the cumulative CR energy injected over the entire cosmological
-history of the cluster. \AP{However, since the average injection rates of CR energy are similar, 
-the CRes injected during the merger are especially important for the radio emission above 1 GHz 
-since these CRs have not yet had time to cool.}  Similarly, the initial CRe distribution is given
-by the steady state between cooling (Coulomb, inverse Compton, and synchrotron)
-and injection of secondary CRes from $f_\rmn{p,0}$.  The diffusion constant
-$D_{pp} \propto X_{\rm tu}^{2} \eps_{\rm th}^{\alpha_{\rm tu}-1} \sqrt{T} k_L$ is
-calculated for each radial bin. All parameters and assumptions are similar to
-what is used for our simulated cluster (see section~\ref{sec:results}). Our
-fiducial model assumes $X_{\rm tu} = 0.2$, $\alpha_{\rm tu} =0.8$, $\alpha_{\rm
-  CR, spat}=1.0$, and $k_L=2 \upi/\lambda_L$ where $\lambda_L=100$ kpc. We also
-assume a fixed acceleration time of $\tau_{\rm cl} = 650 \, {\rm Myr}$.
+history of the cluster. However, since the individual injection events of CR
+energy are similar, the CRes injected during the merger are especially important
+for the radio emission above 1 GHz since these CRs have not yet had time to
+cool.  Similarly, the initial CRe distribution is given by the steady state
+between cooling (Coulomb, inverse Compton, and synchrotron) and injection of
+secondary CRes from $f_\rmn{p,0}$.  The diffusion constant $D_{pp} \propto
+X_{\rm tu}^{2} \eps_{\rm th}^{\alpha_{\rm tu}-1} \sqrt{T} k_L$ is calculated for
+each radial bin. All parameters and assumptions are similar to what is used for
+our simulated cluster (see section~\ref{sec:results}). Our fiducial model
+assumes $X_{\rm tu} = 0.2$, $\alpha_{\rm tu} =0.8$, $\alpha_{\rm CR, spat}=1.0$,
+and $k_L=2 \upi/\lambda_L$ where $\lambda_L=100$ kpc. We also assume a fixed
+acceleration time of $\tau_{\rm cl} = 650 \, {\rm Myr}$.
 
 
 \subsection{Results}
@@ -1280,26 +1280,27 @@ It is also worth exploring the effect of Burgers' turbulence (weak shocks). \C{B
 \end{equation}
 where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' turbulence, i.e. all power is at large scales. This weighting towards larger scales implies a much lower wave-particle interaction rate and thus a diffusion coefficient which is smaller than standard TTD on thermal particles by an order of magnitude. Since $\langle k \rangle_{\mathcal{W}} \approx k_L$ is independent of the cutoff scale $k_{\rm cut}$, this conclusion is unchanged if plasma instabilities regulate the thermal particle mean free path and TTD operates on relativistic particles instead. Since standard TTD on thermal particles was already potentially problematic (equation \ref{eqn:ratios_TTD}), we conclude, in agreement with other assessments \citep{miniati15,brunetti16_review}, that if Burgers turbulence dominates, then turbulent reacceleration will be ineffective.
 
-\C{It is
-  interesting to reconsider surface brightness and spectral profiles if indeed
-  $\tau_{\rm D} \sim \tau_{\rm cl}$ for the reasons mentioned above (e.g.,
-  equation~\ref{eqn:ratios_CR_damp}). We show the results of adopting such an
-  ansatz in Figure~\ref{fig:param_comp_tcl_tD}, where, similar to
+\C{It is interesting to reconsider surface brightness and spectral profiles if
+  indeed $\tau_{\rm D} \sim \tau_{\rm cl}$ for the reasons mentioned above
+  (e.g., equation~\ref{eqn:ratios_CR_damp}). We show the results of adopting
+  such an ansatz in Figure~\ref{fig:param_comp_tcl_tD}, where, similar to
   Figure~\ref{fig:param_comp}, we vary $X_{\rm tu}$, $\alpha_{\rm tu}$, and
-  $\alpha_{\rm CR, spat}$ about fiducial values.\footnote{\C{When \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const} is adopted, the radial behaviour of $\tau_{\rm cl}$ is
-      also modified. Because $\tau_{\rm D}$ decreases with radius (see
-      e.g. Figure~\ref{fig:tauD}), $\tau_{\rm cl}$ has to decrease by the same
-      amount, which results in a steeper radio profile. To compensate for this
-      effect in Figure~\ref{fig:param_comp_tcl_tD}, we change $\alpha_{\rm CR,
-        spat}=1.0\rightarrow0.5$ and \AP{decrease the injection rate of CR energy by a factor five.}}} Instead
-  of adopting a fixed $\tau_{\rm cl}$, we set $\tau_{\rm
-    cl}/\tau_{\rm D} = 2.5 $. The results are remarkably revealing. In this case, we are indeed less
-  sensitive to the properties of the turbulence, and more sensitive to the
-  details of the CR seed population.  This gives hope to the possibility that
-  one could effectively marginalise over the very uncertain properties of
-  turbulence at larger scales in merging clusters (which are unlikely to be more
-  precisely constrained observationally in the near future) to learn something
-  about the underlying CR population.}
+  $\alpha_{\rm CR, spat}$ about fiducial values.\footnote{\C{When $\tau_{\rm
+        cl}/\tau_{\rm decay} \sim\rmn{const}$ is adopted, the radial behaviour
+      of $\tau_{\rm cl}$ is also modified. Because $\tau_{\rm D}$ decreases with
+      radius (see e.g. Figure~\ref{fig:tauD}), $\tau_{\rm cl}$ has to decrease
+      by the same amount, which results in a steeper radio profile. To
+      compensate for this effect in Figure~\ref{fig:param_comp_tcl_tD}, we
+      change $\alpha_{\rm CR, spat}=1.0\rightarrow0.5$ and decrease the
+      injection rate of CR energy by a factor five.}} Instead of adopting a
+  fixed $\tau_{\rm cl}$, we set $\tau_{\rm cl}/\tau_{\rm D} = 2.5 $. The results
+  are remarkably revealing. In this case, we are indeed less sensitive to the
+  properties of the turbulence, and more sensitive to the details of the CR seed
+  population.  This gives hope to the possibility that one could effectively
+  marginalise over the very uncertain properties of turbulence at larger scales
+  in merging clusters (which are unlikely to be more precisely constrained
+  observationally in the near future) to learn something about the underlying CR
+  population.}
 
 For instance, in the \C{third row of panels} of
 Figure~\ref{fig:param_comp_tcl_tD}, we see that once turbulence exceeds a
@@ -1309,9 +1310,11 @@ does not matter -- profiles simply converge to an asymptotic form as $X_{\rm
 flattening in surface brightness, and increasing spectral curvature as $X_{\rm
   tu}$ is increased that we saw previously. A threshold value of $X_{\rm tu}$ is
 necessary for turbulent reacceleration to overcome cooling. Once that condition
-is satisfied, the condition $\tau_{\rm cl}/\tau_{\rm D} \sim$const implies a fixed
-amount of amplification: stronger turbulence implies faster acceleration, but
-also dissipates more quickly. This leads to the asymptotic behaviour seen. \C{The value of this constant depends on plasma physics details, but we have shown that the value required to match observations is plausible.}  
+is satisfied, the condition $\tau_{\rm cl}/\tau_{\rm D} \sim\rmn{const}$ implies a
+fixed amount of amplification: stronger turbulence implies faster acceleration,
+but also dissipates more quickly. This leads to the asymptotic behaviour
+seen. \C{The value of this constant depends on plasma physics details, but we
+  have shown that the value required to match observations is plausible.}
 
 \C{The second row of panels of Figure~\ref{fig:param_comp_tcl_tD} reveal another
   striking result:} in contrast to Figure~\ref{fig:param_comp}, results are also
@@ -1327,7 +1330,7 @@ radio surface brightness profile (a flatter CR distribution implies flatter
 surface brightness profiles) and luminosity (once again, luminosity is larger
 for more centrally concentrated CRs, since more secondaries are produced). This
 arises because once turbulent reacceleration overcomes cooling, the condition
-$\tau_{\rm cl}/\tau_{\rm D} \sim$const provides a fixed amount of amplification in
+$\tau_{\rm cl}/\tau_{\rm D} \sim\rmn{const}$ provides a fixed amount of amplification in
 each radial shell. The radio luminosity in each shell then depends linearly on
 initial conditions, i.e., the profile of CR seeds. Interestingly, the
 best-fitting profile for Coma results from a flat CR distribution -- i.e., the
@@ -1352,21 +1355,21 @@ Obviously, the ideas in this section require further study. \C{For instance, the
     active ($\tau_{\rm cl}$) to the turbulent re-acceleration time ($\tau_{\rm
       D}$). In comparison to Figure~\ref{fig:param_comp}, we change our fiducial
     model (solid lines) and adopt a slightly more extended spatial distribution
-    of CRs ($\alpha_{\rm CR, spat}=0.5$) and lower the \AP{injection rate of CR energy by a factor five}; 
-    otherwise, we adopt $X_\rmn{tu}=0.2$, $\alpha_\rmn{tu}=0.8$,
-    $\tau_{\rm cl}=2.5\,\tau_{\rm D}$ as fiducial values and vary each parameter
-    separately in each row of panels. Radio surface brightness profiles (left)
-    are contrasted to radio synchrotron spectra (right; for more details see
-    caption to Figure~\ref{fig:param_comp}).  Provided there is a minimum
-    (threshold) level of turbulence ($X_\rmn{tu}\gtrsim0.2$), here the radio
-    profiles are mainly determined by the CR distribution, while turbulence
-    has a \AP{remarkable} small impact. In the bottom two panels we vary the exponential
-    momentum growth factor $\tau_{\rm cl}/\tau_{\rm D}$ (see
-    equations~\ref{eq:pexp} and \ref{eq:Creacc}), which mainly changes the
-    normalisation of the CR distribution and neither spectral shape nor radial
-    synchrotron profile. Interestingly, the flat CR profiles adopted here are
-    similar to those required to reproduce the radio profiles in our CR
-    streaming model (see Figure~\ref{fig:sync_profile}).}}
+    of CRs ($\alpha_{\rm CR, spat}=0.5$) and lower the injection rate of CR
+    energy by a factor five; otherwise, we adopt $X_\rmn{tu}=0.2$,
+    $\alpha_\rmn{tu}=0.8$, $\tau_{\rm cl}=2.5\,\tau_{\rm D}$ as fiducial values
+    and vary each parameter separately in each row of panels. Radio surface
+    brightness profiles (left) are contrasted to radio synchrotron spectra
+    (right; for more details see caption to Figure~\ref{fig:param_comp}).
+    Provided there is a minimum (threshold) level of turbulence
+    ($X_\rmn{tu}\gtrsim0.2$), here the radio profiles are mainly determined by
+    the CR distribution, while turbulence has a remarkably small impact. In the
+    bottom two panels we vary the exponential momentum growth factor $\tau_{\rm
+      cl}/\tau_{\rm D}$ (see equations~\ref{eq:pexp} and \ref{eq:Creacc}), which
+    mainly changes the normalisation of the CR distribution and neither spectral
+    shape nor radial synchrotron profile. Interestingly, the flat CR profiles
+    adopted here are similar to those required to reproduce the radio profiles
+    in our CR streaming model (see Figure~\ref{fig:sync_profile}).}}
   \label{fig:param_comp_tcl_tD}
 \end{figure*}
 
@@ -1451,24 +1454,24 @@ merger and infall conditions) will be exponentially amplified in radio
 luminosity. The timescale of the merger has some natural scatter which is not
 obviously correlated with $\tau_{\rm D}$. 
 
-If instead we adopt \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const}, i.e. the natural
-lifetime of turbulence is its decay lifetime, then we can show that the
-acceleration time and the lifetime of turbulence are coupled, simply because the
-wave-particle interaction rate (which drives particle acceleration) and the
-wave-wave interaction rate (which drives dissipation) are linked. If we are
-mindful that Kraichnan turbulence is only applicable below the Alfven scale
-$l_{\rm A}$ (where turbulent velocities $\varv < \varv_{\rm A}$), then remarkably the
-ratio $\tau_{\rm cl}/\tau_{\rm D}$ is independent of properties of the
-turbulence (such as its amplitude and outer scale) and only depends on plasma
-parameters. Our results suggest that TTD on thermal particles may result in
-overly rapid damping of turbulence, and inefficient acceleration (equation
+If instead we adopt \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim\rmn{const}$},
+i.e. the natural lifetime of turbulence is its decay lifetime, then we can show
+that the acceleration time and the lifetime of turbulence are coupled, simply
+because the wave-particle interaction rate (which drives particle acceleration)
+and the wave-wave interaction rate (which drives dissipation) are linked. If we
+are mindful that Kraichnan turbulence is only applicable below the Alfven scale
+$l_{\rm A}$ (where turbulent velocities $\varv < \varv_{\rm A}$), then
+remarkably the ratio $\tau_{\rm cl}/\tau_{\rm D}$ is independent of properties
+of the turbulence (such as its amplitude and outer scale) and only depends on
+plasma parameters. Our results suggest that TTD on thermal particles may result
+in overly rapid damping of turbulence, and inefficient acceleration (equation
 \ref{eqn:ratios_TTD}), but if plasma instabilities scatter the thermal particles
-so that the fast modes damp via TTD on the CRs, then the required
-acceleration can take place (equation \ref{eqn:ratios_CR_damp}). In agreement
-with other assessments, we find that if turbulence is Burgers rather than
-Kraichnan, then turbulent reacceleration is ineffective, and some other
-explanation for radio haloes (e.g., magnetic reconnection, \citealt{brunetti16}) is
-necessary. If we adopt the ansatz \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const}, then we
+so that the fast modes damp via TTD on the CRs, then the required acceleration
+can take place (equation \ref{eqn:ratios_CR_damp}). In agreement with other
+assessments, we find that if turbulence is Burgers rather than Kraichnan, then
+turbulent reacceleration is ineffective, and some other explanation for radio
+haloes (e.g., magnetic reconnection, \citealt{brunetti16}) is necessary. If we
+adopt the ansatz \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim\rmn{const}$}, then we
 find that above a threshold level of turbulence (necessary to overcome cooling),
 radio properties are insensitive to both the amplitude and spatial profile of
 turbulence, since only a fixed, asymptotic amount of amplification takes

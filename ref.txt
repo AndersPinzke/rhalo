@@ -7,7 +7,7 @@ We thank the referee for his/her thoughtful report. In addition to the changes s
 
 3. Added a brief discussion of Burger's turbulence to Sect. 4.3
 
-4. Significantly revised figure 7, so that the fiducial model now match the data points. In addition, we have added two more panels showing the ratio of the time scales on which turbulence is active (τcl) to the turbulent re-acceleration time (τD). The figure shows more clearly now that when τcl~τD, radio profiles are mainly determined by the CR distribution while turbulence has a smaller impact.
+4. Significantly revised figure 7, so that the fiducial model now matches the data points. In addition, we have added two more panels showing the ratio of the time scales on which turbulence is active (τcl) to the turbulent re-acceleration time (τD). The figure shows more clearly now that for τcl~τD, radio profiles are mainly determined by the CR distribution while turbulence has a smaller impact.
 
 
 > I have read the revised version of the manuscript titled “Turbulence and Particle Acceleration in Giant Radio Halos: the Origin of Seed Electrons” by Pinzke et al.
