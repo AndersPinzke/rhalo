@@ -1043,8 +1043,8 @@ C_\rmn{inj}\,p^{-\alpha_\rmn{inj}}$, where $\alpha_\rmn{inj}\approx
 2.5$ in our simulations. The CRps approximately trace the thermal gas
 with $C_\rmn{inj} \propto \eps_\rmn{th}^{\alpha_\rmn{CR,spat}}$
 \citep{pinzke10,2016MNRAS.459...70V}, where the normalisation is fixed
-by the injected CR energy in the last 650~Myrs. Our simulations show
-that it approximately amounts to 0.03 per cent of the thermal energy inside
+by the \AP{injection rate of} CR energy in the last 650~Myrs. Our simulations show
+that \AP{the energy} approximately amounts to 0.03 per cent of the thermal energy inside
 the virial radius, i.e.  $\int_0^{R_{200}}\eps_\rmn{CR,inj} \rmn{d}
 V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} =
 0.0003$. The spectrum of the initial CRp distribution is determined by
@@ -1057,9 +1057,9 @@ where we fix the normalisation by requiring $\int_0^{R_{200}}\eps_\rmn{CR,0}
 \rmn{d}V\left(\int_0^{R_{200}}\eps_\rmn{th} \rmn{d}V\right)^{-1} = 0.003$. Note
 that the injected energy in the last 650 Myr is smaller by about a factor of 10
 in comparison to the cumulative CR energy injected over the entire cosmological
-history of the cluster, but this component is nonetheless important since above
-1 GHz the radio emission is dominated by CRes injected during the merger, which
-have not yet had time to cool.  Similarly, the initial CRe distribution is given
+history of the cluster. \AP{However, since the average injection rates of CR energy are similar, 
+the CRes injected during the merger are especially important for the radio emission above 1 GHz 
+since these CRs have not yet had time to cool.}  Similarly, the initial CRe distribution is given
 by the steady state between cooling (Coulomb, inverse Compton, and synchrotron)
 and injection of secondary CRes from $f_\rmn{p,0}$.  The diffusion constant
 $D_{pp} \propto X_{\rm tu}^{2} \eps_{\rm th}^{\alpha_{\rm tu}-1} \sqrt{T} k_L$ is
@@ -1291,8 +1291,7 @@ where we have set $\langle k \rangle_{\mathcal{W}} \approx k_L$ for Burgers' tur
       e.g. Figure~\ref{fig:tauD}), $\tau_{\rm cl}$ has to decrease by the same
       amount, which results in a steeper radio profile. To compensate for this
       effect in Figure~\ref{fig:param_comp_tcl_tD}, we change $\alpha_{\rm CR,
-        spat}=1.0\rightarrow0.5$ and decrease the relative CR-to-thermal energy
-      within the virial radius by a factor five to $6\times10^{-4}$.}} Instead
+        spat}=1.0\rightarrow0.5$ and \AP{decrease the injection rate of CR energy by a factor five.}}} Instead
   of adopting a fixed $\tau_{\rm cl}$, we set $\tau_{\rm
     cl}/\tau_{\rm D} = 2.5 $. The results are remarkably revealing. In this case, we are indeed less
   sensitive to the properties of the turbulence, and more sensitive to the
@@ -1353,22 +1352,21 @@ Obviously, the ideas in this section require further study. \C{For instance, the
     active ($\tau_{\rm cl}$) to the turbulent re-acceleration time ($\tau_{\rm
       D}$). In comparison to Figure~\ref{fig:param_comp}, we change our fiducial
     model (solid lines) and adopt a slightly more extended spatial distribution
-    of CRs ($\alpha_{\rm CR, spat}=0.5$) and lower the CR-to-thermal energy by a
-    factor of five; otherwise, we adopt $X_\rmn{tu}=0.2$, $\alpha_\rmn{tu}=0.8$,
+    of CRs ($\alpha_{\rm CR, spat}=0.5$) and lower the \AP{injection rate of CR energy by a factor five}; 
+    otherwise, we adopt $X_\rmn{tu}=0.2$, $\alpha_\rmn{tu}=0.8$,
     $\tau_{\rm cl}=2.5\,\tau_{\rm D}$ as fiducial values and vary each parameter
     separately in each row of panels. Radio surface brightness profiles (left)
     are contrasted to radio synchrotron spectra (right; for more details see
-    caption to Figure~\ref{fig:param_comp}). Provided there is a minimum
+    caption to Figure~\ref{fig:param_comp}).  Provided there is a minimum
     (threshold) level of turbulence ($X_\rmn{tu}\gtrsim0.2$), here the radio
-    profiles are mainly determined by the CR distribution, while turbulence has
-    a smaller impact. In the bottom two panels we vary the exponential momentum
-    growth factor $\tau_{\rm cl}/\tau_{\rm D}$ (see equations~\ref{eq:pexp} and
-    \ref{eq:Creacc}), but unlike $X_\rmn{tu}$ should not vary strongly with
-    time. Instead, it mainly changes the normalisation of the CR distribution
-    and neither spectral shape nor radial synchrotron profile. Interestingly,
-    the flat CR profiles adopted here are similar to those required to reproduce
-    the radio profiles in our CR streaming model (see
-    Figure~\ref{fig:sync_profile}).}}
+    profiles are mainly determined by the CR distribution, while turbulence
+    has a \AP{remarkable} small impact. In the bottom two panels we vary the exponential
+    momentum growth factor $\tau_{\rm cl}/\tau_{\rm D}$ (see
+    equations~\ref{eq:pexp} and \ref{eq:Creacc}), which mainly changes the
+    normalisation of the CR distribution and neither spectral shape nor radial
+    synchrotron profile. Interestingly, the flat CR profiles adopted here are
+    similar to those required to reproduce the radio profiles in our CR
+    streaming model (see Figure~\ref{fig:sync_profile}).}}
   \label{fig:param_comp_tcl_tD}
 \end{figure*}
 
@@ -1441,17 +1439,17 @@ luminosity), but play a secondary role.
 This exponential dependence of radio halo luminosity with turbulence then raises
 the interesting question of why radio halo scaling relations (e.g.,
 $L_{\nu}$--$L_{\rm X}$) are so tight. Previous statistical modelling of radio
-halo populations \citep{2006MNRAS.369.1577C,2007MNRAS.378.1565C} have focused on
-matching the mean relations, but not the scatter. We believe the latter provides
-a particularly interesting and potentially fruitful constraint. The acceleration
-timescale $\tau_{\rm D}$ and the length of time during which acceleration takes
-place $\tau_{\rm cl}$ must be matched so that there are roughly $\sim 2$ e-folds
-(given the factor $\sim 10$ difference in radio luminosity between the radio
-bright and faint populations; \citealt{2011ApJ...740L..28B}), otherwise scatter
-in turbulence (which we might expect given the wide variety of merger and infall
-conditions) will be exponentially amplified in radio luminosity. The timescale
-of the merger has some natural scatter which is not obviously correlated with
-$\tau_{\rm D}$.
+halo populations \citep{2006MNRAS.369.1577C,2007MNRAS.378.1565C} have focused
+on matching the mean relations, but not the scatter. We believe the latter
+provides a particularly interesting and potentially fruitful constraint. The
+acceleration timescale $\tau_{\rm D}$ and the length of time during which
+acceleration takes place $\tau_{\rm cl}$ must be matched so that there are
+roughly $\sim 2$ e-folds (given the factor $\sim 10$ difference in radio
+luminosity between the radio bright and faint populations; \citet{brown11}),
+otherwise scatter in turbulence (which we might expect given the wide variety of
+merger and infall conditions) will be exponentially amplified in radio
+luminosity. The timescale of the merger has some natural scatter which is not
+obviously correlated with $\tau_{\rm D}$. 
 
 If instead we adopt \C{$\tau_{\rm cl}/\tau_{\rm decay} \sim$const}, i.e. the natural
 lifetime of turbulence is its decay lifetime, then we can show that the

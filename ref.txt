@@ -1,0 +1,130 @@
+
+We thank the referee for his/her thoughtful report. In addition to the changes suggested by the referee (see below our point-by-point reply) we have improved the following points:
+
+1. Unified the notation throughout the manuscript and corrected some minor typos. 
+
+2. Added a short derivation for the Kraichnan turbulent spectrum (that is critical for some of our arguments) to Sect. 2.2.
+
+3. Added a brief discussion of Burger's turbulence to Sect. 4.3
+
+4. Significantly revised figure 7, so that the fiducial model now match the data points. In addition, we have added two more panels showing the ratio of the time scales on which turbulence is active (τcl) to the turbulent re-acceleration time (τD). The figure shows more clearly now that when τcl~τD, radio profiles are mainly determined by the CR distribution while turbulence has a smaller impact.
+
+
+> I have read the revised version of the manuscript titled “Turbulence and Particle Acceleration in Giant Radio Halos: the Origin of Seed Electrons” by Pinzke et al.
+> I find the paper is much improved. I have a few additional comments, mostly (but not only) minor.
+> 
+> 1)
+> My main concern is with the newly introduced Sec. 4.3. The authors point out the importance of the tight relation between radio and X-ray luminosity in galaxy clusters hosting a radio-halo, which is believe is a valid point.
+> But I am concerned with the discussion in Sec. 4.3, starting with the second paragraph at page 12. 
+> 
+> First, the authors use Kolmogorov scaling which does not describe the compressional modes responsible for the acceleration mechanism hey are considering
+
+Section 4.3 has two goals: (i) it aims to explore the issue of fine-tuning in turbulence levels raised in previous sections (e.g., upper right panel of Fig 6), (ii) it challenges the common assumption of assuming a Kraichnan spectrum, beginning at the outer scale. Since turbulence is essentially hydrodynamic at large scales, this is unjustified. 
+
+The referee is correct that in the hydrodynamic regime, a standard Hodge-Helmholtz decomposition usually shows that the compressive component of the velocity field is Burgers-like (W(k) \propto k^-2), while the solenoidal component is Kolomogorov-like (W(k) \propto k^(-5/3)). The Burgers-like component does not reflect a genuine cascade, but rather the appearance of shocks which directly transfer power from large to small scales. 
+
+At face value, we should use the Burgers spectrum for compressible modes. However, as already found by previous authors, this does not produce significant particle acceleration. If this is the correct spectrum, then the paradigm of turbulent particle acceleration is simply flawed, and some other mechanism (reconnection?) is necessary. Alternatively, it is well-known that due to mode-mode coupling,  solenoidal modes can give rise to compressive modes, and vice-versa (Kida & Orszag 1990, Cho et al 2003, Kruitsuk et al 2007). Indeed, note that many numerical studies (such as the last 2 above) only have solenoidal driving on the outer scale, but then are also able to study the compressive modes that develop. In hydrodynamic turbulence, the energy in compressible modes which develop in this way scales as ~ M_s^2, for M_s < 1. In MHD turbulence, mode-mode coupling is weak below the Alfven scale and the Alfven, fast and slow modes proceed as separate cascades. 
+
+We thus assume that some fraction of the Kolmogorov-like hydrodynamic turbulence which cascades down to the Alfven scale ends up as compressive fast modes with a Kraichnan spectrum, as seen in simulations (Cho et al 2003). 
+
+At the same time, we agree that our estimate of the hydrodynamic contribution to the momentum diffusion coefficient, which used Kolmogorov scalings, is inconsistent, and we have deleted it. We used this to argue that contributions from super-Alfvenic scales were at most comparable to those from sub-Alfvenic scales, and could be discounted. If we used a Burgers spectrum for the hydrodynamic contribution, this would render this portion completely negligible, reinforcing our point. 
+
+We have rewritten portions of the text to emphasize these points. 
+
+> 
+> Likewise, they assume that ALL the turbulence below the Alfven scale contributes to the acceleration, i.e., is compressible.
+
+We always normalize to a fractional energy density in compressible turbulence, although we agree that our previous notation was potentially confusing. We now explicitly assume that the energy density in compressible modes is ~ f_c rho v_A^2.  This only enters into equation 34, where we compare the decay time at the Alfven scale to the eddy turnover time. In all other cases, we compare the decay time to the acceleration time, and since both timescales scale as v_c^-2, their ratio is independent of velocity.
+
+In the current version, we have changed equation 30, 33, 34 (although getting the same result for equation 34), and added some text around these equations, to make our assumptions clearer.  
+
+> 
+> Also the decay time is computed based on the Alfven scale. But obviously the MHD turbulence is fed by the HD turbulence on larger scales and will not decay until the large  scale HD has also decayed. 
+
+Equation 34 shows that the decay time at the Alfven scale at least comparable to the eddy turnover time at the largest scale, and potentially longer. The reason, of course, is that large scale hydrodynamic modes cascade on a single eddy turnover time, whereas small scale sub-Alfvenic MHD modes are in the weak turbulence limit, and require multiple wave-wave interactions for a mode to cascade. We emphasize this in the revised text. 
+
+> 
+> In addition, with an injection scale of 100kpc and an Alfven number of ~5 the Alfven scale is below the cutoff scale of the compressible turbulence, so there is no acceleration. 
+
+The separation of scales is already discussed above equation 36, and depends on the plasma beta; we find l_cut ~ 0.2 (beta/50)^2 l_A. This indeed implies that acceleration is inefficient if transit time damping operates on thermal particles, and motivated us to adopt the BL11 suggestion that plasma instabilities will scatter thermal particles and shorten their mean free path, implying that transit time damping operates on relativistic particles. In this case, acceleration can be efficient (equation 39).
+
+> 
+> So the derivation appears to be inconsistent. Strangely the authors raise some of these issues later in the text themselves.
+
+Given our assumptions, we believe our derivation to be consistent. Our bottom line is summarized in the last paragraph of the conclusions, which addresses many of the concerns above. Of course, the brief estimates of section 4.3 are only an initial exploration of the two issues raised. Much more detailed studies are needed; the main value of this addition is to stimulate others to look into these issues as well. 
+
+> 
+> 2)
+> Page 3, second column, first paragraph:
+> My second point concerns (again) the following text. 
+> 
+> "The simulated cluster undergoes a major merger over the last 1-2 Gyrs that is thought to inject large turbulent eddies. Following Brunetti & Lazarian (2007, 2011) (see also Yan & Lazarian 2004; Beresnyak et al. 2013) we assume that a Gyr after core passage the fields have decayed down to the smallest scales k_cut, and the radio halo turns on shortly after. We choose this simulation snapshot to analyze. We are not very sensitive to this assumption, since the thermal and CR quantities are very similar a few 100 Myrs before and after z = 0, where we have chosen to evaluate the simulations. ”
+> 
+> As I pointed out in my previous report, this scenario is probably not realistic even if assumed in previous work in the literature. I understand it’s not the focus of the authors, since they take the CR transport coefficients from the same literature (Brunetti and Lazarian 2007/2011), but it’s something their work and conclusions rely on, so they should probably caution the reader, in view of the results of numerical simulations in Miniati (2015). Either at the end of the paragraph or in the discussion section would be appropriate.
+
+We agree with the referee that numerical simulation such as those performed by Miniati (2015) are very useful for studying the time evolution of the efficiency of turbulent reacceleration. We have added a cautionary remark in response to this request.
+
+We have added a cautionary remark to the text. "The simulated cluster undergoes a major merger over the last 1-2 Gyrs that is thought to inject large turbulent eddies. Following Brunetti & Lazarian (2007, 2011) (see also Yan & Lazarian 2004; Beresnyak et al. 2013) we assume that a Gyr after core passage the fields have decayed down to the smallest scales k_cut, and the radio halo turns on shortly after. We choose this simulation snapshot to analyze. Note that in the recent simulations by Miniati (2015) the turbulent reacceleration is strongest around core passage. However, we are not very sensitive to the adopted decay time, since the thermal and CR quantities are very similar a few 100 Myrs before and after z = 0, where we have chosen to evaluate the simulations.”
+
+> 
+> Other minor points:
+> 
+> 3)
+> Page 1, Line 28 (Abstract): 
+> I think for the sake of clarity it should be said in the abstract that the Fokker-Planck integration is post processing. From the text “in cosmological simulations of cluster formation” one has the impression that such integration is simultaneous to the simulation.
+
+We have clarified the scentence.
+
+
+> 4)
+> Page 3, Eq. 1:
+> is a factor 1/3 missing from the adiabatic loss term?
+
+No, it is correct. The reason is that we are using the one dimensional distribution function in the Fokker-Planck equations, i.e. f^{1D} = 4pi p^2 f^{3D}. Hence, the factor 1/3 in the adiabatic term exactly cancels teh factor 3 from the derivative on p^3.
+
+ 
+> 5)
+> Page 3, second column:
+> the last few sentences of the first and second paragraph are identical.
+
+Thank you for pointing this out. We have cut the last scentence in the second paragraph.
+
+
+> 6)
+> Sec. 3.1, in describing the numerical modelling, the authors should mention similar/related technical work, e.g. Miniati (2001), ZuHone et al (2013).
+
+We have added aproparate references to the text.
+
+
+> 7)
+> Page 4, second column, the sentence between lines 26-28, concerning the fact that the “magnetic energy density is scale independent” should be revised. The magnetic energy is also characterised by a spectrum.
+
+It is true that the fluctuating field is scale dependent. However, the magnetic energy density is dominated by the large scale field, or mean field. This statement is equivalent to canonical arguments for the transition to MHD turbulence--the Alfven speed is roughly scale independent, so that as turbulent velocities decay at small scales, the Alfven Mach number drops accordingly. We have added a note about the mean field. 
+ 
+> 8)
+> Sec. 3.2, since the panels of Fig 2 show two curves passing very nicely through the points it is not immediately clear that there is an issue with the simultaneous fit of the radial profile at two different frequencies. So perhaps this point could be made more explicit by mentioning it somewhere at the beginning of the second paragraph, with explicit indication of the data points to consider.
+
+We modified the relevant sentence in the second paragraph to make the point more explicit. But at the same time we want to stress that we discuss this point in more detail in paragraph four.
+
+
+> 9)
+> It would be worth rereading also the second and third paragraph of Sec. 3.3 at page 8. At the end of the the page “M-streaming … would produce too much gamma-rays”, is this meant by the authors?
+
+This is correct. The point we want to make is that if all paramters are fixed except X_tu and xi_p, the level of radio emission is conserved if we increase xi_p more than we decrease X_tu, since there is a contribution from the reaccelerated secondary CRes generated by reaccelerated CRps. But since the gamma-ray emission is equally sensitive to the X_tu and xi_p, this implies that the gamma-ray emission would increase relative to the radio emission, and hence violate Fermi limits.
+
+ 
+> 10)
+> page 5, line 38, first paragraph, perhaps saying Vazza and Miniati find \lambda_L ~ 1 Mpc is more informative than comparable to the size of the cluster
+
+We have added \lambda_L ~ 1 Mpc to the text.
+
+ 
+> 11) 
+> I have spotted some typos:
+> page 2, line 59, first paragraph: shows -> show
+> page 3, second column, beginning second paragraph: ignore -> ignored
+> after Eq. 10: I0 -> I_0
+> page 5, line 9, first column : seem -> seen
+> page 12, line 48, first paragraph: tauD -> tau_D
+
+Fixed. Thank you! 
